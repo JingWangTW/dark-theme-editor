@@ -1,0 +1,14 @@
+<header class="header">
+    
+    <div class="header_left">
+        <img class="logo" src="{{ "images/favicon.ico" | absURL }}" alt="logo" />
+    </div>
+
+    <div class="header_middle">
+        {{ if .IsHome }}
+            {{ .Title }}
+        {{ else }}
+            {{ .Title }} - {{ .Site.Title }}
+        {{ end }}
+    </div>   
+</header>

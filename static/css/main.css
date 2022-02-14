@@ -1,0 +1,121 @@
+@charset "UTF-8";
+
+/**************
+    layout
+***************/
+header {
+    height: 4vh;
+}
+
+main {
+    height: 92vh;
+    display: flex;
+}
+
+aside {
+    flex: 0 1 20vw;
+}
+
+article {
+    flex: 0 1 80vw;
+}
+
+footer {
+    height: 4vh;
+}
+
+/**************
+    Styling
+***************/
+
+a, a:link, a:visited, a:hover, a:active {
+    text-decoration: none;
+    color: inherit;
+}
+
+body {
+    background-color: #282C34;
+    font-size: calc(1vh + 1vw);
+    font-family: system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans","Liberation Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+    overflow: hidden;
+}
+
+/*** Header ***/
+header {
+    font-size: 8pt;
+    color: white;
+    border-bottom: 1pt solid rgb(59, 59, 59);
+}
+
+header div {
+    vertical-align: middle;
+    text-align: center;
+    line-height: 4vh;
+    height: 100%;
+}
+
+header div.header_left {
+    float: left;
+    position: relative;
+    left: 5pt;
+    top: 0pt;
+}
+
+header div.header_left img.logo {
+    height: 100%;
+}
+
+/*** sidebar ***/
+aside {
+    border-right: 1pt solid rgb(59, 59, 59);
+}
+
+/*** main content ***/
+article {
+}
+
+/*** footer ***/
+footer {
+    font-size: 10pt;
+    color: grey;
+    border-top: 1pt solid rgb(59, 59, 59);
+    padding: 0 3pt;
+    display: flex;
+    justify-content: space-between;
+}
+
+footer > div {
+    display: inline;
+    flex: 0 0 auto;
+}
+
+footer > div > ul {
+    display: flex;
+    height: 100%;
+    align-items: stretch;
+}
+
+footer > div > ul > li {
+    flex: 0 0 auto;
+    padding: 0 5pt;
+    
+    display: inline-flex;
+    align-items: center;
+}
+
+footer > div > ul > li:hover {
+    background-color: rgb(65, 65, 65);
+    color: rgb(150, 150, 150);
+}
+
+footer > div.footer-left > ul {
+    justify-content: flex-start;
+}
+
+footer ul li:not(:is(a)) {
+    cursor: default;
+}
+
+footer > div.footer-right > ul {
+    justify-content: flex-end;
+}

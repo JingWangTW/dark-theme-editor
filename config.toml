@@ -1,3 +1,17 @@
 baseURL = 'http://example.org/'
 languageCode = 'en-us'
 title = 'My New Hugo Site'
+
+
+[Params]
+    AuthorName = 'Tony'
+
+# CopyRight string in the footer, change it to "" hide it
+CopyRight = 'All Rights Reserved.'
+
+# Social link in the footer, change it to "" hide it
+[Social]
+    github = " "
+    facebook = " "
+    twitter = " "
+    email = " "
