@@ -5,7 +5,13 @@
             {{ range $key, $val := .Site.Social }}
                 {{ with $val }}
                     <li>
-                        <a href="{{ $val }}" target="_blank"><div class="icon {{ $key }}"></div></a>
+                        <a href="{{ $val }}" target="_blank">
+                            {{ if eq $key "email" }}
+                                <i class="bi-envelope"></i>
+                            {{ else }}
+                                <i class="bi-{{ $key }}"></i>
+                            {{ end }}
+                        </a>
                     </li>
                 {{ end }}
             {{ end }}

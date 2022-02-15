@@ -1,3 +1,22 @@
 <aside class="sidebar">
+    <ul>
+        {{ range os.ReadDir "content" }}
             
+            {{ if .IsDir }}
+                <li class="dir closed-dir">
+                    <a>
+                        {{ .Name }}
+                    </a>
+                </li>
+            {{ else }}
+                <li class="file">
+                    <a href="{{ .Name | relURL }}">
+                        <i class="bi bi-file-earmark-richtext"></i>
+                        {{ .Name }}
+                    </a>
+                </li>
+            {{ end }}
+        
+        {{ end }}
+    </ul>
 </aside>

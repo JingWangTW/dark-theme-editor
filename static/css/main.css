@@ -70,6 +70,44 @@ aside {
     border-right: 1pt solid rgb(59, 59, 59);
 }
 
+aside > ul > li:hover {
+    color: white !important;
+}
+
+aside > ul > li.dir {
+    padding-left: 10pt;
+    padding-top: 10pt;
+    color: grey;   
+}
+
+aside > ul > li.dir > a{
+    margin-left: 5pt;
+}
+
+aside > ul > li.closed-dir::before {
+    content: ' ';
+    border-color: white;
+    border-width: 1pt 1pt 0 0;
+    border-style: solid;
+    padding: 3pt;
+    transform: rotate(45deg);
+    display: inline-block;
+}
+
+aside > ul > li.file {
+    padding-left: 5pt;
+    padding-top: 5pt;
+    color: grey;
+}
+
+aside > ul > li.file i {
+    padding-left: 5pt;
+}
+
+aside > ul > li > a {
+    cursor: pointer;
+}
+
 /*** main content ***/
 article {
 }
