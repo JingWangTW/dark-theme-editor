@@ -1,22 +1,42 @@
 <aside class="sidebar">
-    <ul>
-        {{ range os.ReadDir "content" }}
-            
-            {{ if .IsDir }}
-                <li class="dir closed-dir">
-                    <a>
-                        {{ .Name }}
-                    </a>
-                </li>
-            {{ else }}
-                <li class="file">
-                    <a href="{{ .Name | relURL }}">
-                        <i class="bi bi-file-earmark-richtext"></i>
-                        {{ .Name }}
-                    </a>
-                </li>
-            {{ end }}
-        
-        {{ end }}
-    </ul>
+    {{ template "section-tree-generator" ( dict "context" .Site.Home "currentPage" . ) }}
 </aside>
+
+
+{{ define "section-tree-generator" }}
+
+    {{ $context := .context }}
+    {{ $currentPage := .currentPage }}
+
+    {{ with $context}}
+        {{ $page_children := where ( union .Sections .Pages ) "Kind" "page" }}
+        {{ $section_children := where ( union .Sections .Pages ) "Kind" "!=" "page" }}
+
+        {{/* show page first than child section */}}
+        {{ $children := $page_children | append $section_children }}
+
+        <ul class="sidebar-list">
+
+            {{ range $children }}
+                {{ if .IsNode}}
+                    {{ if .IsAncestor $currentPage }}
+                        <li class="dir open-dir">
+                    {{ else}}
+                        <li class="dir closed-dir">
+                    {{ end }}
+                            <span class="dir-text"> {{ .Title }} </span>
+                            {{ template "section-tree-generator" ( dict "context" . "currentPage" $currentPage ) }}
+                        </li>
+                {{else}}
+                    <li class="file">
+                        <a href="{{ .RelPermalink }}">
+                            <i class="bi bi-file-earmark-richtext"></i>
+                            {{ .Title }}
+                        </a>
+                    </li>
+                {{ end }}
+            {{ end }}
+        </ul>
+    {{end}}
+
+{{end}}

@@ -1,37 +1,35 @@
 <!DOCTYPE html>
 <html {{ with .Site.LanguageCode }}lang="{{ . }}" {{ end }}>
 
-<head>
-    <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    {{ hugo.Generator }}
-    <meta name="description" content="{{ .Site.Params.Description }}">
+        {{ hugo.Generator }}
+        <meta name="description" content="{{ .Site.Params.Description }}">
 
-    <title>
-        {{ if .IsHome }}
+        <title>
+            {{ if .IsHome }}
             {{ .Title }}
-        {{ else }}
+            {{ else }}
             {{ .Title }} - {{ .Site.Title }}
+            {{ end }}
+        </title>
+
+        <link rel="shortcut icon" href="{{ " images/favicon.ico" | absURL }}" />
+
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css"
+            integrity="sha512-NmLkDIU1C/C88wi324HBc+S2kLhi08PN5GDeUVVVC/BVt/9Izdsc9SVeVfA1UZbY3sHUlDSyRXhCzHfr6hmPPw=="
+            crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
+
+        <link rel="stylesheet" href='{{ "index.css" | absURL }}' />
+
+        <!-- custom css -->
+        {{ range .Site.Params.customCSS }}
+        <link rel="stylesheet" href="{{ " css/" | absURL }}{{ . }}">
         {{ end }}
-    </title>
-    
-    <link rel="canonical" href="{{ .Permalink }}" />
 
-    {{ range .AlternativeOutputFormats }}
-    <link rel="{{ .Rel }}" type="{{ .MediaType.Type }}" href="{{ .Permalink | safeURL }}">
-    {{ end }}
-
-    <link rel="shortcut icon" href="{{ "images/favicon.ico" | absURL }}" />
-
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css" integrity="sha512-NmLkDIU1C/C88wi324HBc+S2kLhi08PN5GDeUVVVC/BVt/9Izdsc9SVeVfA1UZbY3sHUlDSyRXhCzHfr6hmPPw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
-    
-    <link rel="stylesheet" href="{{ "css/main.css" | absURL }}" />
-    
-    <!-- custom css -->
-    {{ range .Site.Params.customCSS }}
-    <link rel="stylesheet" href="{{ "css/" | absURL }}{{ . }}">
-    {{ end }}
-</head>
+        <script src='{{ "index.js" | absURL }}'></script>
+    </head>
