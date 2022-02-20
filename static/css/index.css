@@ -139,7 +139,88 @@ ul.sidebar-list ul.sidebar-list > li.file {
 
 
 /*** main content ***/
-article {
+article.main {
+    text-align: left;
+    color: #c6c6c7;
+
+    padding: 3vw;
+    overflow-y: auto;
+}
+
+article.main::-webkit-scrollbar{
+    width: 7px;
+    background-color: rgb(95, 94, 94);
+}
+
+article.main::-webkit-scrollbar-thumb {
+    background: rgb(139, 139, 139);
+    border-radius: 10pt;
+}
+
+article.main > div.title {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 15pt;
+}
+
+article.main > div.title > h1.title-header {
+    flex: 0 0 auto;
+
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: .5rem;
+}
+
+article.main > div.title > div.date-readtime {
+    flex: 0 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+
+    font-size: .9rem;
+    color: #939bab;
+}
+
+article.main > div.title > div.date-readtime > div.date {
+    padding-bottom: 5pt;
+}
+
+article.main > div.article-meta {
+    color: #939bab;
+    font-size: 1rem;
+}
+
+article.main > div.article-meta > div {
+    padding-bottom: 20pt;
+}
+
+article.main > div.article-meta a {
+    padding: 2pt 10pt;
+    margin: 0pt 5pt;
+    border-radius: 10px;
+    color: #fff;
+}
+
+article.main > div.article-meta a.cat-btn {
+    background: #2f5292;
+}
+
+article.main > div.article-meta a.cat-btn:hover {
+    background: #5779b9;
+}
+
+article.main > div.article-meta a.tag-btn {
+    background: #327e5e;
+}
+
+article.main > div.article-meta a.tag-btn:hover {
+    background: #479775;
+}
+
+article.main > div.article-meta a.bread-btn {
+    color: #99a1ff;
+    padding-left: 5pt;
+    padding-right: 5pt;
 }
 
 /*** footer ***/
@@ -169,6 +250,7 @@ footer > div > ul > li {
     
     display: inline-flex;
     align-items: center;
+    cursor: default;
 }
 
 footer > div > ul > li:hover {
@@ -178,10 +260,6 @@ footer > div > ul > li:hover {
 
 footer > div.footer-left > ul {
     justify-content: flex-start;
-}
-
-footer ul li:not(:is(a)) {
-    cursor: default;
 }
 
 footer > div.footer-right > ul {

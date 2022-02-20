@@ -15,3 +15,10 @@ CopyRight = 'All Rights Reserved.'
     facebook = " "
     twitter = " "
     email = " "
+
+[markup]
+    [markup.highlight]
+        lineNoStart = 1
+        lineNos = true
+        style = "native"
+        tabWidth = 4

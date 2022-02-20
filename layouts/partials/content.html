@@ -1,3 +1,84 @@
 <article class="main">
-    {{ .Content }}
+
+    <div class="title">
+        <h1 class="title-header">
+            {{ .Title }}
+        </h1>
+
+        <div class="date-readtime">
+            <div class="date">
+                <i class="bi bi-calendar3"></i>
+                <time datetime="{{ .Date.Format " 2006.01.02" }}">{{ .Date.Format "2006.01.02" }}</time>
+            </div>
+            <div class="readtime">
+                <i class="bi bi-clock"></i>
+                {{ .Page.ReadingTime }} min to read
+            </div>
+        </div>
+    </div>
+
+    <div class="article-meta">
+        {{ with .Params.categories }}
+        <div class="categories">
+            <i class="bi bi-bookmarks" title="Categories"></i>
+            {{ range . }}
+            <a href='{{ "categories" | absURL }}/{{ . | urlize }}/' class="cat-btn">
+                {{ . }}
+            </a>
+            {{ end }}
+        </div>
+        {{ end }}
+
+        {{ with .Params.tags }}
+        <div class="tags">
+            <i class="bi bi-tags" title="Tags"></i>
+            {{ range . }}
+            <a href='{{ "tags" | absURL }}/{{ . | urlize }}/' class="tag-btn">
+                {{ . }}
+            </a>
+            {{ end }}
+        </div>
+        {{ end }}
+
+
+        <div class="breadcumb">
+            <i class="bi bi-folder"></i>
+            {{ template "breadcrumb" . }}
+        </div>
+
+    </div>
+
+
+    <div class="content">
+        {{ if .Content }}
+        {{ .Content }}
+        {{ else }}
+        <p class="no-content">No content on this page.</p>
+        {{ end }}
+    </div>
+
 </article>
+
+
+{{ define "breadcrumb" }}
+
+{{ if .Parent }}
+{{ template "breadcrumb" .Parent }}
+{{ else if not .IsHome }}
+{{ template "breadcrumb" .Site.Home }}
+{{ end }}
+
+{{ if not .IsHome}}
+/
+{{ end }}
+
+<a href="{{ .Permalink }}" class="bread-btn">
+    {{ if .IsHome}}
+    Home
+    {{ else }}
+    {{ .Title }}
+    {{end}}
+</a>
+
+
+{{ end }}
