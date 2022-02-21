@@ -2,6 +2,8 @@
 <i class="bi bi-tag"></i>
 {{ else if eq .Data.Singular "category" }}
 <i class="bi bi-bookmark"></i>
-{{ else }}
+{{ else if eq .Data.Singular "author" }}
 <i class="bi bi-person"></i>
+{{ else }}
+<i class="bi bi-gear"></i>
 {{ end }}

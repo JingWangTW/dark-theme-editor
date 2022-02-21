@@ -6,8 +6,10 @@
             <i class="bi bi-tags"></i>
             {{ else if eq .Data.Singular "category" }}
             <i class="bi bi-bookmarks"></i>
+            {{ else if eq .Data.Singular "author" }}
+            <i class="bi bi-person-fill"></i>
             {{ else }}
-            <i class="bi bi-person"></i>
+            <i class="bi bi-gear"></i>
             {{ end }}
 
             All {{ pluralize .Title }}
@@ -25,8 +27,8 @@
         <ul>
             {{ range .Pages }}
             <li>
-                {{ partial "tax_icon" . }}
                 <a href="{{ .Permalink }}">
+                    {{ partial "tax_icon" . }}
                     {{ .Title }}
                 </a>
             </li>

@@ -244,6 +244,37 @@ article.main > nav#TableOfContents a:hover {
     text-decoration: underline;
 }
 
+article.main > div.list-content > ul {
+    font-size: 14pt;;
+}
+
+article.main > div.list-content > ul > li {
+    margin-bottom: 15pt;
+}
+
+article.main > div.list-content > ul > li:hover{
+    color: white;
+}
+
+article.main > div.list-content ul.sidebar-list {
+    margin-bottom: 10px;
+    margin-top: 10px;
+    padding: 0;
+}
+
+article.main > div.list-content ul.sidebar-list ul {
+    margin-left: 25px;
+}
+
+article.main > div.list-content ul.sidebar-list li{
+    padding-left: 0;
+}
+
+article.main > div.list-content ul.sidebar-list li.file {
+    margin-left: -5pt;
+    padding-top: 10pt;
+}
+
 /*** footer ***/
 footer {
     font-size: 10pt;

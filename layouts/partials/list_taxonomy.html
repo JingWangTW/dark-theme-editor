@@ -18,7 +18,10 @@
         <ul>
             {{ range .Pages }}
             <li>
-                <a href="{{ .Permalink }}">{{ .Title }}</a>
+                <a href="{{ .Permalink }}">
+                    <i class="bi bi-file-earmark-richtext"></i>
+                    {{ .Title }}
+                </a>
             </li>
             {{ end }}
         </ul>
