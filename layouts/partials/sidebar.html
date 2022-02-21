@@ -5,38 +5,38 @@
 
 {{ define "section-tree-generator" }}
 
-    {{ $context := .context }}
-    {{ $currentPage := .currentPage }}
+{{ $context := .context }}
+{{ $currentPage := .currentPage }}
 
-    {{ with $context}}
-        {{ $page_children := where ( union .Sections .Pages ) "Kind" "page" }}
-        {{ $section_children := where ( union .Sections .Pages ) "Kind" "!=" "page" }}
+{{ with $context}}
+{{ $page_children := where ( union .Sections .Pages ) "Kind" "page" }}
+{{ $section_children := where ( union .Sections .Pages ) "Kind" "!=" "page" }}
 
-        {{/* show page first than child section */}}
-        {{ $children := $page_children | append $section_children }}
+{{/* show page first than child section */}}
+{{ $children := $section_children | append $page_children }}
 
-        <ul class="sidebar-list">
+<ul class="sidebar-list">
 
-            {{ range $children }}
-                {{ if .IsNode}}
-                    {{ if .IsAncestor $currentPage }}
-                        <li class="dir open-dir">
-                    {{ else}}
-                        <li class="dir closed-dir">
-                    {{ end }}
-                            <span class="dir-text"> {{ .Title }} </span>
-                            {{ template "section-tree-generator" ( dict "context" . "currentPage" $currentPage ) }}
-                        </li>
-                {{else}}
-                    <li class="file">
-                        <a href="{{ .RelPermalink }}">
-                            <i class="bi bi-file-earmark-richtext"></i>
-                            {{ .Title }}
-                        </a>
-                    </li>
-                {{ end }}
-            {{ end }}
-        </ul>
-    {{end}}
+    {{ range $children }}
+    {{ if .IsNode}}
+    {{ if .IsAncestor $currentPage }}
+    <li class="dir open-dir">
+        {{ else}}
+    <li class="dir closed-dir">
+        {{ end }}
+        <span class="dir-text"> {{ .Title }} </span>
+        {{ template "section-tree-generator" ( dict "context" . "currentPage" $currentPage ) }}
+    </li>
+    {{else}}
+    <li class="file">
+        <a href="{{ .RelPermalink }}">
+            <i class="bi bi-file-earmark-richtext"></i>
+            {{ .Title }}
+        </a>
+    </li>
+    {{ end }}
+    {{ end }}
+</ul>
+{{end}}
 
 {{end}}
