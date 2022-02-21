@@ -34,6 +34,14 @@ article.main .content ul {
     padding-inline-start: 40px;
 }
 
+article.main .content ul ul {
+    list-style-type: circle;
+}
+
+article.main .content ul ul ul {
+    list-style-type: square;
+}
+
 article.main .content ol {
     display: block;
     list-style-type: decimal;
@@ -148,13 +156,13 @@ article.main .content blockquote p {
 }
 
 
-:where(article.main, article.main table, article.main div.highlight table)::-webkit-scrollbar {
+article.main *::-webkit-scrollbar {
     width: 8px;
     height: 8px;
     background-color: rgb(95, 94, 94);
 }
 
-:where(article.main, article.main table, article.main div.highlight table)::-webkit-scrollbar-thumb {
+article.main *::-webkit-scrollbar-thumb {
     background: rgb(139, 139, 139);
     border-radius: 10pt;
 }

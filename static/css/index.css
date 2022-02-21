@@ -213,6 +213,34 @@ article.main > div.article-meta a.bread-btn {
     padding-right: 5pt;
 }
 
+article.main > nav#TableOfContents ul {
+    display: block;
+    list-style-type: disc;
+    padding-inline-start: 20px;
+    font-size: 12pt;
+}
+
+article.main > nav#TableOfContents ul ul {
+    list-style-type: circle;
+}
+
+article.main > nav#TableOfContents ul ul ul {
+    list-style-type: square;
+}
+
+article.main > nav#TableOfContents li {
+    margin: 5pt 0pt;
+}
+
+article.main > nav#TableOfContents a {
+    color: #337ab7;
+}
+
+article.main > nav#TableOfContents a:hover {
+    color: #4398e5;
+    text-decoration: underline;
+}
+
 /*** footer ***/
 footer {
     font-size: 10pt;
