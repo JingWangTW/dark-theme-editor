@@ -18,7 +18,7 @@
     <li class="dir closed-dir">
         {{ end }}
         <span class="dir-text"> {{ .Title }} </span>
-        {{ template "section-tree-generator" ( dict "context" . "currentPage" $currentPage ) }}
+        {{ partial "section_tree" ( dict "context" . "currentPage" $currentPage ) }}
     </li>
     {{else}}
     <li class="file">

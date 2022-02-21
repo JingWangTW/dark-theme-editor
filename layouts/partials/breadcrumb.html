@@ -1,7 +1,7 @@
 {{ if .Parent }}
-{{ template "breadcrumb" .Parent }}
+{{ partial "breadcrumb" .Parent }}
 {{ else if not .IsHome }}
-{{ template "breadcrumb" .Site.Home }}
+{{ partial "breadcrumb" .Site.Home }}
 {{ end }}
 
 {{ if not .IsHome}}
