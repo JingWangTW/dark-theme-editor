@@ -1,0 +1,17 @@
+{{ if .Parent }}
+{{ template "breadcrumb" .Parent }}
+{{ else if not .IsHome }}
+{{ template "breadcrumb" .Site.Home }}
+{{ end }}
+
+{{ if not .IsHome}}
+/
+{{ end }}
+
+<a href="{{ .Permalink }}" class="bread-btn">
+    {{ if .IsHome}}
+    Home
+    {{ else }}
+    {{ .Title }}
+    {{end}}
+</a>
