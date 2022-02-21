@@ -35,7 +35,7 @@ a, a:link, a:visited, a:hover, a:active {
 
 body {
     background-color: #282C34;
-    font-size: calc(1vh + 1vw);
+    font-size: 16px;
     font-family: system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans","Liberation Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
     overflow: hidden;
 }
@@ -213,11 +213,14 @@ article.main > div.article-meta a.bread-btn {
     padding-right: 5pt;
 }
 
+article.main > nav#TableOfContents {
+    margin-bottom: 20pt;
+}
+
 article.main > nav#TableOfContents ul {
     display: block;
     list-style-type: disc;
     padding-inline-start: 20px;
-    font-size: 12pt;
 }
 
 article.main > nav#TableOfContents ul ul {

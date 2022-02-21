@@ -1,16 +1,10 @@
-article.main .content h1, 
-article.main .content h2,
-article.main .content h3, 
-article.main .content h4, 
-article.main .content h5, 
-article.main .content h6 {
-    margin: 25pt 0pt;
+article.main :where(.content h1, .content h2, .content h3) {
+    margin: 20pt 0pt;
     font-weight: bold;
-
 }
 
-article.main .content h1, article.main .content h2  {
-    font-size: 2rem;
+article.main :where(.content h1, .content h2) {
+    font-size: 1.8rem;
 }
 
 article.main .content h1 {
@@ -19,19 +13,24 @@ article.main .content h1 {
 }
 
 article.main .content h3  {
-    font-size: 1.5rem;
+    font-size: 1.3rem;
+}
+
+article.main :where(.content h4, .content h5, .content h6) {
+    margin: 10pt 0pt;
+    font-weight: bold;
 }
 
 article.main .content p {
-    margin-top: 1em;
-    margin-bottom: 1em;
+    margin-top: 0;
+    margin-bottom: .5em;
     line-height: 1.5;
 }
 
 article.main .content ul {
     display: block;
     list-style-type: disc;
-    padding-inline-start: 40px;
+    padding-inline-start: 20px;
 }
 
 article.main .content ul ul {
@@ -45,11 +44,11 @@ article.main .content ul ul ul {
 article.main .content ol {
     display: block;
     list-style-type: decimal;
-    padding-inline-start: 40px;
+    padding-inline-start: 20px;
 }
 
 article.main .content li {
-    margin: 10pt 0pt;
+    margin: 5pt 0pt;
 }
 
 
