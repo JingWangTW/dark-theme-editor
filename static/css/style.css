@@ -1,5 +1,5 @@
 article.main :where(.content h1, .content h2, .content h3) {
-    margin: 20pt 0pt;
+    margin: 20pt 0;
     font-weight: bold;
 }
 
@@ -120,7 +120,7 @@ article.main div.highlight table tr {
 
 article.main table {
     display: block;
-    width: 100%;
+    max-width: 100%;
     overflow: auto;
     margin: 15pt 0pt;
 }
@@ -155,13 +155,13 @@ article.main .content blockquote p {
 }
 
 
-article.main *::-webkit-scrollbar {
+:where(article.main, article.main *)::-webkit-scrollbar {
     width: 8px;
     height: 8px;
     background-color: rgb(95, 94, 94);
 }
 
-article.main *::-webkit-scrollbar-thumb {
+:where(article.main, article.main *)::-webkit-scrollbar-thumb {
     background: rgb(139, 139, 139);
     border-radius: 10pt;
 }
