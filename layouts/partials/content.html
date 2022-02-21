@@ -5,7 +5,13 @@
             {{ .Title }}
         </h1>
 
-        <div class="date-readtime">
+        <div class="author-date-readtime">
+            {{ if isset .Params "author" }}
+            <div class="author">
+                <i class="bi bi-person"></i>
+                {{ .Params.author }}
+            </div>
+            {{ end }}
             <div class="date">
                 <i class="bi bi-calendar3"></i>
                 <time datetime="{{ .Date.Format " 2006.01.02" }}">{{ .Date.Format "2006.01.02" }}</time>
@@ -40,13 +46,15 @@
         </div>
         {{ end }}
 
-
         <div class="breadcumb">
             <i class="bi bi-folder"></i>
             {{ template "breadcrumb" . }}
         </div>
 
     </div>
+
+    {{ .TableOfContents }}
+
 
 
     <div class="content">

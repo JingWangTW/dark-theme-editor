@@ -92,8 +92,8 @@ article.main code {
 article.main div.highlight {
     margin: 10pt 0;
 }
+
 article.main div.highlight div {
-    padding: 5pt 0;
     border-radius: 5pt;
 }
 
@@ -103,7 +103,8 @@ article.main div.highlight code {
 }
 
 article.main div.highlight table {
-    overflow: hidden!important;
+    padding: 5pt!important;
+    overflow-y: hidden!important;
 }
 
 article.main div.highlight table tr {
@@ -144,4 +145,16 @@ article.main .content blockquote {
 article.main .content blockquote p {
     margin-top: .5em;
     margin-bottom: .5em;
+}
+
+
+:where(article.main, article.main table, article.main div.highlight table)::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+    background-color: rgb(95, 94, 94);
+}
+
+:where(article.main, article.main table, article.main div.highlight table)::-webkit-scrollbar-thumb {
+    background: rgb(139, 139, 139);
+    border-radius: 10pt;
 }

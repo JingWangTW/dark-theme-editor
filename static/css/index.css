@@ -147,16 +147,6 @@ article.main {
     overflow-y: auto;
 }
 
-article.main::-webkit-scrollbar{
-    width: 7px;
-    background-color: rgb(95, 94, 94);
-}
-
-article.main::-webkit-scrollbar-thumb {
-    background: rgb(139, 139, 139);
-    border-radius: 10pt;
-}
-
 article.main > div.title {
     display: flex;
     justify-content: space-between;
@@ -171,7 +161,7 @@ article.main > div.title > h1.title-header {
     margin-bottom: .5rem;
 }
 
-article.main > div.title > div.date-readtime {
+article.main > div.title > div.author-date-readtime {
     flex: 0 0 auto;
     display: flex;
     flex-direction: column;
@@ -181,7 +171,7 @@ article.main > div.title > div.date-readtime {
     color: #939bab;
 }
 
-article.main > div.title > div.date-readtime > div.date {
+article.main > div.title > div.author-date-readtime > div:not(:last-child) {
     padding-bottom: 5pt;
 }
 
