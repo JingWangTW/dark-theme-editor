@@ -9,7 +9,9 @@
             {{ if isset .Params "author" }}
             <div class="author">
                 <i class="bi bi-person"></i>
-                {{ .Params.author }}
+                <a href='{{ "author" | absURL }}/{{ .Params.author | urlize }}/' class="cat-btn">
+                    {{ .Params.author }}
+                </a>
             </div>
             {{ end }}
             <div class="date">

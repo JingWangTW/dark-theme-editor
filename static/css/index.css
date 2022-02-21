@@ -175,6 +175,10 @@ article.main > div.title > div.author-date-readtime > div:not(:last-child) {
     padding-bottom: 5pt;
 }
 
+article.main > div.title > div.author-date-readtime > div.author:hover {
+    color: white;
+}
+
 article.main > div.article-meta {
     color: #939bab;
     font-size: 1rem;
