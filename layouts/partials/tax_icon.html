@@ -1,0 +1,7 @@
+{{ if eq .Data.Singular "tag" }}
+<i class="bi bi-tag"></i>
+{{ else if eq .Data.Singular "category" }}
+<i class="bi bi-bookmark"></i>
+{{ else }}
+<i class="bi bi-person"></i>
+{{ end }}

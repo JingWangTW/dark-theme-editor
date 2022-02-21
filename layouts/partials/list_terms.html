@@ -1,0 +1,37 @@
+<article class="main">
+
+    <div class="title">
+        <h1 class="title-header">
+            {{ if eq .Data.Singular "tag" }}
+            <i class="bi bi-tags"></i>
+            {{ else if eq .Data.Singular "category" }}
+            <i class="bi bi-bookmarks"></i>
+            {{ else }}
+            <i class="bi bi-person"></i>
+            {{ end }}
+
+            All {{ pluralize .Title }}
+        </h1>
+    </div>
+
+    <div class="article-meta">
+        <div class="breadcumb">
+            <i class="bi bi-folder"></i>
+            {{ partial "breadcrumb" .}}
+        </div>
+    </div>
+
+    <div class="list-content">
+        <ul>
+            {{ range .Pages }}
+            <li>
+                {{ partial "tax_icon" . }}
+                <a href="{{ .Permalink }}">
+                    {{ .Title }}
+                </a>
+            </li>
+            {{ end }}
+        </ul>
+    </div>
+
+</article>
