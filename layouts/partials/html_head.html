@@ -47,11 +47,33 @@
             crossorigin="anonymous" referrerpolicy="no-referrer" />
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
 
-        <link rel="stylesheet" href='{{ "css/index.css" | absURL }}' />
-        <link rel="stylesheet" href='{{ "css/style.css" | absURL }}' />
 
-        <!-- custom css -->
+        {{ if hugo.IsProduction }}
+
+        <!-- Bundle all css -->
+        {{ $style := slice }}
+        {{ $style := $style | append ( resources.Get "css/index.css" | resources.Minify ) }}
+        {{ $style := $style | append ( resources.Get "css/style.css" | resources.Minify ) }}
+
+        <!-- Get all custom css -->
         {{ range .Site.Params.customCSS }}
-        <link rel="stylesheet" href='{{ "css/" | absURL }}{{ . }}' />
+        {{ $style := $style | append ( resources.Get . | resources.Minify ) }}
         {{ end }}
+
+        <!-- Concat to a single file -->
+        {{ $style := $style | resources.Concat "css/index.css" | resources.Fingerprint "sha512" }}
+
+        <link rel="stylesheet" href="{{ $style.Permalink }}" integrity="{{ $style.Data.Integrity }}" />
+        {{ else }}
+
+        <link rel="stylesheet" href='{{ "css/index.css" | absURL }}' />
+        <link rel="stylesheet" href=' {{ "css/style.css" | absURL }}' />
+
+        <!-- Get all custom css -->
+        {{ range .Site.Params.customCSS }}
+        <link rel="stylesheet" href='{{ . | absURL }}' />
+        {{ end }}
+
+        {{ end }}
+
     </head>

@@ -1,8 +1,29 @@
-<script src='{{ "index.js" | absURL }}'></script>
+{{ if hugo.IsProduction }}
+
+<!-- Bundle all css -->
+{{ $script := slice }}
+{{ $script := $script | append ( resources.Get "index.js" | resources.Minify ) }}
+
+<!-- Get all custom JS -->
+{{ range .Site.Params.customJS }}
+{{ $script = $script | append (resources.Get . | resources.Minify ) }}
+{{ end }}
+
+<!-- Concat to a single file -->
+{{ $script := $script | resources.Concat "js/index.js" | resources.Fingerprint "sha512" }}
+
+<script type="text/javascript" src="{{ $script.Permalink }}" integrity="{{ $script.Data.Integrity }}"></script>
+
+{{ else }}
+
+<script type="text/javascript" src='{{ "index.js" | absURL }}'></script>
 
 <!-- custom JS -->
 {{ range .Site.Params.customJS }}
-<script src='{{ "js/" | absURL }}{{ . }}'></script>
+<script type="text/javascript" src='{{ . | absURL }}'></script>
 {{ end }}
+
+{{ end }}
+
 
 </html>
