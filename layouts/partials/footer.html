@@ -2,18 +2,18 @@
     <div class="footer-left">
         <ul class="control social clearfix">
             <li> {{ .Site.Params.AuthorName }} </a>
-            {{ range $key, $val := .Site.Social }}
+                {{ range $key, $val := .Site.Social }}
                 {{ with $val }}
-                    <li>
-                        <a href="{{ $val }}" target="_blank">
-                            {{ if eq $key "email" }}
-                                <i class="bi-envelope"></i>
-                            {{ else }}
-                                <i class="bi-{{ $key }}"></i>
-                            {{ end }}
-                        </a>
-                    </li>
-                {{ end }}
+            <li>
+                <a href="{{ $val }}" target="_blank">
+                    {{ if eq $key "email" }}
+                    <i class="bi-envelope"></i>
+                    {{ else }}
+                    <i class="bi-{{ $key }}"></i>
+                    {{ end }}
+                </a>
+            </li>
+            {{ end }}
             {{ end }}
         </ul>
     </div>
@@ -22,32 +22,33 @@
         <ul class="control status clearfix">
             <li>
                 {{ if .IsPage }}
-                    Word Count: {{ .WordCount }}
+                Word Count: {{ .WordCount }}
                 {{ else if .IsSection }}
-                    Pages In Section:
-                    {{ len (where (where .Site.RegularPages "Section" .CurrentSection) "Params.hidden" "!=" true) }}</a>
+                Pages In Section:
+                {{ len (where (where .Site.RegularPages "Section" .CurrentSection) "Params.hidden" "!=" true) }}</a>
                 {{ else if .IsHome }}
-                    Pages:
-                    {{ len (where .Site.RegularPages "Params.hidden" "!=" true) }}
+                Pages:
+                {{ len (where .Site.RegularPages "Params.hidden" "!=" true) }}
                 {{ end }}
             </li>
             <li> {{ .Site.Language.Lang }} </li>
             <li><a href="https://gohugo.io" class="btn">Hugo: {{ hugo.Version }}</a></li>
             <li><a href="https://github.com/sfengyuan/edidor" class="btn">Theme: Edidor</a></li>
             <li>
-                {{ if .IsHome }}
-                    {{with hugo.BuildDate }}
-                        Last build: 
-                        <time datetime="{{ dateFormat "2000-00-00T00:00:00Z0000" hugo.BuildDate | safeHTML }}">{{ dateFormat "2000-00-00T00:00:00Z0000" hugo.BuildDate | safeHTML }}</time>
-                        </a>
-                    {{ end}}
+                {{ if or (.IsHome) (.IsNode) }}
+                {{with hugo.BuildDate }}
+                Last build:
+                <time datetime="{{ dateFormat " 2000-00-00T00:00:00Z0000" hugo.BuildDate | safeHTML }}">{{ dateFormat
+                    "2000-00-00T00:00:00Z0000" hugo.BuildDate | safeHTML }}</time>
+                </a>
+                {{ end}}
                 {{ else }}
-                    Last modified: 
-                        <time datetime="{{ dateFormat "2000-00-00T00:00:00Z0000" .Lastmod | safeHTML }}">{{ dateFormat "2000-00-00T00:00:00Z0000" .Lastmod | safeHTML }}</time>
+                Last modified:
+                <time datetime="{{ dateFormat " 2000-00-00T00:00:00Z0000" .Lastmod | safeHTML }}">{{ dateFormat
+                    "2000-00-00T00:00:00Z0000" .Lastmod | safeHTML }}</time>
                 {{ end }}
             </li>
             <li> {{ .Site.Copyright }} </li>
         </ul>
     </div>
 </footer>
-
