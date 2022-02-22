@@ -1,9 +1,13 @@
 <footer class="footer">
     <div class="footer-left">
-        <ul class="control social clearfix">
-            <li> {{ .Site.Params.AuthorName }} </a>
-                {{ range $key, $val := .Site.Social }}
-                {{ with $val }}
+        <ul class="social">
+            {{ with $.Site.Copyright }}
+            <li> {{ $.Site.Copyright }} </li>
+            {{ end }}
+
+            <li> {{ .Site.Params.AuthorName }} </li>
+            {{ range $key, $val := .Site.Social }}
+            {{ with $val }}
             <li>
                 <a href="{{ $val }}" target="_blank">
                     {{ if eq $key "email" }}
@@ -25,10 +29,13 @@
                 Word Count: {{ .WordCount }}
                 {{ else if .IsSection }}
                 Pages In Section:
-                {{ len (where (where .Site.RegularPages "Section" .CurrentSection) "Params.hidden" "!=" true) }}</a>
+                {{ len (where .Pages "Params.hidden" "!=" true) }}</a>
                 {{ else if .IsHome }}
-                Pages:
+                All Pages:
                 {{ len (where .Site.RegularPages "Params.hidden" "!=" true) }}
+                {{ else if .IsNode }}
+                All Pages:
+                {{ len (where .Pages "Params.hidden" "!=" true) }}</a>
                 {{ end }}
             </li>
             <li> {{ .Site.Language.Lang }} </li>
@@ -37,18 +44,12 @@
             <li>
                 {{ if or (.IsHome) (.IsNode) }}
                 {{with hugo.BuildDate }}
-                Last build:
-                <time datetime="{{ dateFormat " 2000-00-00T00:00:00Z0000" hugo.BuildDate | safeHTML }}">{{ dateFormat
-                    "2000-00-00T00:00:00Z0000" hugo.BuildDate | safeHTML }}</time>
-                </a>
+                Last build: <time>{{ time hugo.BuildDate | safeHTML }}</time>
                 {{ end}}
                 {{ else }}
-                Last modified:
-                <time datetime="{{ dateFormat " 2000-00-00T00:00:00Z0000" .Lastmod | safeHTML }}">{{ dateFormat
-                    "2000-00-00T00:00:00Z0000" .Lastmod | safeHTML }}</time>
+                Last modified: <time>{{ time .Lastmod | safeHTML }}</time>
                 {{ end }}
             </li>
-            <li> {{ .Site.Copyright }} </li>
         </ul>
     </div>
 </footer>
