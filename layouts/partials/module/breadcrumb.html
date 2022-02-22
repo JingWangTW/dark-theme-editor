@@ -1,7 +1,7 @@
 {{ if .Parent }}
-{{ partial "breadcrumb" .Parent }}
+{{ partial "module/breadcrumb" .Parent }}
 {{ else if not .IsHome }}
-{{ partial "breadcrumb" .Site.Home }}
+{{ partial "module/breadcrumb" .Site.Home }}
 {{ end }}
 
 {{ if not .IsHome}}

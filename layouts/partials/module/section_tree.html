@@ -18,7 +18,7 @@
     <li class="dir closed-dir">
         {{ end }}
         <span class="dir-text"> {{ .Title }} </span>
-        {{ partial "section_tree" ( dict "context" . "currentPage" $currentPage ) }}
+        {{ partial "module/section_tree" ( dict "context" . "currentPage" $currentPage ) }}
     </li>
     {{else}}
     <li class="file">

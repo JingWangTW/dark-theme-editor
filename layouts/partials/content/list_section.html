@@ -9,12 +9,12 @@
     <div class="article-meta">
         <div class="breadcumb">
             <i class="bi bi-folder"></i>
-            {{ partial "breadcrumb" .}}
+            {{ partial "module/breadcrumb" .}}
         </div>
     </div>
 
     <div class="list-content">
-        {{ partial "section_tree" ( dict "context" . "currentPage" . ) }}
+        {{ partial "module/section_tree" ( dict "context" . "currentPage" . ) }}
     </div>
 
 </article>
