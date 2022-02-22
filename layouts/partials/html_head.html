@@ -7,7 +7,30 @@
         <meta name="viewport" content="width=device-width, initial-scale=1" />
 
         {{ hugo.Generator }}
+
+        {{ if .IsPage }}
+        {{ if .Description }}
+        <meta name="description" content="{{ .Description }}">
+        {{ else }}
+        <meta name="description" content="{{ .Summary }}">
+        {{ end }}
+
+        {{ if isset .Params "keywords" }}
+        <meta name="keywords" content='{{ delimit .Keywords ","}}'>
+        {{ end }}
+
+        {{ if isset .Params "author" }}
+        <meta name="author" content="{{ .Params.author }}">
+        {{ else }}
+        <meta name="author" content="{{ .Site.Params.AuthorName }}">
+        {{ end }}
+        {{ else }}
+        {{ with .Site.Params.Description }}
         <meta name="description" content="{{ .Site.Params.Description }}">
+        {{ end }}
+
+        <meta name="author" content="{{ .Site.Params.AuthorName }}">
+        {{end}}
 
         <title>
             {{ if .IsHome }}
