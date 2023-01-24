@@ -10,8 +10,14 @@
 
 <a href="{{ .Permalink }}" class="bread-btn">
     {{ if .IsHome}}
-    Home
+        <i class="bi bi-house-fill"></i>
+    {{ else if eq .Kind "taxonomy" }}
+        {{ partial "module/tax_icon" . }}
+    {{end}}
+        
+    {{ if .IsHome}}
+        Home
     {{ else }}
-    {{ .Title }}
+        {{ .Title }}
     {{end}}
 </a>

@@ -18,6 +18,12 @@ function sidebarExpanding(e) {
         console.log("calc( " + articlePercentage + "% - 3pt - 4% - 1px);");
 
         document.querySelector("aside.sidebar").style.width = `${sidebarPercentage}%`;
+
+        /*
+            3pt: expand bar
+            4%: <article> padding
+            1px: dummpy
+        */
         document.querySelector("article.main").style.width = `calc( ${articlePercentage}% - 3pt - 4% - 1px )`;
     }
 }
