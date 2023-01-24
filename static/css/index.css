@@ -4,39 +4,49 @@
     layout
 ***************/
 header {
-    height: 4vh;
+    height: 3vh;
 }
 
 main {
-    height: 92vh;
+    height: 94vh;
     display: flex;
 }
 
-aside {
-    flex: 0 1 20vw;
+aside.sidebar {
+    width: 15%;
 }
 
 article {
-    flex: 0 1 80vw;
+    /*
+        3pt: expand bar
+        4%: <article> padding
+        1px: dummpy
+    */
+    width: calc(85% - 3pt - 4% - 1px);
 }
 
 footer {
-    height: 4vh;
+    height: 3vh;
 }
 
 /**************
     Styling
 ***************/
 
-a, a:link, a:visited, a:hover, a:active {
+a,
+a:link,
+a:visited,
+a:hover,
+a:active {
     text-decoration: none;
     color: inherit;
 }
 
 body {
-    background-color: #282C34;
+    background-color: #282c34;
     font-size: 16px;
-    font-family: system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans","Liberation Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+    font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif,
+        "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
     overflow: hidden;
 }
 
@@ -50,7 +60,7 @@ header {
 header div {
     vertical-align: middle;
     text-align: center;
-    line-height: 4vh;
+    line-height: 3vh;
     height: 100%;
 }
 
@@ -66,14 +76,20 @@ header div.header_left img.logo {
 }
 
 /*** sidebar ***/
-aside {
-    border-right: 1pt solid rgb(59, 59, 59);
+aside.exapandable {
+    width: 3pt;
+    background-color: rgb(59, 59, 59);
+    cursor: col-resize;
+}
+
+aside.exapandable:hover {
+    background-color: rgb(99, 99, 99);
 }
 
 ul.sidebar-list > li.dir {
     padding-left: 10pt;
     padding-top: 10pt;
-    color: grey;   
+    color: grey;
 }
 
 ul.sidebar-list > li.dir > span.dir-text {
@@ -86,27 +102,31 @@ ul.sidebar-list > li.dir > span.dir-text:hover {
 }
 
 ul.sidebar-list > li.closed-dir::before {
-    content: ' ';
+    content: " ";
     border-color: white;
     border-width: 1pt 1pt 0 0;
     border-style: solid;
     padding: 3pt;
     transform: rotate(45deg);
     display: inline-block;
+    position: relative;
+    bottom: 1pt;
 }
 
 ul.sidebar-list > li.closed-dir > ul {
     display: none;
 }
 
-ul.sidebar-list > li.open-dir::before {
-    content: ' ';
+ul.sidebar-list > li.opened-dir::before {
+    content: " ";
     border-color: white;
     border-width: 1pt 1pt 0 0;
     border-style: solid;
     padding: 3pt;
     transform: rotate(135deg);
     display: inline-block;
+    position: relative;
+    bottom: 3pt;
 }
 
 ul.sidebar-list > li.file {
@@ -137,13 +157,11 @@ ul.sidebar-list ul.sidebar-list > li.file {
     padding-left: 10pt;
 }
 
-
 /*** main content ***/
 article.main {
     text-align: left;
     color: #c6c6c7;
-
-    padding: 3vw;
+    padding: 2%;
     overflow-y: auto;
 }
 
@@ -158,7 +176,7 @@ article.main > div.title > h1.title-header {
 
     font-size: 2rem;
     font-weight: bold;
-    margin-bottom: .5rem;
+    margin-bottom: 0.5rem;
 }
 
 article.main > div.title > div.author-date-readtime {
@@ -167,7 +185,7 @@ article.main > div.title > div.author-date-readtime {
     flex-direction: column;
     align-items: flex-end;
 
-    font-size: .9rem;
+    font-size: 0.9rem;
     color: #939bab;
 }
 
@@ -249,14 +267,14 @@ article.main > nav#TableOfContents a:hover {
 }
 
 article.main > div.list-content > ul {
-    font-size: 14pt;;
+    font-size: 14pt;
 }
 
 article.main > div.list-content > ul > li {
     margin-bottom: 15pt;
 }
 
-article.main > div.list-content > ul > li:hover{
+article.main > div.list-content > ul > li:hover {
     color: white;
 }
 
@@ -270,7 +288,7 @@ article.main > div.list-content ul.sidebar-list ul {
     margin-left: 25px;
 }
 
-article.main > div.list-content ul.sidebar-list li{
+article.main > div.list-content ul.sidebar-list li {
     padding-left: 0;
 }
 
@@ -303,7 +321,6 @@ footer > div > ul {
 footer > div > ul > li {
     flex: 0 0 auto;
     padding: 0 5pt;
-    
     display: inline-flex;
     align-items: center;
     cursor: default;
