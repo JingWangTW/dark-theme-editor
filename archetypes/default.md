@@ -1,6 +1,11 @@
 ---
 title: "{{ replace .Name "-" " " | title }}"
 date: {{ .Date }}
-draft: true
+author: {{ .Site.Params.AuthorName }}
+tags: ["put", "some", "tags", "here"]
+categories: ["catgorized", "the", "page"]
+draft: false
+include_toc: true
 ---
+
 
