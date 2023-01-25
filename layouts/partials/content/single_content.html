@@ -52,8 +52,11 @@
             <i class="bi bi-folder"></i>
             {{ partial "module/breadcrumb" . }}
         </div>
-
     </div>
+    
+    {{ if .Params.include_toc }}
+        {{ .TableOfContents }}
+    {{ end }}
 
     <div class="content">
         {{ if .Content }}
