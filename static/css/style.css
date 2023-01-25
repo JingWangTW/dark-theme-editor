@@ -1,5 +1,12 @@
+article.main .content * {
+    line-height: 14pt;
+}
+
 article.main :where(.content h1, .content h2, .content h3) {
-    margin: 20pt 0;
+    margin-top: 20pt;
+    margin-right: 0;
+    margin-bottom: 20pt;
+    margin-left: -8pt;
     font-weight: bold;
 }
 
@@ -12,7 +19,7 @@ article.main .content h1 {
     padding-bottom: 10pt;
 }
 
-article.main .content h3  {
+article.main .content h3 {
     font-size: 1.3rem;
 }
 
@@ -23,8 +30,8 @@ article.main :where(.content h4, .content h5, .content h6) {
 
 article.main .content p {
     margin-top: 0;
-    margin-bottom: .5em;
-    line-height: 1.5;
+    margin-bottom: 0.5em;
+    line-height: 20pt;
 }
 
 article.main .content ul {
@@ -48,9 +55,8 @@ article.main .content ol {
 }
 
 article.main .content li {
-    margin: 5pt 0pt;
+    margin: 8pt 0pt;
 }
-
 
 article.main .content img {
     height: auto;
@@ -88,7 +94,7 @@ article.main .content hr {
 
 /* small code span */
 article.main code {
-    padding: 0.1em 0;   
+    padding: 0.1em 0;
     font-size: 85%;
     background-color: rgb(92 92 92);
     border-radius: 3px;
@@ -110,8 +116,8 @@ article.main div.highlight code {
 }
 
 article.main div.highlight table {
-    padding: 5pt!important;
-    overflow-y: hidden!important;
+    padding: 5pt !important;
+    overflow-y: hidden !important;
 }
 
 article.main div.highlight table tr {
@@ -150,10 +156,9 @@ article.main .content blockquote {
 }
 
 article.main .content blockquote p {
-    margin-top: .5em;
-    margin-bottom: .5em;
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
 }
-
 
 :where(article.main, article.main *)::-webkit-scrollbar {
     width: 8px;
