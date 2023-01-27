@@ -254,15 +254,15 @@ article.main > nav#TableOfContents ul ul ul {
 }
 
 article.main > nav#TableOfContents li {
-    margin: 5pt 0pt;
+    margin: 8pt 0pt;
 }
 
 article.main > nav#TableOfContents a {
-    color: #337ab7;
+    color: #4398e5;
 }
 
 article.main > nav#TableOfContents a:hover {
-    color: #4398e5;
+    color: #7fb8ee;
     text-decoration: underline;
 }
 

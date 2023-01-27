@@ -1,129 +1,103 @@
-article.main .content * {
+article.main div.content * {
     line-height: 14pt;
 }
 
-article.main :where(.content h1, .content h2, .content h3) {
-    margin-top: 20pt;
-    margin-right: 0;
-    margin-bottom: 20pt;
-    margin-left: -8pt;
+article.main div.content :where(h1, h2, h3) {
+    margin: 24pt 0;
     font-weight: bold;
 }
 
-article.main :where(.content h1, .content h2) {
+article.main div.content :where(h1, h2) {
     font-size: 1.8rem;
 }
 
-article.main .content h1 {
+article.main div.content h1 {
     border-bottom: 1.5pt solid #5c5e60;
-    padding-bottom: 10pt;
+    padding-bottom: 15pt;
 }
 
-article.main .content h3 {
+article.main div.content h3 {
     font-size: 1.3rem;
 }
 
-article.main :where(.content h4, .content h5, .content h6) {
-    margin: 10pt 0pt;
+article.main div.content :where(h4, h5, h6) {
+    margin: 15pt 0pt;
     font-weight: bold;
 }
 
-article.main .content p {
-    margin-top: 0;
+article.main div.content p {
+    line-height: 22pt;
+    text-align: justify;
+    margin-top: 0.5em;
     margin-bottom: 0.5em;
-    line-height: 20pt;
 }
 
-article.main .content ul {
+article.main div.content p + p {
+    margin-top: 2em;
+}
+
+article.main div.content a {
+    color: #4398e5;
+}
+
+article.main div.content a:hover {
+    color: #7fb8ee;
+    text-decoration: underline;
+}
+
+article.main div.content ul {
     display: block;
     list-style-type: disc;
     padding-inline-start: 20px;
+    padding-left: 2em;
 }
 
-article.main .content ul ul {
+article.main div.content ul ul {
     list-style-type: circle;
 }
 
-article.main .content ul ul ul {
+article.main div.content ul ul ul {
     list-style-type: square;
 }
 
-article.main .content ol {
+article.main div.content ol {
     display: block;
     list-style-type: decimal;
     padding-inline-start: 20px;
+    padding-left: 2em;
 }
 
-article.main .content li {
+article.main div.content li {
     margin: 8pt 0pt;
 }
 
-article.main .content img {
+article.main div.content img {
     height: auto;
     width: 100%;
 }
 
-article.main .content em {
+article.main div.content em {
     font-style: italic;
 }
 
-article.main .content strong {
+article.main div.content strong {
     font-weight: bold;
+    font-size: 106%;
+    color: #c8c8c8;
 }
 
-article.main .content del {
+article.main div.content del {
     text-decoration: line-through;
 }
 
-article.main .content a {
-    color: #337ab7;
-}
-
-article.main .content a:hover {
-    color: #4398e5;
-    text-decoration: underline;
-}
-
-article.main .content hr {
+article.main div.content hr {
     height: 0.1em;
     background-color: #525252;
     margin: 12pt 0;
     padding: 0;
     border: 0;
 }
-
-/* small code span */
-article.main code {
-    padding: 0.1em 0;
-    font-size: 85%;
-    background-color: rgb(92 92 92);
-    border-radius: 3px;
-    font-family: Menlo, Monaco, Consolas, "Courier New", monospace;
-}
-
-/* large code block */
-article.main div.highlight {
-    margin: 10pt 0;
-}
-
-article.main div.highlight div {
-    border-radius: 5pt;
-}
-
-article.main div.highlight code {
-    background: none;
-    border-radius: 0;
-}
-
-article.main div.highlight table {
-    padding: 5pt !important;
-    overflow-y: hidden !important;
-}
-
-article.main div.highlight table tr {
-    border: none;
-}
-
+/* table */
 article.main table {
     display: block;
     max-width: 100%;
@@ -132,34 +106,132 @@ article.main table {
 }
 
 article.main table tr {
-    border-top: 1px solid #726f6f;
+    border-bottom: 1px solid #726f6f;
 }
 
 article.main table th {
     font-weight: bold;
+    font-size: 106%;
+    color: #c8c8c8;
 }
 
 article.main table th,
 article.main table td {
-    padding: 6px 13px;
-    border: 1px solid #726f6f;
+    padding: 0.8em 1.4em;
+}
+
+article.main table thead tr:last-child {
+    border-bottom-style: double;
+    border-bottom-width: 4px;
+}
+
+article.main table tbody tr:last-child {
+    border-bottom: none;
 }
 
 article.main table tbody tr:nth-child(2n) {
-    background-color: #404040;
+    background-color: #202020;
 }
 
-article.main .content blockquote {
-    padding: 0 0.5em;
-    border-left: 0.18em solid #5c5c5c;
-    color: #817c7c;
+/* small code span */
+article.main div.content :where(pre, code) {
+    font-family: Menlo, Monaco, Consolas, "Courier New", monospace;
 }
 
-article.main .content blockquote p {
+article.main div.content code:not(div.highlight code) {
+    padding: 0.2em 0.4em;
+    font-size: 85%;
+    background-color: rgb(92 92 92);
+    border-radius: 10px;
+}
+
+/* Code block indented with four spaces */
+article.main div.content pre:not(div.highlight pre) {
+    border: 1.5pt solid #5c5e60;
+    border-radius: 10px;
+    padding: 1em;
+}
+
+article.main div.content pre:not(div.highlight pre) > code {
+    border: none;
+    padding: 0;
+    font-size: 100%;
+    background-color: transparent;
+}
+
+/* large code block */
+article.main div.content div.highlight div {
+    border-radius: 10pt;
+    padding-top: 0.5em;
+    padding-bottom: 0.5em;
+}
+
+article.main div.content div.highlight code {
+    background: none;
+    border-radius: 0;
+}
+
+article.main div.content div.highlight table {
+    padding: 5pt !important;
+    overflow-y: hidden !important;
+}
+
+article.main div.content div.highlight table tr {
+    border: none;
+}
+
+article.main div.content blockquote {
+    padding: 0 1em;
+    border-left: 0.2em solid #727272;
+    color: #ada9a9;
+    margin-top: 2em;
+    margin-bottom: 2em;
+    margin-left: 1em;
+}
+
+article.main div.content blockquote blockquote {
+    margin-top: 0;
+}
+
+article.main div.content blockquote p {
+    padding-top: 0.2em;
+    padding-bottom: 0.2em;
+}
+
+article.main div.content blockquote blockquote p {
+    padding-top: 0.1em;
     margin-top: 0.5em;
-    margin-bottom: 0.5em;
 }
 
+/* definition tags <dt>, <dd> */
+article.main dt {
+    font-weight: bold;
+    font-size: 106%;
+    color: #c8c8c8;
+}
+
+article.main dd {
+    margin-bottom: 1em;
+    margin-left: 0.5em;
+}
+
+/* superscript, subscript */
+article.main sup {
+    vertical-align: super;
+    font-size: 80%;
+}
+
+article.main sub {
+    vertical-align: sub;
+    font-size: 80%;
+}
+
+/* footnore */
+article.main div.footnotes p {
+    margin: 0;
+}
+
+/* scrollbar */
 :where(article.main, article.main *)::-webkit-scrollbar {
     width: 8px;
     height: 8px;
