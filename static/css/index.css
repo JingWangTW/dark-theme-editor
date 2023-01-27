@@ -4,11 +4,11 @@
     layout
 ***************/
 header {
-    height: 3vh;
+    height: 3%;
 }
 
 main {
-    height: 94vh;
+    height: 94%;
     display: flex;
 }
 
@@ -26,7 +26,7 @@ article {
 }
 
 footer {
-    height: 3vh;
+    height: 3%;
 }
 
 /**************

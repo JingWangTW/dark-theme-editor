@@ -198,6 +198,10 @@ article.main div.content blockquote p {
     padding-bottom: 0.2em;
 }
 
+article.main div.content blockquote p + p {
+    margin-top: 0.5em;
+}
+
 article.main div.content blockquote blockquote p {
     padding-top: 0.1em;
     margin-top: 0.5em;
