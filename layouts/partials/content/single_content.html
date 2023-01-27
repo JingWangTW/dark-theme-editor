@@ -1,5 +1,9 @@
 <article class="main">
 
+    <button class="sidebar-toggle-btn" type="menu" aria-expanded="false" aria-haspopup="true">
+        <i class="bi bi-list"></i>
+    </button>
+
     <div class="title">
         <h1 class="title-header">
             {{ .Title }}
@@ -20,7 +24,7 @@
             </div>
             <div class="readtime">
                 <i class="bi bi-clock"></i>
-                {{ .Page.ReadingTime }} min to read
+                {{ .Page.ReadingTime }} min{{ cond (eq .Page.ReadingTime 1) "" "s" }} to read
             </div>
         </div>
     </div>

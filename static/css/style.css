@@ -98,38 +98,37 @@ article.main div.content hr {
     border: 0;
 }
 /* table */
-article.main table {
+article.main div.content table {
     display: block;
     max-width: 100%;
     overflow: auto;
     margin: 15pt 0pt;
 }
 
-article.main table tr {
+article.main div.content table tr {
     border-bottom: 1px solid #726f6f;
 }
 
-article.main table th {
+article.main div.content table th {
     font-weight: bold;
     font-size: 106%;
     color: #c8c8c8;
 }
 
-article.main table th,
-article.main table td {
+article.main div.content table :where(th, td) {
     padding: 0.8em 1.4em;
 }
 
-article.main table thead tr:last-child {
+article.main div.content table thead tr:last-child {
     border-bottom-style: double;
     border-bottom-width: 4px;
 }
 
-article.main table tbody tr:last-child {
+article.main div.content table tbody tr:last-child {
     border-bottom: none;
 }
 
-article.main table tbody tr:nth-child(2n) {
+article.main div.content table tbody tr:nth-child(2n) {
     background-color: #202020;
 }
 
@@ -150,6 +149,7 @@ article.main div.content pre:not(div.highlight pre) {
     border: 1.5pt solid #5c5e60;
     border-radius: 10px;
     padding: 1em;
+    overflow: auto;
 }
 
 article.main div.content pre:not(div.highlight pre) > code {
@@ -208,30 +208,30 @@ article.main div.content blockquote blockquote p {
 }
 
 /* definition tags <dt>, <dd> */
-article.main dt {
+article.main div.content dt {
     font-weight: bold;
     font-size: 106%;
     color: #c8c8c8;
 }
 
-article.main dd {
+article.main div.content dd {
     margin-bottom: 1em;
     margin-left: 0.5em;
 }
 
 /* superscript, subscript */
-article.main sup {
+article.main div.content sup {
     vertical-align: super;
     font-size: 80%;
 }
 
-article.main sub {
+article.main div.content sub {
     vertical-align: sub;
     font-size: 80%;
 }
 
 /* footnore */
-article.main div.footnotes p {
+article.main div.content div.footnotes :where(p, p + p) {
     margin: 0;
 }
 

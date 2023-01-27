@@ -3,6 +3,11 @@
 /**************
     layout
 ***************/
+body {
+    height: 100vh;
+    max-height: 100vh;
+}
+
 header {
     height: 3%;
 }
@@ -165,6 +170,10 @@ article.main {
     overflow-y: auto;
 }
 
+article.main > button.sidebar-toggle-btn {
+    display: none;
+}
+
 article.main > div.title {
     display: flex;
     justify-content: space-between;
@@ -184,13 +193,12 @@ article.main > div.title > div.author-date-readtime {
     display: flex;
     flex-direction: column;
     align-items: flex-end;
-
     font-size: 0.9rem;
     color: #939bab;
 }
 
-article.main > div.title > div.author-date-readtime > div:not(:last-child) {
-    padding-bottom: 5pt;
+article.main > div.title > div.author-date-readtime > div:not(:first-child) {
+    padding-top: 1em;
 }
 
 article.main > div.title > div.author-date-readtime > div.author:hover {
@@ -200,6 +208,7 @@ article.main > div.title > div.author-date-readtime > div.author:hover {
 article.main > div.article-meta {
     color: #939bab;
     font-size: 1rem;
+    margin-top: -2em;
 }
 
 article.main > div.article-meta > div {
@@ -337,4 +346,123 @@ footer > div.footer-left > ul {
 
 footer > div.footer-right > ul {
     justify-content: flex-end;
+}
+
+/* responsive style */
+@media only screen and (max-width: 900px) {
+    /* release the static layout*/
+    body {
+        height: 100%;
+        max-height: 100%;
+        overflow-y: auto;
+    }
+
+    main:has(article.main > button.sidebar-toggle-btn[aria-expanded="true"]) {
+        width: 130%;
+    }
+
+    /* remove the sidebar */
+    aside:where(.exapandable, .sidebar) {
+        display: none;
+    }
+
+    aside.sidebar {
+        width: 30%;
+    }
+
+    /* Add some padding */
+    article.main {
+        padding: 4vw;
+
+        /*
+            8vw: <article> padding
+            1px: dummpy
+        */
+        width: calc(100% - 8vw - 1px);
+    }
+
+    /* show the navbar button */
+    article.main > button.sidebar-toggle-btn {
+        background-color: #282c34;
+        border: 1px solid grey;
+        border-radius: 20%;
+        padding: 0.2em;
+        color: #c6c6c7;
+        font-size: 22pt;
+        line-height: 0.6em;
+        display: block;
+        position: fixed;
+        top: 40px;
+        right: 20px;
+    }
+
+    article.main > button.sidebar-toggle-btn:where(:hover, :active) {
+        color: white;
+        border-color: white;
+        border-width: 2px;
+    }
+
+    /* move the position of article information */
+    article.main > div.title {
+        flex-direction: column;
+    }
+
+    article.main > div.title > div.author-date-readtime {
+        flex-direction: row;
+    }
+
+    article.main > div.title > div.author-date-readtime > div {
+        padding-top: 0;
+        padding-right: 2em;
+    }
+
+    article.main > div.article-meta {
+        margin-top: 0.2em;
+    }
+
+    /* remove the info part in the footer */
+    footer > div.footer-right {
+        display: none;
+    }
+}
+
+/* responsive style */
+@media only screen and (max-width: 700px) {
+    main:has(article.main > button.sidebar-toggle-btn[aria-expanded="true"]) {
+        width: 150%;
+    }
+
+    aside.sidebar {
+        width: 50%;
+    }
+}
+
+@media only screen and (max-width: 440px) {
+    main:has(article.main > button.sidebar-toggle-btn[aria-expanded="true"]) {
+        width: 180%;
+    }
+
+    /* Add some padding */
+    article.main {
+        padding: 6vw;
+
+        /*
+            8vw: <article> padding
+            1px: dummpy
+        */
+        width: calc(100% - 12vw - 1px);
+    }
+
+    article.main > div.title > div.author-date-readtime {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    article.main > div.title > div.author-date-readtime > div {
+        padding-top: 1em;
+    }
+
+    aside.sidebar {
+        width: 80%;
+    }
 }
