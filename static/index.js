@@ -1,15 +1,16 @@
-let sidebarExpand = false;
+let isSidebarExpand = false;
+let isSidebarShow = false;
 
-function sidebarExpandStart() {
-    sidebarExpand = true;
+function isSidebarExpandStart() {
+    isSidebarExpand = true;
 }
 
-function sidebarExpandEnd() {
-    sidebarExpand = false;
+function isSidebarExpandEnd() {
+    isSidebarExpand = false;
 }
 
-function sidebarExpanding(e) {
-    if (!sidebarExpand) return;
+function isSidebarExpanding(e) {
+    if (!isSidebarExpand) return;
 
     const sidebarPercentage = (e.pageX / window.innerWidth) * 100;
 
@@ -30,24 +31,29 @@ function sidebarExpanding(e) {
 
 function showSidebar() {
     document.querySelector("aside.sidebar").style.display = "block";
-    document.querySelector("aside.exapandable").style.display = "block";
-    document.querySelector("button.sidebar-toggle-btn").setAttribute("aria-expanded", true);
+
+    isSidebarShow = true;
+    document.querySelector("button.sidebar-toggle-btn").setAttribute("aria-expanded", "true");
 }
 
 function hideSidebar() {
-    document.querySelector("aside.sidebar").style.display = "none";
-    document.querySelector("aside.exapandable").style.display = "none";
-    document.querySelector("button.sidebar-toggle-btn").setAttribute("aria-expanded", false);
+    if (isSidebarShow) {
+        // remove the attribute instead, if set to "hudden", it would overwrite the rule in css.
+        document.querySelector("aside.sidebar").style.display = "";
+
+        isSidebarShow = false;
+        document.querySelector("button.sidebar-toggle-btn").setAttribute("aria-expanded", "false");
+    }
 }
 
 window.addEventListener("load", function () {
     // sidebar expanble
-    document.querySelector("aside.exapandable").addEventListener("mousedown", sidebarExpandStart);
-    document.querySelector("aside.exapandable").addEventListener("touchstart", sidebarExpandStart);
-    window.addEventListener("mousemove", sidebarExpanding);
-    window.addEventListener("touchmove", sidebarExpanding);
-    window.addEventListener("mouseup", sidebarExpandEnd);
-    window.addEventListener("touchend", sidebarExpandEnd);
+    document.querySelector("aside.exapandable").addEventListener("mousedown", isSidebarExpandStart);
+    document.querySelector("aside.exapandable").addEventListener("touchstart", isSidebarExpandStart);
+    window.addEventListener("mousemove", isSidebarExpanding);
+    window.addEventListener("touchmove", isSidebarExpanding);
+    window.addEventListener("mouseup", isSidebarExpandEnd);
+    window.addEventListener("touchend", isSidebarExpandEnd);
 
     // responsive sidebar
     document.querySelector("button.sidebar-toggle-btn").addEventListener("click", (event) => {
@@ -58,6 +64,20 @@ window.addEventListener("load", function () {
             hideSidebar();
         } else {
             showSidebar();
+        }
+    });
+
+    this.document.querySelector("article.main:where(:not(button), :not(a))").addEventListener("click", hideSidebar);
+    this.document.querySelector("article.main:where(:not(button), :not(a))").addEventListener("touchstart", hideSidebar);
+    this.document.querySelector("article.main:where(:not(button), :not(a))").addEventListener("mousedown", hideSidebar);
+
+    // remove generated element style when windows enlarge
+    this.window.addEventListener("resize", () => {
+        if (window.innerWidth > 900) {
+            isSidebarShow = false;
+
+            document.querySelector("aside.sidebar").style.display = "";
+            document.querySelector("button.sidebar-toggle-btn").setAttribute("aria-expanded", "false");
         }
     });
 

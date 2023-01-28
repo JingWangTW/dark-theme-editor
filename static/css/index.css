@@ -215,6 +215,10 @@ article.main > div.article-meta > div {
     padding-bottom: 20pt;
 }
 
+article.main > div.article-meta > div:only-child {
+    padding-top: 20pt;
+}
+
 article.main > div.article-meta a {
     padding: 2pt 10pt;
     margin: 0pt 5pt;
@@ -357,8 +361,28 @@ footer > div.footer-right > ul {
         overflow-y: auto;
     }
 
+    /* sticky header */
+    header {
+        height: 6vh;
+        position: sticky;
+        top: 0px;
+        width: 100%;
+        font-size: 10pt;
+        background-color: #282c34;
+        text-overflow: ellipsis;
+        overflow: hidden;
+    }
+
+    header div {
+        line-height: 6vh;
+    }
+
+    /* Slide sidebar */
     main:has(article.main > button.sidebar-toggle-btn[aria-expanded="true"]) {
         width: 130%;
+
+        animation: slide-in 0.5s forwards;
+        transform: translateX(calc(-20%));
     }
 
     /* remove the sidebar */
@@ -368,6 +392,7 @@ footer > div.footer-right > ul {
 
     aside.sidebar {
         width: 30%;
+        border-right: 3pt solid rgb(59, 59, 59);
     }
 
     /* Add some padding */
@@ -392,8 +417,9 @@ footer > div.footer-right > ul {
         line-height: 0.6em;
         display: block;
         position: fixed;
-        top: 40px;
-        right: 20px;
+        top: 20px;
+        right: 10px;
+        cursor: pointer;
     }
 
     article.main > button.sidebar-toggle-btn:where(:hover, :active) {
@@ -420,7 +446,20 @@ footer > div.footer-right > ul {
         margin-top: 0.2em;
     }
 
-    /* remove the info part in the footer */
+    /* re-layout the footer */
+    footer {
+        height: 8vh;
+        font-size: 14pt;
+    }
+
+    footer > div.footer-left {
+        width: 60%;
+    }
+
+    footer > div.footer-left > ul.social {
+        justify-content: space-between;
+    }
+
     footer > div.footer-right {
         display: none;
     }
@@ -428,6 +467,7 @@ footer > div.footer-right > ul {
 
 /* responsive style */
 @media only screen and (max-width: 700px) {
+    /* Slide sidebar */
     main:has(article.main > button.sidebar-toggle-btn[aria-expanded="true"]) {
         width: 150%;
     }
@@ -438,6 +478,7 @@ footer > div.footer-right > ul {
 }
 
 @media only screen and (max-width: 440px) {
+    /* Slide sidebar */
     main:has(article.main > button.sidebar-toggle-btn[aria-expanded="true"]) {
         width: 180%;
     }
@@ -453,6 +494,7 @@ footer > div.footer-right > ul {
         width: calc(100% - 12vw - 1px);
     }
 
+    /* move the position of article information */
     article.main > div.title > div.author-date-readtime {
         align-items: flex-start;
         flex-direction: column;
@@ -464,5 +506,18 @@ footer > div.footer-right > ul {
 
     aside.sidebar {
         width: 80%;
+    }
+
+    /* re-layout the footer */
+    footer {
+        height: 6vh;
+        font-size: 12pt;
+    }
+}
+
+/* sidebar slide-in animation */
+@keyframes slide-in {
+    100% {
+        transform: translateX(0%);
     }
 }
