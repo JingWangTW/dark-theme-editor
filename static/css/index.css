@@ -248,6 +248,12 @@ article.main > div.article-meta a.bread-btn {
     padding-right: 5pt;
 }
 
+article.main > hr {
+    border-color: #5c5e60;
+    border-width: 1pt;
+    margin-bottom: 25pt;
+}
+
 article.main > nav#TableOfContents {
     margin-bottom: 20pt;
 }

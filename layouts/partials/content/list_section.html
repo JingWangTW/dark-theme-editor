@@ -1,9 +1,8 @@
 <article class="main">
+    {{ partial "module/sidebar_btn" . }}
 
     <div class="title">
-        <h1 class="title-header">
-            {{ .Title }}
-        </h1>
+        <h1 class="title-header">{{ .Title }}</h1>
     </div>
 
     <div class="article-meta">
@@ -13,8 +12,7 @@
         </div>
     </div>
 
-    <div class="list-content">
-        {{ partial "module/section_tree" ( dict "context" . "currentPage" . ) }}
-    </div>
+    <hr />
 
+    <div class="list-content">{{ partial "module/section_tree" ( dict "context" . "currentPage" . ) }}</div>
 </article>

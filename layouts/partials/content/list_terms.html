@@ -1,4 +1,5 @@
 <article class="main">
+    {{ partial "module/sidebar_btn" . }}
 
     <div class="title">
         <h1 class="title-header">
@@ -10,9 +11,7 @@
             <i class="bi bi-person-fill"></i>
             {{ else }}
             <i class="bi bi-gear"></i>
-            {{ end }}
-
-            All {{ pluralize .Title }}
+            {{ end }} All {{ pluralize .Title }}
         </h1>
     </div>
 
@@ -23,17 +22,15 @@
         </div>
     </div>
 
+    <hr />
+
     <div class="list-content">
         <ul>
             {{ range .Pages }}
             <li>
-                <a href="{{ .Permalink }}">
-                    {{ partial "module/tax_icon" . }}
-                    {{ .Title }}
-                </a>
+                <a href="{{ .Permalink }}"> {{ partial "module/tax_icon" . }} {{ .Title }} </a>
             </li>
             {{ end }}
         </ul>
     </div>
-
 </article>
