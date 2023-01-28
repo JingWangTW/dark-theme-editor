@@ -285,35 +285,54 @@ article.main > nav#TableOfContents a:hover {
     text-decoration: underline;
 }
 
-article.main > div.list-content > ul {
+article.main > div.list-files > ul {
     font-size: 14pt;
 }
 
-article.main > div.list-content > ul > li {
+article.main > div.list-files > ul > li {
     margin-bottom: 15pt;
 }
 
-article.main > div.list-content > ul > li:hover {
+article.main > div.list-files > ul > li:hover {
     color: white;
 }
 
-article.main > div.list-content ul.sidebar-list {
+article.main > div.list-files ul.sidebar-list {
     margin-bottom: 10px;
     margin-top: 10px;
     padding: 0;
 }
 
-article.main > div.list-content ul.sidebar-list ul {
+article.main > div.list-files ul.sidebar-list ul {
     margin-left: 25px;
 }
 
-article.main > div.list-content ul.sidebar-list li {
+article.main > div.list-files ul.sidebar-list li {
     padding-left: 0;
 }
 
-article.main > div.list-content ul.sidebar-list li.file {
+article.main > div.list-files ul.sidebar-list li.file {
     margin-left: -5pt;
     padding-top: 10pt;
+}
+
+article.main > div.list-terms > ul {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+article.main > div.list-terms > ul > li {
+    border: 1px solid #6c6d6e;
+    border-radius: 30px;
+    padding: 0.5em 1em;
+    margin: 0.5em 1em;
+}
+
+article.main > div.list-terms > ul > li:hover {
+    border-color: #969697;
+    border-width: 2px;
+    color: white;
+    background-color: #727272;
 }
 
 /*** footer ***/
@@ -410,6 +429,14 @@ footer > div.footer-right > ul {
             1px: dummpy
         */
         width: calc(100% - 8vw - 1px);
+
+        /*
+            6vh: header
+            6vh: footer
+            8vw: <article> padding
+            2pt: border of header and footer
+        */
+        min-height: calc(100vh - 6vh - 6vh - 8vw - 2pt);
     }
 
     /* show the navbar button */
@@ -454,7 +481,7 @@ footer > div.footer-right > ul {
 
     /* re-layout the footer */
     footer {
-        height: 8vh;
+        height: 6vh;
         font-size: 14pt;
     }
 
@@ -498,6 +525,14 @@ footer > div.footer-right > ul {
             1px: dummpy
         */
         width: calc(100% - 12vw - 1px);
+
+        /*
+            6vh: header
+            6vh: footer
+            6vw: <article> padding
+            2pt: border of header and footer
+        */
+        min-height: calc(100vh - 6vh - 6vh - 12vw - 2pt);
     }
 
     /* move the position of article information */
