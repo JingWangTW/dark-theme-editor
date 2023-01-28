@@ -67,9 +67,9 @@ window.addEventListener("load", function () {
         }
     });
 
-    this.document.querySelector("article.main:where(:not(button), :not(a))").addEventListener("click", hideSidebar);
-    this.document.querySelector("article.main:where(:not(button), :not(a))").addEventListener("touchstart", hideSidebar);
-    this.document.querySelector("article.main:where(:not(button), :not(a))").addEventListener("mousedown", hideSidebar);
+    this.document.querySelector("article.main").addEventListener("click", hideSidebar);
+    this.document.querySelector("article.main").addEventListener("touchstart", hideSidebar);
+    this.document.querySelector("article.main").addEventListener("mousedown", hideSidebar);
 
     // remove generated element style when windows enlarge
     this.window.addEventListener("resize", () => {
