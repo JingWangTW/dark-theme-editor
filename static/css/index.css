@@ -211,10 +211,6 @@ article.main > div.article-meta {
     margin-top: -2em;
 }
 
-article.main > div.article-meta > div {
-    padding-bottom: 20pt;
-}
-
 article.main > div.article-meta > div:only-child {
     padding-top: 20pt;
 }
@@ -226,26 +222,34 @@ article.main > div.article-meta a {
     color: #fff;
 }
 
-article.main > div.article-meta a.cat-btn {
+article.main > div.article-meta > div.categories > a.cat-btn {
     background: #2f5292;
 }
 
-article.main > div.article-meta a.cat-btn:hover {
+article.main > div.article-meta > div.categories > a.cat-btn:hover {
     background: #5779b9;
 }
 
-article.main > div.article-meta a.tag-btn {
+article.main > div.article-meta > div.tags > a.tag-btn {
     background: #327e5e;
 }
 
-article.main > div.article-meta a.tag-btn:hover {
+article.main > div.article-meta > div.tags > a.tag-btn:hover {
     background: #479775;
 }
 
-article.main > div.article-meta a.bread-btn {
+article.main > div.article-meta > div:where(.categories, .tags) > a {
+    line-height: 3em;
+}
+
+article.main > div.article-meta > div.breadcumb > a.bread-btn {
     color: #99a1ff;
     padding-left: 5pt;
     padding-right: 5pt;
+}
+
+article.main > div.article-meta > div.breadcumb > a.bread-btn {
+    line-height: 1.5em;
 }
 
 article.main > hr {
