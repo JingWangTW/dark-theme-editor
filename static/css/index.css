@@ -1,7 +1,7 @@
 @charset "UTF-8";
 
 /**************
-    layout
+    Layout
 ***************/
 body {
     height: 100vh;
@@ -38,6 +38,7 @@ footer {
     Styling
 ***************/
 
+/*** Element Styling ***/
 a,
 a:link,
 a:visited,
@@ -47,6 +48,7 @@ a:active {
     color: inherit;
 }
 
+/*** HTML Body ***/
 body {
     background-color: #282c34;
     font-size: 16px;
@@ -62,21 +64,21 @@ header {
     border-bottom: 1pt solid rgb(59, 59, 59);
 }
 
-header div {
+header > div {
     vertical-align: middle;
     text-align: center;
     line-height: 3vh;
     height: 100%;
 }
 
-header div.header_left {
+header > div.header_left {
     float: left;
     position: relative;
     left: 5pt;
     top: 0pt;
 }
 
-header div.header_left img.logo {
+header > div.header_left > img.logo {
     height: 100%;
 }
 
@@ -89,77 +91,6 @@ aside.exapandable {
 
 aside.exapandable:hover {
     background-color: rgb(99, 99, 99);
-}
-
-ul.sidebar-list > li.dir {
-    padding-left: 10pt;
-    padding-top: 10pt;
-    color: grey;
-}
-
-ul.sidebar-list > li.dir > span.dir-text {
-    cursor: pointer;
-    margin-left: 5pt;
-}
-
-ul.sidebar-list > li.dir > span.dir-text:hover {
-    color: white;
-}
-
-ul.sidebar-list > li.closed-dir::before {
-    content: " ";
-    border-color: white;
-    border-width: 1pt 1pt 0 0;
-    border-style: solid;
-    padding: 3pt;
-    transform: rotate(45deg);
-    display: inline-block;
-    position: relative;
-    bottom: 1pt;
-}
-
-ul.sidebar-list > li.closed-dir > ul {
-    display: none;
-}
-
-ul.sidebar-list > li.opened-dir::before {
-    content: " ";
-    border-color: white;
-    border-width: 1pt 1pt 0 0;
-    border-style: solid;
-    padding: 3pt;
-    transform: rotate(135deg);
-    display: inline-block;
-    position: relative;
-    bottom: 3pt;
-}
-
-ul.sidebar-list > li.file {
-    padding-left: 5pt;
-    padding-top: 7pt;
-    color: grey;
-}
-
-ul.sidebar-list > li.file i {
-    padding-left: 5pt;
-}
-
-ul.sidebar-list > li > a {
-    cursor: pointer;
-}
-
-ul.sidebar-list > li > a:hover {
-    color: white !important;
-}
-
-/* dir in nested subdir*/
-ul.sidebar-list ul.sidebar-list > li.dir {
-    padding-left: 18pt;
-}
-
-/* file in nested subdir*/
-ul.sidebar-list ul.sidebar-list > li.file {
-    padding-left: 10pt;
 }
 
 /*** main content ***/
@@ -211,15 +142,21 @@ article.main > div.article-meta {
     margin-top: -2em;
 }
 
-article.main > div.article-meta > div:only-child {
-    padding-top: 20pt;
-}
-
 article.main > div.article-meta a {
     padding: 2pt 10pt;
     margin: 0pt 5pt;
     border-radius: 10px;
-    color: #fff;
+    color: #ffffff;
+}
+
+article.main > hr {
+    border-color: #5c5e60;
+    border-width: 1pt;
+    margin-bottom: 25pt;
+}
+
+article.main > div.article-meta > div:only-child {
+    padding-top: 20pt;
 }
 
 article.main > div.article-meta > div.categories > a.cat-btn {
@@ -246,16 +183,7 @@ article.main > div.article-meta > div.breadcumb > a.bread-btn {
     color: #99a1ff;
     padding-left: 5pt;
     padding-right: 5pt;
-}
-
-article.main > div.article-meta > div.breadcumb > a.bread-btn {
     line-height: 1.5em;
-}
-
-article.main > hr {
-    border-color: #5c5e60;
-    border-width: 1pt;
-    margin-bottom: 25pt;
 }
 
 article.main > nav#TableOfContents {
@@ -301,21 +229,21 @@ article.main > div.list-files > ul > li:hover {
     color: white;
 }
 
-article.main > div.list-files ul.sidebar-list {
+article.main > div.list- ul.section-tree {
     margin-bottom: 10px;
     margin-top: 10px;
     padding: 0;
 }
 
-article.main > div.list-files ul.sidebar-list ul {
+article.main > div.list-files ul.section-tree ul {
     margin-left: 25px;
 }
 
-article.main > div.list-files ul.sidebar-list li {
+article.main > div.list-files ul.section-tree li {
     padding-left: 0;
 }
 
-article.main > div.list-files ul.sidebar-list li.file {
+article.main > div.list-files ul.section-tree li.file {
     margin-left: -5pt;
     padding-top: 10pt;
 }
@@ -381,7 +309,82 @@ footer > div.footer-right > ul {
     justify-content: flex-end;
 }
 
-/* responsive style */
+/*** Section Tree Listing ***/
+
+ul.section-tree > li > a {
+    cursor: pointer;
+}
+
+ul.section-tree > li > a:hover {
+    color: white !important;
+}
+
+ul.section-tree > li.dir {
+    padding-left: 10pt;
+    padding-top: 10pt;
+    color: grey;
+}
+
+ul.section-tree > li.dir > span.dir-text {
+    cursor: pointer;
+    margin-left: 5pt;
+}
+
+ul.section-tree > li.dir > span.dir-text:hover {
+    color: white;
+}
+
+ul.section-tree > li.closed-dir::before {
+    content: " ";
+    border-color: white;
+    border-width: 1pt 1pt 0 0;
+    border-style: solid;
+    padding: 3pt;
+    transform: rotate(45deg);
+    display: inline-block;
+    position: relative;
+    bottom: 1pt;
+}
+
+ul.section-tree > li.closed-dir > ul {
+    display: none;
+}
+
+ul.section-tree > li.opened-dir::before {
+    content: " ";
+    border-color: white;
+    border-width: 1pt 1pt 0 0;
+    border-style: solid;
+    padding: 3pt;
+    transform: rotate(135deg);
+    display: inline-block;
+    position: relative;
+    bottom: 3pt;
+}
+
+ul.section-tree > li.file {
+    padding-left: 5pt;
+    padding-top: 7pt;
+    color: grey;
+}
+
+ul.section-tree > li.file i {
+    padding-left: 5pt;
+}
+
+/* dir in nested subdir*/
+ul.section-tree ul.section-tree > li.dir {
+    padding-left: 18pt;
+}
+
+/* file in nested subdir*/
+ul.section-tree ul.section-tree > li.file {
+    padding-left: 10pt;
+}
+
+/**************
+    Styling
+***************/
 @media only screen and (max-width: 900px) {
     /* release the static layout*/
     body {
@@ -402,8 +405,13 @@ footer > div.footer-right > ul {
         overflow: hidden;
     }
 
-    header div {
+    header > div {
         line-height: 6vh;
+    }
+
+    /* remove the sidebar */
+    aside:where(.exapandable, .sidebar) {
+        display: none;
     }
 
     /* Slide sidebar */
@@ -412,11 +420,6 @@ footer > div.footer-right > ul {
 
         animation: slide-in 0.5s forwards;
         transform: translateX(calc(-20%));
-    }
-
-    /* remove the sidebar */
-    aside:where(.exapandable, .sidebar) {
-        display: none;
     }
 
     aside.sidebar {
@@ -459,7 +462,7 @@ footer > div.footer-right > ul {
         cursor: pointer;
     }
 
-    article.main > button.sidebar-toggle-btn:where(:hover, :active) {
+    article.main > button.sidebar-toggle-btn:where(:hover, :active, :focus) {
         color: white;
         border-color: white;
         border-width: 2px;
@@ -502,7 +505,6 @@ footer > div.footer-right > ul {
     }
 }
 
-/* responsive style */
 @media only screen and (max-width: 700px) {
     /* Slide sidebar */
     main:has(article.main > button.sidebar-toggle-btn[aria-expanded="true"]) {
@@ -520,6 +522,10 @@ footer > div.footer-right > ul {
         width: 180%;
     }
 
+    aside.sidebar {
+        width: 80%;
+    }
+
     /* Add some padding */
     article.main {
         padding: 6vw;
@@ -533,7 +539,7 @@ footer > div.footer-right > ul {
         /*
             6vh: header
             6vh: footer
-            6vw: <article> padding
+            12vw: <article> padding
             2pt: border of header and footer
         */
         min-height: calc(100vh - 6vh - 6vh - 12vw - 2pt);
@@ -547,10 +553,6 @@ footer > div.footer-right > ul {
 
     article.main > div.title > div.author-date-readtime > div {
         padding-top: 1em;
-    }
-
-    aside.sidebar {
-        width: 80%;
     }
 
     /* re-layout the footer */

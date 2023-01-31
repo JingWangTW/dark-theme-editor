@@ -8,7 +8,7 @@
 {{/* show page child first than section child */}}
 {{ $children := $section_children | append $page_children }}
 
-<ul class="sidebar-list">
+<ul class="section-tree">
 
     {{ range $children }}
     {{ if .IsNode}}
