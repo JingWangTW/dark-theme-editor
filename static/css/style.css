@@ -172,7 +172,9 @@ article.main > div.content code:not(div.highlight code) {
     padding: 0.2em 0.4em;
     font-size: 85%;
     background-color: rgb(92 92 92);
-    border-radius: 10px;
+    border-radius: 5pt;
+    margin-left: 0.2em;
+    margin-right: 0.2em;
 }
 
 /*** Code block indented with four spaces ***/
