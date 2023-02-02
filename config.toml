@@ -1,15 +1,17 @@
 baseURL = 'http://example.org/'
 languageCode = 'en-us'
 title = 'My New Hugo Site'
-pluralizeListTitles = false
-copyright = 'All Rights Reserved.'
 assetDir = '/static'
 
-[Params]
-    AuthorName = 'Tony'
+# What I preferred config
+pluralizeListTitles = false
 
 # CopyRight string in the footer, change it to "" hide it
+copyright = 'All Rights Reserved.'
 
+# Site Authory Name
+[Params]
+    AuthorName = 'Jing'
 
 # Social link in the footer, change it to "" hide it
 [Social]
@@ -18,6 +20,7 @@ assetDir = '/static'
     twitter = " "
     email = " "
 
+# Recommend syntax hilight config
 [markup]
     [markup.highlight]
         lineNoStart = 1
@@ -25,6 +28,7 @@ assetDir = '/static'
         style = "native"
         tabWidth = 4
 
+# Availabe tavnomies used with this theme
 [taxonomies]
     category = 'categories'
     author = 'author'
