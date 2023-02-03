@@ -1,0 +1,12 @@
+name = "dark-theme-editor"
+license = "Apache-2.0"
+licenselink = "https://github.com/JingWangTW/dark-theme-editor/blob/main/LICENSE"
+description = "A simple, editor-liked theme for Hugo."
+homepage = "https://github.com/JingWangTW/dark-theme-editor"
+tags = ["blog", "clean", "dark", "highlighting", "personal", "responsive", "simple", "technical", "editor", "Dark Mode", "Docs"]
+features = ["blog", "syntax highlighting", "responsive"]
+min_version = 0.90
+
+[author]
+  name = "Jing Wang"
+  homepage = "https://github.com/JingWangTW"
