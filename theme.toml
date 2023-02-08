@@ -1,4 +1,4 @@
-name = "dark-theme-editor"
+name = "Dark Theme Editor"
 license = "Apache-2.0"
 licenselink = "https://github.com/JingWangTW/dark-theme-editor/blob/main/LICENSE"
 description = "A simple, editor-liked theme for Hugo."

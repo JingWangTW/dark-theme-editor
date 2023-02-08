@@ -1,3 +1,5 @@
-baseURL = 'http://example.org/'
+baseURL = 'https://jingwangtw.github.io/dark-theme-editor'
 languageCode = 'en-us'
-title = 'My New Hugo Site'
+title = 'Dark Theme Editor Example Site'
+
+theme = 'dark-theme-editor'
