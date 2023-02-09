@@ -21,7 +21,7 @@ concurrency:
 defaults:
   run:
     shell: bash
-    working-directory: example-site    
+    working-directory: ./example-site    
 
 jobs:
   # Build job
@@ -43,7 +43,7 @@ jobs:
       - name: Setup Pages
         id: pages
         uses: actions/configure-pages@v3
-      - name: Installing Theme
+      - name: Install Theme
         run: git init && git submodule add --depth 1 https://github.com/JingWangTW/dark-theme-editor.git themes/dark-theme-editor
       - name: Build with Hugo
         env:
