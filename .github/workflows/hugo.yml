@@ -21,7 +21,6 @@ concurrency:
 defaults:
   run:
     shell: bash
-    working-directory: example-site
 
 jobs:
   # Build job
@@ -44,8 +43,10 @@ jobs:
         id: pages
         uses: actions/configure-pages@v3
       - name: Install Theme
+        working-directory: example-site
         run: git init && git submodule add --depth 1 https://github.com/JingWangTW/dark-theme-editor.git themes/dark-theme-editor
       - name: Build with Hugo
+        working-directory: example-site
         env:
           # For maximum backward compatibility with Hugo modules
           HUGO_ENVIRONMENT: production
@@ -57,7 +58,7 @@ jobs:
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v1
         with:
-          path: ./public
+          path: ./example-site/public
 
   # Deployment job
   deploy:
