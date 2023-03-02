@@ -33,3 +33,9 @@ copyright = 'All Rights Reserved.'
     category = 'categories'
     author = 'author'
     tag = 'tags'
+
+# To have the correct generated static directory
+[module]
+  [[module.mounts]]
+    source = "static"
+    target = "static"
