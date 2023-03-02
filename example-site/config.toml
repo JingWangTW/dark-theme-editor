@@ -1,5 +1,0 @@
-baseURL = 'https://jingwangtw.github.io/dark-theme-editor'
-languageCode = 'en-us'
-title = 'Dark Theme Editor Example Site'
-
-theme = 'dark-theme-editor'
