@@ -10,3 +10,8 @@ min_version = 0.90
 [author]
   name = "Jing Wang"
   homepage = "https://github.com/JingWangTW"
+
+[origin]
+  name = "editor"
+  homepage = "https://github.com/sfengyuan/edidor"
+  repp = "https://github.com/sfengyuan/edidor"
