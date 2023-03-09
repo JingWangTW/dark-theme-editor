@@ -1,4 +1,7 @@
-baseURL = 'http://example.org/'
+baseURL = 'https://jingwangtw.github.io/dark-theme-editor/'
 languageCode = 'en-us'
-title = 'My New Hugo Site'
+title = 'Example Site of dark-theme-editor'
 theme = 'dark-theme-editor'
+
+[params]
+    include_toc = true
