@@ -1,7 +1,6 @@
 baseURL = 'http://example.org/'
 languageCode = 'en-us'
 title = 'My New Hugo Site'
-assetDir = '/static'
 
 # What I preferred config
 pluralizeListTitles = false
@@ -27,9 +26,3 @@ copyright = 'All Rights Reserved.'
         lineNos = true
         style = "native"
         tabWidth = 4
-
-# Availabe tavnomies used with this theme
-[taxonomies]
-    category = 'categories'
-    author = 'author'
-    tag = 'tags'
