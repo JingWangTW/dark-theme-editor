@@ -3,5 +3,5 @@ languageCode = 'en-us'
 title = 'Example Site of dark-theme-editor'
 theme = 'dark-theme-editor'
 
-[params]
-    include_toc = true
+[Params]
+    includeToc = true
