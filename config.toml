@@ -5,20 +5,6 @@ title = 'My New Hugo Site'
 # What I preferred config
 pluralizeListTitles = false
 
-# CopyRight string in the footer, change it to "" hide it
-copyright = 'All Rights Reserved.'
-
-# Site Authory Name
-[Params]
-    AuthorName = 'Jing'
-
-# Social link in the footer, change it to "" hide it
-[Social]
-    github = " "
-    facebook = " "
-    twitter = " "
-    email = " "
-
 # Recommend syntax hilight config
 [markup]
     [markup.highlight]
@@ -26,3 +12,21 @@ copyright = 'All Rights Reserved.'
         lineNos = true
         style = "native"
         tabWidth = 4
+
+# Theme parameter
+[Params]
+    # CopyRight string in the footer, change it to "" hide it
+    copyright_str = 'All Rights Reserved.'
+    
+    # This name would be shown in the bottom of the page. It indicates the author of the site.
+    authorName = 'Jing'
+
+    # Should include Table of Content in front of the page or not.
+    includeToc = true
+    
+    # Social link in the footer, change it to "" hide it
+    [Social]
+        github = " "
+        facebook = " "
+        twitter = " "
+        email = " "
