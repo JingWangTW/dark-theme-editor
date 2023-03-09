@@ -16,7 +16,7 @@ pluralizeListTitles = false
 # Theme parameter
 [Params]
     # CopyRight string in the footer, change it to "" hide it
-    copyright_str = 'All Rights Reserved.'
+    copyrightStr = 'All Rights Reserved.'
     
     # This name would be shown in the bottom of the page. It indicates the author of the site.
     authorName = 'Jing'

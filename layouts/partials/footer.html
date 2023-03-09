@@ -1,12 +1,12 @@
 <footer class="footer">
     <div class="footer-left">
         <ul class="social">
-            {{ with $.Site.Copyright }}
-            <li> {{ $.Site.Copyright }} </li>
+            {{ with $.Params.copyrightStr }}
+            <li> {{ $.Site.copyrightStr }} </li>
             {{ end }}
 
-            <li> {{ .Site.Params.AuthorName }} </li>
-            {{ range $key, $val := .Site.Social }}
+            <li> {{ .Site.Params.authorName }} </li>
+            {{ range $key, $val := .Site.Params.Social }}
             {{ with $val }}
             <li>
                 <a href="{{ $val }}" target="_blank">
