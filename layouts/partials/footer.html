@@ -31,16 +31,16 @@
                 Pages In Section:
                 {{ len (where .Pages "Params.hidden" "!=" true) }}</a>
                 {{ else if .IsHome }}
-                All Pages:
+                Pages:
                 {{ len (where .Site.RegularPages "Params.hidden" "!=" true) }}
                 {{ else if .IsNode }}
-                All Pages:
+                Pages:
                 {{ len (where .Pages "Params.hidden" "!=" true) }}</a>
                 {{ end }}
             </li>
             <li> {{ .Site.Language.Lang }} </li>
-            <li><a href="https://gohugo.io" class="btn">Hugo: {{ hugo.Version }}</a></li>
-            <li><a href="https://github.com/JingWangTW/dark-theme-editor" class="btn">Theme: dark-theme-editor</a></li>
+            <li><a href="https://gohugo.io" class="btn" target="_blank">Hugo: {{ hugo.Version }}</a></li>
+            <li><a href="https://github.com/JingWangTW/dark-theme-editor" class="btn" target="_blank">Theme: dark-theme-editor</a></li>
             <li>
                 {{ if or (.IsHome) (.IsNode) }}
                 {{with hugo.BuildDate }}
