@@ -24,7 +24,7 @@ pluralizeListTitles = false
     # Should include Table of Content in front of the page or not.
     includeToc = true
     
-    # Social link in the footer, change it to "" hide it
+    # Social link in the footer, delete unwanted items to hide it.
     [Social]
         github = " "
         facebook = " "
