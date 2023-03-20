@@ -1,6 +1,5 @@
 baseURL = 'http://example.org/'
 languageCode = 'en-us'
-title = 'My New Hugo Site'
 
 # What I preferred config
 pluralizeListTitles = false
@@ -14,19 +13,102 @@ pluralizeListTitles = false
         tabWidth = 4
 
 # Theme parameter
-[Params]
-    # CopyRight string in the footer, change it to "" hide it
-    copyrightStr = 'All Rights Reserved.'
-    
-    # This name would be shown in the bottom of the page. It indicates the author of the site.
-    authorName = 'Jing'
+[params]
 
-    # Should include Table of Content in front of the page or not.
-    includeToc = true
-    
-    # Social link in the footer, delete unwanted items to hide it.
-    [Social]
-        github = " "
-        facebook = " "
-        twitter = " "
-        email = " "
+    # Customized info shown in header of the page
+    [header]
+        # Website title for header banner.
+        title = "My New Hugo Site"
+
+        # Config about your's site logo, remove this item to hide the logo
+        [logo]
+            # Where is your site's URL
+            imgUrl = ""
+
+            # Should the logo clickable?
+            clickable = true
+
+            # If the logo is clickable, where should it be linked?
+            logoLink = ""
+
+    # Customized info shown in footer of the page
+    [footer]
+        # The author of this site. Keep it an empty string or remove this item will hide it from the page
+        author = "Jing Wang"
+
+        # CopyRight string shown in the footer. Keep it an empty string or remove this item will hide it from the page.
+        copyrightStr = "All Rights Reserved."
+
+        # Should show the counter in the footer or not
+        # In the home page, it will show the numbers of all pages
+        # In the sections pages, it will show the numbers of pages within the section
+        # In the taxonomy pages, it will show the numbers of pages belong to the taxonomy.
+        # In the regular content pages, it will show the word count.
+        counter = true
+
+        # Should show the language of the page or not
+        language = true
+
+        # Should show the hugo version or not
+        hugoVersion = true
+
+        # Should show the theme info or not
+        theme = true
+
+        # Should show the edited time of the page or not
+        modifiedTime = true
+
+        # Social link in the footer, listed items are supported, delete unwanted items to hide it.
+        [socialLink]
+            github = ""
+            facebook = ""
+            twitter = ""
+            email = ""
+            linkedin = ""
+            instagram = ""
+            telegram = ""
+            medium = ""
+            gitlab = ""
+            youtube = ""
+
+
+    # Metadata of the site, value will be used in HTML <header>
+    # These value would be used when they didn't appear in the frontmatter of a single page.
+    # In other words, these value will be overwritten by the frontmatter in the single page.
+    [globalFrontmatter]
+        
+        # Website description for RSS and SEO. Theme will generate a <meta> tag for this item
+        description = "This is my new hugo site"
+
+        # Website keywords. Theme will generate a <meta> tag for this item.
+        keywords = "hugo,site,new"
+
+        # Website ICON
+        faviconUrl = ""
+
+        # Do you need to add any external CSS? List them in an array.
+        externalCss = []
+
+        # Do you have any external Script need to add on? List them in an array.
+        externalJs = []
+
+    # Paramater applied in the single page
+    # These values could be overwritten by the frontmatter in the single page.
+    [page]
+        # Should include Table of Content in front of the page or not.
+        includeToc = true
+
+        # Should show the author of the page or not.
+        # The author name will be shown in the single page if and only if 
+        #   1. this items been set as true and
+        #   2. aurthor name been provided in the single page frontmatter.
+        showAuthor = true
+
+        # Should show the estimate reading time in front of the page or not.
+        timeToRead = true
+
+        # Should show the breadcrumb in front of the page or not.
+        showBreadcrumb = true
+
+
+
