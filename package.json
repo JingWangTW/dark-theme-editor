@@ -1,0 +1,16 @@
+{
+    "name": "dark-theme-editor",
+    "version": "1.0.0",
+    "description": "[![Example Site](https://github.com/JingWangTW/dark-theme-editor/actions/workflows/hugo.yml/badge.svg)](https://github.com/JingWangTW/dark-theme-editor/actions/workflows/hugo.yml)",
+    "main": "index.js",
+    "scripts": {
+        "format:check": "prettier --check .",
+        "format:write": "prettier --write ."
+    },
+    "author": "",
+    "license": "ISC",
+    "devDependencies": {
+        "prettier": "^2.8.5",
+        "prettier-plugin-go-template": "^0.0.13"
+    }
+}

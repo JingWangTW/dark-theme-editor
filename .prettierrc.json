@@ -1,0 +1,16 @@
+{
+    "tabWidth": 4,
+    "useTabs": false,
+    "singleQuote": false,
+    "quoteProps": "as-needed",
+    "bracketSpacing": true,
+    "bracketSameLine": true,
+    "overrides": [
+        {
+            "files": ["*.html"],
+            "options": {
+                "parser": "go-template"
+            }
+        }
+    ]
+}
