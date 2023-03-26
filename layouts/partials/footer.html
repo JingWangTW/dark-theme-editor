@@ -2,22 +2,23 @@
     <div class="footer-left">
         <ul class="social">
             {{ with $.Params.copyrightStr }}
-            <li> {{ $.Site.copyrightStr }} </li>
+                <li>{{ $.Site.copyrightStr }}</li>
             {{ end }}
 
-            <li> {{ .Site.Params.authorName }} </li>
+
+            <li>{{ .Site.Params.authorName }}</li>
             {{ range $key, $val := .Site.Params.Social }}
-            {{ with $val }}
-            <li>
-                <a href="{{ $val }}" target="_blank">
-                    {{ if eq $key "email" }}
-                    <i class="bi-envelope"></i>
-                    {{ else }}
-                    <i class="bi-{{ $key }}"></i>
-                    {{ end }}
-                </a>
-            </li>
-            {{ end }}
+                {{ with $val }}
+                    <li>
+                        <a href="{{ $val }}" target="_blank">
+                            {{ if eq $key "email" }}
+                                <i class="bi-envelope"></i>
+                            {{ else }}
+                                <i class="bi-{{ $key }}"></i>
+                            {{ end }}
+                        </a>
+                    </li>
+                {{ end }}
             {{ end }}
         </ul>
     </div>
@@ -26,28 +27,41 @@
         <ul class="control status clearfix">
             <li>
                 {{ if .IsPage }}
-                Word Count: {{ .WordCount }}
+                    Word Count:
+                    {{ .WordCount }}
                 {{ else if .IsSection }}
-                Pages In Section:
-                {{ len (where .Pages "Params.hidden" "!=" true) }}</a>
+                    Pages In Section:
+                    {{ len (where .Pages "Params.hidden" "!=" true) }}
                 {{ else if .IsHome }}
-                Pages:
-                {{ len (where .Site.RegularPages "Params.hidden" "!=" true) }}
+                    Pages:
+                    {{ len (where .Site.RegularPages "Params.hidden" "!=" true) }}
                 {{ else if .IsNode }}
-                Pages:
-                {{ len (where .Pages "Params.hidden" "!=" true) }}</a>
+                    Pages:
+                    {{ len (where .Pages "Params.hidden" "!=" true) }}
                 {{ end }}
             </li>
-            <li> {{ .Site.Language.Lang }} </li>
-            <li><a href="https://gohugo.io" class="btn" target="_blank">Hugo: {{ hugo.Version }}</a></li>
-            <li><a href="https://github.com/JingWangTW/dark-theme-editor" class="btn" target="_blank">Theme: dark-theme-editor</a></li>
+            <li>{{ .Site.Language.Lang }}</li>
+            <li>
+                <a href="https://gohugo.io" class="btn" target="_blank"
+                    >Hugo: {{ hugo.Version }}</a
+                >
+            </li>
+            <li>
+                <a
+                    href="https://github.com/JingWangTW/dark-theme-editor"
+                    class="btn"
+                    target="_blank"
+                    >Theme: dark-theme-editor</a
+                >
+            </li>
             <li>
                 {{ if or (.IsHome) (.IsNode) }}
-                {{with hugo.BuildDate }}
-                Last build: <time>{{ time hugo.BuildDate | safeHTML }}</time>
-                {{ end}}
+                    {{ with hugo.BuildDate }}
+                        Last build:
+                        <time>{{ time hugo.BuildDate | safeHTML }}</time>
+                    {{ end }}
                 {{ else }}
-                Last modified: <time>{{ time .Lastmod | safeHTML }}</time>
+                    Last modified: <time>{{ time .Lastmod | safeHTML }}</time>
                 {{ end }}
             </li>
         </ul>

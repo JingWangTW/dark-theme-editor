@@ -1,6 +1,5 @@
 <!DOCTYPE html>
-<html {{ with .Site.LanguageCode }}lang="{{ . }}" {{ end }}>
-
+<html {{ with .Site.LanguageCode }}lang="{{ . }}"{{ end }}>
     <head>
         <meta charset="utf-8" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
@@ -9,67 +8,85 @@
         {{ hugo.Generator }}
 
         {{ if .IsPage }}
-        {{ if .Description }}
-        <meta name="description" content="{{ .Description }}">
+            {{ if .Description }}
+                <meta name="description" content="{{ .Description }}" />
+            {{ else }}
+                <meta name="description" content="{{ .Summary }}" />
+            {{ end }}
+
+            {{ if isset .Params "keywords" }}
+                <meta name="keywords" content="{{ delimit .Keywords "," }}" />
+            {{ end }}
+
+            {{ if isset .Params "author" }}
+                <meta name="author" content="{{ .Params.author }}" />
+            {{ else }}
+                <meta name="author" content="{{ .Site.Params.AuthorName }}" />
+            {{ end }}
         {{ else }}
-        <meta name="description" content="{{ .Summary }}">
+            {{ with .Site.Params.Description }}
+                <meta
+                    name="description"
+                    content="{{ .Site.Params.Description }}" />
+            {{ end }}
+
+
+            <meta name="author" content="{{ .Site.Params.AuthorName }}" />
         {{ end }}
 
-        {{ if isset .Params "keywords" }}
-        <meta name="keywords" content='{{ delimit .Keywords ","}}'>
-        {{ end }}
-
-        {{ if isset .Params "author" }}
-        <meta name="author" content="{{ .Params.author }}">
-        {{ else }}
-        <meta name="author" content="{{ .Site.Params.AuthorName }}">
-        {{ end }}
-        {{ else }}
-        {{ with .Site.Params.Description }}
-        <meta name="description" content="{{ .Site.Params.Description }}">
-        {{ end }}
-
-        <meta name="author" content="{{ .Site.Params.AuthorName }}">
-        {{end}}
 
         <title>
             {{ if .IsHome }}
-            {{ .Title }}
+                {{ .Title }}
             {{ else }}
-            {{ .Title }} - {{ .Site.Title }}
+                {{ .Title }} -
+                {{ .Site.Title }}
             {{ end }}
         </title>
 
         <link rel="shortcut icon" href="{{ " images/favicon.ico" | absURL }}" />
 
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css"
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css"
             integrity="sha512-NmLkDIU1C/C88wi324HBc+S2kLhi08PN5GDeUVVVC/BVt/9Izdsc9SVeVfA1UZbY3sHUlDSyRXhCzHfr6hmPPw=="
-            crossorigin="anonymous" referrerpolicy="no-referrer" />
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
+            crossorigin="anonymous"
+            referrerpolicy="no-referrer" />
+        <link
+            rel="stylesheet"
+            href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css" />
 
         <!-- Bundle all css -->
         {{ $style := slice }}
         {{ $style := $style | append ( resources.Get "css/index.css" ) }}
         {{ $style := $style | append ( resources.Get "css/style.css" ) }}
 
+
         <!-- Get all custom css -->
         {{ range .Site.Params.customCSS }}
-        {{ $style := $style | append ( resources.Get .  ) }}
+            {{ $style := $style | append ( resources.Get .  ) }}
         {{ end }}
 
         {{ if hugo.IsProduction }}
 
-        <!-- Concat to a single file -->
-        {{ $style := $style | resources.Concat "css/index.css" | resources.Fingerprint "sha512" }}
+            <!-- Concat to a single file -->
+            {{ $style := $style | resources.Concat "css/index.css" | resources.Fingerprint "sha512" }}
 
-        <link rel="stylesheet" href="{{ $style.Permalink }}" integrity="{{ $style.Data.Integrity }}" />
+
+            <link
+                rel="stylesheet"
+                href="{{ $style.Permalink }}"
+                integrity="{{ $style.Data.Integrity }}" />
         {{ else }}
 
-        {{ range $style }}
-        {{ $currentStyle := . | resources.Fingerprint "sha512" }}
-        <link rel="stylesheet" href='{{ $currentStyle.Permalink | absURL }}' />
-        {{ end }}
+            {{ range $style }}
+                {{ $currentStyle := . | resources.Fingerprint "sha512" }}
+                <link
+                    rel="stylesheet"
+                    href="{{ $currentStyle.Permalink | absURL }}" />
+            {{ end }}
 
         {{ end }}
 
     </head>
+</html>

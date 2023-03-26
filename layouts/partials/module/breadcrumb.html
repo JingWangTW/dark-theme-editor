@@ -1,23 +1,24 @@
 {{ if .Parent }}
-{{ partial "module/breadcrumb" .Parent }}
+    {{ partial "module/breadcrumb" .Parent }}
 {{ else if not .IsHome }}
-{{ partial "module/breadcrumb" .Site.Home }}
+    {{ partial "module/breadcrumb" .Site.Home }}
 {{ end }}
 
-{{ if not .IsHome}}
-/
+{{ if not .IsHome }}
+    /
 {{ end }}
+
 
 <a href="{{ .Permalink }}" class="bread-btn">
-    {{ if .IsHome}}
+    {{ if .IsHome }}
         <i class="bi bi-house-fill"></i>
     {{ else if eq .Kind "taxonomy" }}
         {{ partial "module/tax_icon" . }}
-    {{end}}
-        
-    {{ if .IsHome}}
+    {{ end }}
+
+    {{ if .IsHome }}
         Home
     {{ else }}
         {{ .Title }}
-    {{end}}
+    {{ end }}
 </a>

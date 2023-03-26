@@ -1,8 +1,10 @@
 <header class="header">
-    
     <div class="header_left">
         <a href="/">
-            <img class="logo" src="{{ "images/favicon.ico" | absURL }}" alt="logo" />
+            <img
+                class="logo"
+                src="{{ "images/favicon.ico" | absURL }}"
+                alt="logo" />
         </a>
     </div>
 
@@ -10,7 +12,8 @@
         {{ if .IsHome }}
             {{ .Title }}
         {{ else }}
-            {{ .Title }} - {{ .Site.Title }}
+            {{ .Title }} -
+            {{ .Site.Title }}
         {{ end }}
-    </div>   
+    </div>
 </header>
