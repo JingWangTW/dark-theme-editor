@@ -1,33 +1,35 @@
 {{ $context := .context }}
 {{ $currentPage := .currentPage }}
 
-{{ with $context}}
-{{ $page_children := where ( union .Sections .Pages ) "Kind" "page" }}
-{{ $section_children := where ( union .Sections .Pages ) "Kind" "!=" "page" }}
+{{ with $context }}
+    {{ $page_children := where ( union .Sections .Pages ) "Kind" "page" }}
+    {{ $section_children := where ( union .Sections .Pages ) "Kind" "!=" "page" }}
 
-{{/* show page child first than section child */}}
-{{ $children := $section_children | append $page_children }}
+    {{/* show page child first than section child */}}
+    {{ $children := $section_children | append $page_children }}
 
-<ul class="section-tree">
 
-    {{ range $children }}
-    {{ if .IsNode}}
-    {{ if .IsAncestor $currentPage }}
-    <li class="dir open-dir">
-        {{ else}}
-    <li class="dir closed-dir">
+    <ul class="section-tree">
+        {{ range $children }}
+            {{ if .IsNode }}
+                    {{ if .IsAncestor $currentPage }}
+                        <li class="dir open-dir">
+                    {{ else}}
+                        <li class="dir closed-dir">
+                    {{ end }}
+                    <span class="dir-text"> {{ .Title }} </span>
+                    
+                    {{ partial "module/section_tree" ( dict "context" . "currentPage" $currentPage ) }}
+
+                </li>
+            {{ else }}
+                <li class="file">
+                    <a href="{{ .RelPermalink }}">
+                        <i class="bi bi-file-earmark-richtext"></i>
+                        {{ .Title }}
+                    </a>
+                </li>
+            {{ end }}
         {{ end }}
-        <span class="dir-text"> {{ .Title }} </span>
-        {{ partial "module/section_tree" ( dict "context" . "currentPage" $currentPage ) }}
-    </li>
-    {{else}}
-    <li class="file">
-        <a href="{{ .RelPermalink }}">
-            <i class="bi bi-file-earmark-richtext"></i>
-            {{ .Title }}
-        </a>
-    </li>
-    {{ end }}
-    {{ end }}
-</ul>
-{{end}}
+    </ul>
+{{ end }}
