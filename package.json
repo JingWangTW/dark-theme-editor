@@ -5,12 +5,44 @@
     "main": "index.js",
     "scripts": {
         "format:check": "prettier --check .",
-        "format:write": "prettier --write ."
+        "format:write": "prettier --write .",
+        "lint": "eslint . --ext .js,.json --quiet",
+        "lint:fix": "eslint . --ext .js,.json --fix",
+        "precommit": "lint-staged",
+        "commit": "git-cz"
     },
     "author": "",
     "license": "ISC",
     "devDependencies": {
+        "commitlint": "^17.5.0",
+        "eslint": "^8.36.0",
+        "eslint-config-google": "^0.14.0",
+        "eslint-plugin-json": "^3.1.0",
+        "git-cz": "^4.9.0",
+        "husky": "^8.0.3",
+        "lint-staged": "^13.2.0",
         "prettier": "^2.8.5",
         "prettier-plugin-go-template": "^0.0.13"
+    },
+    "husky": {
+        "hooks": {
+            "commit-msg": "commitlint -E HUSKY_GIT_PARAMS",
+            "pre-commit": "lint-staged"
+        }
+    },
+    "lint-staged": {
+        "*.{js,json}": [
+            "prettier --write",
+            "eslint --fix",
+            "eslint"
+        ],
+        "*.{css,html}": [
+            "prettier --write"
+        ]
+    },
+    "commitlint": {
+        "extends": [
+            "@commitlint/config-conventional"
+        ]
     }
 }

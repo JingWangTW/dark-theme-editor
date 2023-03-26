@@ -1,0 +1,34 @@
+{
+    "env": {
+        "browser": true,
+        "commonjs": true,
+        "es2021": true
+    },
+    "extends": ["eslint:recommended", "plugin:json/recommended"],
+    "parserOptions": {
+        "ecmaVersion": "latest"
+    },
+
+    "ignorePatterns": ["node_modules/", "public/", "resources/"],
+    "rules": {
+        "no-trailing-spaces": "error",
+        "comma-dangle": [
+            "error",
+            {
+                "arrays": "always-multiline",
+                "objects": "always-multiline",
+                "imports": "always-multiline",
+                "exports": "always-multiline",
+                "functions": "never"
+            }
+        ],
+        "function-paren-newline": "off",
+        "global-require": "error",
+        "import/no-dynamic-require": "off",
+        "no-inner-declarations": "off",
+        "class-methods-use-this": "off",
+        "import/extensions": "off",
+        "import/prefer-default-export": "off",
+        "no-multiple-empty-lines": ["error"]
+    }
+}
