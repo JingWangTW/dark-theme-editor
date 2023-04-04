@@ -21,7 +21,7 @@
                     </div>
                 {{ end }}
 
-            {{ else if isset .Site.Params.globalFrontmatter "author" }}
+            {{ else if isset $.Site.Params.globalFrontmatter "author" }}
 
                 {{ if or ( and ( not (isset $.Params "showAuthor") ) $.Site.Params.page.showAuthor ) $.Params "showAuthor" }}
                     <div class="author">
@@ -43,11 +43,14 @@
                     >{{ .Date.Format "2006.01.02" }}</time
                 >
             </div>
-            <div class="readtime">
-                <i class="bi bi-clock"></i>
-                {{ .Page.ReadingTime }}
-                min{{ cond (eq .Page.ReadingTime 1) "" "s" }} to read
-            </div>
+
+            {{ with $.Site.Params.page.timeToRead }}
+                <div class="readtime">
+                    <i class="bi bi-clock"></i>
+                    {{ $.Page.ReadingTime }}
+                    min{{ cond (eq $.Page.ReadingTime 1) "" "s" }} to read
+                </div>
+            {{ end }}
         </div>
     </div>
 
