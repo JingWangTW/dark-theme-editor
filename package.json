@@ -11,8 +11,8 @@
         "precommit": "lint-staged",
         "commit": "git-cz"
     },
-    "author": "",
-    "license": "ISC",
+    "author": "Jing Wang",
+    "license": "Apache 2.0",
     "devDependencies": {
         "commitlint": "^17.5.0",
         "eslint": "^8.36.0",
