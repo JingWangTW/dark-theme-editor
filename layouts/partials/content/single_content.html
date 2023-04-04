@@ -8,16 +8,35 @@
         </h1>
 
         <div class="author-date-readtime">
-            {{ if isset .Params "author" }}
-                <div class="author">
-                    <i class="bi bi-person"></i>
-                    <a
-                        href="{{ "author" | absURL }}/{{ .Params.author | urlize }}/"
-                        class="cat-btn">
-                        {{ .Params.author }}
-                    </a>
-                </div>
+            {{ if isset .Page "author" }}
+
+                {{ if or ( and ( not isset .Page "showAuthor" ) .params.page.showAuthor ) .Page "showAuthor" }}
+                    <div class="author">
+                        <i class="bi bi-person"></i>
+                        <a
+                            href="{{ "author" | absURL }}/{{ .Page.author | urlize }}/"
+                            class="cat-btn">
+                            {{ .Page.author }}
+                        </a>
+                    </div>
+                {{ end }}
+
+            {{ else if isset .params.globalFrontmatter "author" }}
+
+                {{ if or ( and ( not isset .Page "showAuthor" ) .params.page.showAuthor ) .Page "showAuthor" }}
+                    <div class="author">
+                        <i class="bi bi-person"></i>
+                        <a
+                            href="{{ "author" | absURL }}/{{ .params.globalFrontmatter.author | urlize }}/"
+                            class="cat-btn">
+                            {{ .params.globalFrontmatter.author }}
+                        </a>
+                    </div>
+                {{ end }}
+
             {{ end }}
+
+
             <div class="date">
                 <i class="bi bi-calendar3"></i>
                 <time datetime="{{ .Date.Format " 2006.01.02" }}"

@@ -33,9 +33,6 @@ pluralizeListTitles = false
 
     # Customized info shown in footer of the page
     [footer]
-        # The author of this site. Keep it an empty string or remove this item will hide it from the page
-        author = "Jing Wang"
-
         # CopyRight string shown in the footer. Keep it an empty string or remove this item will hide it from the page.
         copyrightStr = "All Rights Reserved."
 
@@ -76,6 +73,11 @@ pluralizeListTitles = false
     # These value would be used when they didn't appear in the frontmatter of a single page.
     # In other words, these value will be overwritten by the frontmatter in the single page.
     [globalFrontmatter]
+        # The author of this site. This will be shown in 
+        # 1. the footer of all page
+        # 2. the author filed in the single page. (this could be overwritten by the frontmatter of the single page.)
+        # Keep it an empty string or remove this item will hide it from the page
+        author = "Jing Wang"
         
         # Website description for RSS and SEO. Theme will generate a <meta> tag for this item
         description = "This is my new hugo site"
@@ -101,7 +103,9 @@ pluralizeListTitles = false
         # Should show the author of the page or not.
         # The author name will be shown in the single page if and only if 
         #   1. this items been set as true and
-        #   2. aurthor name been provided in the single page frontmatter.
+        #   2. "aurthor" filed been provided in the 
+        #       A. single page frontmatter or
+        #       B. "author" filed in above "globalFrontmatter" block
         showAuthor = true
 
         # Should show the estimate reading time in front of the page or not.

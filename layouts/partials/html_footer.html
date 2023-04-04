@@ -1,28 +1,28 @@
-    <!-- Bundle all css -->
-    {{ $script := slice }}
-    {{ $script := $script | append ( resources.Get "index.js" ) }}
+<!-- Bundle all css -->
+{{ $script := slice }}
+{{ $script := $script | append ( resources.Get "index.js" ) }}
 
 
-    <!-- Get all custom JS -->
-    {{ range .Site.Params.customJS }}
+<!-- Get all custom JS -->
+{{ with }}
+    {{ range .params.globalFrontmatter.externalJs }}
         {{ $script = $script | append (resources.Get . ) }}
     {{ end }}
+{{ end }}
 
-    {{ if hugo.IsProduction }}
-        <!-- Concat to a single file -->
-        {{ $script := $script | resources.Concat "js/index.js" | resources.Fingerprint "sha512" }}
+{{ if hugo.IsProduction }}
+    <!-- Concat to a single file -->
+    {{ $script := $script | resources.Concat "js/index.js" | resources.Fingerprint "sha512" }}
 
 
-        <script
-            type="text/javascript"
-            src="{{ $script.Permalink }}"
-            integrity="{{ $script.Data.Integrity }}"></script>
-    {{ else }}
-        {{ range $script }}
-            {{ $currentScript := . | resources.Fingerprint "sha512" }}
-            <link rel="stylesheet" href="{{ $currentScript.Permalink | absURL }}" />
-        {{ end }}
-
+    <script
+        type="text/javascript"
+        src="{{ $script.Permalink }}"
+        integrity="{{ $script.Data.Integrity }}"></script>
+{{ else }}
+    {{ range $script }}
+        {{ $currentScript := . | resources.Fingerprint "sha512" }}
+        <link rel="stylesheet" href="{{ $currentScript.Permalink | absURL }}" />
     {{ end }}
 
-</html>
+{{ end }}
