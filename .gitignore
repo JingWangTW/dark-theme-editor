@@ -1,4 +1,16 @@
-public/
-themes/
+# node modules and config files are ignored
+/node_modules
+
+# node dependency version is not required to this project
+package-lock.json
+
+# ignore hugo generated
+/public/**
+/resources/**
 .hugo_build.lock
-.gitmodules
+
+# this is a example site, we don't need the directory themes
+/themes/**
+
+# ignore vscode configuration
+/.vscode
