@@ -1,7 +1,7 @@
 ---
 title: "{{ replace .Name "-" " " | title }}"
 date: {{ .Date }}
-author: {{ .params.globalFrontmatter.author }}
+author: {{ .Site.Params.globalFrontmatter.author }}
 tags: ["put", "some", "tags", "here"]
 categories: ["catgorized", "the", "page"]
 description: "Description of this page."

@@ -8,28 +8,28 @@
         </h1>
 
         <div class="author-date-readtime">
-            {{ if isset .Page "author" }}
+            {{ if isset $.Params "author" }}
 
-                {{ if or ( and ( not isset .Page "showAuthor" ) .params.page.showAuthor ) .Page "showAuthor" }}
+                {{ if or ( and ( not (isset $.Params "showAuthor") ) $.Site.Params.page.showAuthor ) $.Params "showAuthor" }}
                     <div class="author">
                         <i class="bi bi-person"></i>
                         <a
-                            href="{{ "author" | absURL }}/{{ .Page.author | urlize }}/"
+                            href="{{ "author" | absURL }}/{{ $.Params.author | urlize }}/"
                             class="cat-btn">
-                            {{ .Page.author }}
+                            {{ $.Params.author }}
                         </a>
                     </div>
                 {{ end }}
 
-            {{ else if isset .params.globalFrontmatter "author" }}
+            {{ else if isset .Site.Params.globalFrontmatter "author" }}
 
-                {{ if or ( and ( not isset .Page "showAuthor" ) .params.page.showAuthor ) .Page "showAuthor" }}
+                {{ if or ( and ( not (isset $.Params "showAuthor") ) $.Site.Params.page.showAuthor ) $.Params "showAuthor" }}
                     <div class="author">
                         <i class="bi bi-person"></i>
                         <a
-                            href="{{ "author" | absURL }}/{{ .params.globalFrontmatter.author | urlize }}/"
+                            href="{{ "author" | absURL }}/{{ $.Site.Params.globalFrontmatter.author | urlize }}/"
                             class="cat-btn">
-                            {{ .params.globalFrontmatter.author }}
+                            {{ $.Site.Params.globalFrontmatter.author }}
                         </a>
                     </div>
                 {{ end }}

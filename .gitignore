@@ -11,3 +11,7 @@ package-lock.json
 
 # ignore vscode configuration
 /.vscode
+
+# this is a theme, we don't need these files
+/content
+/themes

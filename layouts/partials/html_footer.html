@@ -4,8 +4,8 @@
 
 
 <!-- Get all custom JS -->
-{{ with }}
-    {{ range .params.globalFrontmatter.externalJs }}
+{{ with .Site.Params.globalFrontmatter.externalJs }}
+    {{ range . }}
         {{ $script = $script | append (resources.Get . ) }}
     {{ end }}
 {{ end }}

@@ -16,12 +16,12 @@ pluralizeListTitles = false
 [params]
 
     # Customized info shown in header of the page
-    [header]
+    [params.header]
         # Website title for header banner.
         title = "My New Hugo Site"
 
         # Config about your's site logo, remove this item to hide the logo
-        [logo]
+        [params.header.logo]
             # Where is your site's URL
             imgUrl = ""
 
@@ -32,7 +32,7 @@ pluralizeListTitles = false
             logoLink = ""
 
     # Customized info shown in footer of the page
-    [footer]
+    [params.footer]
         # CopyRight string shown in the footer. Keep it an empty string or remove this item will hide it from the page.
         copyrightStr = "All Rights Reserved."
 
@@ -56,7 +56,7 @@ pluralizeListTitles = false
         modifiedTime = true
 
         # Social link in the footer, listed items are supported, delete unwanted items to hide it.
-        [socialLink]
+        [params.footer.socialLink]
             github = ""
             facebook = ""
             twitter = ""
@@ -72,7 +72,7 @@ pluralizeListTitles = false
     # Metadata of the site, value will be used in HTML <header>
     # These value would be used when they didn't appear in the frontmatter of a single page.
     # In other words, these value will be overwritten by the frontmatter in the single page.
-    [globalFrontmatter]
+    [params.globalFrontmatter]
         # The author of this site. This will be shown in 
         # 1. the footer of all page
         # 2. the author filed in the single page. (this could be overwritten by the frontmatter of the single page.)
@@ -96,7 +96,7 @@ pluralizeListTitles = false
 
     # Paramater applied in the single page
     # These values could be overwritten by the frontmatter in the single page.
-    [page]
+    [params.page]
         # Should include Table of Content in front of the page or not.
         includeToc = true
 

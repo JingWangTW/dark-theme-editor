@@ -5,48 +5,55 @@
 
     {{ hugo.Generator }}
 
-    {{ if .IsPage }}
-        {{ if isset .Page "Description" }}
-            <meta name="description" content="{{ .Description }}" />
-        {{ else if isset .params.globalFrontmatter "description" }}
+    {{ if $.IsPage }}
+        {{ if isset $.Params "description" }}
+            <meta name="description" content="{{ $.Params.description }}" />
+        {{ else if isset $.Site.Params.globalFrontmatter "description" }}
             <meta
                 name="description"
-                content="{{ .params.globalFrontmatter.description }}" />
+                content="{{ $.Site.Params.globalFrontmatter.description }}" />
         {{ end }}
 
-        {{ if isset .Page "Keywords" }}
-            <meta name="keywords" content="{{ .Keywords }}" />
-        {{ else if isset .params.globalFrontmatter "keywords" }}
+        {{ if isset $.Params "keywords" }}
+            <meta name="keywords" content="{{ $.Params.keywords }}" />
+        {{ else if isset $.Site.Params.globalFrontmatter "keywords" }}
             <meta
                 name="keywords"
-                content="{{ .params.globalFrontmatter.keywords }}" />
+                content="{{ $.Site.Params.globalFrontmatter.keywords }}" />
         {{ end }}
 
-        {{ if isset .Page "author" }}
-            <meta name="author" content="{{ .Page.author }}" />
-        {{ else if isset .params.globalFrontmatter "author" }}
+        {{ if isset $.Params "author" }}
+            <meta name="author" content="{{ $.Params.author }}" />
+        {{ else if isset $.Site.Params.globalFrontmatter "author" }}
             <meta
                 name="author"
-                content="{{ .params.globalFrontmatter.author }}" />
+                content="{{ $.Site.Params.globalFrontmatter.author }}" />
         {{ end }}
+
     {{ else }}
-        {{ with .params.globalFrontmatter.description }}
+        {{ with $.Site.Params.globalFrontmatter.description }}
             <meta name="description" content="{{ . }}" />
         {{ end }}
-        <meta name="author" content="{{ .params.globalFrontmatter.author }}" />
+
+        {{ with $.Site.Params.globalFrontmatter.author }}
+            <meta name="author" content="{{ . }}" />
+        {{ end }}
+
     {{ end }}
 
 
     <title>
-        {{ if .IsHome }}
-            {{ .Title }}
+        {{ if $.IsHome }}
+            {{ $.Title }}
         {{ else }}
-            {{ .Title }} -
-            {{ .Site.Title }}
+            {{ $.Title }} -
+            {{ $.Site.Title }}
         {{ end }}
     </title>
 
-    <link rel="shortcut icon" href="{{ .params.globalFrontmatter.author }}" />
+    <link
+        rel="shortcut icon"
+        href="{{ $.Site.Params.globalFrontmatter.author }}" />
 
     <link
         rel="stylesheet"
@@ -65,7 +72,7 @@
 
 
     <!-- Get all custom css -->
-    {{ range .params.globalFrontmatter.externalCss }}
+    {{ range $.Site.Params.globalFrontmatter.externalCss }}
         {{ $style := $style | append ( resources.Get .  ) }}
     {{ end }}
 
