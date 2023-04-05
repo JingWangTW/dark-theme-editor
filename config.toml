@@ -133,7 +133,7 @@ pluralizeListTitles = false
         dateFormat = "2006.01.02"
 
         # Should show the estimate reading time in front of the page or not.
-        timeToRead = true
+        showTimeToRead = true
 
         # Should show the breadcrumb in front of the page or not.
         showBreadcrumb = true
