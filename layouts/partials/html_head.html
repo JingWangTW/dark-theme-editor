@@ -51,9 +51,14 @@
         {{ end }}
     </title>
 
-    <link
-        rel="shortcut icon"
-        href="{{ $.Site.Params.globalFrontmatter.author }}" />
+    {{ if isset $.Params "faviconurl" }}
+        <link rel="icon" href="{{ $.Params.faviconUrl }}" />
+    {{ else if isset $.Site.Params.globalFrontmatter "faviconurl" }}
+        <link
+            rel="icon"
+            href="{{ $.Site.Params.globalFrontmatter.faviconUrl }}" />
+    {{ end }}
+
 
     <link
         rel="stylesheet"
