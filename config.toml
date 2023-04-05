@@ -32,7 +32,7 @@ pluralizeListTitles = false
     # Customized info shown in footer of the page
     [params.footer]
         # CopyRight string shown in the footer. Keep it an empty string or remove this item will hide it from the page.
-        copyrightStr = "All Rights Reserved."
+        copyrightStr = "All Rights Reserved ®."
 
         # Should show the counter in the footer or not
         # In the home page, it will show the numbers of all pages
@@ -52,6 +52,11 @@ pluralizeListTitles = false
 
         # Should show the edited time of the page or not
         modifiedTime = true
+
+        # Should show the current git HEAD hash or not
+        # To make this show up correctly, please follow the prerequisites in page
+        # https://gohugo.io/variables/git/
+        gitHash = true
 
         # Social link in the footer, listed items are supported, delete unwanted items to hide it.
         [params.footer.socialLink]

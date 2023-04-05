@@ -85,6 +85,12 @@
                     {{ end }}
                 </li>
             {{ end }}
+
+            {{ with $.Site.Params.footer.gitHash }}
+                <li title="{{ $.GitInfo.Subject }}">
+                    {{ $.GitInfo.AbbreviatedHash }}
+                </li>
+            {{ end }}
         </ul>
     </div>
 </footer>
