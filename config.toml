@@ -88,6 +88,7 @@ pluralizeListTitles = false
         # Website keywords. Theme will generate a <meta> tag for this item.
         keywords = "hugo,site,new"
 
+    [params.site]
         # Website ICON
         faviconUrl = ""
 

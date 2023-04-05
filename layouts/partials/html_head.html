@@ -51,12 +51,8 @@
         {{ end }}
     </title>
 
-    {{ if isset $.Params "faviconurl" }}
-        <link rel="icon" href="{{ $.Params.faviconUrl }}" />
-    {{ else if isset $.Site.Params.globalFrontmatter "faviconurl" }}
-        <link
-            rel="icon"
-            href="{{ $.Site.Params.globalFrontmatter.faviconUrl }}" />
+    {{ with $.Site.Params.site.faviconUrl }}
+        <link rel="icon" href="{{ . }}" />
     {{ end }}
 
 
@@ -77,8 +73,16 @@
 
 
     <!-- Get all custom css -->
-    {{ range $.Site.Params.globalFrontmatter.externalCss }}
-        {{ $style := $style | append ( resources.Get .  ) }}
+    {{ with $.Site.Params.globalFrontmatter.externalcss }}
+        {{ range $css_src :=  $.Site.Params.globalFrontmatter.externalcss }}
+            {{ $style := $style | append ( resources.Get $css_src  ) }}
+        {{ end }}
+    {{ end }}
+
+    {{ with $.Site.Params.globalFrontmatter.localCss }}
+        {{ range $css_src :=  $.Site.Params.globalFrontmatter.externalcss }}
+            {{ $style := $style | append ( resources.Get $css_src  ) }}
+        {{ end }}
     {{ end }}
 
     {{ if hugo.IsProduction }}
