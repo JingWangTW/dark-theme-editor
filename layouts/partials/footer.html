@@ -1,15 +1,15 @@
 <footer class="footer">
     <div class="footer-left">
         <ul class="social">
-            {{ with .Site.Params.footer.copyrightStr }}
+            {{ with $.Site.Params.footer.copyrightStr }}
                 <li>{{ . }}</li>
             {{ end }}
 
-            {{ with .Site.Params.globalFrontmatter.author }}
+            {{ with $.Site.Params.globalFrontmatter.author }}
                 <li>{{ . }}</li>
             {{ end }}
 
-            {{ range $key, $val := .Site.Params.footer.socialLink }}
+            {{ range $key, $val := $.Site.Params.footer.socialLink }}
                 {{ with $val }}
                     <li>
                         <a href="{{ $val }}" target="_blank">
@@ -27,7 +27,7 @@
 
     <div class="footer-right">
         <ul class="control status clearfix">
-            {{ with .Site.Params.footer.counter }}
+            {{ with $.Site.Params.footer.counter }}
                 <li>
                     {{ if $.IsPage }}
                         Word Count:
@@ -45,11 +45,11 @@
                 </li>
             {{ end }}
 
-            {{ with .Site.Params.footer.language }}
+            {{ with $.Site.Params.footer.language }}
                 <li>{{ $.Site.Language.Lang }}</li>
             {{ end }}
 
-            {{ with .Site.Params.footer.hugoVersion }}
+            {{ with $.Site.Params.footer.hugoVersion }}
                 <li>
                     <a href="https://gohugo.io" class="btn" target="_blank"
                         >Hugo: {{ hugo.Version }}</a
@@ -57,7 +57,7 @@
                 </li>
             {{ end }}
 
-            {{ with .Site.Params.footer.theme }}
+            {{ with $.Site.Params.footer.theme }}
                 <li>
                     <a
                         href="https://github.com/JingWangTW/dark-theme-editor"
@@ -68,7 +68,7 @@
                 </li>
             {{ end }}
 
-            {{ with .Site.Params.footer.modifiedTime }}
+            {{ with $.Site.Params.footer.modifiedTime }}
                 <li>
                     {{ if or ($.IsHome) ($.IsNode) }}
                         {{ with hugo.BuildDate }}
