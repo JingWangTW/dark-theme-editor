@@ -43,11 +43,11 @@
 
 
     <title>
-        {{ if $.IsHome }}
-            {{ $.Title }}
+        {{ if .IsHome }}
+            {{ $.Site.Params.header.title }}
         {{ else }}
-            {{ $.Title }} -
-            {{ $.Site.Title }}
+            {{ $.Page.Title }} |
+            {{ $.Site.Params.header.title }}
         {{ end }}
     </title>
 

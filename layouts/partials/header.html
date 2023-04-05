@@ -10,10 +10,10 @@
 
     <div class="header_middle">
         {{ if .IsHome }}
-            {{ .Title }}
+            {{ $.Site.Params.header.title }}
         {{ else }}
-            {{ .Title }} -
-            {{ .Site.Title }}
+            {{ $.Page.Title }} -
+            {{ $.Site.Params.header.title }}
         {{ end }}
     </div>
 </header>
