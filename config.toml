@@ -124,6 +124,14 @@ pluralizeListTitles = false
         #       B. "author" filed in above "globalFrontmatter" block
         showAuthor = true
 
+        # Should show the date of the page or not
+        showDate = true
+
+        # The format of the date.
+        # Refer to page https://gohugo.io/functions/format/ for more detail.
+        # Below is the default format, please do not remove it, unless you set `false` in `showDate` field.
+        dateFormat = "2006.01.02"
+
         # Should show the estimate reading time in front of the page or not.
         timeToRead = true
 

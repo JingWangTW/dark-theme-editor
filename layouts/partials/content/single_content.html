@@ -36,13 +36,15 @@
 
             {{ end }}
 
-
-            <div class="date">
-                <i class="bi bi-calendar3"></i>
-                <time datetime="{{ .Date.Format " 2006.01.02" }}"
-                    >{{ .Date.Format "2006.01.02" }}</time
-                >
-            </div>
+            {{ with $.Site.Params.page.showDate }}
+                <div class="date">
+                    <i class="bi bi-calendar3"></i>
+                    <time
+                        datetime="{{ $.Page.Date.Format $.Site.Params.page.dateFormat }}"
+                        >{{ $.Page.Date.Format $.Site.Params.page.dateFormat }}
+                    </time>
+                </div>
+            {{ end }}
 
             {{ with $.Site.Params.page.timeToRead }}
                 <div class="readtime">
