@@ -83,11 +83,12 @@
             </div>
         {{ end }}
 
-
-        <div class="breadcumb">
-            <i class="bi bi-folder"></i>
-            {{ partial "module/breadcrumb" . }}
-        </div>
+        {{ with  $.Site.Params.page.showBreadcrumb }}
+            <div class="breadcumb">
+                <i class="bi bi-folder"></i>
+                {{ partial "module/breadcrumb" $ }}
+            </div>
+        {{ end }}
     </div>
 
     {{ if .Params.includeToc }}
