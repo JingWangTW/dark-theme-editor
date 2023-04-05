@@ -72,12 +72,16 @@
                 <li>
                     {{ if or ($.IsHome) ($.IsNode) }}
                         {{ with hugo.BuildDate }}
-                            Last build:
-                            <time>{{ time hugo.BuildDate | safeHTML }}</time>
+                            Last build: &nbsp;
+                            <time
+                                >{{ time hugo.BuildDate | time.Format "Jan 02 2006 15:04:05" | safeHTML }}</time
+                            >
                         {{ end }}
                     {{ else }}
-                        Last modified:
-                        <time>{{ time $.Lastmod | safeHTML }}</time>
+                        Last modified: &nbsp;
+                        <time
+                            >{{ time $.Lastmod | time.Format "Jan 02 2006 15:04:05" | safeHTML }}</time
+                        >
                     {{ end }}
                 </li>
             {{ end }}
