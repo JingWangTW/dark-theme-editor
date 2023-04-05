@@ -73,15 +73,15 @@
                     {{ if or ($.IsHome) ($.IsNode) }}
                         {{ with hugo.BuildDate }}
                             Last build: &nbsp;
-                            <time
-                                >{{ time hugo.BuildDate | time.Format "Jan 02 2006 15:04:05" | safeHTML }}</time
-                            >
+                            <time>
+                                {{ time hugo.BuildDate | time.Format $.Site.Params.footer.dateFormat | safeHTML }}
+                            </time>
                         {{ end }}
                     {{ else }}
                         Last modified: &nbsp;
-                        <time
-                            >{{ time $.Lastmod | time.Format "Jan 02 2006 15:04:05" | safeHTML }}</time
-                        >
+                        <time>
+                            {{ time $.Lastmod | time.Format $.Site.Params.footer.dateFormat | safeHTML }}
+                        </time>
                     {{ end }}
                 </li>
             {{ end }}
