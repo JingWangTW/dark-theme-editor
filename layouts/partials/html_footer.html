@@ -5,14 +5,20 @@
 
 <!-- Get all custom JS -->
 {{ with $.Site.Params.globalFrontmatter.externalJs }}
-    {{ range . }}
-        {{ $script = $script | append (resources.Get . ) }}
+    {{ range $js_src := $.Site.Params.globalFrontmatter.externalJs }}
+        {{ $script = $script | append (resources.GetRemote $js_src ) }}
+    {{ end }}
+{{ end }}
+
+{{ with $.Site.Params.globalFrontmatter.localJs }}
+    {{ range $js_src := $.Site.Params.globalFrontmatter.localJs }}
+        {{ $script = $script | append (resources.Get $js_src ) }}
     {{ end }}
 {{ end }}
 
 {{ if hugo.IsProduction }}
     <!-- Concat to a single file -->
-    {{ $script := $script | resources.Concat "js/index.js" | resources.Fingerprint "sha512" }}
+    {{ $script := $script | resources.Concat "js/index.js" | minify | resources.Fingerprint "sha512" }}
 
 
     <script
@@ -22,7 +28,16 @@
 {{ else }}
     {{ range $script }}
         {{ $currentScript := . | resources.Fingerprint "sha512" }}
-        <link rel="stylesheet" href="{{ $currentScript.Permalink | absURL }}" />
+        <script
+            type="text/javascript"
+            src="{{ $currentScript.Permalink }}"
+            integrity="{{ $currentScript.Data.Integrity }}"></script>
     {{ end }}
 
 {{ end }}
+
+
+<!-- CSS to support icon will include font inside, it's better to ref it explicit. -->
+<link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.4/font/bootstrap-icons.css" />
