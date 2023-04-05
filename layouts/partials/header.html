@@ -1,11 +1,19 @@
 <header class="header">
     <div class="header_left">
-        <a href="/">
-            <img
-                class="logo"
-                src="{{ "images/favicon.ico" | absURL }}"
-                alt="logo" />
-        </a>
+        {{ with $.Site.Params.header.logo.imgUrl }}
+            {{ if $.Site.Params.header.logo.logoLink }}
+                <a href="{{ $.Site.Params.header.logo.logoLink }}">
+                    <img class="logo" src="{{ "{{ . }}" | absURL }}" alt="logo"
+                    />
+                </a>
+            {{ else }}
+                <a href="/">
+                    <img class="logo" src="{{ "{{ . }}" | absURL }}" alt="logo"
+                    />
+                </a>
+            {{ end }}
+
+        {{ end }}
     </div>
 
     <div class="header_middle">
