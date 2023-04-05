@@ -25,10 +25,8 @@ pluralizeListTitles = false
             # Where is your site's URL
             imgUrl = ""
 
-            # Should the logo clickable?
-            clickable = true
-
             # If the logo is clickable, where should it be linked?
+            # In default, it will linked to the homepage of the site.
             logoLink = ""
 
     # Customized info shown in footer of the page
