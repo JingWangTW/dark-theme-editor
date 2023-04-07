@@ -31,7 +31,7 @@ article {
 }
 
 footer {
-    height: calc(3% + 8px);
+    height: 3%;
 }
 
 /**************
@@ -445,9 +445,9 @@ ul.section-tree ul.section-tree > li.file {
             6vh: footer
             8vw: <article> padding
             2pt: border of header and footer
-            8px: padding in footer
+            12px: padding in footer
         */
-        min-height: calc(100vh - 6vh - 6vh - 8vw - 2pt - 8px);
+        min-height: calc(100vh - 6vh - 6vh - 8vw - 2pt - 12px);
     }
 
     /* show the navbar button */
@@ -492,8 +492,10 @@ ul.section-tree ul.section-tree > li.file {
 
     /* re-layout the footer */
     footer {
-        height: 6vh;
+        height: calc(6vh + 12px);
         font-size: 14pt;
+        padding-top: 6px;
+        padding-bottom: 6px;
     }
 
     footer > div.footer-left {
@@ -542,9 +544,9 @@ ul.section-tree ul.section-tree > li.file {
             6vh: footer
             12vw: <article> padding
             2pt: border of header and footer
-            8px: padding in footer
+            12px: padding in footer
         */
-        min-height: calc(100vh - 6vh - 6vh - 12vw - 2pt - 8px);
+        min-height: calc(100vh - 6vh - 6vh - 12vw - 2pt - 12px);
     }
 
     /* move the position of article information */
@@ -559,7 +561,6 @@ ul.section-tree ul.section-tree > li.file {
 
     /* re-layout the footer */
     footer {
-        height: 6vh;
         font-size: 12pt;
     }
 }
