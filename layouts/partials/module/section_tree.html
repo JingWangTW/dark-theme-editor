@@ -12,15 +12,15 @@
     <ul class="section-tree">
         {{ range $children }}
             {{ if .IsNode }}
+                <li
                     {{ if .IsAncestor $currentPage }}
-                        <li class="dir open-dir">
-                    {{ else}}
-                        <li class="dir closed-dir">
-                    {{ end }}
+                        class="dir opened-dir"
+                    {{ else }}
+                        class="dir closed-dir"
+                    {{ end }}>
                     <span class="dir-text"> {{ .Title }} </span>
-                    
-                    {{ partial "module/section_tree" ( dict "context" . "currentPage" $currentPage ) }}
 
+                    {{ partial "module/section_tree" ( dict "context" . "currentPage" $currentPage ) }}
                 </li>
             {{ else }}
                 <li class="file">
