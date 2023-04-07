@@ -13,7 +13,9 @@ header {
 }
 
 main {
-    /* 2pt: border in headr and footer */
+    /* 
+        2pt: border in headr and footer 
+    */
     height: calc(94% - 2pt);
     display: flex;
 }
@@ -275,22 +277,21 @@ footer {
     color: grey;
     border-top: 1pt solid rgb(59, 59, 59);
     padding: 0 3pt;
+    padding-top: 2pt;
     display: flex;
     justify-content: space-between;
-    overflow-x: hidden;
 }
 
 footer > div {
     display: inline;
     flex: 0 0 auto;
-    padding-top: 8px;
+    overflow-x: hidden;
 }
 
 footer > div > ul {
     display: flex;
     height: 100%;
     align-items: stretch;
-    flex-wrap: wrap;
 }
 
 footer > div > ul > li {
@@ -506,6 +507,10 @@ ul.section-tree ul.section-tree > li.file {
         font-size: 14pt;
         padding-top: 6px;
         padding-bottom: 6px;
+    }
+
+    footer > div > ul {
+        flex-wrap: wrap;
     }
 
     footer > div.footer-left {
