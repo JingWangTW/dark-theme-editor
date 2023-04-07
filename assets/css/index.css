@@ -31,7 +31,7 @@ article {
 }
 
 footer {
-    height: 3%;
+    height: calc(3% + 8px);
 }
 
 /**************
@@ -52,8 +52,9 @@ a:active {
 body {
     background-color: #282c34;
     font-size: 16px;
-    font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif,
-        "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue",
+        Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji",
+        "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
     overflow: hidden;
 }
 
@@ -280,12 +281,14 @@ footer {
 footer > div {
     display: inline;
     flex: 0 0 auto;
+    padding-top: 8px;
 }
 
 footer > div > ul {
     display: flex;
     height: 100%;
     align-items: stretch;
+    flex-wrap: wrap;
 }
 
 footer > div > ul > li {
@@ -442,8 +445,9 @@ ul.section-tree ul.section-tree > li.file {
             6vh: footer
             8vw: <article> padding
             2pt: border of header and footer
+            8px: padding in footer
         */
-        min-height: calc(100vh - 6vh - 6vh - 8vw - 2pt);
+        min-height: calc(100vh - 6vh - 6vh - 8vw - 2pt - 8px);
     }
 
     /* show the navbar button */
@@ -493,11 +497,8 @@ ul.section-tree ul.section-tree > li.file {
     }
 
     footer > div.footer-left {
-        width: 60%;
-    }
-
-    footer > div.footer-left > ul.social {
-        justify-content: space-between;
+        min-width: 60%;
+        max-width: 100%;
     }
 
     footer > div.footer-right {
@@ -541,8 +542,9 @@ ul.section-tree ul.section-tree > li.file {
             6vh: footer
             12vw: <article> padding
             2pt: border of header and footer
+            8px: padding in footer
         */
-        min-height: calc(100vh - 6vh - 6vh - 12vw - 2pt);
+        min-height: calc(100vh - 6vh - 6vh - 12vw - 2pt - 8px);
     }
 
     /* move the position of article information */
