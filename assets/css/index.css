@@ -13,7 +13,8 @@ header {
 }
 
 main {
-    height: 94%;
+    /* 2pt: border in headr and footer */
+    height: calc(94% - 2pt);
     display: flex;
 }
 
@@ -270,12 +271,13 @@ article.main > div.list-terms > ul > li:hover {
 
 /*** footer ***/
 footer {
-    font-size: 10pt;
+    font-size: 8pt;
     color: grey;
     border-top: 1pt solid rgb(59, 59, 59);
     padding: 0 3pt;
     display: flex;
     justify-content: space-between;
+    overflow-x: hidden;
 }
 
 footer > div {
@@ -304,8 +306,16 @@ footer > div > ul > li:hover {
     color: rgb(150, 150, 150);
 }
 
+footer > div.footer-left {
+    max-width: 40%;
+}
+
 footer > div.footer-left > ul {
     justify-content: flex-start;
+}
+
+footer > div.footer-right {
+    min-width: 60%;
 }
 
 footer > div.footer-right > ul {
