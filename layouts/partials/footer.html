@@ -12,13 +12,16 @@
             {{ range $key, $val := $.Site.Params.footer.socialLink }}
                 {{ with $val }}
                     <li>
-                        <a href="{{ $val }}" target="_blank">
-                            {{ if eq $key "email" }}
+                        {{ if eq $key "email" }}
+                            <a href="mailto:{{ $val }}" target="_blank">
                                 <i class="bi-envelope"></i>
-                            {{ else }}
+                            </a>
+                        {{ else }}
+                            <a href="{{ $val }}" target="_blank">
                                 <i class="bi-{{ $key }}"></i>
-                            {{ end }}
-                        </a>
+                            </a>
+                        {{ end }}
+
                     </li>
                 {{ end }}
             {{ end }}
