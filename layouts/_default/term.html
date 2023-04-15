@@ -5,8 +5,17 @@
 
         <div class="title">
             <h1 class="title-header">
-                {{ partial "module/tax_icon" . }}
-                {{ .Title }}
+                {{ if eq .Data.Singular "tag" }}
+                    <i class="bi bi-tags"></i>
+                {{ else if eq .Data.Singular "category" }}
+                    <i class="bi bi-bookmarks"></i>
+                {{ else if eq .Data.Singular "author" }}
+                    <i class="bi bi-person-fill"></i>
+                {{ else }}
+                    <i class="bi bi-gear"></i>
+                {{ end }}
+                All
+                {{ pluralize .Title }}
             </h1>
         </div>
 
@@ -19,12 +28,12 @@
 
         <hr />
 
-        <div class="list-files">
+        <div class="list-terms">
             <ul>
                 {{ range .Pages }}
                     <li>
                         <a href="{{ .Permalink }}">
-                            <i class="bi bi-file-earmark-richtext"></i>
+                            {{ partial "module/tax_icon" . }}
                             {{ .Title }}
                         </a>
                     </li>
