@@ -20,6 +20,9 @@ pluralizeListTitles = false
         # Website title for header banner.
         title = "My New Hugo Site"
 
+        # Subtitle for this site, used in homepage only
+        subtitle = "A Site Built by Hugo"
+
         # Config about your's site logo, remove this item to hide the logo
         [params.header.logo]
             # Where is your site's URL

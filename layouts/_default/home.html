@@ -2,8 +2,15 @@
     <article class="main">
         {{ partial "module/sidebar_btn" . }}
 
+
         <div class="home">
-            <div class="title"></div>
+            <div class="title">
+                <h1>{{ $.Site.Params.header.title }}</h1>
+
+                {{ with $.Site.Params.header.subtitle }}
+                    <h2>{{ . }}</h2>
+                {{ end }}
+            </div>
             <div class="recommend">
                 <div class="left">
                     <div class="start"></div>
