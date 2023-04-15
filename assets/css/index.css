@@ -277,7 +277,6 @@ footer {
     color: grey;
     border-top: 1pt solid rgb(59, 59, 59);
     padding: 0 3pt;
-    padding-top: 2pt;
     display: flex;
     justify-content: space-between;
 }
