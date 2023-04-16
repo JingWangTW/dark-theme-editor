@@ -1,0 +1,299 @@
+/*******************************************************************************************
+ * This files contain the stlying used in the <artile> <div.content>
+ * In other words, this file used to styling the content generated from markdown.
+ *******************************************************************************************/
+
+@charset "UTF-8";
+
+/**************
+    General
+***************/
+article.main > div.content * {
+    line-height: 14pt;
+}
+
+/**************
+    Header
+***************/
+article.main > div.content :where(h1, h2, h3) {
+    margin: 24pt 0;
+    font-weight: bold;
+}
+
+article.main > div.content :where(h1, h2) {
+    font-size: 1.8rem;
+}
+
+article.main > div.content h1 {
+    border-bottom: 1.5pt solid #5c5e60;
+    padding-bottom: 15pt;
+}
+
+article.main > div.content h3 {
+    font-size: 1.3rem;
+}
+
+article.main > div.content :where(h4, h5, h6) {
+    margin: 15pt 0pt;
+    font-weight: bold;
+}
+
+/**************
+   Paragraph
+***************/
+article.main > div.content p {
+    line-height: 22pt;
+    text-align: justify;
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+}
+
+article.main > div.content p + p {
+    margin-top: 2em;
+}
+
+/**************
+    Anchor
+***************/
+article.main > div.content a {
+    color: #4398e5;
+}
+
+article.main > div.content a:hover {
+    color: #7fb8ee;
+    text-decoration: underline;
+}
+
+/**************
+      List
+***************/
+article.main > div.content ul {
+    display: block;
+    list-style-type: disc;
+    padding-inline-start: 20px;
+    padding-left: 2em;
+}
+
+article.main > div.content ul ul {
+    list-style-type: circle;
+}
+
+article.main > div.content ul ul ul {
+    list-style-type: square;
+}
+
+article.main > div.content ol {
+    display: block;
+    list-style-type: decimal;
+    padding-inline-start: 20px;
+    padding-left: 2em;
+}
+
+article.main > div.content li {
+    margin: 8pt 0pt;
+}
+
+/**************
+     Image
+***************/
+article.main > div.content img {
+    height: auto;
+    width: 100%;
+}
+
+/**************
+     Font
+***************/
+article.main > div.content em {
+    font-style: italic;
+}
+
+article.main > div.content strong {
+    font-weight: bold;
+    font-size: 106%;
+    color: #c8c8c8;
+}
+
+article.main > div.content del {
+    text-decoration: line-through;
+}
+
+/**************
+     Rule
+***************/
+article.main > div.content hr {
+    height: 0.1em;
+    background-color: #525252;
+    margin: 12pt 0;
+    padding: 0;
+    border: 0;
+}
+
+/**************
+     Table
+***************/
+article.main > div.content table {
+    display: block;
+    max-width: 100%;
+    overflow: auto;
+    margin: 15pt 0pt;
+}
+
+article.main > div.content table tr {
+    border-bottom: 1px solid #726f6f;
+}
+
+article.main > div.content table th {
+    font-weight: bold;
+    font-size: 106%;
+    color: #c8c8c8;
+}
+
+article.main > div.content table :where(th, td) {
+    padding: 0.8em 1.4em;
+}
+
+article.main > div.content table > thead > tr:last-child {
+    border-bottom-style: double;
+    border-bottom-width: 4px;
+}
+
+article.main > div.content table > tbody > tr:last-child {
+    border-bottom: none;
+}
+
+article.main > div.content table > tbody > tr:nth-child(2n) {
+    background-color: #202020;
+}
+
+/**************
+   Code Block
+***************/
+
+/*** small code span ***/
+article.main > div.content :where(pre, code) {
+    font-family: Menlo, Monaco, Consolas, "Courier New", monospace;
+}
+
+article.main > div.content code:not(div.highlight code) {
+    padding: 0.2em 0.4em;
+    font-size: 85%;
+    background-color: rgb(92 92 92);
+    border-radius: 5pt;
+    margin-left: 0.2em;
+    margin-right: 0.2em;
+}
+
+/*** Code block indented with four spaces ***/
+article.main > div.content pre:not(div.highlight pre) {
+    border: 1.5pt solid #5c5e60;
+    border-radius: 10px;
+    padding: 1em;
+    overflow: auto;
+}
+
+article.main > div.content pre:not(div.highlight pre) > code {
+    border: none;
+    padding: 0;
+    font-size: 100%;
+    background-color: transparent;
+}
+
+/*** Highlight Codeblock ***/
+article.main > div.content div.highlight div {
+    border-radius: 10pt;
+    padding-top: 0.5em;
+    padding-bottom: 0.5em;
+}
+
+article.main > div.content div.highlight code {
+    background: none;
+    border-radius: 0;
+}
+
+article.main > div.content div.highlight table {
+    padding: 5pt !important;
+    overflow-y: hidden !important;
+}
+
+article.main > div.content div.highlight table tr {
+    border: none;
+}
+
+/**************
+   Blockquote
+***************/
+article.main > div.content blockquote {
+    padding: 0 1em;
+    border-left: 0.2em solid #727272;
+    color: #ada9a9;
+    margin-top: 2em;
+    margin-bottom: 2em;
+    margin-left: 1em;
+}
+
+article.main > div.content blockquote blockquote {
+    margin-top: 0;
+}
+
+article.main > div.content blockquote p {
+    padding-top: 0.2em;
+    padding-bottom: 0.2em;
+}
+
+article.main > div.content blockquote p + p {
+    margin-top: 0.5em;
+}
+
+article.main > div.content blockquote blockquote p {
+    padding-top: 0.1em;
+    margin-top: 0.5em;
+}
+
+/**************
+   Description
+***************/
+article.main > div.content dt {
+    font-weight: bold;
+    font-size: 106%;
+    color: #c8c8c8;
+}
+
+article.main > div.content dd {
+    margin-bottom: 1em;
+    margin-left: 0.5em;
+}
+
+/**************
+   Super/sub script
+***************/
+article.main > div.content sup {
+    vertical-align: super;
+    font-size: 80%;
+}
+
+article.main > div.content sub {
+    vertical-align: sub;
+    font-size: 80%;
+}
+
+/**************
+   Footnote
+***************/
+article.main > div.content div.footnotes :where(p, p + p) {
+    margin: 0;
+}
+
+/**************
+   Scrollbar
+***************/
+:where(article.main, article.main *)::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+    background-color: rgb(95, 94, 94);
+}
+
+:where(article.main, article.main *)::-webkit-scrollbar-thumb {
+    background: rgb(139, 139, 139);
+    border-radius: 10pt;
+}

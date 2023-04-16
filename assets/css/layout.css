@@ -1,0 +1,39 @@
+/*******************************************************************************************
+ * This file contains the stlying used for layout.
+ *******************************************************************************************/
+
+@charset "UTF-8";
+
+body {
+    height: 100vh;
+    max-height: 100vh;
+}
+
+header {
+    height: 3%;
+}
+
+main {
+    /* 
+        2pt: border in headr and footer 
+    */
+    height: calc(94% - 2pt);
+    display: flex;
+}
+
+aside.sidebar {
+    width: 15%;
+}
+
+article {
+    /*
+        3pt: expand bar
+        4%: <article> padding
+        1px: dummpy
+    */
+    width: calc(85% - 3pt - 4% - 1px);
+}
+
+footer {
+    height: 3%;
+}

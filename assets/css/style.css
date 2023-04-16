@@ -1,292 +1,364 @@
-/**************
-    General
-***************/
-article.main > div.content * {
-    line-height: 14pt;
+/*******************************************************************************************
+ * This file contains the all the styling in the site
+ *******************************************************************************************/
+@charset "UTF-8";
+
+/*** Element Styling ***/
+a,
+a:link,
+a:visited,
+a:hover,
+a:active {
+    text-decoration: none;
+    color: inherit;
 }
 
-/**************
-    Header
-***************/
-article.main > div.content :where(h1, h2, h3) {
-    margin: 24pt 0;
-    font-weight: bold;
+/*** HTML Body ***/
+body {
+    background-color: #282c34;
+    font-size: 16px;
+    font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue",
+        Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji",
+        "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    overflow: hidden;
 }
 
-article.main > div.content :where(h1, h2) {
-    font-size: 1.8rem;
+/*** Header ***/
+header {
+    font-size: 8pt;
+    color: white;
+    border-bottom: 1pt solid rgb(59, 59, 59);
 }
 
-article.main > div.content h1 {
-    border-bottom: 1.5pt solid #5c5e60;
+header > div {
+    vertical-align: middle;
+    text-align: center;
+    line-height: 3vh;
+    height: 100%;
+}
+
+header > div.header_left {
+    float: left;
+    position: relative;
+    left: 5pt;
+    top: 0pt;
+}
+
+header > div.header_left > img.logo {
+    height: 100%;
+}
+
+/*** sidebar ***/
+aside.exapandable {
+    width: 3pt;
+    background-color: rgb(59, 59, 59);
+    cursor: col-resize;
+}
+
+aside.exapandable:hover {
+    background-color: rgb(99, 99, 99);
+}
+
+/*** main content ***/
+article.main {
+    text-align: left;
+    color: #c6c6c7;
+    padding: 2%;
+    overflow-y: auto;
+}
+
+article.main > button.sidebar-toggle-btn {
+    display: none;
+}
+
+article.main > div.title {
+    display: flex;
+    justify-content: space-between;
     padding-bottom: 15pt;
 }
 
-article.main > div.content h3 {
-    font-size: 1.3rem;
-}
+article.main > div.title > h1.title-header {
+    flex: 0 0 auto;
 
-article.main > div.content :where(h4, h5, h6) {
-    margin: 15pt 0pt;
+    font-size: 2rem;
     font-weight: bold;
+    margin-bottom: 0.5rem;
 }
 
-/**************
-   Paragraph
-***************/
-article.main > div.content p {
-    line-height: 22pt;
-    text-align: justify;
-    margin-top: 0.5em;
-    margin-bottom: 0.5em;
+article.main > div.title > div.author-date-readtime {
+    flex: 0 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    font-size: 0.9rem;
+    color: #939bab;
 }
 
-article.main > div.content p + p {
-    margin-top: 2em;
+article.main > div.title > div.author-date-readtime > div:not(:first-child) {
+    padding-top: 1em;
 }
 
-/**************
-    Anchor
-***************/
-article.main > div.content a {
+article.main > div.title > div.author-date-readtime > div.author:hover {
+    color: white;
+}
+
+article.main > div.article-meta {
+    color: #939bab;
+    font-size: 1rem;
+    margin-top: -2em;
+}
+
+article.main > div.article-meta a {
+    padding: 2pt 10pt;
+    margin: 0pt 5pt;
+    border-radius: 10px;
+    color: #ffffff;
+}
+
+article.main > hr {
+    border-color: #5c5e60;
+    border-width: 1pt;
+    margin-bottom: 25pt;
+}
+
+article.main > div.article-meta > div:only-child {
+    padding-top: 20pt;
+}
+
+article.main > div.article-meta > div.categories > a.cat-btn {
+    background: #2f5292;
+}
+
+article.main > div.article-meta > div.categories > a.cat-btn:hover {
+    background: #5779b9;
+}
+
+article.main > div.article-meta > div.tags > a.tag-btn {
+    background: #327e5e;
+}
+
+article.main > div.article-meta > div.tags > a.tag-btn:hover {
+    background: #479775;
+}
+
+article.main > div.article-meta > div:where(.categories, .tags) > a {
+    line-height: 3em;
+}
+
+article.main > div.article-meta > div.breadcumb > a.bread-btn {
+    color: #99a1ff;
+    padding-left: 5pt;
+    padding-right: 5pt;
+    line-height: 1.5em;
+}
+
+article.main > nav#TableOfContents {
+    margin-bottom: 20pt;
+}
+
+article.main > nav#TableOfContents ul {
+    display: block;
+    list-style-type: disc;
+    padding-inline-start: 20px;
+}
+
+article.main > nav#TableOfContents ul ul {
+    list-style-type: circle;
+}
+
+article.main > nav#TableOfContents ul ul ul {
+    list-style-type: square;
+}
+
+article.main > nav#TableOfContents li {
+    margin: 8pt 0pt;
+}
+
+article.main > nav#TableOfContents a {
     color: #4398e5;
 }
 
-article.main > div.content a:hover {
+article.main > nav#TableOfContents a:hover {
     color: #7fb8ee;
     text-decoration: underline;
 }
 
-/**************
-      List
-***************/
-article.main > div.content ul {
-    display: block;
-    list-style-type: disc;
-    padding-inline-start: 20px;
-    padding-left: 2em;
+article.main > div.list-files > ul {
+    font-size: 14pt;
 }
 
-article.main > div.content ul ul {
-    list-style-type: circle;
+article.main > div.list-files > ul > li {
+    margin-bottom: 15pt;
 }
 
-article.main > div.content ul ul ul {
-    list-style-type: square;
+article.main > div.list-files > ul > li:hover {
+    color: white;
 }
 
-article.main > div.content ol {
-    display: block;
-    list-style-type: decimal;
-    padding-inline-start: 20px;
-    padding-left: 2em;
-}
-
-article.main > div.content li {
-    margin: 8pt 0pt;
-}
-
-/**************
-     Image
-***************/
-article.main > div.content img {
-    height: auto;
-    width: 100%;
-}
-
-/**************
-     Font
-***************/
-article.main > div.content em {
-    font-style: italic;
-}
-
-article.main > div.content strong {
-    font-weight: bold;
-    font-size: 106%;
-    color: #c8c8c8;
-}
-
-article.main > div.content del {
-    text-decoration: line-through;
-}
-
-/**************
-     Rule
-***************/
-article.main > div.content hr {
-    height: 0.1em;
-    background-color: #525252;
-    margin: 12pt 0;
+article.main > div.list- ul.section-tree {
+    margin-bottom: 10px;
+    margin-top: 10px;
     padding: 0;
-    border: 0;
 }
 
-/**************
-     Table
-***************/
-article.main > div.content table {
-    display: block;
-    max-width: 100%;
-    overflow: auto;
-    margin: 15pt 0pt;
+article.main > div.list-files ul.section-tree ul {
+    margin-left: 25px;
 }
 
-article.main > div.content table tr {
-    border-bottom: 1px solid #726f6f;
+article.main > div.list-files ul.section-tree li {
+    padding-left: 0;
 }
 
-article.main > div.content table th {
-    font-weight: bold;
-    font-size: 106%;
-    color: #c8c8c8;
+article.main > div.list-files ul.section-tree li.file {
+    margin-left: -5pt;
+    padding-top: 10pt;
 }
 
-article.main > div.content table :where(th, td) {
-    padding: 0.8em 1.4em;
+article.main > div.list-terms > ul {
+    display: flex;
+    flex-wrap: wrap;
 }
 
-article.main > div.content table > thead > tr:last-child {
-    border-bottom-style: double;
-    border-bottom-width: 4px;
+article.main > div.list-terms > ul > li {
+    border: 1px solid #6c6d6e;
+    border-radius: 30px;
+    padding: 0.5em 1em;
+    margin: 0.5em 1em;
 }
 
-article.main > div.content table > tbody > tr:last-child {
-    border-bottom: none;
+article.main > div.list-terms > ul > li:hover {
+    border-color: #969697;
+    border-width: 2px;
+    color: white;
+    background-color: #727272;
 }
 
-article.main > div.content table > tbody > tr:nth-child(2n) {
-    background-color: #202020;
+/*** footer ***/
+footer {
+    font-size: 8pt;
+    color: grey;
+    border-top: 1pt solid rgb(59, 59, 59);
+    padding: 0 3pt;
+    display: flex;
+    justify-content: space-between;
 }
 
-/**************
-   Code Block
-***************/
-
-/*** small code span ***/
-article.main > div.content :where(pre, code) {
-    font-family: Menlo, Monaco, Consolas, "Courier New", monospace;
+footer > div {
+    display: inline;
+    flex: 0 0 auto;
+    overflow-x: hidden;
 }
 
-article.main > div.content code:not(div.highlight code) {
-    padding: 0.2em 0.4em;
-    font-size: 85%;
-    background-color: rgb(92 92 92);
-    border-radius: 5pt;
-    margin-left: 0.2em;
-    margin-right: 0.2em;
+footer > div > ul {
+    display: flex;
+    height: 100%;
+    align-items: stretch;
 }
 
-/*** Code block indented with four spaces ***/
-article.main > div.content pre:not(div.highlight pre) {
-    border: 1.5pt solid #5c5e60;
-    border-radius: 10px;
-    padding: 1em;
-    overflow: auto;
+footer > div > ul > li {
+    flex: 0 0 auto;
+    padding: 0 5pt;
+    display: inline-flex;
+    align-items: center;
+    cursor: default;
 }
 
-article.main > div.content pre:not(div.highlight pre) > code {
-    border: none;
-    padding: 0;
-    font-size: 100%;
-    background-color: transparent;
+footer > div > ul > li:hover {
+    background-color: rgb(65, 65, 65);
+    color: rgb(150, 150, 150);
 }
 
-/*** Highlight Codeblock ***/
-article.main > div.content div.highlight div {
-    border-radius: 10pt;
-    padding-top: 0.5em;
-    padding-bottom: 0.5em;
+footer > div.footer-left {
+    max-width: 40%;
 }
 
-article.main > div.content div.highlight code {
-    background: none;
-    border-radius: 0;
+footer > div.footer-left > ul {
+    justify-content: flex-start;
 }
 
-article.main > div.content div.highlight table {
-    padding: 5pt !important;
-    overflow-y: hidden !important;
+footer > div.footer-right {
+    min-width: 60%;
 }
 
-article.main > div.content div.highlight table tr {
-    border: none;
+footer > div.footer-right > ul {
+    justify-content: flex-end;
 }
 
-/**************
-   Blockquote
-***************/
-article.main > div.content blockquote {
-    padding: 0 1em;
-    border-left: 0.2em solid #727272;
-    color: #ada9a9;
-    margin-top: 2em;
-    margin-bottom: 2em;
-    margin-left: 1em;
+/*** Section Tree Listing ***/
+ul.section-tree > li > a {
+    cursor: pointer;
 }
 
-article.main > div.content blockquote blockquote {
-    margin-top: 0;
+ul.section-tree > li > a:hover {
+    color: white !important;
 }
 
-article.main > div.content blockquote p {
-    padding-top: 0.2em;
-    padding-bottom: 0.2em;
+ul.section-tree > li.dir {
+    padding-left: 10pt;
+    padding-top: 10pt;
+    color: grey;
 }
 
-article.main > div.content blockquote p + p {
-    margin-top: 0.5em;
+ul.section-tree > li.dir > span.dir-text {
+    cursor: pointer;
+    margin-left: 5pt;
 }
 
-article.main > div.content blockquote blockquote p {
-    padding-top: 0.1em;
-    margin-top: 0.5em;
+ul.section-tree > li.dir > span.dir-text:hover {
+    color: white;
 }
 
-/**************
-   Description
-***************/
-article.main > div.content dt {
-    font-weight: bold;
-    font-size: 106%;
-    color: #c8c8c8;
+ul.section-tree > li.closed-dir::before {
+    content: " ";
+    border-color: white;
+    border-width: 1pt 1pt 0 0;
+    border-style: solid;
+    padding: 3pt;
+    transform: rotate(45deg);
+    display: inline-block;
+    position: relative;
+    bottom: 1pt;
 }
 
-article.main > div.content dd {
-    margin-bottom: 1em;
-    margin-left: 0.5em;
+ul.section-tree > li.closed-dir > ul {
+    display: none;
 }
 
-/**************
-   Super/sub script
-***************/
-article.main > div.content sup {
-    vertical-align: super;
-    font-size: 80%;
+ul.section-tree > li.opened-dir::before {
+    content: " ";
+    border-color: white;
+    border-width: 1pt 1pt 0 0;
+    border-style: solid;
+    padding: 3pt;
+    transform: rotate(135deg);
+    display: inline-block;
+    position: relative;
+    bottom: 3pt;
 }
 
-article.main > div.content sub {
-    vertical-align: sub;
-    font-size: 80%;
+ul.section-tree > li.file {
+    padding-left: 5pt;
+    padding-top: 7pt;
+    color: grey;
 }
 
-/**************
-   Footnote
-***************/
-article.main > div.content div.footnotes :where(p, p + p) {
-    margin: 0;
+ul.section-tree > li.file i {
+    padding-left: 5pt;
 }
 
-/**************
-   Scrollbar
-***************/
-:where(article.main, article.main *)::-webkit-scrollbar {
-    width: 8px;
-    height: 8px;
-    background-color: rgb(95, 94, 94);
+/* dir in nested subdir*/
+ul.section-tree ul.section-tree > li.dir {
+    padding-left: 18pt;
 }
 
-:where(article.main, article.main *)::-webkit-scrollbar-thumb {
-    background: rgb(139, 139, 139);
-    border-radius: 10pt;
+/* file in nested subdir*/
+ul.section-tree ul.section-tree > li.file {
+    padding-left: 10pt;
+}
+
+/* sidebar slide-in animation */
+@keyframes slide-in {
+    100% {
+        transform: translateX(0%);
+    }
 }

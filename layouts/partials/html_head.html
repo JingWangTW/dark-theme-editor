@@ -65,8 +65,9 @@
 
 
     <!-- Get all local CSS -->
-    {{ $style := $style | append ( resources.Get "css/index.css" ) }}
-    {{ $style := $style | append ( resources.Get "css/style.css" ) }}
+    {{ $style := $style | append ( resources.Match "css/*.css" ) }}
+    {{/* {{ $style := $style | append ( resources.Get "css/style.css" ) }} */}}
+    {{/* resources.Match */}}
 
 
     <!-- Get all custom css -->
