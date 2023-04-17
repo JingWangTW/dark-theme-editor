@@ -1,0 +1,27 @@
+/*******************************************************************************************
+ * This files contain the stlying used in the <artile> > <div.home>
+ * In other words, this file used to styling the content in the homepage only.
+ *******************************************************************************************/
+
+/*******************
+  * Layout 
+  *******************/
+article.main:has(> div.home) {
+    padding: 8% 20%;
+}
+
+article.main > div.home {
+    height: 100%;
+}
+article.main > div.home > div.title > h1.title-caption {
+    font-weight: 400;
+    font-size: 2.2em;
+    white-space: nowrap;
+    margin-bottom: 16pt;
+}
+
+article.main > div.home > div.title > h2.subtitle {
+    font-size: 1.6em;
+    line-height: 1.4em;
+    white-space: nowrap;
+}
