@@ -13,15 +13,69 @@ article.main:has(> div.home) {
 article.main > div.home {
     height: 100%;
 }
+
+article.main > div.home > div.recommend {
+    display: flex;
+    margin-top: 18pt;
+}
+
+article.main > div.home > div.recommend > div:where(.left, .right) {
+    flex: 1 1 100%;
+    width: 50%;
+}
+
+article.main > div.home > div.recommend > div.left {
+    padding-right: 25pt;
+}
+
+article.main > div.home > div.recommend > div.right {
+    padding-left: 25pt;
+}
+
+/*******************
+  * Styling
+  *******************/
+
+/* Title */
 article.main > div.home > div.title > h1.title-caption {
     font-weight: 400;
     font-size: 2.2em;
     white-space: nowrap;
     margin-bottom: 16pt;
+    color: floralwhite;
 }
 
 article.main > div.home > div.title > h2.subtitle {
     font-size: 1.6em;
     line-height: 1.4em;
     white-space: nowrap;
+}
+
+/* Recommend */
+article.main
+    > div.home
+    > div.recommend
+    > div:where(.left, .right)
+    h3.recommend-title {
+    font-size: 1.4em;
+    line-height: 1.4em;
+    white-space: nowrap;
+    margin-top: 8pt;
+    margin-bottom: 8pt;
+    color: floralwhite;
+}
+
+article.main > div.home > div.recommend > div.left > div.start {
+    margin-bottom: 16pt;
+}
+
+article.main
+    > div.home
+    > div.recommend
+    > div.left
+    > div.start
+    > p.long-description {
+    line-height: 1.6em;
+    font-size: 90%;
+    text-align: justify;
 }
