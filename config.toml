@@ -15,6 +15,29 @@ pluralizeListTitles = false
 # Theme parameter
 [params]
 
+    # Parameters applied in HTML <head>
+    [params.site]
+        # Website ICON
+        faviconUrl = ""
+
+        # Do you have any CSS in local? List them in an array.
+        # They should be placed inside "/assets" dir.
+        # And don't named the file as "index.css" and "style.css".
+        # These two files are used by the theme.
+        localCss = []
+
+        # Do you need to add any external CSS? List them in an array.
+        externalCss = []
+
+        # Do you have any script in local? List them in an array.
+        # They should be placed inside "/assets" dir.
+        # And don't named the file as "index.js"
+        # Theis file is used by the theme.
+        localJs = []
+
+        # Do you have any external Script need to add on? List them in an array.
+        externalJs = []
+
     # Customized info shown in header of the page
     [params.header]
         # Website title for header banner.
@@ -79,7 +102,6 @@ pluralizeListTitles = false
             vimeo = ""
             youtube = ""
 
-
     # Metadata of the site, value will be used in HTML <header>
     # These value would be used when they didn't appear in the frontmatter of a single page.
     # In other words, these value will be overwritten by the frontmatter in the single page.
@@ -96,28 +118,22 @@ pluralizeListTitles = false
         # Website keywords. Theme will generate a <meta> tag for this item.
         keywords = "hugo,site,new"
 
-    [params.site]
-        # Website ICON
-        faviconUrl = ""
+    # Parameters applied in the homepage only
+    [params.homePage]
+        # Long Descripition shown in home page "Start Block"        
+        siteLongDescription = "Hugo is a static HTML and CSS website generator written in Go. It is optimized for speed, ease of use, and configurability. Hugo takes a directory with content and templates and renders them into a full HTML website. Hugo relies on Markdown files with front matter for metadata, and you can run Hugo from any directory. This works well for shared hosts and other systems where you don’t have a privileged account. Hugo renders a typical website of moderate size in a fraction of a second. A good rule of thumb is that each piece of content renders in around 1 millisecond. Hugo is designed to work well for any kind of website including blogs, tumbles, and docs."
 
-        # Do you have any CSS in local? List them in an array.
-        # They should be placed inside "/assets" dir.
-        # And don't named the file as "index.css" and "style.css".
-        # These two files are used by the theme.
-        localCss = []
+        # If you don't like the title of "siteLongDescription" be "Start" (default), 
+        # you may change the value of this item to "Description" or something you like.
+        siteLongDescriptionTitle = "Start"
 
-        # Do you need to add any external CSS? List them in an array.
-        externalCss = []
+        # Param to decide whether to show the most recent blog posts or not. (Default: true)
+        showRecentPostsBlock = true
 
-        # Do you have any script in local? List them in an array.
-        # They should be placed inside "/assets" dir.
-        # And don't named the file as "index.js"
-        # Theis file is used by the theme.
-        localJs = []
-
-        # Do you have any external Script need to add on? List them in an array.
-        externalJs = []
-
+        # Param to decide how many recent posts to show in the home page. (Default: 5)
+        numOfRecentPosts = 5
+    
+    
     # Paramater applied in the single page
     # These values could be overwritten by the frontmatter in the single page.
     [params.page]

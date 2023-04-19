@@ -15,10 +15,30 @@
             </div>
             <div class="recommend">
                 <div class="left">
-                    <div class="start"></div>
-                    <div class="recent"></div>
+                    <div class="start">
+                        {{ with $.Site.Params.homePage.siteLongDescription }}
+                            <h3 class="recommend-title">
+                                {{ $.Site.Params.homePage.siteLongDescriptionTitle | default "Start" }}
+                            </h3>
+                            <p class="long-description">
+                                {{ . }}
+                            </p>
+                        {{ end }}
+                    </div>
+                    <div class="recent">
+                        {{ with $.Site.Params.homePage.showRecentPostsBlock }}
+                            <h3 class="recommend-title">Recent</h3>
+                            {{ range ( where $.Site.RegularPages "Type" "posts" | first ($.Site.Params.homePage.numOfRecentPosts | default 5) ) }}
+                                <li>
+                                    <a href="{{ .Permalink }}">{{ .Title }}</a>
+                                </li>
+                            {{ end }}
+                        {{ end }}
+                    </div>
                 </div>
-                <div class="right"></div>
+                <div class="right">
+                    <h3 class="recommend-title">Walkthroughs</h3>
+                </div>
             </div>
         </div>
     </article>
