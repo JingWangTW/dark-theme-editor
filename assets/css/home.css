@@ -65,6 +65,7 @@ article.main
     color: floralwhite;
 }
 
+/* Start */
 article.main > div.home > div.recommend > div.left > div.start {
     margin-bottom: 16pt;
 }
@@ -78,4 +79,18 @@ article.main
     line-height: 1.6em;
     font-size: 90%;
     text-align: justify;
+}
+
+/* Walkthorughs */
+article.main > div.home > div.recommend > div.right > ul.section-tree > li {
+    padding-left: 0;
+}
+
+article.main
+    > div.home
+    > div.recommend
+    > div.right
+    > ul.section-tree
+    > li:first-child {
+    padding-top: 0;
 }
