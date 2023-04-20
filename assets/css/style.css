@@ -287,6 +287,7 @@ footer > div.footer-right > ul {
 /*** Section Tree Listing ***/
 ul.section-tree > li > a {
     cursor: pointer;
+    margin-left: 5pt;
 }
 
 ul.section-tree > li > a:hover {
@@ -340,10 +341,6 @@ ul.section-tree > li.file {
     padding-left: 5pt;
     padding-top: 7pt;
     color: grey;
-}
-
-ul.section-tree > li.file i {
-    padding-left: 5pt;
 }
 
 /* dir in nested subdir*/
