@@ -81,7 +81,7 @@ article.main
     text-align: justify;
 }
 
-/* Walkthorughs */
+/* Section Tree in Walkthorughs */
 article.main > div.home > div.recommend > div.right > ul.section-tree > li {
     padding-left: 0;
 }
@@ -93,4 +93,20 @@ article.main
     > ul.section-tree
     > li:first-child {
     padding-top: 0;
+}
+
+article.main > div.home > div.recommend > div.right ul.section-tree > li > a {
+    padding: 4pt;
+    border-radius: 5pt;
+}
+
+article.main
+    > div.home
+    > div.recommend
+    > div.right
+    ul.section-tree
+    > li
+    > a:hover {
+    background-color: #3a3939;
+    color: #c9c9c9 !important;
 }
