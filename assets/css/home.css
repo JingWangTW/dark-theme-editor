@@ -1,6 +1,6 @@
 /*******************************************************************************************
  * This files contain the stlying used in the <artile> > <div.home>
- * In other words, this file used to styling the content in the homepage only.
+ * In other words, this file is used to style the content on the homepage only.
  *******************************************************************************************/
 
 /*******************
@@ -81,6 +81,44 @@ article.main
     text-align: justify;
 }
 
+/* Recent Posts */
+article.main
+    > div.home
+    > div.recommend
+    > div.left
+    > div.recent
+    > ul.recent-posts-list
+    > li {
+    line-height: 1.6em;
+    font-size: 95%;
+    color: #80cbc4;
+}
+
+article.main
+    > div.home
+    > div.recommend
+    > div.left
+    > div.recent
+    > ul.recent-posts-list
+    > li:hover {
+    line-height: 1.6em;
+    font-size: 95%;
+    color: #eeffff;
+}
+
+article.main
+    > div.home
+    > div.recommend
+    > div.left
+    > div.recent
+    > ul.recent-posts-list
+    > li
+    > span.recent-posts-items-path {
+    font-size: 90%;
+    color: #eeffff;
+    padding-left: 1em;
+}
+
 /* Section Tree in Walkthorughs */
 article.main > div.home > div.recommend > div.right > ul.section-tree > li {
     padding-left: 0;
@@ -94,9 +132,12 @@ article.main
     > li:first-child {
     padding-top: 0;
 }
+article.main > div.home > div.recommend > div.right ul.section-tree > li.file {
+    margin-top: 6pt;
+}
 
 article.main > div.home > div.recommend > div.right ul.section-tree > li > a {
-    padding: 4pt;
+    padding: 4pt 8pt;
     border-radius: 5pt;
 }
 

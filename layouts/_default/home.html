@@ -27,12 +27,23 @@
                     </div>
                     <div class="recent">
                         {{ with $.Site.Params.homePage.showRecentPostsBlock }}
-                            <h3 class="recommend-title">Recent</h3>
-                            {{ range ( where $.Site.RegularPages "Type" "posts" | first ($.Site.Params.homePage.numOfRecentPosts | default 5) ) }}
-                                <li>
-                                    <a href="{{ .Permalink }}">{{ .Title }}</a>
-                                </li>
-                            {{ end }}
+                            <h3 class="recommend-title">Recent Posts</h3>
+                            <ul class="recent-posts-list">
+                                {{ range ( $.Site.RegularPages | first ($.Site.Params.homePage.numOfRecentPosts | default 5) ) }}
+                                    <li>
+                                        <a
+                                            href="{{ .Permalink }}"
+                                            title=".{{ .RelPermalink }}"
+                                            >{{ .Title }}</a
+                                        >
+                                        <span
+                                            class="recent-posts-items-path"
+                                            title=".{{ .RelPermalink }}">
+                                            .{{ .RelPermalink }}
+                                        </span>
+                                    </li>
+                                {{ end }}
+                            </ul>
                         {{ end }}
                     </div>
                 </div>

@@ -120,8 +120,8 @@ pluralizeListTitles = false
 
     # Parameters applied in the homepage only
     [params.homePage]
-        # Long Descripition shown in home page "Start Block"        
-        siteLongDescription = "Hugo is a static HTML and CSS website generator written in Go. It is optimized for speed, ease of use, and configurability. Hugo takes a directory with content and templates and renders them into a full HTML website. Hugo relies on Markdown files with front matter for metadata, and you can run Hugo from any directory. This works well for shared hosts and other systems where you don’t have a privileged account. Hugo renders a typical website of moderate size in a fraction of a second. A good rule of thumb is that each piece of content renders in around 1 millisecond. Hugo is designed to work well for any kind of website including blogs, tumbles, and docs."
+        # Long Descripition shown in home page "Start Block". Is is recommended to have the paragraph shorter than 100 words.        
+        siteLongDescription = "Hugo is a fast and easy-to-use static website generator written in Go. It renders a complete HTML website from content and templates in a directory, utilizing Markdown files for metadata. It's optimized for speed and suitable for various website types."
 
         # If you don't like the title of "siteLongDescription" be "Start" (default), 
         # you may change the value of this item to "Description" or something you like.
