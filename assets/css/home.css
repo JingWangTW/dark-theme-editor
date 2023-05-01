@@ -7,7 +7,15 @@
   * Layout 
   *******************/
 article.main:has(> div.home) {
-    padding: 8% 20%;
+    padding: 8vh 20vw;
+
+    /*
+        3%: header
+        3%: footer
+        16vh: <article> padding
+        2pt: border of header and footer
+    */
+    min-height: calc(100vh - 3% - 3% - 16vh - 2pt);
 }
 
 article.main > div.home {
@@ -24,12 +32,40 @@ article.main > div.home > div.recommend > div:where(.left, .right) {
     width: 50%;
 }
 
-article.main > div.home > div.recommend > div.left {
-    padding-right: 25pt;
+@media only screen and (max-width: 1400px) {
+    article.main:has(> div.home) {
+        padding: 8vh 10vw;
+    }
 }
 
-article.main > div.home > div.recommend > div.right {
-    padding-left: 25pt;
+@media only screen and (max-width: 900px) {
+    article.main:has(> div.home) {
+        padding: 8vh 5vw;
+
+        /*
+            6vh: header
+            6vh: footer
+            12px: padding in footer
+            16vh: <article> padding
+            2pt: border of header and footer
+        */
+        min-height: calc(100vh - 6vh - 6vh - 12px - 16vh - 2pt);
+    }
+}
+
+@media only screen and (max-width: 700px) {
+    article.main:has(> div.home) {
+        padding: 5vh 5vw;
+
+        /*
+            6vh: header
+            6vh: footer
+            12px: padding in footer
+            10vh: <article> padding
+            2pt: border of header and footer
+        */
+        min-height: calc(100vh - 6vh - 6vh - 12px - 10vh - 2pt);
+    }
 }
 
 /*******************
@@ -63,6 +99,14 @@ article.main
     margin-top: 8pt;
     margin-bottom: 8pt;
     color: floralwhite;
+}
+
+article.main > div.home > div.recommend > div.left {
+    padding-right: 25pt;
+}
+
+article.main > div.home > div.recommend > div.right {
+    padding-left: 25pt;
 }
 
 /* Start */
@@ -150,4 +194,24 @@ article.main
     > a:hover {
     background-color: #3a3939;
     color: #c9c9c9 !important;
+}
+
+/*******************
+  * Responsive Styling
+  *******************/
+@media only screen and (max-width: 640px) {
+    article.main > div.home > div.recommend {
+        flex-wrap: wrap;
+    }
+
+    article.main > div.home > div.recommend > div.left,
+    article.main > div.home > div.recommend > div.right {
+        width: 100%;
+        padding-right: 0;
+        padding-left: 0;
+    }
+
+    article.main > div.home > div.recommend > div:where(.left, .right) > div {
+        margin-bottom: 16pt;
+    }
 }
