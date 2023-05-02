@@ -16,6 +16,13 @@ article.main:has(> div.home) {
         2pt: border of header and footer
     */
     min-height: calc(100vh - 3% - 3% - 16vh - 2pt);
+
+    /*
+        3pt: expand bar
+        40vw: <article> padding
+        1px: dummpy
+    */
+    width: calc(85% - 3pt - 40vw - 1px);
 }
 
 article.main > div.home {

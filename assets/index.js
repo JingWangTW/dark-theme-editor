@@ -16,16 +16,30 @@ function isSidebarExpanding(e) {
 
     if (sidebarPercentage > 10 && sidebarPercentage < 50) {
         const articlePercentage = 100 - sidebarPercentage;
-        console.log("calc( " + articlePercentage + "% - 3pt - 4% - 1px);");
 
-        document.querySelector("aside.sidebar").style.width = `${sidebarPercentage}%`;
+        document.querySelector(
+            "aside.sidebar"
+        ).style.width = `${sidebarPercentage}%`;
 
         /*
             3pt: expand bar
             4%: <article> padding
             1px: dummpy
         */
-        document.querySelector("article.main").style.width = `calc( ${articlePercentage}% - 3pt - 4% - 1px )`;
+        document.querySelector(
+            "article.main"
+        ).style.width = `calc( ${articlePercentage}% - 3pt - 4% - 1px )`;
+
+        /*
+            Case in Home Page
+
+            3pt: expand bar
+            40vw: <article> padding
+            1px: dummpy
+        */
+        document.querySelector(
+            "article.main:has(> div.home)"
+        ).style.width = `calc( ${articlePercentage}% - 3pt - 40vw - 1px)`;
     }
 }
 
@@ -33,7 +47,9 @@ function showSidebar() {
     document.querySelector("aside.sidebar").style.display = "block";
 
     isSidebarShow = true;
-    document.querySelector("button.sidebar-toggle-btn").setAttribute("aria-expanded", "true");
+    document
+        .querySelector("button.sidebar-toggle-btn")
+        .setAttribute("aria-expanded", "true");
 }
 
 function hideSidebar() {
@@ -42,34 +58,48 @@ function hideSidebar() {
         document.querySelector("aside.sidebar").style.display = "";
 
         isSidebarShow = false;
-        document.querySelector("button.sidebar-toggle-btn").setAttribute("aria-expanded", "false");
+        document
+            .querySelector("button.sidebar-toggle-btn")
+            .setAttribute("aria-expanded", "false");
     }
 }
 
 window.addEventListener("load", function () {
     // sidebar expanble
-    document.querySelector("aside.exapandable").addEventListener("mousedown", isSidebarExpandStart);
-    document.querySelector("aside.exapandable").addEventListener("touchstart", isSidebarExpandStart);
+    document
+        .querySelector("aside.exapandable")
+        .addEventListener("mousedown", isSidebarExpandStart);
+    document
+        .querySelector("aside.exapandable")
+        .addEventListener("touchstart", isSidebarExpandStart);
     window.addEventListener("mousemove", isSidebarExpanding);
     window.addEventListener("touchmove", isSidebarExpanding);
     window.addEventListener("mouseup", isSidebarExpandEnd);
     window.addEventListener("touchend", isSidebarExpandEnd);
 
     // responsive sidebar
-    document.querySelector("button.sidebar-toggle-btn").addEventListener("click", (event) => {
-        event.stopPropagation();
-        event.preventDefault();
+    document
+        .querySelector("button.sidebar-toggle-btn")
+        .addEventListener("click", (event) => {
+            event.stopPropagation();
+            event.preventDefault();
 
-        if (event.currentTarget.getAttribute("aria-expanded") === "true") {
-            hideSidebar();
-        } else {
-            showSidebar();
-        }
-    });
+            if (event.currentTarget.getAttribute("aria-expanded") === "true") {
+                hideSidebar();
+            } else {
+                showSidebar();
+            }
+        });
 
-    this.document.querySelector("article.main").addEventListener("click", hideSidebar);
-    this.document.querySelector("article.main").addEventListener("touchstart", hideSidebar);
-    this.document.querySelector("article.main").addEventListener("mousedown", hideSidebar);
+    this.document
+        .querySelector("article.main")
+        .addEventListener("click", hideSidebar);
+    this.document
+        .querySelector("article.main")
+        .addEventListener("touchstart", hideSidebar);
+    this.document
+        .querySelector("article.main")
+        .addEventListener("mousedown", hideSidebar);
 
     // remove generated element style when windows enlarge
     this.window.addEventListener("resize", () => {
@@ -77,7 +107,9 @@ window.addEventListener("load", function () {
             isSidebarShow = false;
 
             document.querySelector("aside.sidebar").style.display = "";
-            document.querySelector("button.sidebar-toggle-btn").setAttribute("aria-expanded", "false");
+            document
+                .querySelector("button.sidebar-toggle-btn")
+                .setAttribute("aria-expanded", "false");
         }
     });
 
