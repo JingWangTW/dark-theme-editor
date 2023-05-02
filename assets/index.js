@@ -21,25 +21,30 @@ function isSidebarExpanding(e) {
             "aside.sidebar"
         ).style.width = `${sidebarPercentage}%`;
 
-        /*
-            3pt: expand bar
-            4%: <article> padding
-            1px: dummpy
-        */
-        document.querySelector(
-            "article.main"
-        ).style.width = `calc( ${articlePercentage}% - 3pt - 4% - 1px )`;
-
-        /*
-            Case in Home Page
-
-            3pt: expand bar
-            40vw: <article> padding
-            1px: dummpy
-        */
-        document.querySelector(
+        let homepageArticleElement = document.querySelector(
             "article.main:has(> div.home)"
-        ).style.width = `calc( ${articlePercentage}% - 3pt - 40vw - 1px)`;
+        );
+
+        if (homepageArticleElement) {
+            /*
+                Case in Home Page
+
+                3pt: expand bar
+                40vw: <article> padding
+                1px: dummpy
+            */
+
+            homepageArticleElement.style.width = `calc( ${articlePercentage}% - 3pt - 40vw - 1px)`;
+        } else {
+            /*
+                3pt: expand bar
+                4%: <article> padding
+                1px: dummpy
+            */
+            document.querySelector(
+                "article.main"
+            ).style.width = `calc( ${articlePercentage}% - 3pt - 4% - 1px )`;
+        }
     }
 }
 
