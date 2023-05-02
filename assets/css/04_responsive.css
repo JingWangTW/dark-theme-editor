@@ -107,7 +107,7 @@
 
     /* re-layout the footer */
     footer {
-        height: calc(6vh + 12px);
+        height: 6vh;
         font-size: 14pt;
         padding-top: 6px;
         padding-bottom: 6px;
