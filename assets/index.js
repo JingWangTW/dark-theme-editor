@@ -21,30 +21,15 @@ function isSidebarExpanding(e) {
             "aside.sidebar"
         ).style.width = `${sidebarPercentage}%`;
 
-        let homepageArticleElement = document.querySelector(
-            "article.main:has(> div.home)"
-        );
+        const originWidth = getComputedStyle(
+            document.querySelector("article.main")
+        ).getPropertyValue("--artile_main_width");
 
-        if (homepageArticleElement) {
-            /*
-                Case in Home Page
+        const newWidth = originWidth.replace(/[\d.]+/, articlePercentage);
 
-                3pt: expand bar
-                40vw: <article> padding
-                1px: dummpy
-            */
-
-            homepageArticleElement.style.width = `calc( ${articlePercentage}% - 3pt - 40vw - 1px)`;
-        } else {
-            /*
-                3pt: expand bar
-                4%: <article> padding
-                1px: dummpy
-            */
-            document.querySelector(
-                "article.main"
-            ).style.width = `calc( ${articlePercentage}% - 3pt - 4% - 1px )`;
-        }
+        document
+            .querySelector("article.main")
+            .style.setProperty("--artile_main_width", newWidth);
     }
 }
 
@@ -115,6 +100,35 @@ window.addEventListener("load", function () {
             document
                 .querySelector("button.sidebar-toggle-btn")
                 .setAttribute("aria-expanded", "false");
+        }
+    });
+
+    // re-calculate the width when resizing the window
+    this.window.addEventListener("resize", () => {
+        let artileElement = document.querySelector("article.main");
+
+        // get the currently configured width
+        const widthProperty = artileElement.style.getPropertyValue(
+            "--artile_main_width"
+        );
+
+        if (widthProperty) {
+            // find the width set currently
+            const sidebarPercentage = widthProperty.match(/[\d.]+/)[0];
+
+            // reset the width
+            artileElement.style.setProperty("--artile_main_width", "");
+
+            // to find out the width set by the stylesheet
+            const appliedSWidthStyle = getComputedStyle(artileElement)
+                .getPropertyValue("--artile_main_width")
+                .replace(/[\d.]+/, sidebarPercentage);
+
+            // add the width setting set by the user
+            artileElement.style.setProperty(
+                "--artile_main_width",
+                appliedSWidthStyle
+            );
         }
     });
 

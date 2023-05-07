@@ -4,6 +4,15 @@
 
 @charset "UTF-8";
 
+:root {
+    /*
+        3pt: expand bar
+        4%: <article> padding
+        1px: dummpy
+    */
+    --artile_main_width: calc(85% - 3pt - 4% - 1px);
+}
+
 body {
     height: 100vh;
     max-height: 100vh;
@@ -26,12 +35,7 @@ aside.sidebar {
 }
 
 article {
-    /*
-        3pt: expand bar
-        4%: <article> padding
-        1px: dummpy
-    */
-    width: calc(85% - 3pt - 4% - 1px);
+    width: var(--artile_main_width);
 }
 
 footer {

@@ -4,6 +4,15 @@
 @charset "UTF-8";
 
 @media only screen and (max-width: 900px) {
+    :root {
+        /*
+            8vw: <article> padding
+            1px: dummpy
+        */
+
+        --artile_main_width: calc(100% - 8vw - 1px);
+    }
+
     /* release the static layout*/
     body {
         height: 100%;
@@ -48,12 +57,6 @@
     /* Add some padding */
     article.main {
         padding: 4vw;
-
-        /*
-            8vw: <article> padding
-            1px: dummpy
-        */
-        width: calc(100% - 8vw - 1px);
 
         /*
             6vh: header
@@ -139,6 +142,15 @@
 }
 
 @media only screen and (max-width: 440px) {
+    :root {
+        /*
+            12vw: <article> padding
+            1px: dummpy
+        */
+
+        --artile_main_width: calc(100% - 12vw - 1px);
+    }
+
     /* Slide sidebar */
     main:has(article.main > button.sidebar-toggle-btn[aria-expanded="true"]) {
         width: 180%;
@@ -151,12 +163,6 @@
     /* Add some padding */
     article.main {
         padding: 6vw;
-
-        /*
-            8vw: <article> padding
-            1px: dummpy
-        */
-        width: calc(100% - 12vw - 1px);
 
         /*
             6vh: header
