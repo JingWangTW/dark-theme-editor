@@ -4,17 +4,121 @@ title = 'Example Site of dark-theme-editor'
 theme = 'dark-theme-editor'
 
 # Theme parameter
-[Params]
-    # CopyRight string in the footer, change it to "" hide it
-    copyrightStr = 'All Rights Reserved.'
-    
-    # This name would be shown in the bottom of the page. It indicates the author of the site.
-    authorName = 'Jing'
+[params]
 
-    # Should include Table of Content in front of the page or not.
-    includeToc = true
+    # Parameters applied in HTML <head>
+    [params.site]
+        # Website ICON
+        faviconUrl = ""
+
+    # Customized info shown in header of the page
+    [params.header]
+        # Website title for header banner.
+        title = "Example Site of dark-theme-editor"
+
+        # Subtitle for this site, used in homepage only
+        subtitle = "A Site Built by Hugo"
+
+        # Config about your's site logo, remove this item to hide the logo
+        [params.header.logo]
+            # Where is your site's URL
+            imgUrl = ""
+
+    # Customized info shown in footer of the page
+    [params.footer]
+        # CopyRight string shown in the footer. Keep it an empty string or remove this item will hide it from the page.
+        copyrightStr = "All Rights Reserved ®."
+
+        # Should show the counter in the footer or not
+        # In the home page, it will show the numbers of all pages
+        # In the sections pages, it will show the numbers of pages within the section
+        # In the taxonomy pages, it will show the numbers of pages belong to the taxonomy.
+        # In the regular content pages, it will show the word count.
+        counter = true
+
+        # Should show the language of the page or not
+        language = true
+
+        # Should show the hugo version or not
+        hugoVersion = true
+
+        # Should show the theme info or not
+        theme = true
+
+        # Should show the edited time of the page or not
+        modifiedTime = true
+
+        # The format of the `modifiedTime`.
+        # Refer to page https://gohugo.io/functions/format/ for more detail.
+        # Below is the default format, please do not remove it, unless you set `false` in `modifiedTime` field.
+        dateFormat = "Jan 02 2006 15:04:05"
+
+        # Should show the current git HEAD hash or not
+        # To make this show up correctly, please follow the prerequisites in page
+        # https://gohugo.io/variables/git/
+        gitHash = true
+
+        # Social link in the footer, listed items are supported, delete unwanted items to hide it.
+        [params.footer.socialLink]
+            github = "https://github.com/JingWangTW"
+            email = "tony.jing.wang@gmail.com"
+
+    # Metadata of the site, value will be used in HTML <header>
+    # These value would be used when they didn't appear in the frontmatter of a single page.
+    # In other words, these value will be overwritten by the frontmatter in the single page.
+    [params.globalFrontmatter]
+        # The author of this site. This will be shown in 
+        # 1. the footer of all page
+        # 2. the author filed in the single page. (this could be overwritten by the frontmatter of the single page.)
+        # Keep it an empty string or remove this item will hide it from the page
+        author = "Jing Wang"
+        
+        # Website description for RSS and SEO. Theme will generate a <meta> tag for this item
+        description = "Example Site of dark-theme-editor"
+
+        # Website keywords. Theme will generate a <meta> tag for this item.
+        keywords = "dark-theme-editor,hugo,theme,example"
+
+    # Parameters applied in the homepage only
+    [params.homePage]
+        # Long Descripition shown in home page "Start Block". Is is recommended to have the paragraph shorter than 100 words.        
+        siteLongDescription = "The \"dark-theme-editor\" is a Hugo theme that resembles a code editor in dark mode, suitable for developers and programmers. The customizable dark color scheme provides a modern and professional appearance and may alleviate eye strain. Overall, it's a practical and visually appealing theme for creating a distinctive website."
+
+        # If you don't like the title of "siteLongDescription" be "Start" (default), 
+        # you may change the value of this item to "Description" or something you like.
+        siteLongDescriptionTitle = "Start"
+
+        # Param to decide whether to show the most recent blog posts or not. (Default: true)
+        showRecentPostsBlock = true
+
+        # Param to decide how many recent posts to show in the home page. (Default: 5)
+        numOfRecentPosts = 5
     
-    # Social link in the footer, change it to "" hide it
-    [Social]
-        github = "https://github.com/JingWangTW"
-        email = "tony.jing.wang@gmail.com"
+    
+    # Paramater applied in the single page
+    # These values could be overwritten by the frontmatter in the single page.
+    [params.page]
+        # Should include Table of Content in front of the page or not.
+        includeToc = true
+
+        # Should show the author of the page or not.
+        # The author name will be shown in the single page if and only if 
+        #   1. this items been set as true and
+        #   2. "aurthor" filed been provided in the 
+        #       A. single page frontmatter or
+        #       B. "author" filed in above "globalFrontmatter" block
+        showAuthor = true
+
+        # Should show the date of the page or not
+        showDate = true
+
+        # The format of the date.
+        # Refer to page https://gohugo.io/functions/format/ for more detail.
+        # Below is the default format, please do not remove it, unless you set `false` in `showDate` field.
+        dateFormat = "2006.01.02"
+
+        # Should show the estimate reading time in front of the page or not.
+        showTimeToRead = true
+
+        # Should show the breadcrumb in front of the page or not.
+        showBreadcrumb = true
