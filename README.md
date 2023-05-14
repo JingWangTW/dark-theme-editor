@@ -3,7 +3,7 @@
 
 > **Dark Theme Editor** is a blog theme for [Hugo](https://gohugo.io/).
 
-DEMO - 
+DEMO - https://jingwangtw.github.io/dark-theme-editor/
 
 ---
 
