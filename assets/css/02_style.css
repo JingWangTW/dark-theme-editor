@@ -287,7 +287,6 @@ footer > div.footer-right > ul {
 /*** Section Tree Listing ***/
 ul.section-tree > li > a {
     cursor: pointer;
-    margin-left: 5pt;
 }
 
 ul.section-tree > li > a:hover {
@@ -341,6 +340,17 @@ ul.section-tree > li.file {
     padding-left: 5pt;
     padding-top: 7pt;
     color: grey;
+    font-size: 95%;
+    margin-left: 28pt;
+}
+
+ul.section-tree > li.file::marker {
+    content: "\f383";
+    font-family: bootstrap-icons !important;
+    font-style: normal;
+    font-weight: normal !important;
+    font-variant: normal;
+    text-transform: none;
 }
 
 /* dir in nested subdir*/
@@ -350,7 +360,7 @@ ul.section-tree ul.section-tree > li.dir {
 
 /* file in nested subdir*/
 ul.section-tree ul.section-tree > li.file {
-    padding-left: 10pt;
+    padding-left: 4pt;
 }
 
 /* sidebar slide-in animation */
