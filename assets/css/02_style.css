@@ -287,6 +287,7 @@ footer > div.footer-right > ul {
 /*** Section Tree Listing ***/
 ul.section-tree > li > a {
     cursor: pointer;
+    line-height: 120%;
 }
 
 ul.section-tree > li > a:hover {
@@ -344,13 +345,16 @@ ul.section-tree > li.file {
     margin-left: 28pt;
 }
 
-ul.section-tree > li.file::marker {
+ul.section-tree > li.file::before {
     content: "\f383";
     font-family: bootstrap-icons !important;
     font-style: normal;
     font-weight: normal !important;
     font-variant: normal;
     text-transform: none;
+    margin-left: -1.6em;
+    vertical-align: -0.3ex;
+    padding-right: 0.4em;
 }
 
 /* dir in nested subdir*/
