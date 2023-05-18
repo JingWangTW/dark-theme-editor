@@ -183,35 +183,21 @@ article.main > nav#TableOfContents a:hover {
     text-decoration: underline;
 }
 
-article.main > div.list-files > ul {
+article.main > div.list-files ul.section-tree {
     font-size: 14pt;
 }
 
-article.main > div.list-files > ul > li {
-    margin-bottom: 15pt;
+article.main > div.list-files ul.section-tree > li {
+    line-height: 140%;
+    padding-left: 5pt;
 }
 
-article.main > div.list-files > ul > li:hover {
+article.main > div.list-files ul.section-tree > li.file {
+    font-size: 12pt;
+}
+
+article.main > div.list-files > ul.section-tree > li.file:hover {
     color: white;
-}
-
-article.main > div.list- ul.section-tree {
-    margin-bottom: 10px;
-    margin-top: 10px;
-    padding: 0;
-}
-
-article.main > div.list-files ul.section-tree ul {
-    margin-left: 25px;
-}
-
-article.main > div.list-files ul.section-tree li {
-    padding-left: 0;
-}
-
-article.main > div.list-files ul.section-tree li.file {
-    margin-left: -5pt;
-    padding-top: 10pt;
 }
 
 article.main > div.list-terms > ul {
