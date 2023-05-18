@@ -30,17 +30,21 @@
                             <h3 class="recommend-title">Recent Posts</h3>
                             <ul class="recent-posts-list">
                                 {{ range ( $.Site.RegularPages | first ($.Site.Params.homePage.numOfRecentPosts | default 5) ) }}
+                                    {{ $page := . }}
                                     <li>
                                         <a
                                             href="{{ .Permalink }}"
                                             title=".{{ .RelPermalink }}"
-                                            >{{ .Title }}</a
+                                            >{{ $page.Title }}</a
                                         >
-                                        <span
-                                            class="recent-posts-items-path"
-                                            title=".{{ .RelPermalink }}">
-                                            .{{ .RelPermalink }}
-                                        </span>
+                                        {{ with $.Site.Params.homePage.recentPostShowUrl }}
+                                            <span
+                                                class="recent-posts-items-path"
+                                                title=".{{ $page.RelPermalink }}">
+                                                .
+                                                {{ $page.RelPermalink }}
+                                            </span>
+                                        {{ end }}
                                     </li>
                                 {{ end }}
                             </ul>

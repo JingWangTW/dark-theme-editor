@@ -160,6 +160,11 @@ This will install the theme repository as a sumbodule in the `themes/dark-theme-
 
             # Param to decide how many recent posts to show in the home page. (Default: 5)
             numOfRecentPosts = 5
+
+            # Parameter to decide whether to show the URL behind the title.
+            # It will be more like an editor if it is shown. However, in general, it can be messy if it is displayed.        
+            # (Default: true)
+            recentPostShowUrl = true
         
         
         # Paramater applied in the single page
