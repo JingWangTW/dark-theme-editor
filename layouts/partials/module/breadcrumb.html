@@ -13,7 +13,7 @@
     {{ if .IsHome }}
         <i class="bi bi-house-fill"></i>
     {{ else if eq .Kind "taxonomy" }}
-        {{ partial "module/tax_icon" . }}
+        {{ partial "module/term_icon" . }}
     {{ end }}
 
     {{ if .IsHome }}

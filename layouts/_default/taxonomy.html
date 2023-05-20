@@ -5,8 +5,19 @@
 
         <div class="title">
             <h1 class="title-header">
-                {{ partial "module/tax_icon" . }}
-                {{ .Title }}
+                {{ if eq .Data.Singular "tag" }}
+                    <i class="bi bi-tags"></i>
+                {{ else if eq .Data.Singular "category" }}
+                    <i class="bi bi-bookmarks"></i>
+                {{ else if eq .Data.Singular "autor" }}
+                    <i class="bi bi-person-fill"></i>
+                {{ else }}
+                    <i class="bi bi-gear"></i>
+                {{ end }}
+                All about
+                <em>
+                    {{ .Title | singularize }}
+                </em>
             </h1>
         </div>
 
@@ -19,11 +30,12 @@
 
         <hr />
 
-        <div class="list-files">
-            <ul class="section-tree">
+        <div class="list-terms">
+            <ul>
                 {{ range .Pages }}
-                    <li class="file">
+                    <li>
                         <a href="{{ .Permalink }}">
+                            {{ partial "module/term_icon" . }}
                             {{ .Title }}
                         </a>
                     </li>
