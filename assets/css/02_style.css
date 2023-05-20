@@ -13,6 +13,10 @@ a:active {
     color: inherit;
 }
 
+em {
+    font-style: italic;
+}
+
 /*** HTML Body ***/
 body {
     background-color: #282c34;
