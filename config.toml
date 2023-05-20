@@ -3,6 +3,17 @@ languageCode = 'en-us'
 title = 'Example Site of dark-theme-editor'
 theme = 'dark-theme-editor'
 
+# What I preferred config
+pluralizeListTitles = false
+
+# Recommend syntax hilight config
+[markup]
+    [markup.highlight]
+        lineNoStart = 1
+        lineNos = true
+        style = "native"
+        tabWidth = 4
+
 # Theme parameter
 [params]
 
@@ -93,8 +104,12 @@ theme = 'dark-theme-editor'
 
         # Param to decide how many recent posts to show in the home page. (Default: 5)
         numOfRecentPosts = 5
-    
-    
+        
+        # Parameter to decide whether to show the URL behind the title.
+        # It will be more like an editor if it is shown. However, in general, it can be messy if it is displayed.        
+        # (Default: true)
+        recentPostShowUrl = true
+
     # Paramater applied in the single page
     # These values could be overwritten by the frontmatter in the single page.
     [params.page]
