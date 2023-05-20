@@ -5,7 +5,7 @@ description = "A simple, editor-like theme for Hugo."
 homepage = "https://github.com/JingWangTW/dark-theme-editor"
 tags = ["blog", "dark", "highlighting", "responsive", "simple", "technical", "editor", "Dark Mode", "Docs"]
 features = ["blog", "syntax highlighting", "responsive"]
-min_version = 0.90
+min_version = 0.110
 
 [author]
   name = "Jing Wang"
