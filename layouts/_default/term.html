@@ -6,7 +6,11 @@
         <div class="title">
             <h1 class="title-header">
                 {{ partial "module/term_icon" . }}
-                {{ .Title }}
+
+                All about
+                <em>
+                    {{ .Title | singularize }}
+                </em>
             </h1>
         </div>
 
