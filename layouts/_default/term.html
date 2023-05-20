@@ -9,13 +9,13 @@
                     <i class="bi bi-tags"></i>
                 {{ else if eq .Data.Singular "category" }}
                     <i class="bi bi-bookmarks"></i>
-                {{ else if eq .Data.Singular "author" }}
+                {{ else if eq .Data.Singular "autor" }}
                     <i class="bi bi-person-fill"></i>
                 {{ else }}
                     <i class="bi bi-gear"></i>
                 {{ end }}
-                All
-                {{ pluralize .Title }}
+                All about
+                {{ .Title | singularize }}
             </h1>
         </div>
 

@@ -1,6 +1,12 @@
 baseURL = 'http://example.org/'
 languageCode = 'en-us'
 
+# Support Taxonomies
+[taxonomies]
+    autor = "author"
+    tag = "tags"
+    category = "categories"
+
 # What I preferred config
 pluralizeListTitles = false
 
