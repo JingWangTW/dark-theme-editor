@@ -12,6 +12,10 @@ article.main > div.content * {
     line-height: 14pt;
 }
 
+article.main > div.content > :first-child {
+    margin-top: 24pt;
+}
+
 /**************
     Header
 ***************/
