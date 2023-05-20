@@ -92,7 +92,12 @@
             {{ end }}
         </div>
 
-        {{ if .Params.includeToc }}
+        {{ if isset $.Params "includeToc" }}
+            {{ if $.Params.includeToc }}
+                {{ .TableOfContents }}
+            {{ end }}
+
+        {{ else if $.Site.Params.page.includeToc }}
             {{ .TableOfContents }}
         {{ end }}
 
