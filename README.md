@@ -40,7 +40,7 @@ This will install the theme repository as a sumbodule in the `themes/dark-theme-
 * <details>
     <summary>Click to toggle the full list of configurations.</summary>
 
-    ```
+    ```toml
     # Theme Parameters
     [params]
         # Parameters applied in HTML <head>
