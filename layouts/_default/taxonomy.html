@@ -20,11 +20,10 @@
         <hr />
 
         <div class="list-files">
-            <ul>
+            <ul class="section-tree">
                 {{ range .Pages }}
-                    <li>
+                    <li class="file">
                         <a href="{{ .Permalink }}">
-                            <i class="bi bi-file-earmark-richtext"></i>
                             {{ .Title }}
                         </a>
                     </li>
