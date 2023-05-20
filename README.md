@@ -42,7 +42,11 @@ theme = 'dark-theme-editor'
         siteLongDescription = "The \"dark-theme-editor\" is a Hugo theme that resembles a code editor in dark mode, suitable for developers and programmers. The customizable dark color scheme provides a modern and professional appearance and may alleviate eye strain. Overall, it's a practical and visually appealing theme for creating a distinctive website."
 
         # When displaying the URL behind the title, it appears to be all messed up.
-        recentPostShowUrl = true
+        recentPostShowUrl = false
+
+    [params.page]
+        # No, I don't want to show thw TOC in the demo site.
+        includeToc = true
 ```
 
 ## Note

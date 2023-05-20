@@ -108,7 +108,7 @@ pluralizeListTitles = false
         # Parameter to decide whether to show the URL behind the title.
         # It will be more like an editor if it is shown. However, in general, it can be messy if it is displayed.        
         # (Default: true)
-        recentPostShowUrl = true
+        recentPostShowUrl = false
 
     # Paramater applied in the single page
     # These values could be overwritten by the frontmatter in the single page.

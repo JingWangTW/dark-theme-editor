@@ -5,6 +5,7 @@ date: 2023-03-09T23:11:11+08:00
 tags: ["markdown", "syntax"]
 categories: ["example", "demo"]
 draft: false
+includeToc: true
 ---
 
 # `<h1>` Heading
