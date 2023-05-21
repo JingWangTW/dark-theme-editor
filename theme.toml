@@ -8,10 +8,10 @@ features = ["blog", "syntax highlighting", "responsive"]
 min_version = 0.110
 
 [author]
-  name = "Jing Wang"
-  homepage = "https://github.com/JingWangTW"
+    name = "Jing Wang"
+    homepage = "https://github.com/JingWangTW"
 
 [origin]
-  name = "editor"
-  homepage = "https://github.com/sfengyuan/edidor"
-  repp = "https://github.com/sfengyuan/edidor"
+    name = "editor"
+    homepage = "https://github.com/sfengyuan/edidor"
+    repp = "https://github.com/sfengyuan/edidor"
