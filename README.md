@@ -5,7 +5,7 @@
 
 DEMO - https://jingwangtw.github.io/dark-theme-editor/
 
-⚠️ The theme needs at least Hugo Extended v0.110.x.
+⚠️ The theme needs at least Hugo v0.110.x.
 
 ---
 
