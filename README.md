@@ -37,8 +37,8 @@ git submodule add -f https://github.com/JingWangTW/dark-theme-editor.git themes/
 This will install the theme repository as a sumbodule in the `themes/dark-theme-editor` directory.
 
 ## Configuration
-* When using `dark-theme-editor` as the theme for your Hugo site, please remember to set the [theme field in your `config.toml` file](https://gohugo.io/getting-started/configuration/#theme).
-* Additionally, the theme provides many custom fields for you to configure as needed. Please refer to the [`config.toml` file in the theme](https://github.com/JingWangTW/dark-theme-editor/blob/main/config.toml) to find all available options. You can override these values by adding them to your own config.toml file or by directly modifying the file in the theme directory.## Build & Run
+* When using `dark-theme-editor` as the theme for your Hugo site, please remember to set the [theme field in your `config.toml` (or `hugo.toml`) file](https://gohugo.io/getting-started/configuration/#theme).
+* Additionally, the theme provides many custom fields for you to configure as needed. Please refer to the [`hugo.toml` file in the theme](https://github.com/JingWangTW/dark-theme-editor/blob/main/config.toml) to find all available options. You can override these values by adding them to your own `config.toml` file or by directly modifying the file in the theme directory.
 * <details>
     <summary>Click to toggle the full list of configurations.</summary>
 
