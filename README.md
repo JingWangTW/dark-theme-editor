@@ -14,6 +14,8 @@ DEMO - https://jingwangtw.github.io/dark-theme-editor/
 * Draggable Sidebar.
 * Fully Responsive.
 * Fully based on Hugo ecosystem.
+* Goolge/Bing SEO Support
+
 
 ## Usage
 ### Download manually
@@ -214,7 +216,6 @@ hugo
 This will build your site in release mode, where all `.html`, `.css`, and `.js` files will be minified and merged when possible.
 
 ## Feature Plan
-* Goolge/Bing SEO Support
 * Share to Socla Media Button
 * `i18n` Support
 * Emoji Support

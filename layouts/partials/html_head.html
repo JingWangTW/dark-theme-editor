@@ -5,6 +5,14 @@
 
     {{ hugo.Generator }}
 
+    {{ with $.Site.Params.site.googleVerification }}
+        <meta name="google-site-verification" content="{{ . }}" />
+    {{ end }}
+
+    {{ with $.Site.Params.site.bingVerifivation }}
+        <meta name="msvalidate.01" content="{{ . }}" />
+    {{ end }}
+
     {{ if $.IsPage }}
         {{ if isset $.Params "description" }}
             <meta name="description" content="{{ $.Params.description }}" />

@@ -44,6 +44,16 @@ pluralizeListTitles = false
         # Do you have any external Script need to add on? List them in an array.
         externalJs = []
 
+        # The code you could get from Google Search Console.
+        # Please patse the value of content xxx in the following items
+        # <meta name="google-site-verification" content="xxxxxxxxxxxxxxxxxxxxxxxxxx" />
+        googleVerification = ""
+
+        # The code you could get from Microsoft Bing Webmater
+        # Please patse the value of content xxx in the following items
+        # <meta name="msvalidate.01" content="xxxxxxxxxxxxxxxxxxxx" />
+        bingVerifivation = ""
+
     # Customized info shown in header of the page
     [params.header]
         # Website title for header banner.
