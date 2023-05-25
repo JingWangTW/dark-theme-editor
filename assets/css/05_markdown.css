@@ -204,23 +204,58 @@ article.main > div.content pre:not(div.highlight pre) > code {
 }
 
 /*** Highlight Codeblock ***/
-article.main > div.content div.highlight div {
+article.main > div.content div.codeblock {
+    margin-top: -2em;
+}
+article.main > div.content div.codeblock > div.copy-button-box {
+    display: inline-flex;
+    position: relative;
+    top: 2.4em;
+    width: 100%;
+    justify-content: flex-end;
+}
+
+article.main
+    > div.content
+    div.codeblock
+    > div.copy-button-box
+    > button.copy-button {
+    height: 2.5em;
+    width: 4.5em;
+    color: rgba(238, 255, 255, 0.4);
+    background-color: transparent;
+    border: rgba(238, 255, 255, 0.4) solid 1pt;
+    border-radius: 10%;
+    margin-right: 0.5em;
+    cursor: pointer;
+}
+
+article.main
+    > div.content
+    div.codeblock
+    > div.copy-button-box
+    > button.copy-button:hover {
+    color: #eeffff;
+    border-color: #eeffff;
+}
+
+article.main > div.content div.codeblock > div.highlight div {
     border-radius: 10pt;
     padding-top: 0.5em;
     padding-bottom: 0.5em;
 }
 
-article.main > div.content div.highlight code {
+article.main > div.content div.codeblock > div.highlight code {
     background: none;
     border-radius: 0;
 }
 
-article.main > div.content div.highlight table {
+article.main > div.content div.codeblock > div.highlight table {
     padding: 5pt !important;
     overflow-y: hidden !important;
 }
 
-article.main > div.content div.highlight table tr {
+article.main > div.content div.codeblock > div.highlight table tr {
     border: none;
 }
 

@@ -1,0 +1,18 @@
+{{/* https://discourse.gohugo.io/t/documentation-for-code-block-render-hooks/37610/3 */}}
+
+{{ $class := .Attributes.class | default "" }}
+{{ $lang  := .Attributes.lang  | default .Type }}
+
+
+<div class="codeblock">
+    <div class="copy-button-box">
+        <button class="copy-button" state="copy" data="{{ .Inner }}">
+            Copy
+        </button>
+    </div>
+    {{ if transform.CanHighlight $lang }}
+        {{ highlight .Inner $lang }}
+    {{ else }}
+        <pre><code>{{ .Inner }}</code></pre>
+    {{ end }}
+</div>
