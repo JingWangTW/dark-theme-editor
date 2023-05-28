@@ -221,13 +221,14 @@ article.main
     > div.copy-button-box
     > button.copy-button {
     height: 2.5em;
-    width: 4.5em;
     color: rgba(238, 255, 255, 0.4);
     background-color: transparent;
     border: rgba(238, 255, 255, 0.4) solid 1pt;
     border-radius: 10%;
     margin-right: 0.5em;
     cursor: pointer;
+    padding-left: 0.8em;
+    padding-right: 0.8em;
 }
 
 article.main
