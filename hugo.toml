@@ -182,3 +182,6 @@ pluralizeListTitles = false
 
         # Should show the breadcrumb in front of the page or not.
         showBreadcrumb = true
+
+        # Should show the "copy" button in the codeblock or not.
+        codeBlockCopible = true

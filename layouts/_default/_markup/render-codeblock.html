@@ -5,11 +5,14 @@
 
 
 <div class="codeblock">
-    <div class="copy-button-box">
-        <button class="copy-button" state="copy" data="{{ .Inner }}">
-            Copy
-        </button>
-    </div>
+    {{ with $.Page.Site.Params.page.codeBlockCopible }}
+        <div class="copy-button-box">
+            <button class="copy-button" state="copy" data="{{ $.Inner }}">
+                Copy
+            </button>
+        </div>
+    {{ end }}
+
     {{ if transform.CanHighlight $lang }}
         {{ highlight .Inner $lang }}
     {{ else }}
