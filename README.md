@@ -15,6 +15,7 @@ DEMO - https://jingwangtw.github.io/dark-theme-editor/
 * Fully Responsive.
 * Fully based on Hugo ecosystem.
 * Goolge/Bing SEO Support
+* Better Code Block
 
 
 ## Usage
@@ -219,7 +220,6 @@ This will build your site in release mode, where all `.html`, `.css`, and `.js` 
 * Share to Socla Media Button
 * `i18n` Support
 * Emoji Support
-* Copy Button in Code Block
 * Better Code Block Highlight
 * Mermaid Support
 * Tab View Support
