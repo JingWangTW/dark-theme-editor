@@ -6,18 +6,7 @@ languageCode = 'en-us'
     autor = "author"
     tag = "tags"
     category = "categories"
-
-# What I preferred config
-pluralizeListTitles = false
-
-# Recommend syntax hilight config
-[markup]
-    [markup.highlight]
-        lineNoStart = 1
-        lineNos = true
-        style = "native"
-        tabWidth = 4
-
+    
 # Theme parameters
 [params]
 

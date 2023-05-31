@@ -240,10 +240,15 @@ article.main
     border-color: #eeffff;
 }
 
-article.main > div.content div.codeblock > div.highlight div {
+/* pre for cases where line numbers are not set to be displayed. */
+article.main > div.content div.codeblock > div.highlight :where(pre, div) {
     border-radius: 10pt;
     padding-top: 0.5em;
     padding-bottom: 0.5em;
+}
+
+article.main > div.content div.codeblock > div.highlight pre {
+    padding-left: 0.6em;
 }
 
 article.main > div.content div.codeblock > div.highlight code {
