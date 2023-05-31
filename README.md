@@ -225,3 +225,4 @@ This will build your site in release mode, where all `.html`, `.css`, and `.js` 
 * Tab View Support
 * Store custom note in local storage.
 * Accessiblity Support
+* LaTex Math Support
