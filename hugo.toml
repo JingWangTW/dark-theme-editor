@@ -1,6 +1,3 @@
-baseURL = 'http://example.org/'
-languageCode = 'en-us'
-
 # Support Taxonomies
 [taxonomies]
     autor = "author"
