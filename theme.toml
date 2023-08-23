@@ -1,6 +1,7 @@
 name = "Dark Theme Editor"
 license = "Apache-2.0"
 licenselink = "https://github.com/JingWangTW/dark-theme-editor/blob/main/LICENSE"
+demosite = "https://jingwangtw.github.io/dark-theme-editor/"
 description = "A simple, editor-like theme for Hugo."
 homepage = "https://github.com/JingWangTW/dark-theme-editor"
 tags = ["blog", "dark", "highlighting", "responsive", "simple", "technical", "editor", "Dark Mode", "Docs"]
@@ -13,4 +14,4 @@ features = ["blog", "syntax highlighting", "responsive"]
 [origin]
     name = "editor"
     homepage = "https://github.com/sfengyuan/edidor"
-    repp = "https://github.com/sfengyuan/edidor"
+    repo = "https://github.com/sfengyuan/edidor"
