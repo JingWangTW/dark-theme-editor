@@ -228,7 +228,7 @@ This will build your site in release mode, where all `.html`, `.css`, and `.js` 
 * LaTex Math Support
 
 ## Acknowledgement
-This theme was originally inspired by the [theme `editor`](https://github.com/sfengyuan/edidor). It appeared that the original theme was no longer maintained. I decided to rewrite the style and add new features to support responsive usage, improve the taxonomy page, and accommodate the newer version of Hugo, among other things. This effort resulted in the creation of this new theme. Hence, I added this acknowledgment to pay my respects to the original.
+This theme was originally inspired by the [theme `edidor`](https://github.com/sfengyuan/edidor). It appeared that the original theme was no longer maintained. I decided to rewrite the style and add new features to support responsive usage, improve the taxonomy page, and accommodate the newer version of Hugo, among other things. This effort resulted in the creation of this new theme. Hence, I added this acknowledgment to pay my respects to the original.
 
 ## License
 This theme was released under the Apache License 2.0.

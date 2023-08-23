@@ -12,6 +12,6 @@ features = ["blog", "syntax highlighting", "responsive"]
     homepage = "https://github.com/JingWangTW"
 
 [origin]
-    name = "editor"
+    name = "edidor"
     homepage = "https://github.com/sfengyuan/edidor"
     repo = "https://github.com/sfengyuan/edidor"
