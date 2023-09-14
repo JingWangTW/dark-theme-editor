@@ -217,7 +217,7 @@ hugo
 This will build your site in release mode, where all `.html`, `.css`, and `.js` files will be minified and merged when possible.
 
 ## Feature Plan
-* Share to Socla Media Button
+* Share to Social Media Button
 * `i18n` Support
 * Emoji Support
 * Better Code Block Highlight
