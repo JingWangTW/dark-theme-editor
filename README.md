@@ -206,7 +206,7 @@ This will install the theme repository as a sumbodule in the `themes/dark-theme-
 ## Run & Build
 ### Develop
 ```
-huso server
+hugo server
 ```
 Then, you should be able to see your site at `localhost:1313`. From now on, all changes made locally will be reflected on the site, without the need to refresh your browser each time. Additionally, all files will not be minified or merged in this development mode, making it easier to debug any issues.
 
@@ -217,7 +217,7 @@ hugo
 This will build your site in release mode, where all `.html`, `.css`, and `.js` files will be minified and merged when possible.
 
 ## Feature Plan
-* Share to Socla Media Button
+* Share to Social Media Button
 * `i18n` Support
 * Emoji Support
 * Better Code Block Highlight
