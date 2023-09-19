@@ -37,38 +37,6 @@ pluralizeListTitles = false
 
     # Customized info shown in footer of the page
     [params.footer]
-        # CopyRight string shown in the footer. Keep it an empty string or remove this item will hide it from the page.
-        copyrightStr = "All Rights Reserved ®."
-
-        # Should show the counter in the footer or not
-        # In the home page, it will show the numbers of all pages
-        # In the sections pages, it will show the numbers of pages within the section
-        # In the taxonomy pages, it will show the numbers of pages belong to the taxonomy.
-        # In the regular content pages, it will show the word count.
-        counter = true
-
-        # Should show the language of the page or not
-        language = true
-
-        # Should show the hugo version or not
-        hugoVersion = true
-
-        # Should show the theme info or not
-        theme = true
-
-        # Should show the edited time of the page or not
-        modifiedTime = true
-
-        # The format of the `modifiedTime`.
-        # Refer to page https://gohugo.io/functions/format/ for more detail.
-        # Below is the default format, please do not remove it, unless you set `false` in `modifiedTime` field.
-        dateFormat = "Jan 02 2006 15:04:05"
-
-        # Should show the current git HEAD hash or not
-        # To make this show up correctly, please follow the prerequisites in page
-        # https://gohugo.io/variables/git/
-        gitHash = true
-
         # Social link in the footer, listed items are supported, delete unwanted items to hide it.
         [params.footer.socialLink]
             github = "https://github.com/JingWangTW"
@@ -94,46 +62,8 @@ pluralizeListTitles = false
     [params.homePage]
         # Long Descripition shown in home page "Start Block". Is is recommended to have the paragraph shorter than 100 words.        
         siteLongDescription = "The \"dark-theme-editor\" is a Hugo theme that resembles a code editor in dark mode, suitable for developers and programmers. The customizable dark color scheme provides a modern and professional appearance and may alleviate eye strain. Overall, it's a practical and visually appealing theme for creating a distinctive website."
-
-        # If you don't like the title of "siteLongDescription" be "Start" (default), 
-        # you may change the value of this item to "Description" or something you like.
-        siteLongDescriptionTitle = "Start"
-
-        # Param to decide whether to show the most recent blog posts or not. (Default: true)
-        showRecentPostsBlock = true
-
-        # Param to decide how many recent posts to show in the home page. (Default: 5)
-        numOfRecentPosts = 5
         
         # Parameter to decide whether to show the URL behind the title.
         # It will be more like an editor if it is shown. However, in general, it can be messy if it is displayed.        
         # (Default: true)
         recentPostShowUrl = false
-
-    # Paramater applied in the single page
-    # These values could be overwritten by the frontmatter in the single page.
-    [params.page]
-        # Should include Table of Content in front of the page or not.
-        includeToc = true
-
-        # Should show the author of the page or not.
-        # The author name will be shown in the single page if and only if 
-        #   1. this items been set as true and
-        #   2. "aurthor" filed been provided in the 
-        #       A. single page frontmatter or
-        #       B. "author" filed in above "globalFrontmatter" block
-        showAuthor = true
-
-        # Should show the date of the page or not
-        showDate = true
-
-        # The format of the date.
-        # Refer to page https://gohugo.io/functions/format/ for more detail.
-        # Below is the default format, please do not remove it, unless you set `false` in `showDate` field.
-        dateFormat = "2006.01.02"
-
-        # Should show the estimate reading time in front of the page or not.
-        showTimeToRead = true
-
-        # Should show the breadcrumb in front of the page or not.
-        showBreadcrumb = true
