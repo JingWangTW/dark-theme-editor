@@ -54,6 +54,5 @@ Java has several advantages that make it a popular choice for developing softwar
 
 Overall, Java is a versatile and widely-used programming language with a range of features and advantages that make it a popular choice for developers.
 
-
 ## Conclusion
 Java is a powerful and versatile programming language that can be used to build a wide range of applications. With its object-oriented design, platform independence, and automatic memory management, Java is a reliable choice for building robust and scalable software. Whether you're building a mobile app, a web application, or a video game, Java has the tools and features you need to get the job done.
