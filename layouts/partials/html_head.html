@@ -99,7 +99,7 @@
 
         <link
             rel="stylesheet"
-            href="{{ $style.Permalink }}"
+            href="{{ $style.RelPermalink }}"
             integrity="{{ $style.Data.Integrity }}" />
     {{ else }}
 
@@ -107,7 +107,7 @@
             {{ $currentStyle := . | resources.Fingerprint "sha512" }}
             <link
                 rel="stylesheet"
-                href="{{ $currentStyle.Permalink | absURL }}"
+                href="{{ $currentStyle.RelPermalink }}"
                 integrity="{{ $currentStyle.Data.Integrity }}" />
         {{ end }}
 
