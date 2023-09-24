@@ -14,6 +14,7 @@ function isSidebarExpanding(e) {
 
     const sidebarPercentage = (e.pageX / window.innerWidth) * 100;
 
+    // limitation of sidebar width
     if (sidebarPercentage > 10 && sidebarPercentage < 50) {
         const articlePercentage = 100 - sidebarPercentage;
 
@@ -55,26 +56,6 @@ function hideSidebar() {
 }
 
 window.addEventListener("load", function () {
-    document.querySelectorAll("button.copy-button").forEach((element) => {
-        element.addEventListener("click", (event) => {
-            let button = event.currentTarget;
-
-            if (button.getAttribute("state") === "copy") {
-                navigator.clipboard.writeText(
-                    decodeURI(button.getAttribute("data"))
-                );
-
-                button.setAttribute("state", "copied");
-                button.textContent = "Copied !";
-
-                window.setTimeout(() => {
-                    button.setAttribute("state", "copy");
-                    button.textContent = "Copy";
-                }, 3 * 1000);
-            }
-        });
-    });
-
     // sidebar expanble
     document
         .querySelector("aside.exapandable")
@@ -101,6 +82,7 @@ window.addEventListener("load", function () {
             }
         });
 
+    // hides sidebar when not focus
     this.document
         .querySelector("article.main")
         .addEventListener("click", hideSidebar);
@@ -150,13 +132,5 @@ window.addEventListener("load", function () {
                 appliedSWidthStyle
             );
         }
-    });
-
-    // sub dir toggle
-    document.querySelectorAll("li.dir > span.dir-text").forEach((element) => {
-        element.addEventListener("click", function () {
-            this.parentNode.classList.toggle("opened-dir");
-            this.parentNode.classList.toggle("closed-dir");
-        });
     });
 });

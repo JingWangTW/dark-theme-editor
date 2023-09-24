@@ -1,6 +1,9 @@
-<!-- Bundle all css -->
+<!-- Bundle all JS -->
 {{ $script := slice }}
-{{ $script := $script | append ( resources.Get "index.js" ) }}
+
+
+<!-- Get all local JS -->
+{{ $script := $script | append ( resources.Match "js/*.js" ) }}
 
 
 <!-- Get all custom JS -->
