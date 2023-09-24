@@ -6,6 +6,12 @@ theme = 'dark-theme-editor'
 # What I preferred config
 pluralizeListTitles = false
 
+# Auto-detect Chinese/Japanese/Korean Languages in the content.
+hasCJKLanguage = true
+
+# Multilingual Configuration
+defaultContentLanguage = 'en'
+
 # Recommend syntax hilight config
 [markup]
     [markup.highlight]
@@ -14,6 +20,23 @@ pluralizeListTitles = false
         style = "native"
         tabWidth = 4
 
+[languages]
+    [languages.en]
+        languageCode = 'en-US'
+        languageDirection = 'ltr'
+        languageName = 'English'
+        title = 'Example Site of dark-theme-editor'
+        weight = 1
+        [languages.en.params]
+            subtitle = 'A Site Built by Hugo'
+    [languages.zh]
+        languageCode = 'zh-Hant-TW'
+        languageDirection = 'ltr'
+        languageName = '繁體中文'
+        title = 'dark-theme-editor 範例網站'
+        weight = 2
+        [languages.zh.params]
+            subtitle = '本站使用Hugo製作'
 # Theme parameter
 [params]
 
