@@ -236,13 +236,14 @@ footer {
 footer > div {
     display: inline;
     flex: 0 0 auto;
-    overflow-x: hidden;
+    /* overflow-x: hidden; */
 }
 
 footer > div > ul {
     display: flex;
     height: 100%;
     align-items: stretch;
+    white-space: nowrap;
 }
 
 footer > div > ul > li {
@@ -253,9 +254,29 @@ footer > div > ul > li {
     cursor: default;
 }
 
-footer > div > ul > li:hover {
+footer > div ul > li:hover {
     background-color: rgb(65, 65, 65);
     color: rgb(150, 150, 150);
+}
+
+/* submenu */
+footer > div ul > li ul {
+    background-color: #282c34;
+
+    display: none;
+    align-self: flex-end;
+    position: relative;
+    bottom: 100%;
+}
+
+footer > div ul > li:hover ul,
+footer > div ul > li ul:hover {
+    display: block;
+}
+
+footer > div ul > li:hover > ul > li,
+footer > div ul > li > ul:hover > li {
+    padding: 8pt;
 }
 
 footer > div.footer-left {
@@ -272,6 +293,21 @@ footer > div.footer-right {
 
 footer > div.footer-right > ul {
     justify-content: flex-end;
+}
+
+/* language navigator */
+footer > div.footer-right > ul > li.language-selector {
+    width: 1em;
+    cursor: pointer;
+}
+
+footer
+    > div.footer-right
+    > ul
+    > li.language-selector
+    > ul.language-selector-menu {
+    font-size: 12pt;
+    left: -1em;
 }
 
 /*** Section Tree Listing ***/

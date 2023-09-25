@@ -48,6 +48,24 @@
                 </li>
             {{ end }}
 
+            {{/* Use this as a trick to check if the multilingual mode is enabled. */}}
+            {{ if $.Site.IsMultiLingual }}
+                <li class="language-selector">
+                    <i class="bi bi-translate"></i>
+
+                    <ul class="language-selector-menu">
+                        {{ range $.Site.Home.AllTranslations }}
+                            <li>
+                                <a href="{{ .Permalink }}">
+                                    {{ .Lang }}
+                                    -{{ .Language.LanguageName }}
+                                </a>
+                            </li>
+                        {{ end }}
+                    </ul>
+                </li>
+            {{ end }}
+
             {{ with $.Site.Params.footer.language }}
                 <li>{{ $.Site.Language.Lang }}</li>
             {{ end }}
