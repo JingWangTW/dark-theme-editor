@@ -146,14 +146,14 @@ article.main > div.article-meta > div.tags > a.tag-btn:hover {
 }
 
 article.main > div.article-meta > div:where(.categories, .tags) > a {
-    line-height: 3em;
+    line-height: 2.8em;
 }
 
 article.main > div.article-meta > div.breadcumb > a.bread-btn {
     color: #99a1ff;
     padding-left: 5pt;
     padding-right: 5pt;
-    line-height: 1.5em;
+    line-height: 2.5em;
 }
 
 article.main > nav#TableOfContents {
