@@ -90,6 +90,13 @@
                     {{ partial "module/breadcrumb" $ }}
                 </div>
             {{ end }}
+
+            {{ if .IsTranslated }}
+                <div class="translation">
+                    <i class="bi bi-globe2"></i>
+                    {{ partial "module/page_translated" $ }}
+                </div>
+            {{ end }}
         </div>
 
         {{ if isset $.Params "includeToc" }}

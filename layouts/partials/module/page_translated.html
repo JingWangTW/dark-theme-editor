@@ -1,0 +1,10 @@
+{{ range $index, $element := .Translations }}
+    {{ if ne $index 0 }}
+        /
+    {{ end }}
+
+
+    <a href="{{ .Permalink }}" class="lang-btn">
+        {{ .Language.LanguageName }}
+    </a>
+{{ end }}

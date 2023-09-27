@@ -149,7 +149,7 @@ article.main > div.article-meta > div:where(.categories, .tags) > a {
     line-height: 2.8em;
 }
 
-article.main > div.article-meta > div.breadcumb > a.bread-btn {
+article.main > div.article-meta > div:where(.breadcumb, .translation) > a {
     color: #99a1ff;
     padding-left: 5pt;
     padding-right: 5pt;
