@@ -63,7 +63,7 @@
                     <i class="bi bi-bookmarks" title="Categories"></i>
                     {{ range . }}
                         <a
-                            href="{{ "categories" | absURL }}/{{ . | urlize }}/"
+                            href="{{ "categories" | relLangURL }}/{{ . | urlize }}/"
                             class="cat-btn">
                             {{ . }}
                         </a>
@@ -76,7 +76,7 @@
                     <i class="bi bi-tags" title="Tags"></i>
                     {{ range . }}
                         <a
-                            href="{{ "tags" | absURL }}/{{ . | urlize }}/"
+                            href="{{ "tags" | relLangURL }}/{{ . | urlize }}/"
                             class="tag-btn">
                             {{ . }}
                         </a>
