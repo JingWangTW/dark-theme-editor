@@ -156,6 +156,11 @@ article.main > div.article-meta > div:where(.breadcumb, .translation) > a {
     line-height: 2.5em;
 }
 
+/* first of a will contain the current present language */
+article.main > div.article-meta > div.translation > a:first-of-type {
+    color: #c6c6c7;
+}
+
 article.main > nav#TableOfContents {
     margin-bottom: 20pt;
 }

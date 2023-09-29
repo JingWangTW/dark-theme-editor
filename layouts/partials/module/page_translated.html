@@ -1,8 +1,9 @@
-{{ range $index, $element := .Translations }}
-    {{ if ne $index 0 }}
-        /
-    {{ end }}
+<a class="lang-btn">
+    {{ $.Site.Language.LanguageName }}
+</a>
 
+{{ range $index, $element := .Translations }}
+    /
 
     <a href="{{ .Permalink }}" class="lang-btn">
         {{ .Language.LanguageName }}
