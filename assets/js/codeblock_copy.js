@@ -2,6 +2,7 @@ window.addEventListener("load", function () {
     document.querySelectorAll("button.copy-button").forEach((element) => {
         element.addEventListener("click", (event) => {
             let button = event.currentTarget;
+            let iconElement = button.querySelector("i");
 
             if (button.getAttribute("state") === "copy") {
                 navigator.clipboard.writeText(
@@ -9,11 +10,13 @@ window.addEventListener("load", function () {
                 );
 
                 button.setAttribute("state", "copied");
-                button.textContent = "Copied !";
+                iconElement.classList.remove("bi-clipboard");
+                iconElement.classList.add("bi-clipboard-check-fill");
 
                 window.setTimeout(() => {
                     button.setAttribute("state", "copy");
-                    button.textContent = "Copy";
+                    iconElement.classList.remove("bi-clipboard-check-fill");
+                    iconElement.classList.add("bi-clipboard");
                 }, 3 * 1000);
             }
         });
