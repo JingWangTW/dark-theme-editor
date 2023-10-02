@@ -12,7 +12,7 @@
                 {{ if isset $.Params "author" }}
 
                     {{ if or ( and ( not (isset $.Params "showAuthor") ) $.Site.Params.page.showAuthor ) $.Params "showAuthor" }}
-                        <div class="author">
+                        <div class="author" title="{{ i18n "author" | title }}">
                             <i class="bi bi-person"></i>
                             <a
                                 href="{{ "author" | absURL }}/{{ $.Params.author | urlize }}/"
@@ -25,7 +25,7 @@
                 {{ else if isset $.Site.Params.globalFrontmatter "author" }}
 
                     {{ if or ( and ( not (isset $.Params "showAuthor") ) $.Site.Params.page.showAuthor ) $.Params "showAuthor" }}
-                        <div class="author">
+                        <div class="author" title="{{ i18n "author"| title }}">
                             <i class="bi bi-person"></i>
                             <a
                                 href="{{ "author" | absURL }}/{{ $.Site.Params.globalFrontmatter.author | urlize }}/"
@@ -38,7 +38,7 @@
                 {{ end }}
 
                 {{ with $.Site.Params.page.showDate }}
-                    <div class="date">
+                    <div class="date" title="{{ i18n "date"| title }}">
                         <i class="bi bi-calendar3"></i>
                         <time
                             datetime="{{ $.Page.Date.Format $.Site.Params.page.dateFormat }}"
@@ -48,10 +48,11 @@
                 {{ end }}
 
                 {{ with $.Site.Params.page.showTimeToRead }}
-                    <div class="readtime">
+                    <div
+                        class="readtime"
+                        title="{{ i18n "time_to_read" | title }}">
                         <i class="bi bi-clock"></i>
-                        {{ $.Page.ReadingTime }}
-                        min{{ cond (eq $.Page.ReadingTime 1) "" "s" }} to read
+                        {{ i18n "min_to_read" $.Page.ReadingTime }}
                     </div>
                 {{ end }}
             </div>
@@ -60,7 +61,9 @@
         <div class="article-meta">
             {{ with .Params.categories }}
                 <div class="categories">
-                    <i class="bi bi-bookmarks" title="Categories"></i>
+                    <i
+                        class="bi bi-bookmarks"
+                        title="{{ i18n "category" 2  | title }}"></i>
                     {{ range . }}
                         <a
                             href="{{ "categories" | relLangURL }}/{{ . | urlize }}/"
@@ -73,7 +76,9 @@
 
             {{ with .Params.tags }}
                 <div class="tags">
-                    <i class="bi bi-tags" title="Tags"></i>
+                    <i
+                        class="bi bi-tags"
+                        title="{{ i18n "tag" 2 | title }}"></i>
                     {{ range . }}
                         <a
                             href="{{ "tags" | relLangURL }}/{{ . | urlize }}/"
@@ -93,7 +98,9 @@
 
             {{ if .IsTranslated }}
                 <div class="translation">
-                    <i class="bi bi-globe2"></i>
+                    <i
+                        class="bi bi-globe2"
+                        title="{{ i18n "language" | title }}"></i>
                     {{ partial "module/page_translated" $ }}
                 </div>
             {{ end }}
@@ -113,7 +120,9 @@
             {{ if .Content }}
                 {{ .Content }}
             {{ else }}
-                <p class="no-content">No content on this page.</p>
+                <p class="no-content">
+                    {{ i18n "empty_page" |  strings.FirstUpper }}
+                </p>
             {{ end }}
         </div>
     </article>

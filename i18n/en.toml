@@ -1,0 +1,34 @@
+
+# The "recent posts" show in home page
+recent_posts = 'recent posts'
+
+# The "Walkthroughs" show in home page
+walkthroughs = 'walkthroughs'
+
+# Hint text of page meta data related icons
+author = 'author'
+date = 'date'
+time_to_read = 'time to read'
+
+# Hint text to indicate an empty page
+empty_page = 'no content on this page.'
+
+# Title of a terms page
+all_about = 'all about'
+
+# Hint text to show for language menu icon
+language = 'language'
+
+# Hint text of related icons of a content
+[category]
+    one = 'category'
+    other = 'categories'
+
+[tag]
+    one = 'Tag'
+    other = 'Tags'
+
+# Time of minutes to read a page
+[min_to_read]
+    one = '{{ . }} min to read'
+    other = '{{ . }} mins to read'

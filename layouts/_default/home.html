@@ -27,7 +27,9 @@
                     </div>
                     <div class="recent">
                         {{ with $.Site.Params.homePage.showRecentPostsBlock }}
-                            <h3 class="recommend-title">Recent Posts</h3>
+                            <h3 class="recommend-title">
+                                {{ i18n "recent_posts" | title }}
+                            </h3>
                             <ul class="recent-posts-list">
                                 {{ range ( $.Site.RegularPages | first ($.Site.Params.homePage.numOfRecentPosts | default 5) ) }}
                                     {{ $page := . }}
@@ -52,7 +54,9 @@
                     </div>
                 </div>
                 <div class="right">
-                    <h3 class="recommend-title">Walkthroughs</h3>
+                    <h3 class="recommend-title">
+                        {{ i18n "walkthroughs"  | title }}
+                    </h3>
                     {{ partial "module/section_tree" ( dict "context" . "currentPage" . ) }}
                 </div>
             </div>
