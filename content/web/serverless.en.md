@@ -23,6 +23,5 @@ Serverless computing is event-driven, meaning that code is executed in response 
 * **Simplicity**: Serverless computing eliminates the need for developers to manage infrastructure, making it easier to focus on writing code.
 * **Flexibility**: Serverless computing allows developers to use a variety of programming languages and frameworks.
 
-
 ## Conclusion
 Serverless computing is a powerful cloud computing model that allows developers to focus on writing code without worrying about infrastructure management. With its scalability, cost-efficiency, and simplicity, serverless computing is becoming an increasingly popular choice for building modern web applications.

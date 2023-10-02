@@ -43,3 +43,4 @@ for i in range(10):
     print("這是第", i+1, "行")
     if i == 5:
         print("已經過了一半!")
+```

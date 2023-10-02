@@ -23,6 +23,5 @@ Queries in GraphQL are flexible, allowing developers to specify which fields the
 * **Type System**: GraphQL has a strong type system that provides type checking and validation.
 * **Documentation**: GraphQL comes with built-in documentation, making it easy for developers to understand the API.
 
-
 ## Conclusion
 GraphQL is a powerful query language for APIs that provides a more efficient, flexible, and powerful alternative to REST APIs. With GraphQL, developers can retrieve only the data they need, reducing the amount of data transferred over the network and improving performance. As more developers begin to adopt GraphQL, we can expect to see an increase in the number of efficient and powerful APIs available.

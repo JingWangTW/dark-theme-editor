@@ -13,10 +13,10 @@ include_toc: true
 Java is a high-level, general-purpose programming language that was developed by Sun Microsystems in the mid-1990s. It is designed to be simple, portable, and secure. Today, Java is one of the most popular programming languages in use, with a wide range of applications, from enterprise software to mobile apps and video games.
 
 ## Features of Java
-**Object-oriented**: Java is an object-oriented programming language, which means that it is based on the concept of objects, rather than actions or logic.
-**Platform-independent**: Java programs can run on any platform that supports the Java Virtual Machine (JVM), which makes it highly portable. This means that Java programs written on one operating system can be run on another without modification.
-**Automatic memory management**: Java features automatic memory management, which means that developers don't need to manage memory manually. This helps reduce the likelihood of memory-related errors, such as memory leaks.
-**Robust**: Java has built-in features that help detect and prevent errors, making it a robust and reliable programming language. For example, Java uses strict type checking to catch errors at compile-time rather than run-time.
+* **Object-oriented**: Java is an object-oriented programming language, which means that it is based on the concept of objects, rather than actions or logic.
+* **Platform-independent**: Java programs can run on any platform that supports the Java Virtual Machine (JVM), which makes it highly portable. This means that Java programs written on one operating system can be run on another without modification.
+* **Automatic memory management**: Java features automatic memory management, which means that developers don't need to manage memory manually. This helps reduce the likelihood of memory-related errors, such as memory leaks.
+* **Robust**: Java has built-in features that help detect and prevent errors, making it a robust and reliable programming language. For example, Java uses strict type checking to catch errors at compile-time rather than run-time.
 
 ## Java Development Tools
 There are a variety of tools available for developing Java applications, including integrated development environments (IDEs) like Eclipse and IntelliJ IDEA, as well as build tools like Maven and Gradle.
