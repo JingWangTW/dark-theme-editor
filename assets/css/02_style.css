@@ -311,8 +311,8 @@ footer
     > ul
     > li.language-selector
     > ul.language-selector-menu {
-    font-size: 12pt;
-    left: -1em;
+    font-size: 10pt;
+    left: -2em;
 }
 
 /*** Section Tree Listing ***/
