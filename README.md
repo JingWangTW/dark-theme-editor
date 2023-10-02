@@ -1,10 +1,13 @@
 # Example Site | Dark Theme Editor 
 [![Example Site](https://github.com/JingWangTW/dark-theme-editor/actions/workflows/hugo.yml/badge.svg)](https://github.com/JingWangTW/dark-theme-editor/actions/workflows/hugo.yml)
 
-> Thisis the source content of demo site for [**Dark Theme Editor**](https://github.com/JingWangTW/dark-theme-editor).
+> This is the source content of demo site for [**Dark Theme Editor**](https://github.com/JingWangTW/dark-theme-editor).
 
 ---
-
+## Example Site
+* This example site demo the most feature offered by the theme.
+* This example site is in multilingual mode. All the content has been translated into three languages: English, Traditional Chinese, and Deutsch.
+ 
 ## Configuration
 * Most of the configurations used in the example site follow the default values.
 * Here is a list of configurations that are different from the default values.
@@ -16,6 +19,73 @@ title = 'Example Site of dark-theme-editor'
 # Of course, this is the demo site for the dark-theme-editor theme.
 theme = 'dark-theme-editor'
 
+# What I preferred config
+pluralizeListTitles = false
+
+# Auto-detect Chinese/Japanese/Korean Languages in the content.
+hasCJKLanguage = true
+
+# Default Language
+defaultContentLanguage = 'en'
+
+# Recommend syntax hilight config
+[markup]
+    [markup.highlight]
+        lineNoStart = 1
+        lineNos = true
+        style = "native"
+        tabWidth = 4
+
+# Multilingual Setting
+[languages]
+    
+    [languages.en]
+        
+        # hugo multilingual setting
+        languageCode = 'en-US'
+        languageDirection = 'ltr'
+        languageName = 'English'
+        weight = 1
+        
+        # Configs that were originally in the "params" section but need to be translated.
+        [languages.en.params]
+            
+            [languages.en.params.header]
+                # Website title for header banner.
+                title = "Example Site of dark-theme-editor"
+
+                # Subtitle for this site, used in homepage only
+                subtitle = "A Site Built by Hugo"
+            
+            [languages.en.params.footer]
+                # CopyRight string shown in the footer. Keep it an empty string or remove this item will hide it from the page.
+                copyrightStr = "All Rights Reserved ®."
+
+            # Metadata of the site, value will be used in HTML <header>
+            # These value would be used when they didn't appear in the frontmatter of a single page.
+            # In other words, these value will be overwritten by the frontmatter in the single page.
+            [languages.en.params.globalFrontmatter]
+                # The author of this site. This will be shown in 
+                # 1. the footer of all page
+                # 2. the author filed in the single page. (this could be overwritten by the frontmatter of the single page.)
+                # Keep it an empty string or remove this item will hide it from the page
+                author = "Jing Wang"
+                
+                # Website description for RSS and SEO. Theme will generate a <meta> tag for this item
+                description = "Example Site of dark-theme-editor"
+
+                # Website keywords. Theme will generate a <meta> tag for this item.
+                keywords = "dark-theme-editor,hugo,theme,example"
+
+            [languages.en.params.homePage]
+
+                # Long Descripition shown in home page "Start Block". Is is recommended to have the paragraph shorter than 100 words.        
+                siteLongDescription = "The \"dark-theme-editor\" is a Hugo theme that resembles a code editor in dark mode, suitable for developers and programmers. The customizable dark color scheme provides a modern and professional appearance and may alleviate eye strain. Overall, it's a practical and visually appealing theme for creating a distinctive website."
+    
+    # Configuration in Traditional Chinese and Deutsch 
+    [languages.zh]
+    [languages.de]
+
 [params]
     # As I don't need to add any other JavaScript and CSS, I have removed the following items.
     [params.site]
@@ -23,10 +93,6 @@ theme = 'dark-theme-editor'
         externalCss = []
         localJs = []
         externalJs = []
-
-    # Obviously
-    [params.header]
-        title = "My New Hugo Site"
     
     # I want to show these links only
     [params.footer]
@@ -34,19 +100,10 @@ theme = 'dark-theme-editor'
             github = "https://github.com/JingWangTW"
             email = "tony.jing.wang@gmail.com"
 
-    [params.globalFrontmatter]        
-        description = "This is my new hugo site"
-        keywords = "hugo,site,new"
-
     [params.homePage]
-        siteLongDescription = "The \"dark-theme-editor\" is a Hugo theme that resembles a code editor in dark mode, suitable for developers and programmers. The customizable dark color scheme provides a modern and professional appearance and may alleviate eye strain. Overall, it's a practical and visually appealing theme for creating a distinctive website."
 
         # When displaying the URL behind the title, it appears to be all messed up.
         recentPostShowUrl = false
-
-    [params.page]
-        # No, I don't want to show thw TOC in the demo site.
-        includeToc = true
 ```
 
 ## Note
