@@ -20,23 +20,149 @@ defaultContentLanguage = 'en'
         style = "native"
         tabWidth = 4
 
+# Multilingual Setting
 [languages]
+
     [languages.en]
+
+        # hugo multilingual setting
         languageCode = 'en-US'
         languageDirection = 'ltr'
         languageName = 'English'
-        title = 'Example Site of dark-theme-editor'
         weight = 1
+
+        # Configs that were originally in the "params" section but need to be translated.
         [languages.en.params]
-            subtitle = 'A Site Built by Hugo'
+
+            [languages.en.params.header]
+                # Website title for header banner.
+                title = "Example Site of dark-theme-editor"
+
+                # Subtitle for this site, used in homepage only
+                subtitle = "A Site Built by Hugo"
+
+            [languages.en.params.footer]
+                # CopyRight string shown in the footer. Keep it an empty string or remove this item will hide it from the page.
+                copyrightStr = "All Rights Reserved ®."
+
+            # Metadata of the site, value will be used in HTML <header>
+            # These value would be used when they didn't appear in the frontmatter of a single page.
+            # In other words, these value will be overwritten by the frontmatter in the single page.
+            [languages.en.params.globalFrontmatter]
+                # The author of this site. This will be shown in
+                # 1. the footer of all page
+                # 2. the author filed in the single page. (this could be overwritten by the frontmatter of the single page.)
+                # Keep it an empty string or remove this item will hide it from the page
+                author = "Jing Wang"
+
+                # Website description for RSS and SEO. Theme will generate a <meta> tag for this item
+                description = "Example Site of dark-theme-editor"
+
+                # Website keywords. Theme will generate a <meta> tag for this item.
+                keywords = "dark-theme-editor,hugo,theme,example"
+
+            [languages.en.params.homePage]
+
+                # Long Descripition shown in home page "Start Block". Is is recommended to have the paragraph shorter than 100 words.
+                siteLongDescription = "The \"dark-theme-editor\" is a Hugo theme that resembles a code editor in dark mode, suitable for developers and programmers. The customizable dark color scheme provides a modern and professional appearance and may alleviate eye strain. Overall, it's a practical and visually appealing theme for creating a distinctive website."
+
+    # 設定為繁體中文
     [languages.zh]
+
+        # Hugo 多語言設定
         languageCode = 'zh-Hant-TW'
         languageDirection = 'ltr'
         languageName = '繁體中文'
-        title = 'dark-theme-editor 範例網站'
         weight = 2
+
+        # 需要翻譯的原本在 "params" 部分的設定。
         [languages.zh.params]
-            subtitle = '本站使用Hugo製作'
+
+            [languages.zh.params.header]
+                # 頁首橫幅的網站標題。
+                title = "深色主題編輯器範例網站"
+
+                # 此網站的副標題，僅用於首頁
+                subtitle = "由 Hugo 建立的網站"
+
+            [languages.zh.params.footer]
+                # 在頁尾顯示的版權字串。將其保留為空字串或刪除此項目將隱藏它。
+                copyrightStr = "保留所有權利 ®."
+
+            # 網站的元數據，將用於 HTML <header>
+            # 當它們未出現在單個頁面的正文前，這些值將被使用。
+            # 換句話說，這些值將被單個頁面的正文覆寫。
+            [languages.zh.params.globalFrontmatter]
+                # 這個網站的作者。將顯示在
+                # 1. 所有頁面的頁尾
+                # 2. 單個頁面的作者欄位。（可以被單個頁面的正文覆寫。）
+                # 保持為空字串或刪除此項目將隱藏它
+                author = "王靖"
+
+                # RSS 和 SEO 的網站描述。主題將為此項目生成 <meta> 標籤
+                description = "深色主題編輯器範例網站"
+
+                # 網站關鍵字。主題將為此項目生成 <meta> 標籤。
+                keywords = "深色主題編輯器,hugo,主題,範例"
+
+            [languages.zh.params.homePage]
+
+                # 在首頁「開始區塊」中顯示的長描述。建議段落長度不超過 100 個字。
+                siteLongDescription = "「深色主題編輯器」是一款 Hugo 主題，類似於暗模式下的程式碼編輯器，適用於開發人員和程序員。可自定義的深色配色方案呈現出現代專業的外觀，可能減輕眼睛疲勞。總的來說，這是一款實用且外觀吸引人的主題，適合創建獨特的網站。"
+
+                # 如果您不喜歡 "siteLongDescription" 的標題是「開始」（默認值），
+                # 您可以將此項目的值更改為「描述」或您喜歡的其他內容。
+                siteLongDescriptionTitle = "開始"
+
+
+    # Spracheinstellung für Deutsch
+    [languages.de]
+
+        languageCode = 'de-DE'
+        languageDirection = 'ltr'
+        languageName = 'Deutsch'
+        title = 'Projekt Dokumentation'
+        weight = 3
+
+        # Konfigurationen, die ursprünglich im Abschnitt "params" waren, aber übersetzt werden müssen.
+        [languages.de.params]
+
+            [languages.de.params.header]
+                # Website-Titel für das Kopfzeilen-Banner.
+                title = "Beispielwebsite des Dunkel-Theme-Editors"
+
+                # Untertitel für diese Website, nur auf der Startseite verwendet
+                subtitle = "Eine Website erstellt von Hugo"
+
+            [languages.de.params.footer]
+                # Copyright-Text, der im Footer angezeigt wird. Lassen Sie ihn leer oder entfernen Sie diesen Eintrag, um ihn von der Seite auszublenden.
+                copyrightStr = "Alle Rechte vorbehalten ®."
+
+            # Metadaten der Website, der Wert wird im HTML-<header> verwendet
+            # Diese Werte werden verwendet, wenn sie nicht im Frontmatter einer einzelnen Seite erscheinen.
+            # Mit anderen Worten, diese Werte werden durch das Frontmatter auf der einzelnen Seite überschrieben.
+            [languages.de.params.globalFrontmatter]
+                # Der Autor dieser Website. Dies wird angezeigt in
+                # 1. im Footer auf allen Seiten
+                # 2. im Autorfeld auf der einzelnen Seite. (kann durch das Frontmatter der einzelnen Seite überschrieben werden.)
+                # Lassen Sie ihn leer oder entfernen Sie diesen Eintrag, um ihn von der Seite auszublenden.
+                author = "Jing Wang"
+
+                # Website-Beschreibung für RSS und SEO. Das Theme generiert ein <meta>-Tag für diesen Wert.
+                description = "Beispielwebsite des Dunkel-Theme-Editors"
+
+                # Website-Schlüsselwörter. Das Theme generiert ein <meta>-Tag für diesen Wert.
+                keywords = "dunkel-Theme-Editor,hugo,theme,beispiel"
+
+            [languages.de.params.homePage]
+
+                # Lange Beschreibung, die im "Startblock" der Startseite angezeigt wird. Es wird empfohlen, den Absatz kürzer als 100 Wörter zu halten.
+                siteLongDescription = "Der \"Dunkel-Theme-Editor\" ist ein Hugo-Theme, das einem Code-Editor im Dunkelmodus ähnelt und sich für Entwickler und Programmierer eignet. Das anpassbare dunkle Farbschema bietet ein modernes und professionelles Erscheinungsbild und kann Augenbelastungen lindern. Insgesamt ist es ein praktisches und optisch ansprechendes Theme, um eine distinctive Website zu erstellen."
+
+                # Wenn Ihnen der Titel von "siteLongDescription" nicht gefällt, der standardmäßig "Start" ist,
+                # können Sie den Wert dieses Elements in "Beschreibung" oder etwas ähnliches ändern, das Ihnen gefällt.
+                siteLongDescriptionTitle = "Start"
+
 # Theme parameter
 [params]
 
@@ -47,11 +173,6 @@ defaultContentLanguage = 'en'
 
     # Customized info shown in header of the page
     [params.header]
-        # Website title for header banner.
-        title = "Example Site of dark-theme-editor"
-
-        # Subtitle for this site, used in homepage only
-        subtitle = "A Site Built by Hugo"
 
         # Config about your's site logo, remove this item to hide the logo
         [params.header.logo]
@@ -65,28 +186,10 @@ defaultContentLanguage = 'en'
             github = "https://github.com/JingWangTW"
             email = "tony.jing.wang@gmail.com"
 
-    # Metadata of the site, value will be used in HTML <header>
-    # These value would be used when they didn't appear in the frontmatter of a single page.
-    # In other words, these value will be overwritten by the frontmatter in the single page.
-    [params.globalFrontmatter]
-        # The author of this site. This will be shown in 
-        # 1. the footer of all page
-        # 2. the author filed in the single page. (this could be overwritten by the frontmatter of the single page.)
-        # Keep it an empty string or remove this item will hide it from the page
-        author = "Jing Wang"
-        
-        # Website description for RSS and SEO. Theme will generate a <meta> tag for this item
-        description = "Example Site of dark-theme-editor"
-
-        # Website keywords. Theme will generate a <meta> tag for this item.
-        keywords = "dark-theme-editor,hugo,theme,example"
-
     # Parameters applied in the homepage only
     [params.homePage]
-        # Long Descripition shown in home page "Start Block". Is is recommended to have the paragraph shorter than 100 words.        
-        siteLongDescription = "The \"dark-theme-editor\" is a Hugo theme that resembles a code editor in dark mode, suitable for developers and programmers. The customizable dark color scheme provides a modern and professional appearance and may alleviate eye strain. Overall, it's a practical and visually appealing theme for creating a distinctive website."
-        
+
         # Parameter to decide whether to show the URL behind the title.
-        # It will be more like an editor if it is shown. However, in general, it can be messy if it is displayed.        
+        # It will be more like an editor if it is shown. However, in general, it can be messy if it is displayed.
         # (Default: true)
         recentPostShowUrl = false
