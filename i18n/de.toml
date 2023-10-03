@@ -1,0 +1,33 @@
+# Die "Neuesten Beiträge" auf der Startseite anzeigen
+recent_posts = 'Neueste Beiträge'
+
+# Die "Schritt-für-Schritt-Anleitungen" auf der Startseite anzeigen
+walkthroughs = 'Schritt-für-Schritt-Anleitungen'
+
+# Hinweistext für Metadaten-Symbole auf der Seite
+author = 'Autor'
+date = 'Datum'
+time_to_read = 'Lesezeit'
+
+# Hinweistext, um eine leere Seite anzugeben
+empty_page = 'Kein Inhalt auf dieser Seite.'
+
+# Titel einer Seite mit Begriffsbedingungen
+all_about = 'Alles über'
+
+# Hinweistext für das Sprachmenü-Symbol
+language = 'Sprache'
+
+# Hinweistext für zugehörige Symbole eines Inhalts
+[category]
+    one = 'Kategorie'
+    other = 'Kategorien'
+
+[tag]
+    one = 'Schlagwort'
+    other = 'Schlagwörter'
+
+# Lesezeit in Minuten für eine Seite
+[min_to_read]
+    one = '{{ . }} Min. Lesezeit'
+    other = '{{ . }} Min. Lesezeit'

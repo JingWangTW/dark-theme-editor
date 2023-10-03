@@ -1,0 +1,33 @@
+# 主頁上顯示的 "最近的文章"
+recent_posts = '最近的文章'
+
+# 主頁上顯示的 "教學導覽"
+walkthroughs = '教學導覽'
+
+# 頁面元數據相關圖標的提示文字
+author = '作者'
+date = '日期'
+time_to_read = '閱讀時間'
+
+# 顯示空白頁面的提示文字
+empty_page = '此頁面無內容。'
+
+# 用於條款頁面的標題
+all_about = '關於'
+
+# 語言選單圖標的提示文字
+language = '語言'
+
+# 內容相關圖標的提示文字
+[category]
+    one = '分類'
+    other = '分類'
+
+[tag]
+    one = '標籤'
+    other = '標籤'
+
+# 閱讀頁面所需的分鐘數
+[min_to_read]
+    one = '需要 {{ . }} 分鐘閱讀'
+    other = '需要 {{ . }} 分鐘閱讀'
