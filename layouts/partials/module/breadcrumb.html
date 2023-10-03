@@ -16,5 +16,9 @@
         {{ partial "module/term_icon" . }}
     {{ end }}
 
-    {{ .Title }}
+    {{ if .IsHome }}
+        Home
+    {{ else }}
+        {{ .Title }}
+    {{ end }}
 </a>
