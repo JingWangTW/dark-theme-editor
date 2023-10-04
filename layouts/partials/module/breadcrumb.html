@@ -17,7 +17,7 @@
     {{ end }}
 
     {{ if .IsHome }}
-        Home
+        {{ i18n "breadcrumb_home" | title }}
     {{ else }}
         {{ .Title }}
     {{ end }}

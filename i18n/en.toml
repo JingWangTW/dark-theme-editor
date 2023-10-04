@@ -19,6 +19,9 @@ all_about = 'all about'
 # Hint text to show for language menu icon
 language = 'language'
 
+# The "Home" shown in breadcrumb root
+breadcrumb_home = 'home'
+
 # Hint text of related icons of a content
 [category]
     one = 'category'
