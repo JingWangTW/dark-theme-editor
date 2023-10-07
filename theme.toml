@@ -4,8 +4,8 @@ licenselink = "https://github.com/JingWangTW/dark-theme-editor/blob/main/LICENSE
 demosite = "https://jingwangtw.github.io/dark-theme-editor/"
 description = "A simple, editor-like theme for Hugo."
 homepage = "https://github.com/JingWangTW/dark-theme-editor"
-tags = ["blog", "dark", "highlighting", "responsive", "simple", "technical", "editor", "Dark Mode", "Docs"]
-features = ["blog", "syntax highlighting", "responsive"]
+tags = ["multilingual", "dark", "responsive", "technical", "editor", "Docs"]
+features = ["multilingual", "syntax highlighting", "responsive"]
 
 [author]
     name = "Jing Wang"
