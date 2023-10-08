@@ -28,6 +28,9 @@ hasCJKLanguage = true
 # Default Language
 defaultContentLanguage = 'en'
 
+# Turn on Emoji support in Hugo
+enableEmoji = true
+
 # Recommend syntax hilight config
 [markup]
     [markup.highlight]
