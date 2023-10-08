@@ -69,30 +69,44 @@
 
 
     <!-- Get all remore CSS -->
-    {{ $style := $style | append ( resources.GetRemote "https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css" ) }}
+    {{ $style = $style | append ( resources.GetRemote "https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css" ) }}
 
 
     <!-- Get all local CSS -->
     {{ $style = $style | append ( resources.Match "_theme/css/*.css" ) }}
 
 
-    <!-- Get all custom css -->
-    {{ with $.Site.Params.globalFrontmatter.externalcss }}
-        {{ range $css_src :=  $.Site.Params.globalFrontmatter.externalcss }}
-            {{ $style := $style | append ( resources.GetRemote $css_src  ) }}
+    <!-- Append all custom CSS listed in the page metadata. -->
+    {{ if isset $.Params "localcss" }}
+        {{ range $css_src :=  $.Params.localcss }}
+            {{ $style = $style | append ( resources.Match $css_src ) }}
         {{ end }}
     {{ end }}
 
+    {{ if isset $.Params "externalcss" }}
+        {{ range $css_src :=  $.Params.externalcss }}
+            {{ $style = $style | append ( resources.GetRemote $css_src  ) }}
+        {{ end }}
+    {{ end }}
+
+
+    <!-- Append all custom CSS listed in the global config.-->
+
     {{ with $.Site.Params.globalFrontmatter.localCss }}
         {{ range $css_src :=  $.Site.Params.globalFrontmatter.localCss }}
-            {{ $style := $style | append ( resources.Get $css_src  ) }}
+            {{ $style = $style | append ( resources.Match $css_src  ) }}
+        {{ end }}
+    {{ end }}
+    {{ with $.Site.Params.globalFrontmatter.externalCss }}
+        {{ range $css_src :=  $.Site.Params.globalFrontmatter.externalCss }}
+            {{ $style = $style | append ( resources.GetRemote $css_src  ) }}
         {{ end }}
     {{ end }}
 
     {{ if hugo.IsProduction }}
 
         <!-- Concat to a single file -->
-        {{ $style := $style | resources.Concat "css/index.css" | minify | resources.Fingerprint "sha512" }}
+        {{ $style = $style | resources.Concat "css/index.css" | minify | resources.Fingerprint "sha512" }}
 
 
         <link

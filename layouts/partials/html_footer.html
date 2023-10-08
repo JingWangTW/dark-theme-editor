@@ -6,22 +6,36 @@
 {{ $script = $script | append ( resources.Match "_theme/js/*.js" ) }}
 
 
-<!-- Get all custom JS -->
-{{ with $.Site.Params.globalFrontmatter.externalJs }}
-    {{ range $js_src := $.Site.Params.globalFrontmatter.externalJs }}
+<!-- Append all custom CSS listed in the global config.-->
+{{ with $.Site.Params.globalFrontmatter.externaljs }}
+    {{ range $js_src := $.Site.Params.globalFrontmatter.externaljs }}
         {{ $script = $script | append (resources.GetRemote $js_src ) }}
     {{ end }}
 {{ end }}
 
-{{ with $.Site.Params.globalFrontmatter.localJs }}
-    {{ range $js_src := $.Site.Params.globalFrontmatter.localJs }}
-        {{ $script = $script | append (resources.Get $js_src ) }}
+{{ with $.Site.Params.globalFrontmatter.localjs }}
+    {{ range $js_src := $.Site.Params.globalFrontmatter.localjs }}
+        {{ $script = $script | append (resources.Match $js_src ) }}
+    {{ end }}
+{{ end }}
+
+
+<!-- Append all custom CSS listed in the page metadata. -->
+{{ if isset $.Params "externaljs" }}
+    {{ range $js_src :=  $.Params.externalJs }}
+        {{ $script = $script | append (resources.GetRemote $js_src ) }}
+    {{ end }}
+{{ end }}
+
+{{ if isset $.Params "localjs" }}
+    {{ range $js_src :=  $.Params.localJs }}
+        {{ $script = $script | append (resources.Match $js_src ) }}
     {{ end }}
 {{ end }}
 
 {{ if hugo.IsProduction }}
     <!-- Concat to a single file -->
-    {{ $script := $script | resources.Concat "js/index.js" | minify | resources.Fingerprint "sha512" }}
+    {{ $script = $script | resources.Concat "js/index.js" | minify | resources.Fingerprint "sha512" }}
 
 
     <script
