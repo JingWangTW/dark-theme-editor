@@ -57,20 +57,24 @@ This will install the theme repository as a sumbodule in the `themes/dark-theme-
 
             # Do you have any CSS in local? List them in an array.
             # They should be placed inside "/assets" dir.
-            # And don't named the file as "index.css" and "style.css".
-            # These two files are used by the theme.
+            # Please list your files relative to the /assets directory.
+            # Glob pattern is acceptable
+            # If only a few pages need the extra style files, list them in the page metadata.
             localCss = []
 
-            # Do you need to add any external CSS? List them in an array.
+            # Do you need to add any external CSS? List their URL in an array.
+            # If only a few pages need the extra style files, list them in the page metadata.
             externalCss = []
 
             # Do you have any script in local? List them in an array.
             # They should be placed inside "/assets" dir.
-            # And don't named the file as "index.js"
-            # Theis file is used by the theme.
+            # Please list your files relative to the /assets directory.
+            # Glob pattern is acceptable
+            # If only a few pages need the extra script files, list them in the page metadata.
             localJs = []
 
-            # Do you have any external Script need to add on? List them in an array.
+            # Do you have any external Script need to add on? List their URL in an array.
+            # If only a few pages need the extra script files, list them in the page metadata.
             externalJs = []
 
             # The code you could get from Google Search Console.
