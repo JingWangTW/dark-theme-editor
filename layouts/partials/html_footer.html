@@ -3,7 +3,7 @@
 
 
 <!-- Get all local JS -->
-{{ $script := $script | append ( resources.Match "js/*.js" ) }}
+{{ $script = $script | append ( resources.Match "_theme/js/*.js" ) }}
 
 
 <!-- Get all custom JS -->
