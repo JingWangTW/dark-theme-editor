@@ -1,7 +1,7 @@
 ---
-titel: "Altes Dateibeispiel"
-autor: "ChatGPT"
-datum: 2023-04-20T23:35:20+08:00
+title: "Altes Dateibeispiel"
+author: "ChatGPT"
+date: 2023-04-20T23:35:20+08:00
 tags: ["Archiv"]
 categories: ["Beispiel", "alt"]
 description: "Markdown-Beispiel von ChatGPT."
