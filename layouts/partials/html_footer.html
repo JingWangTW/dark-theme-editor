@@ -6,15 +6,15 @@
 {{ $script = $script | append ( resources.Match "_theme/js/*.js" ) }}
 
 
-<!-- Append all custom CSS listed in the global config.-->
-{{ with $.Site.Params.globalFrontmatter.externaljs }}
-    {{ range $js_src := $.Site.Params.globalFrontmatter.externaljs }}
+<!-- Append all custom script listed in the global config.-->
+{{ with $.Site.Params.globalFrontmatter.externalJs }}
+    {{ range $js_src := $.Site.Params.globalFrontmatter.externalJs }}
         {{ $script = $script | append (resources.GetRemote $js_src ) }}
     {{ end }}
 {{ end }}
 
-{{ with $.Site.Params.globalFrontmatter.localjs }}
-    {{ range $js_src := $.Site.Params.globalFrontmatter.localjs }}
+{{ with $.Site.Params.globalFrontmatter.localJs }}
+    {{ range $js_src := $.Site.Params.globalFrontmatter.localJs }}
         {{ $script = $script | append (resources.Match $js_src ) }}
     {{ end }}
 {{ end }}
@@ -22,13 +22,13 @@
 
 <!-- Append all custom CSS listed in the page metadata. -->
 {{ if isset $.Params "externaljs" }}
-    {{ range $js_src :=  $.Params.externalJs }}
+    {{ range $js_src :=  $.Params.externaljs }}
         {{ $script = $script | append (resources.GetRemote $js_src ) }}
     {{ end }}
 {{ end }}
 
 {{ if isset $.Params "localjs" }}
-    {{ range $js_src :=  $.Params.localJs }}
+    {{ range $js_src :=  $.Params.localjs }}
         {{ $script = $script | append (resources.Match $js_src ) }}
     {{ end }}
 {{ end }}

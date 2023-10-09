@@ -91,7 +91,6 @@
 
 
     <!-- Append all custom CSS listed in the global config.-->
-
     {{ with $.Site.Params.globalFrontmatter.localCss }}
         {{ range $css_src :=  $.Site.Params.globalFrontmatter.localCss }}
             {{ $style = $style | append ( resources.Match $css_src  ) }}
