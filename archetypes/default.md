@@ -9,7 +9,8 @@ keywords: "keywords,used,for,SEO"
 draft: false
 includeToc: true
 localCss: []
-externelCss: []
+externalCss: []
+externalCssDownload: []
 localJs: []
 externalJs: []
 ---

@@ -83,8 +83,8 @@
         {{ end }}
     {{ end }}
 
-    {{ if isset $.Params "externalcss" }}
-        {{ range $css_src :=  $.Params.externalcss }}
+    {{ if isset $.Params "externalcssdownload" }}
+        {{ range $css_src :=  $.Params.externalcssdownload }}
             {{ $style = $style | append ( resources.GetRemote $css_src  ) }}
         {{ end }}
     {{ end }}
@@ -96,8 +96,9 @@
             {{ $style = $style | append ( resources.Match $css_src  ) }}
         {{ end }}
     {{ end }}
-    {{ with $.Site.Params.globalFrontmatter.externalCss }}
-        {{ range $css_src :=  $.Site.Params.globalFrontmatter.externalCss }}
+
+    {{ with $.Site.Params.globalFrontmatter.externalCssDownload }}
+        {{ range $css_src :=  $.Site.Params.globalFrontmatter.externalCssDownload }}
             {{ $style = $style | append ( resources.GetRemote $css_src  ) }}
         {{ end }}
     {{ end }}
@@ -122,6 +123,26 @@
                 integrity="{{ $currentStyle.Data.Integrity }}" />
         {{ end }}
 
+    {{ end }}
+
+
+    <!-- External CSS that needs to be included separately. -->
+    {{ $style_seprated := slice }}
+
+    {{ if isset $.Params "externalcss" }}
+        {{ range $css_src :=  $.Params.externalcss }}
+            {{ $style_seprated = $style_seprated | append ($css_src ) }}
+        {{ end }}
+    {{ end }}
+
+    {{ with $.Site.Params.globalFrontmatter.externalCss }}
+        {{ range $css_src :=  $.Site.Params.globalFrontmatter.externalCss }}
+            {{ $style_seprated = $style_seprated | append ( $css_src ) }}
+        {{ end }}
+    {{ end }}
+
+    {{ range $style_seprated }}
+        <link rel="stylesheet" href="{{ . }}" />
     {{ end }}
 
 </head>

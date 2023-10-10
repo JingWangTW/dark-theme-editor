@@ -77,6 +77,10 @@ This will install the theme repository as a sumbodule in the `themes/dark-theme-
             # If only a few pages need the extra script files, list them in the page metadata.
             externalJs = []
 
+            # Like the one above, but this will download a local copy and combine it with 
+            # other CSS files into a single file while in production mode.
+            externalCssDownload = []
+
             # The code you could get from Google Search Console.
             # Please patse the value of content xxx in the following items
             # <meta name="google-site-verification" content="xxxxxxxxxxxxxxxxxxxxxxxxxx" />

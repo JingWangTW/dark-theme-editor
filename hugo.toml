@@ -28,6 +28,10 @@
         # If only a few pages need the extra style files, list them in the page metadata.
         externalCss = []
 
+        # Like the one above, but this will download a local copy and combine it with 
+        # other CSS files into a single file while in production mode.
+        externalCssDownload = []
+
         # Do you have any script in local? List them in an array.
         # They should be placed inside "/assets" dir.
         # Please list your files relative to the /assets directory.
