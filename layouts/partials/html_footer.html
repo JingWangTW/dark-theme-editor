@@ -54,6 +54,26 @@
 {{ end }}
 
 
+<!-- External JS that needs to be included separately. -->
+{{ $js_seprated := slice }}
+
+{{ if isset $.Params "externaljs" }}
+    {{ range $js_src :=  $.Params.externaljs }}
+        {{ $js_seprated = $js_seprated | append ($js_src ) }}
+    {{ end }}
+{{ end }}
+
+{{ with $.Site.Params.globalFrontmatter.externalJs }}
+    {{ range $js_src :=  $.Site.Params.globalFrontmatter.externalJs }}
+        {{ $js_seprated = $js_seprated | append ( $js_src ) }}
+    {{ end }}
+{{ end }}
+
+{{ range $js_seprated }}
+    <script type="text/javascript" src="{{ . }}"></script>
+{{ end }}
+
+
 <!-- CSS to support icon will include font inside, it's better to ref it explicit. -->
 <link
     rel="stylesheet"
