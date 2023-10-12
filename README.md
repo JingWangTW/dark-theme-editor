@@ -64,7 +64,12 @@ This will install the theme repository as a sumbodule in the `themes/dark-theme-
 
             # Do you need to add any external CSS? List their URL in an array.
             # If only a few pages need the extra style files, list them in the page metadata.
+            # These URLs will be inserted into <link> tags directly without any check.
             externalCss = []
+
+            # Like the one above, but this will download a local copy and combine it with 
+            # other CSS files into a single file while in production mode.
+            externalCssDownload = []
 
             # Do you have any script in local? List them in an array.
             # They should be placed inside "/assets" dir.
@@ -75,11 +80,12 @@ This will install the theme repository as a sumbodule in the `themes/dark-theme-
 
             # Do you have any external Script need to add on? List their URL in an array.
             # If only a few pages need the extra script files, list them in the page metadata.
+            # These URLs will be inserted into <script> tags directly without any check.
             externalJs = []
 
             # Like the one above, but this will download a local copy and combine it with 
-            # other CSS files into a single file while in production mode.
-            externalCssDownload = []
+            # other JS files into a single file while in production mode.
+            externalJsDownload = []
 
             # The code you could get from Google Search Console.
             # Please patse the value of content xxx in the following items
@@ -91,7 +97,7 @@ This will install the theme repository as a sumbodule in the `themes/dark-theme-
             # <meta name="msvalidate.01" content="xxxxxxxxxxxxxxxxxxxx" />
             bingVerifivation = ""
 
-        # Customized info shown in header of the page
+        # Customized info shown in header of the page        # Customized info shown in header of the page
         [params.header]
             # Website title for header banner.
             title = "My New Hugo Site"
