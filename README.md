@@ -529,7 +529,6 @@ This will build your site in release mode, where all `.html`, `.css`, and `.js` 
 
 ## Feature Plan
 * Share to Social Media Button
-* Emoji Support
 * Better Code Block Highlight
 * Mermaid Support
 * Tab View Support
