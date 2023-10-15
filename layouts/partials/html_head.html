@@ -67,6 +67,9 @@
     <!-- Bundle all CSS -->
     {{ $style := slice }}
 
+    {{/* Record all the css file names, except the general files. */}}
+    {{ $style_files_list := slice }}
+
 
     <!-- Get all remore CSS -->
     {{ $style = $style | append ( resources.GetRemote "https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css" ) }}
@@ -80,12 +83,14 @@
     {{ if isset $.Params "localcss" }}
         {{ range $css_src :=  $.Params.localcss }}
             {{ $style = $style | append ( resources.Match $css_src ) }}
+            {{ $style_files_list =  $style_files_list | append $css_src }}
         {{ end }}
     {{ end }}
 
     {{ if isset $.Params "externalcssdownload" }}
         {{ range $css_src :=  $.Params.externalcssdownload }}
             {{ $style = $style | append ( resources.GetRemote $css_src  ) }}
+            {{ $style_files_list =  $style_files_list | append $css_src }}
         {{ end }}
     {{ end }}
 
@@ -94,19 +99,25 @@
     {{ with $.Site.Params.globalFrontmatter.localCss }}
         {{ range $css_src :=  $.Site.Params.globalFrontmatter.localCss }}
             {{ $style = $style | append ( resources.Match $css_src  ) }}
+            {{ $style_files_list =  $style_files_list | append $css_src }}
         {{ end }}
     {{ end }}
 
     {{ with $.Site.Params.globalFrontmatter.externalCssDownload }}
         {{ range $css_src :=  $.Site.Params.globalFrontmatter.externalCssDownload }}
             {{ $style = $style | append ( resources.GetRemote $css_src  ) }}
+            {{ $style_files_list =  $style_files_list | append $css_src }}
         {{ end }}
     {{ end }}
 
     {{ if hugo.IsProduction }}
 
+        {{/* Create a hash based on the file list, to determince different style file */}}
+        {{ $hash:= substr (jsonify $style_files_list | md5) 0 7 }}
+
+
         <!-- Concat to a single file -->
-        {{ $style = $style | resources.Concat "css/index.css" | minify | resources.Fingerprint "sha512" }}
+        {{ $style = $style | resources.Concat ( printf "css/index_%s.css" $hash ) | minify | resources.Fingerprint "sha512" }}
 
 
         <link
