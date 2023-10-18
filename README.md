@@ -1,4 +1,4 @@
-# Dark Theme Editor | Hugo 
+# Dark Theme Editor | Hugo
 [![Example Site](https://github.com/JingWangTW/dark-theme-editor/actions/workflows/hugo.yml/badge.svg)](https://github.com/JingWangTW/dark-theme-editor/actions/workflows/hugo.yml)
 
 > **Dark Theme Editor** is a blog theme for [Hugo](https://gohugo.io/).
@@ -11,38 +11,44 @@ DEMO - https://jingwangtw.github.io/dark-theme-editor/
 
 ## Main Features
 * An editor-like theme for Hugo
-* Draggable Sidebar
-* Fully Responsive
-* Fully based on Hugo ecosystem
-* Goolge/Bing SEO Support
-* Better Code Block
-* Multilingual Support
+* Draggable sidebar
+* Fully responsive
+* Fully based on Hugo ecosystem  
+* Google/Bing SEO support
+* Better code block
+* Multilingual support
 
-## Usage
-### Download manually
-You can simply download the theme from [GitGub Repo](https://github.com/JingWangTW/dark-theme-editor) and paste it into the `themes/dark-theme-editor` directory in the root directory of your Hugo site.
+## Installation Approaches
 
-### Install theme locally
-```
-# Under the root directory of your Hugo site.
+### Download Manually
+
+You can simply download the theme from [GitHub Repo](https://github.com/JingWangTW/dark-theme-editor) and paste it into the `themes/dark-theme-editor` directory in the root directory of your Hugo site.
+
+### Install Theme Locally
+
+```bash
+# Under the root directory of your Hugo site
 
 git clone https://github.com/JingWangTW/dark-theme-editor.git themes/dark-theme-editor
 ```
 
 This will clone the theme repository directly into the `themes/dark-theme-editor` directory.
 
-### Install theme as submodule
-```
-# Under the root directory of your Hugo site.
+### Install Theme as Submodule
+
+```bash
+# Under the root directory of your Hugo site  
 
 git submodule add -f https://github.com/JingWangTW/dark-theme-editor.git themes/dark-theme-editor
 ```
 
-This will install the theme repository as a sumbodule in the `themes/dark-theme-editor` directory.
+This will install the theme repository as a submodule in the `themes/dark-theme-editor` directory.
 
 ## Configuration
-* When using `dark-theme-editor` as the theme for your Hugo site, please remember to set the [theme field in your `hugo.toml` file](https://gohugo.io/getting-started/configuration/#theme).
-* Additionally, the theme provides many custom fields for you to configure as needed. Please refer to the [`hugo.toml` file in the theme](https://github.com/JingWangTW/dark-theme-editor/blob/main/config.toml) to find all available options. You can override these values by adding them to your own `hugo.toml` file or by directly modifying the file in the theme directory.
+
+### General Configuration
+* When using `dark-theme-editor` as the theme for your Hugo site, please remember to set the [theme field in your `config.toml` file](https://gohugo.io/getting-started/configuration/#theme).
+* Additionally, the theme provides many custom fields for you to configure as needed. Please refer to the [`config.toml` file in the theme](https://github.com/JingWangTW/dark-theme-editor/blob/main/config.toml) to find all available options. You can override these values by adding them to your own `config.toml` file or by directly modifying the file in the theme directory.
     <details>
     <summary>Click to toggle the full list of configurations.</summary>
 
@@ -528,13 +534,13 @@ hugo
 This will build your site in release mode, where all `.html`, `.css`, and `.js` files will be minified and merged when possible.
 
 ## Feature Plan
-* Share to Social Media Button
+* Share to Social Media Button  
 * Better Code Block Highlight
 * Mermaid Support
-* Tab View Support
+* Tab View Support 
 * Store custom note in local storage.
-* Accessiblity Support
-* LaTex Math Support
+* Accessibility Support
+* LaTeX Math Support
 
 ## Acknowledgement
 This theme was originally inspired by the [theme `edidor`](https://github.com/sfengyuan/edidor).
