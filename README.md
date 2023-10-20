@@ -46,7 +46,7 @@ This will install the theme repository as a submodule in the `themes/dark-theme-
 
 ## Configuration
 
-### General Configuration
+### General Config
 * When using `dark-theme-editor` as the theme for your Hugo site, please remember to set the [theme field in your `config.toml` file](https://gohugo.io/getting-started/configuration/#theme).
 * Additionally, the theme provides many custom fields for you to configure as needed. Please refer to the [`config.toml` file in the theme](https://github.com/JingWangTW/dark-theme-editor/blob/main/config.toml) to find all available options. You can override these values by adding them to your own `config.toml` file or by directly modifying the file in the theme directory.
     <details>
@@ -237,7 +237,7 @@ This will install the theme repository as a submodule in the `themes/dark-theme-
     ```
     </details>
 
-## Multilingual
+### Multilingual
 * If your site is in [multilingual mode](https://gohugo.io/content-management/multilingual/), there will be a language select icon at the footer of the site. Additionally, there will be a navigator on each translated page.
 * Please move the configuration fields that need to be translated under the corresponding language configuration blocks in your `hugo.toml`. There is an example `hugo.multilang.toml` file you could reference. Remember to rename it to `hugo.toml` when needed.
     <details>
@@ -519,6 +519,22 @@ This will install the theme repository as a submodule in the `themes/dark-theme-
     ```
     </details>
 * Also, please [add the corresponding i18n translation table](https://gohugo.io/functions/lang/translate/) according to the language you use, so the theme can translate to the language you use properly. I have placed an example file for English containing all the words required by the theme under the `i18n` folder. You should copy it and translate it to the language you need.
+
+### Author Taxonomies 
+* Since Hugo [will not merge the taxonomies config from theme config to site config by default](https://gohugo.io/getting-started/configuration/#merge-configuration-from-themes), the author taxonomies pages need to be set in your site configuration.
+  * You could simply merge the theme config into site config.  
+    ```toml
+    [taxonomies]
+        _merge = "deep"
+    ```
+  * Otherwise, you could define your taxonomies directly.
+    ```toml
+    [taxonomies]
+        autor = "author"
+        tag = "tags"
+        category = "categories"
+    ```
+* Also, you need to set up the `[params.page.showAuthor]` according to your preference. `params` config will be merged from theme config into site config by default.
 
 ## Run & Build
 ### Develop
