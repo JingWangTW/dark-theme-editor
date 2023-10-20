@@ -15,7 +15,7 @@
                         <div class="author" title="{{ i18n "author" | title }}">
                             <i class="bi bi-person"></i>
                             <a
-                                href="{{ "author" | absURL }}/{{ $.Params.author | urlize }}/"
+                                href="{{ "author" | relLangURL }}/{{ $.Params.author | urlize }}/"
                                 class="cat-btn">
                                 {{ $.Params.author }}
                             </a>
@@ -28,7 +28,7 @@
                         <div class="author" title="{{ i18n "author"| title }}">
                             <i class="bi bi-person"></i>
                             <a
-                                href="{{ "author" | absURL }}/{{ $.Site.Params.globalFrontmatter.author | urlize }}/"
+                                href="{{ "author" | relLangURL }}/{{ $.Site.Params.globalFrontmatter.author | urlize }}/"
                                 class="cat-btn">
                                 {{ $.Site.Params.globalFrontmatter.author }}
                             </a>
