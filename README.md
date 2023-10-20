@@ -39,6 +39,10 @@ enableEmoji = true
         style = "native"
         tabWidth = 4
 
+# Merge the taxonomies config from theme to site configuration
+[taxonomies]
+    _merge = 'deep'
+
 # Multilingual Setting
 [languages]
     
