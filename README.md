@@ -1,5 +1,8 @@
 # Dark Theme Editor | Hugo
 [![Example Site](https://github.com/JingWangTW/dark-theme-editor/actions/workflows/hugo.yml/badge.svg)](https://github.com/JingWangTW/dark-theme-editor/actions/workflows/hugo.yml)
+[![GitHub Release](https://img.shields.io/github/release/JingWangTW/dark-theme-editor?&color=03fcfc)]()
+[![Built for - Hugo](https://img.shields.io/badge/Built_for-Hugo-a503fc)](https://gohugo.io/)
+[![License - Apache 2.0](https://img.shields.io/badge/License-Apache_2.0-036bfc)](https://github.com/JingWangTW/dark-theme-editor/blob/main/LICENSE)
 
 > **Dark Theme Editor** is a blog theme for [Hugo](https://gohugo.io/).
 
