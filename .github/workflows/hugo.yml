@@ -1,5 +1,5 @@
 # Sample workflow for building and deploying a Hugo site to GitHub Pages
-name: Deploy example site to GitGhub Pages
+name: Deploy example site to GitHub Pages
 
 on:
   # Triggers the workflow on push to any tags
