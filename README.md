@@ -14,12 +14,12 @@ DEMO - https://jingwangtw.github.io/dark-theme-editor/
 
 ## Main Features
 * An editor-like theme for Hugo
-* Draggable sidebar
-* Fully responsive
-* Fully based on Hugo ecosystem  
+* Multilingual support
+* Mermaid Support
 * Google/Bing SEO support
 * Better code block
-* Multilingual support
+* Draggable sidebar
+* Fully responsive
 
 ## Installation Approaches
 
@@ -555,7 +555,6 @@ This will build your site in release mode, where all `.html`, `.css`, and `.js` 
 ## Feature Plan
 * Share to Social Media Button  
 * Better Code Block Highlight
-* Mermaid Support
 * Tab View Support 
 * Store custom note in local storage.
 * Accessibility Support
