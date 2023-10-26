@@ -6,8 +6,6 @@ tags: ["c", "introduction"]
 categories: ["language", "programming"]
 description: "Introduction to C programming syntax and structures."
 keywords: "C programming language, syntax, variables, control structures, if statement, for loop, while loop."
-draft: false
-includeToc: true
 ---
 
 C is a high-level programming language that was developed in the early 1970s by Dennis Ritchie at Bell Labs. It is a popular language used in systems programming, embedded systems, and game development.

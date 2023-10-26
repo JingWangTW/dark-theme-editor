@@ -6,8 +6,6 @@ tags: ["ada", "introduction"]
 categories: ["language", "programming"]
 description: "Introduction to Ada programming language."
 keywords: "Ada,strong typing,reliable,safe,modular programming."
-draft: false
-includeToc: true
 ---
 
 # Introduction

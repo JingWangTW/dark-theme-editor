@@ -6,8 +6,6 @@ tags: ["java", "介紹"]
 categories: ["語言", "程式設計"]
 description: "介紹Java語法和優點。"
 keywords: "物件導向程式設計,網頁開發,行動應用程式,記憶體管理,強健性"
-draft: false
-includeToc: true
 ---
 
 Java是一種高階、通用的程式設計語言，於1990年代中期由Sun Microsystems開發。它設計簡單、可攜帶且安全。如今，Java是最受歡迎的程式設計語言之一，應用範圍廣泛，從企業軟體到行動應用程式和電子遊戲。

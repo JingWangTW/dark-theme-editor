@@ -5,7 +5,6 @@ date: 2023-04-20T23:35:20+08:00
 tags: ["存檔"]
 categories: ["範例", "舊檔"]
 description: "ChatGPT 提供的 Markdown 範例。"
-draft: false
 ---
 
 # Markdown 範例

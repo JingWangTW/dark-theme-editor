@@ -6,8 +6,6 @@ tags: ["c", "einführung"]
 categories: ["sprache", "programmierung"]
 description: "Einführung in die C-Programmiersyntax und -strukturen."
 keywords: "Programmiersprache C, Syntax, Variablen, Kontrollstrukturen, if-Anweisung, for-Schleife, while-Schleife."
-draft: false
-includeToc: true
 ---
 
 C ist eine Hochsprachenprogrammiersprache, die Anfang der 1970er Jahre von Dennis Ritchie bei Bell Labs entwickelt wurde. Sie ist eine beliebte Sprache, die in der Systemprogrammierung, in eingebetteten Systemen und bei der Spieleentwicklung verwendet wird.

@@ -6,7 +6,6 @@ tags: ["GraphQL", "節點", "網路"]
 categories: ["網路"]
 description: "介紹GraphQL API技術。"
 keywords: "GraphQL, 查詢語言, APIs, 效率, 彈性, 圖形結構, 節點, 邊, 強型別系統, 文件"
-draft: false
 includeToc: false
 ---
 

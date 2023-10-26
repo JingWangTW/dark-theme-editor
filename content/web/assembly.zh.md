@@ -6,7 +6,6 @@ tags: ["組合語言", "網路"]
 categories: ["網路"]
 description: "介紹WebAssembly技術。"
 keywords: "WebAssembly, 技術, 編譯目標, 安全, 沙盒環境, Web APIs"
-draft: false
 includeToc: false
 ---
 

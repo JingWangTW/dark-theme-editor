@@ -6,7 +6,6 @@ tags: ["GraphQL", "nodes", "web"]
 categories: ["web"]
 description: "Introduction to GraphQL API technology."
 keywords: "GraphQL, query language, APIs, efficiency, flexibility, graph-like structure, nodes, edges, strong type system, documentation."
-draft: false
 includeToc: false
 ---
 

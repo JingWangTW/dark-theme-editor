@@ -6,8 +6,6 @@ tags: ["c", "syntax"]
 categories: ["language", "programming"]
 description: "Introduction to C programming syntax."
 keywords: "C,syntax,programming,rules,markdown."
-draft: false
-includeToc: true
 ---
 
 # C Programming Language Syntax

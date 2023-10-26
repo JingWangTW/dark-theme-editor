@@ -6,8 +6,6 @@ tags: ["c", "語法"]
 categories: ["語言", "程式設計"]
 description: "介紹C程式語言的語法。"
 keywords: "C,語法,程式設計,規則,Markdown。"
-draft: false
-includeToc: true
 ---
 
 # C程式語言語法

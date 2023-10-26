@@ -6,7 +6,6 @@ tags: ["assembly", "web"]
 categories: ["web"]
 description: "Einführung in die Technologie von WebAssembly."
 keywords: "WebAssembly, Technologie, Kompilierungsziel, sicher, abgesicherte Umgebung, Web-APIs"
-draft: false
 includeToc: false
 ---
 

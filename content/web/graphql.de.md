@@ -6,7 +6,6 @@ tags: ["GraphQL", "Knoten", "web"]
 categories: ["web"]
 description: "Einführung in die Technologie der GraphQL-API."
 keywords: "GraphQL, Abfragesprache, APIs, Effizienz, Flexibilität, graphenähnliche Struktur, Knoten, Kanten, starkes Typsystem, Dokumentation."
-draft: false
 includeToc: false
 ---
 

@@ -6,8 +6,6 @@ tags: ["ada", "介紹"]
 categories: ["語言", "程式設計"]
 description: "介紹Ada程式語言。"
 keywords: "Ada,強型別,可靠,安全,模組化程式設計。"
-draft: false
-includeToc: true
 ---
 
 # 介紹

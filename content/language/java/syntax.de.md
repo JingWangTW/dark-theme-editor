@@ -6,8 +6,6 @@ tags: ["java", "syntax"]
 categories: ["sprache", "programmierung"]
 description: "Einführung in die Java-Programmiersyntax."
 keywords: "Java, Syntax, Programmierung, Regeln, Markdown."
-draft: false
-includeToc: true
 ---
 
 Java ist eine beliebte objektorientierte Programmiersprache mit einer umfangreichen Syntax. Einige der wichtigsten Syntax und Regeln von Java sind:

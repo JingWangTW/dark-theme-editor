@@ -6,8 +6,6 @@ tags: ["c", "介紹"]
 categories: ["語言", "程式設計"]
 description: "介紹C程式語言的語法和結構。"
 keywords: "C程式語言, 語法, 變數, 控制結構, if陳述句, for迴圈, while迴圈。"
-draft: false
-includeToc: true
 ---
 
 C是一種高階程式語言，於1970年代初由貝爾實驗室的Dennis Ritchie開發。它是一種廣泛用於系統程式設計、嵌入式系統和遊戲開發的語言。

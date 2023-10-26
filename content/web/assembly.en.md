@@ -6,7 +6,6 @@ tags: ["assembly", "web"]
 categories: ["web"]
 description: "Introduction to WebAssembly technology."
 keywords: "WebAssembly, technology, compilation target, secure, sandboxed environment, Web APIs"
-draft: false
 includeToc: false
 ---
 

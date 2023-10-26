@@ -6,7 +6,6 @@ tags: ["標籤1", "標籤2", "標籤3", "這裡可以放一些標籤"]
 categories: ["分類1", "分類2", "分類3", "這裡可以放一些分類"]
 description: "這頁的描述。"
 keywords: "關鍵字,用於,SEO"
-draft: false
 includeToc: false
 ---
 

@@ -6,8 +6,6 @@ tags: ["java", "introduction"]
 categories: ["language", "programming"]
 description: "Introduction to Java syntax and advantages."
 keywords: "Object-oriented programming,Web development,Mobile applications,Memory management,Robustness"
-draft: false
-includeToc: true
 ---
 
 Java is a high-level, general-purpose programming language that was developed by Sun Microsystems in the mid-1990s. It is designed to be simple, portable, and secure. Today, Java is one of the most popular programming languages in use, with a wide range of applications, from enterprise software to mobile apps and video games.

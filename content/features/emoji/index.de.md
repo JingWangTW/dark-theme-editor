@@ -6,8 +6,6 @@ tags: ["emoji"]
 categories: ["Funktion"]
 description: "Beispielseite zur Anzeige aller unterstützten Emojis"
 keywords: "emoji,markdown,hugo"
-draft: false
-includeToc: true
 localCss: ["no_thead.css"]
 ---
 
