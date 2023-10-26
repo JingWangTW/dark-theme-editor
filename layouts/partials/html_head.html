@@ -156,4 +156,17 @@
         <link rel="stylesheet" href="{{ . }}" />
     {{ end }}
 
+    {{ if isset $.Params "usemath" }}
+
+        {{ if $.Params.usemath }}
+            {{ partial "module/use_math" . }}
+        {{ end }}
+
+    {{ else if isset $.Site.Params.globalFrontmatter "useMath" }}
+
+        {{ if $.Site.Params.globalFrontmatter.useMath }}
+            {{ partial "module/use_math" . }}
+        {{ end }}
+
+    {{ end }}
 </head>
