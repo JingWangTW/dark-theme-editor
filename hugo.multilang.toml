@@ -281,3 +281,10 @@
 
         # Should show the "copy" button in the codeblock or not.
         codeBlockCopible = true
+
+        # Should include LaTeX support on a single page or not?
+        # This parameter will be overwritten by the page front matter (if it has been set).
+        # Since enabling this configuration loads some external JavaScript, 
+        #   it will slow down the page loading speed. 
+        # It's recommended to keep it turned off by default and only enable this configuration when required.
+        useMath = false
