@@ -7,7 +7,7 @@ categories: ["web"]
 description: "Introduction to GraphQL API technology."
 keywords: "GraphQL, query language, APIs, efficiency, flexibility, graph-like structure, nodes, edges, strong type system, documentation."
 draft: false
-include_toc: true
+includeToc: false
 ---
 
 GraphQL is a query language for APIs that was developed by Facebook. It provides a more efficient, powerful, and flexible alternative to REST APIs. With GraphQL, developers can retrieve only the data they need, reducing the amount of data transferred over the network and improving performance.

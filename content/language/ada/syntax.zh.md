@@ -7,7 +7,7 @@ categories: ["語言", "程式設計"]
 description: "介紹Ada程式語法。"
 keywords: "Ada,語法,程式設計,規則,Markdown。"
 draft: false
-include_toc: true
+includeToc: true
 ---
 
 Ada的語法設計旨在易於閱讀和編寫。Ada是一種強型別語言，其嚴格的語法要求使用分號結束語句。程式被劃分為包(package)，包含程序、函式和變數。必須在使用變數之前宣告變數，且宣告後其類型不能更改。Ada使用關鍵字如 `if`、`else`、`while` 和 `for` 來控制程式流程。Ada支援使用陣列、記錄和指標，並允許動態記憶體配置。Ada語法的獨特特點之一是使用 `in` 和 `out` 來指定子程序中參數傳遞的方向。Ada還支援使用異常處理來處理程式執行中的錯誤。最後，Ada的語法旨在通過使用包和獨立編譯來促進模組化和可重用性。

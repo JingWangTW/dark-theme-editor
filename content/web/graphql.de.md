@@ -7,7 +7,7 @@ categories: ["web"]
 description: "Einführung in die Technologie der GraphQL-API."
 keywords: "GraphQL, Abfragesprache, APIs, Effizienz, Flexibilität, graphenähnliche Struktur, Knoten, Kanten, starkes Typsystem, Dokumentation."
 draft: false
-include_toc: true
+includeToc: false
 ---
 
 GraphQL ist eine Abfragesprache für APIs, die von Facebook entwickelt wurde. Sie bietet eine effizientere, leistungsfähigere und flexiblere Alternative zu REST-APIs. Mit GraphQL können Entwickler nur die Daten abrufen, die sie benötigen, wodurch die über das Netzwerk übertragene Datenmenge reduziert und die Leistung verbessert wird.

@@ -7,7 +7,7 @@ categories: ["language", "programming"]
 description: "Introduction to Ada programming language."
 keywords: "Ada,strong typing,reliable,safe,modular programming."
 draft: false
-include_toc: true
+includeToc: true
 ---
 
 # Introduction

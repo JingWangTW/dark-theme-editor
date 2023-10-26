@@ -7,7 +7,7 @@ categories: ["feature"]
 description: "Example page to display all the supported emojis"
 keywords: "emoji,markdown,hugo"
 draft: false
-include_toc: true
+includeToc: true
 localCss: ["no_thead.css"]
 ---
 

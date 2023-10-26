@@ -7,7 +7,7 @@ categories: ["language", "programming"]
 description: "Introduction to Ada programming syntax."
 keywords: "Ada,syntax,programming,rules,markdown."
 draft: false
-include_toc: true
+includeToc: true
 ---
 
 The syntax of Ada is designed to be easy to read and write. Ada is a strongly typed language with a strict syntax that requires the use of semicolons to end statements. A program is divided into packages that contain procedures, functions, and variables. Variables must be declared before they can be used, and their type cannot be changed after declaration. Ada uses keywords such as `if`, `else`, `while`, and `for` to control program flow. Ada supports the use of arrays, records, and pointers, and allows for dynamic memory allocation. One of the unique features of Ada's syntax is the use of `in` and `out` to specify the direction of parameter passing in subprograms. Ada also supports the use of exception handling to deal with errors in a program's execution. Finally, Ada's syntax is designed to promote modularity and reusability through the use of packages and separate compilation.

@@ -7,7 +7,7 @@ categories: ["語言", "程式設計"]
 description: "介紹Java程式設計語法。"
 keywords: "Java,語法,程式設計,規則,Markdown"
 draft: false
-include_toc: true
+includeToc: true
 ---
 
 Java是一種流行的物件導向程式設計語言，具有豐富的語法。以下是Java的一些主要語法和規則：

@@ -7,7 +7,7 @@ categories: ["sprache", "programmierung"]
 description: "Einführung in die Syntax der C-Programmierung."
 keywords: "C, Syntax, Programmierung, Regeln, Markdown."
 draft: false
-include_toc: true
+includeToc: true
 ---
 
 # Syntax der C-Programmiersprache

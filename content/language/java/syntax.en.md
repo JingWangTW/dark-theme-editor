@@ -7,7 +7,7 @@ categories: ["language", "programming"]
 description: "Introduction to Java programming syntax."
 keywords: "Java,syntax,programming,rules,markdown."
 draft: false
-include_toc: true
+includeToc: true
 ---
 
 Java is a popular object-oriented programming language that has a rich syntax. Some of the key syntax and rules of Java are:

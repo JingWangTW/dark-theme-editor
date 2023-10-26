@@ -7,7 +7,7 @@ categories: ["分類1", "分類2", "分類3", "這裡可以放一些分類"]
 description: "這頁的描述。"
 keywords: "關鍵字,用於,SEO"
 draft: false
-include_toc: true
+includeToc: false
 ---
 
 無伺服器運算是一種雲端運算模型，雲端提供商管理基礎架構並根據需要自動分配資源。這消除了開發人員管理基礎架構的需要，使他們可以專注於編寫程式碼。

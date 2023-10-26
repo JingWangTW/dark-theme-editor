@@ -7,7 +7,7 @@ categories: ["網路"]
 description: "介紹GraphQL API技術。"
 keywords: "GraphQL, 查詢語言, APIs, 效率, 彈性, 圖形結構, 節點, 邊, 強型別系統, 文件"
 draft: false
-include_toc: true
+includeToc: false
 ---
 
 GraphQL是由Facebook開發的API查詢語言。它提供了一個比REST API更高效、更強大和更靈活的選擇。使用GraphQL，開發人員可以僅擷取他們需要的數據，減少在網路上傳輸的數據量並提高效能。

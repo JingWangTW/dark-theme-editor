@@ -7,7 +7,7 @@ categories: ["web"]
 description: "Einführung in die Technologie von WebAssembly."
 keywords: "WebAssembly, Technologie, Kompilierungsziel, sicher, abgesicherte Umgebung, Web-APIs"
 draft: false
-include_toc: true
+includeToc: false
 ---
 
 WebAssembly ist eine neue Technologie, die in letzter Zeit unter Webentwicklern an Beliebtheit gewonnen hat. Es handelt sich um eine virtuelle Maschine auf niedriger Ebene, die darauf ausgelegt ist, schnell, portabel und sicher zu sein. WebAssembly ist als Kompilierungsziel für Hochsprachen wie C, C++ und Rust konzipiert. Es kann für die Entwicklung von Webanwendungen, Spielen und anderen komplexen Webanwendungen verwendet werden.

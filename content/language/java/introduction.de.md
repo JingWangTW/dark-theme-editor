@@ -7,7 +7,7 @@ categories: ["sprache", "programmierung"]
 description: "Einführung in die Java-Syntax und Vorteile."
 keywords: "Objektorientierte Programmierung, Webentwicklung, Mobile Anwendungen, Speicherverwaltung, Robustheit"
 draft: false
-include_toc: true
+includeToc: true
 ---
 
 Java ist eine Hochsprachenprogrammiersprache, die in den mittleren 1990er Jahren von Sun Microsystems entwickelt wurde. Sie ist darauf ausgelegt, einfach, portabel und sicher zu sein. Heute ist Java eine der beliebtesten Programmiersprachen mit einer breiten Palette von Anwendungen, von Unternehmenssoftware bis hin zu mobilen Apps und Videospielen.

@@ -7,7 +7,7 @@ categories: ["kategorisiert", "die", "Seite"]
 description: "Beschreibung dieser Seite."
 keywords: "Stichwörter, verwendet, für, SEO"
 draft: false
-include_toc: true
+includeToc: false
 ---
 
 Das serverlose Computing ist ein Cloud-Computing-Modell, bei dem der Cloud-Anbieter die Infrastruktur verwaltet und Ressourcen bei Bedarf automatisch zuweist. Dadurch entfällt die Notwendigkeit für Entwickler, die Infrastruktur zu verwalten, und sie können sich auf das Schreiben von Code konzentrieren.

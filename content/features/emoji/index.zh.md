@@ -7,7 +7,7 @@ categories: ["功能"]
 description: "展示所有支援的表情符號的示例頁面"
 keywords: "表情符號,Markdown,Hugo"
 draft: false
-include_toc: true
+includeToc: true
 localCss: ["no_thead.css"]
 ---
 

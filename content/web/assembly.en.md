@@ -7,7 +7,7 @@ categories: ["web"]
 description: "Introduction to WebAssembly technology."
 keywords: "WebAssembly, technology, compilation target, secure, sandboxed environment, Web APIs"
 draft: false
-include_toc: true
+includeToc: false
 ---
 
 WebAssembly is a new technology that has recently gained popularity among web developers. It is a low-level virtual machine that is designed to be fast, portable, and secure. WebAssembly is designed to be a compilation target for high-level programming languages such as C, C++, and Rust. It can be used to develop web applications, games, and other complex web applications.

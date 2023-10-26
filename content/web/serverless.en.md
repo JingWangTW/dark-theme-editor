@@ -7,7 +7,7 @@ categories: ["catgorized", "the", "page"]
 description: "Description of this page."
 keywords: "keywords,used,for,SEO"
 draft: false
-include_toc: true
+includeToc: false
 ---
 
 Serverless computing is a cloud computing model where the cloud provider manages the infrastructure and automatically allocates resources as needed. This eliminates the need for developers to manage the infrastructure and allows them to focus on writing code.

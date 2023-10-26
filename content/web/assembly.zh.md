@@ -7,7 +7,7 @@ categories: ["網路"]
 description: "介紹WebAssembly技術。"
 keywords: "WebAssembly, 技術, 編譯目標, 安全, 沙盒環境, Web APIs"
 draft: false
-include_toc: true
+includeToc: false
 ---
 
 WebAssembly是近年來在網頁開發人員中日益受歡迎的新技術。它是一種低層級的虛擬機器，旨在實現快速、可攜帶和安全。WebAssembly旨在成為高級編程語言（如C、C++和Rust）的編譯目標。它可用於開發網頁應用程式、遊戲和其他複雜的Web應用程式。

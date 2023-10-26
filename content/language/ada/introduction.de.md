@@ -7,7 +7,7 @@ categories: ["sprache", "programmierung"]
 description: "Einführung in die Ada-Programmiersprache."
 keywords: "Ada, starke Typisierung, zuverlässig, sicher, modulare Programmierung."
 draft: false
-include_toc: true
+includeToc: true
 ---
 
 # Einführung
