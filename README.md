@@ -16,6 +16,7 @@ DEMO - https://jingwangtw.github.io/dark-theme-editor/
 * An editor-like theme for Hugo
 * Multilingual support
 * Mermaid Support
+* LaTeX Math Support
 * Google/Bing SEO support
 * Better code block
 * Draggable sidebar
@@ -237,6 +238,13 @@ This will install the theme repository as a submodule in the `themes/dark-theme-
 
             # Should show the "copy" button in the codeblock or not.
             codeBlockCopible = true
+
+            # Should include LaTeX support on a single page or not?
+            # This parameter will be overwritten by the page front matter (if it has been set).
+            # Since enabling this configuration loads some external JavaScript, 
+            #   it will slow down the page loading speed. 
+            # It's recommended to keep it turned off by default and only enable this configuration when required.
+            useMath = false
     ```
     </details>
 
@@ -519,6 +527,13 @@ This will install the theme repository as a submodule in the `themes/dark-theme-
 
             # Should show the "copy" button in the codeblock or not.
             codeBlockCopible = true
+
+            # Should include LaTeX support on a single page or not?
+            # This parameter will be overwritten by the page front matter (if it has been set).
+            # Since enabling this configuration loads some external JavaScript, 
+            #   it will slow down the page loading speed. 
+            # It's recommended to keep it turned off by default and only enable this configuration when required.
+            useMath = false
     ```
     </details>
 * Also, please [add the corresponding i18n translation table](https://gohugo.io/functions/lang/translate/) according to the language you use, so the theme can translate to the language you use properly. I have placed an example file for English containing all the words required by the theme under the `i18n` folder. You should copy it and translate it to the language you need.
@@ -558,7 +573,6 @@ This will build your site in release mode, where all `.html`, `.css`, and `.js` 
 * Tab View Support 
 * Store custom note in local storage.
 * Accessibility Support
-* LaTeX Math Support
 
 ## Acknowledgement
 This theme was originally inspired by the [theme `edidor`](https://github.com/sfengyuan/edidor).
