@@ -14,9 +14,9 @@ DEMO - https://jingwangtw.github.io/dark-theme-editor/
 
 ## Main Features
 * An editor-like theme for Hugo
-* Multilingual support
+* [Multilingual support](#multilingual-config)
 * Mermaid Support
-* LaTeX Math Support
+* [LaTeX Math Support](#latex-math-support)
 * Google/Bing SEO support
 * Better code block
 * Draggable sidebar
@@ -48,7 +48,7 @@ git submodule add -f https://github.com/JingWangTW/dark-theme-editor.git themes/
 
 This will install the theme repository as a submodule in the `themes/dark-theme-editor` directory.
 
-## Configuration
+## Usage
 
 ### General Config
 * When using `dark-theme-editor` as the theme for your Hugo site, please remember to set the [theme field in your `config.toml` file](https://gohugo.io/getting-started/configuration/#theme).
@@ -248,7 +248,7 @@ This will install the theme repository as a submodule in the `themes/dark-theme-
     ```
     </details>
 
-### Multilingual
+### Multilingual Config
 * If your site is in [multilingual mode](https://gohugo.io/content-management/multilingual/), there will be a language select icon at the footer of the site. Additionally, there will be a navigator on each translated page.
 * Please move the configuration fields that need to be translated under the corresponding language configuration blocks in your `hugo.toml`. There is an example `hugo.multilang.toml` file you could reference. Remember to rename it to `hugo.toml` when needed.
     <details>
@@ -539,7 +539,7 @@ This will install the theme repository as a submodule in the `themes/dark-theme-
 * Also, please [add the corresponding i18n translation table](https://gohugo.io/functions/lang/translate/) according to the language you use, so the theme can translate to the language you use properly. I have placed an example file for English containing all the words required by the theme under the `i18n` folder. You should copy it and translate it to the language you need.
 
 ### Author Taxonomies 
-* Since Hugo [will not merge the taxonomies config from theme config to site config by default](https://gohugo.io/getting-started/configuration/#merge-configuration-from-themes), the author taxonomies pages need to be set in your site configuration.
+* Since Hugo [will not merge the taxonomies config from theme config to site config by default](https://gohugo.io/getting-started/configuration/#merge-configuration-from-themes), the author taxonomies pages need to be set in your [site configuration].
   * You could simply merge the theme config into site config.  
     ```toml
     [taxonomies]
@@ -553,6 +553,16 @@ This will install the theme repository as a submodule in the `themes/dark-theme-
         category = "categories"
     ```
 * Also, you need to set up the `[params.page.showAuthor]` according to your preference. `params` config will be merged from theme config into site config by default.
+
+### LaTex Math Support
+* This theme supports LaTeX Math interpretation and utilizes [KaTeX](https://katex.org/) as the rendering engine.
+* To enable this feature, please add `useMath = true` in the frontmatter of the single page or in the [site configuration]. By default, this feature is turned off. The single page configuration will override the configuration in the [site configuration].
+* By default, we support the following delimiters: 
+    * `$$ \LaTeX $$`: This will render the formula in a single line.
+    * `$ \LaTeX $`: This will render the formula inline.
+    * `\\( \LaTeX \\)`: This will render the formula inline.
+    * `\\[ \LaTeX \\]`: This will render the formula in a single line.
+* Also, as Hugo will interpret `\` as an escape character, remember to use `\\\\` for line breaks.
 
 ## Run & Build
 ### Develop
@@ -573,9 +583,13 @@ This will build your site in release mode, where all `.html`, `.css`, and `.js` 
 * Tab View Support 
 * Store custom note in local storage.
 * Accessibility Support
+* LaTex Math Rendering in Server Side.
 
 ## Acknowledgement
 This theme was originally inspired by the [theme `edidor`](https://github.com/sfengyuan/edidor).
 
 ## License
 This theme was released under the Apache License 2.0.
+
+
+[site configuration]: https://gohugo.io/getting-started/configuration/
