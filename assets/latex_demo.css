@@ -1,0 +1,37 @@
+article.main > div.content > table.latex-demo > tbody > tr > td:nth-child(2n) {
+  vertical-align: middle;
+}
+
+article.main
+  > div.content
+  > table.latex-demo
+  > tbody
+  > tr
+  > td:nth-child(2n + 1) {
+  vertical-align: middle;
+  text-align: center;
+}
+
+article.main
+  > div.content
+  > table.latex-demo.env-auto-gen
+  > tbody
+  > tr
+  > td:nth-child(2n + 1) {
+  min-width: 11em;
+}
+
+article.main
+  > div.content
+  > div.latex-demo-annotation-table
+  > table
+  > tbody
+  > tr
+  > td:nth-child(2n + 1) {
+  min-width: 20em;
+}
+
+article.main > div.content > table.latex-demo > tbody > tr > td > pre {
+  padding: 0.5em;
+  background-color: #5c5c5c;
+}
