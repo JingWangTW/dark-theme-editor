@@ -557,6 +557,7 @@ This will install the theme repository as a submodule in the `themes/dark-theme-
 ### LaTex Math Support
 * This theme supports LaTeX Math interpretation and utilizes [KaTeX](https://katex.org/) as the rendering engine.
 * To enable this feature, please add `useMath = true` in the frontmatter of the single page or in the [site configuration]. By default, this feature is turned off. The single page configuration will override the configuration in the [site configuration].
+* As turning on this feature will add the related dependency in each page, which will slow down the performance of page loading, it is recommended to turn on this feature in the pages that require it, rather than turning it on globally in the [site configuration].
 * By default, we support the following delimiters: 
     * `$$ \LaTeX $$`: This will render the formula in a single line.
     * `$ \LaTeX $`: This will render the formula inline.
