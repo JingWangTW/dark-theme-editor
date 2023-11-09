@@ -1,7 +1,7 @@
 ---
 title: "LaTex Math Support"
 date: "2023-10-22T21:24:55+08:00"
-author: "Jing Wang"
+author: "KaTex Doc"
 tags: ["lartex", "example", "math"]
 categories: ["feature", "latex"]
 description: "Example page to demonstrate the support of LaTex"
@@ -9,6 +9,9 @@ keywords: "latex,example,math"
 localCss: ["no_thead.css", "latex_demo.css"]
 useMath: true
 ---
+
+> The content in this page is copied from the [KaTeX Official Supported Functions](https://katex.org/docs/supported.html) page.
+> I have only made some changes to fit the migration with the Hugo system.
 
 ## Accents
 
