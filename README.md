@@ -563,6 +563,24 @@ This will install the theme repository as a submodule in the `themes/dark-theme-
     * `\\( \LaTeX \\)`: This will render the formula inline.
     * `\\[ \LaTeX \\]`: This will render the formula in a single line.
 * Also, as Hugo will interpret `\` as an escape character, remember to use `\\\\` for line breaks.
+* <details>
+  <summary>FYI, this is the <a href="https://katex.org/docs/options"> configuraions </a> passed to KaTeX by the theme.</summary>
+
+    ```js
+    renderMathInElement(document.body, {
+        // customised options
+        // auto-render specific keys, e.g.:
+        delimiters: [
+            { left: "$$", right: "$$", display: true },
+            { left: "$", right: "$", display: false },
+            { left: "\\(", right: "\\)", display: false },
+            { left: "\\[", right: "\\]", display: true },
+        ],
+        // rendering keys, e.g.:
+        throwOnError: false,
+    });
+    ```
+  </details>
 
 ## Run & Build
 ### Develop
