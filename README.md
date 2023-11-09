@@ -39,6 +39,11 @@ enableEmoji = true
         style = "native"
         tabWidth = 4
 
+    # Use to render raw HTML
+    [markup.goldmark.renderer]
+        unsafe= true
+
+
 # Merge the taxonomies config from theme to site configuration
 [taxonomies]
     _merge = 'deep'
