@@ -1,6 +1,6 @@
 {
     "name": "dark-theme-editor",
-    "version": "2.3.0",
+    "version": "3.0.0",
     "description": "[![Example Site](https://github.com/JingWangTW/dark-theme-editor/actions/workflows/hugo.yml/badge.svg)](https://github.com/JingWangTW/dark-theme-editor/actions/workflows/hugo.yml)",
     "main": "index.js",
     "scripts": {
