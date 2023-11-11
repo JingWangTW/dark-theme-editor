@@ -83,7 +83,7 @@ article.main > div.title {
 
 article.main > div.title > h1.title-header {
     flex: 0 0 auto;
-
+    color: #e0e5e5;
     font-size: 2rem;
     font-weight: bold;
     margin-bottom: 0.5rem;
