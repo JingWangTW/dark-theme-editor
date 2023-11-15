@@ -2,6 +2,7 @@
 
 {{ $class := .Attributes.class | default "" }}
 {{ $lang  := .Attributes.lang  | default .Type }}
+{{ $opts  := .Options | default dict }}
 
 
 <div class="codeblock">
@@ -14,7 +15,7 @@
     {{ end }}
 
     {{ if transform.CanHighlight $lang }}
-        {{ highlight .Inner $lang }}
+        {{ highlight .Inner $lang $opts }}
     {{ else }}
         <pre><code>{{ .Inner }}</code></pre>
     {{ end }}
