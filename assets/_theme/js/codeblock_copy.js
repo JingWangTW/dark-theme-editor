@@ -10,14 +10,14 @@ window.addEventListener("load", function () {
                 );
 
                 button.setAttribute("state", "copied");
-                iconElement.classList.remove("bi-clipboard");
-                iconElement.classList.add("bi-clipboard-check-fill");
+                iconElement.classList.remove("bi-copy");
+                iconElement.classList.add("bi-check2-all");
 
                 window.setTimeout(() => {
                     button.setAttribute("state", "copy");
-                    iconElement.classList.remove("bi-clipboard-check-fill");
-                    iconElement.classList.add("bi-clipboard");
-                }, 3 * 1000);
+                    iconElement.classList.remove("bi-check2-all");
+                    iconElement.classList.add("bi-copy");
+                }, 2 * 1000);
             }
         });
     });

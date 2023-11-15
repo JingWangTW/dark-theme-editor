@@ -221,7 +221,7 @@ article.main > div.content div.codeblock {
 article.main > div.content div.codeblock > div.copy-button-box {
     display: inline-flex;
     position: relative;
-    top: 2.4em;
+    top: 2.6em;
     width: 100%;
     justify-content: flex-end;
 }
@@ -238,8 +238,9 @@ article.main
     border-radius: 10%;
     margin-right: 0.5em;
     cursor: pointer;
-    padding-left: 0.8em;
-    padding-right: 0.8em;
+    padding-left: 0.7em;
+    padding-right: 0.7em;
+    font-size: 14px;
 }
 
 article.main
@@ -249,6 +250,18 @@ article.main
     > button.copy-button:hover {
     color: #eeffff;
     border-color: #eeffff;
+}
+
+article.main
+    > div.content
+    div.codeblock
+    > div.copy-button-box
+    > button.copy-button[state="copied"] {
+    > i {
+        color: green;
+    }
+    border-color: green;
+    padding-top: 3px;
 }
 
 /* pre for cases where line numbers are not set to be displayed. */
