@@ -101,6 +101,46 @@ var foo = function (bar) {
 console.log(foo(5));
 ```
 
+### Syntaxhervorhebung mit Option
+```c {linenos=table,hl_lines=["23-24","26-27",33],linenostart=20}
+/*
+    C-Programm: Einfache Addition
+
+    Beschreibung: Dieses Programm fordert den Benutzer auf, zwei Zahlen einzugeben, berechnet ihre Summe und gibt das Ergebnis aus.
+    
+    Autor: Ihr Name
+    Datum: 23. Juli 2023
+*/
+
+#include <stdio.h>
+
+// Funktion zum Addieren von zwei Zahlen
+int addiere(int a, int b) {
+    return a + b;
+}
+
+// Hauptfunktion
+int main() {
+    // Variablen deklarieren
+    int num1, num2, ergebnis;
+
+    // Benutzer um Eingabe bitten
+    printf("Geben Sie die erste Zahl ein: ");
+    scanf("%d", &num1);
+
+    printf("Geben Sie die zweite Zahl ein: ");
+    scanf("%d", &num2);
+
+    // Summe berechnen
+    ergebnis = addiere(num1, num2);
+
+    // Ergebnis anzeigen
+    printf("Die Summe von %d und %d ist: %d\n", num1, num2, ergebnis);
+
+    return 0; // Erfolgreicher Abschluss anzeigen
+}
+```
+
 ## Tabellen
 
 ### Standardtabelle

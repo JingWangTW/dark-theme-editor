@@ -101,6 +101,47 @@ var foo = function (bar) {
 console.log(foo(5));
 ```
 
+### Syntax highlighting with option
+
+```c {linenos=table,hl_lines=["23-24","26-27",33],linenostart=20}
+/*
+    C Program: Simple Addition
+
+    Description: This program prompts the user to enter two numbers, calculates their sum, and prints the result.
+    
+    Author: Your Name
+    Date: July 23, 2023
+*/
+
+#include <stdio.h>
+
+// Function to add two numbers
+int add(int a, int b) {
+    return a + b;
+}
+
+// Main function
+int main() {
+    // Declare variables
+    int num1, num2, result;
+
+    // Prompt user for input
+    printf("Enter the first number: ");
+    scanf("%d", &num1);
+
+    printf("Enter the second number: ");
+    scanf("%d", &num2);
+
+    // Calculate the sum
+    result = add(num1, num2);
+
+    // Display the result
+    printf("The sum of %d and %d is: %d\n", num1, num2, result);
+
+    return 0; // Indicate successful completion
+}
+```
+
 ## Tables
 
 ### Default Table

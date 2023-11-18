@@ -91,7 +91,7 @@ _這是斜體文字_
 ```
 
 
-## 語法突顯
+### 語法突顯
 
 ``` js
 var foo = function (bar) {
@@ -99,6 +99,47 @@ var foo = function (bar) {
 };
 
 console.log(foo(5));
+```
+
+### 使用選項語法突出顯示
+
+```c {linenos=table,hl_lines=["23-24","26-27",33],linenostart=20}
+/*
+    C 程式：簡單加法
+
+    描述：此程式提示使用者輸入兩個數字，計算它們的總和，並印出結果。
+    
+    作者：你的名字
+    日期：2023年7月23日
+*/
+
+#include <stdio.h>
+
+// 加法函式
+int add(int a, int b) {
+    return a + b;
+}
+
+// 主函式
+int main() {
+    // 宣告變數
+    int num1, num2, result;
+
+    // 提示使用者輸入
+    printf("輸入第一個數字：");
+    scanf("%d", &num1);
+
+    printf("輸入第二個數字：");
+    scanf("%d", &num2);
+
+    // 計算總和
+    result = add(num1, num2);
+
+    // 顯示結果
+    printf("%d 和 %d 的總和是：%d\n", num1, num2, result);
+
+    return 0; // 表示成功完成
+}
 ```
 
 ## 表格
