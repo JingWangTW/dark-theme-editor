@@ -1,5 +1,5 @@
 ---
-title: "Markdown範例"
+title: "Markdown語法"
 author: "Jing Wang"
 date: 2023-03-09T23:11:11+08:00
 tags: ["markdown", "語法"]
