@@ -1,170 +1,93 @@
 ---
-title: "Markdown-Beispiel"
-author: "Jing Wang"
-date: 2023-03-09T23:11:11+08:00
-tags: ["markdown", "syntax"]
-categories: ["beispiel", "demo"]
+title: "Markdown Beispiel"
+author: "ChatGPT"
+date: 2023-11-18T21:53:25+08:00
+tags: ["markdown", "beispiel"]
+categories: ["beispiel"]
 ---
 
-# `<h1>` Überschrift
-## `<h2>` Überschrift
-### `<h3>` Überschrift
-#### `<h4>` Überschrift
-##### `<h5>` Überschrift
-###### `<h6>` Überschrift
+# Einleitung
 
+Markdown ist eine leichtgewichtige Auszeichnungssprache, die mit Einfachheit im Sinn entwickelt wurde. Erstellt von John Gruber und Aaron Swartz ermöglicht Markdown Benutzern, strukturierte Inhalte mit einfachem Textformat zu schreiben. Es wird weitläufig für verschiedene Zwecke verwendet, von der Erstellung von Dokumentationen und dem Schreiben von Blog-Beiträgen bis zur Formatierung von README-Dateien auf Plattformen wie GitHub. Der wesentliche Vorteil von Markdown liegt in seiner Lesbarkeit; das Quelldokument sieht sauber und unaufdringlich aus, während die gerenderte Ausgabe gut formatiert und visuell ansprechend ist.
 
-## Horizontale Linien
+## Entwicklung und Beliebtheit
 
-___
+Markdown hat aufgrund seiner Benutzerfreundlichkeit und Kompatibilität mit verschiedenen Plattformen erheblich an Popularität gewonnen. Insbesondere GitHub hat eine entscheidende Rolle dabei gespielt, Markdown als bevorzugtes Format für Dokumentationen und codebezogene Inhalte zu popularisieren. Seine Einfachheit und Vielseitigkeit machen es zu einer ausgezeichneten Wahl für Autoren, Entwickler und alle, die Inhalte erstellen müssen, ohne sich mit komplexen Auszeichnungssprachen herumschlagen zu müssen.
+
+### Syntax und Formatierung
+
+Die Syntax von Markdown ist einfach und intuitiv. Überschriften werden mit Hash-Symbolen erstellt, während Listen entweder geordnet oder ungeordnet sein können. Sie können verschiedene Schriftstile wie *kursiv* oder **fett** mit einfachen Symbolen anwenden. Codeblöcke, sowohl inline als auch mehrzeilig, werden unterstützt, um Code-Snippets einfach in Ihre Dokumente einzufügen.
+
+```python
+# Beispiel einer Python-Funktion
+def grüße(name):
+    return f"Hallo, {name}!"
+```
+
+## Fortgeschrittene Funktionen
+
+### Hervorgehobene Codeblöcke
+
+Sie können hervorgehobene Codeblöcke erstellen, indem Sie Backticks gefolgt vom Sprachkennzeichen verwenden:
+
+```javascript
+// Beispiel einer JavaScript-Funktion
+function grüße(name) {
+    return `Hallo, ${name}!`;
+}
+```
+
+### Listen und Horizontale Linien
+
+Listen können geordnet oder ungeordnet sein, und Sie können verschachtelte Listen erstellen:
+
+- Ungeordneter Listeneintrag
+  - Verschachtelter Punkt 1
+  - Verschachtelter Punkt 2
+- Ein weiterer ungeordneter Eintrag
+
+1. Geordneter Listeneintrag
+   1. Verschachtelter Punkt A
+   2. Verschachtelter Punkt B
+2. Ein weiterer geordneter Eintrag
 
 ---
 
-***
+### Unterschiedliche Schriftstile
 
+Sie können verschiedenen Texten verschiedene Schriftstile zuweisen:
 
-## Betonung
+- *Kursiv* oder _Kursiv_
+- **Fett** oder __Fett__
+- ***Fett und kursiv*** oder ___Fett und kursiv___
 
-**Dieser Text ist fett**
+### Tabellen und Ausrichtung
 
-__Dieser Text ist fett__
+Markdown ermöglicht es Ihnen, Tabellen mit unterschiedlichen Ausrichtungen zu erstellen. Sie können die Ausrichtung für jede Spalte durch Verwenden von Doppelpunkten in der Kopfzeile festlegen. Dies erleichtert das Erstellen organisierter und visuell ansprechender Tabellen.
 
-*Dieser Text ist kursiv*
+| Links ausgerichtet | Zentriert ausgerichtet | Rechts ausgerichtet |
+|:-------------------:|:----------------------:|:-------------------:|
+| Apfel              | Banane                | Orange              |
+| Laptop             | Tablet                | Smartphone          |
+| Montag             | Mittwoch               | Freitag             |
 
-_Dieser Text ist kursiv_
+### Hyperlinks und Bilder
 
-~~Durchgestrichen~~
+Das Erstellen von Hyperlinks in Markdown ist so einfach wie das Umgeben des Textes mit eckigen Klammern und dem Bereitstellen der URL in Klammern. Für Bilder verwenden Sie eine ähnliche Syntax, jedoch mit einem Ausrufezeichen davor.
 
+[OpenAI](https://www.openai.com/)
 
-## Blockzitate
+![Markdown Logo](https://markdown-here.com/img/icon256.png)
 
-> Blockzitate können auch verschachtelt sein...
->> ...durch Verwendung zusätzlicher Größer-als-Zeichen direkt hintereinander...
-> > > ...oder mit Leerzeichen zwischen den Pfeilen.
+### Blockzitate und Fußnoten
 
+Blockzitate werden durch Verwenden des Größer-als-Symbols erstellt. Sie können Blockzitate verschachteln, um zusätzliche Einrückungsebenen hinzuzufügen. Fußnoten, gekennzeichnet durch `[^1]`, können am Ende des Dokuments definiert werden.
 
-## Listen
+> Dies ist ein Blockzitat.
+>> Sie können Blockzitate für mehr Tiefe verschachteln.
 
-### Ungeordnet
+[^1]: Dies ist eine Fußnote.
 
-+ Erstelle eine Liste, indem du eine Zeile mit `+`, `-` oder `*` beginnst
-+ Unterlisten werden durch Einrücken um 2 Leerzeichen erstellt:
-  - Änderung des Markerzeichens zwingt einen neuen Listenbeginn:
-    * Ac tristique libero volutpat at
-    + Facilisis in pretium nisl aliquet
-    - Nulla volutpat aliquam velit
-+ Sehr einfach!
+---
 
-### Geordnet
-
-1. Lorem ipsum dolor sit amet
-2. Consectetur adipiscing elit
-3. Integer molestie lorem at massa
-
-1. Du kannst aufeinanderfolgende Zahlen verwenden...
-1. ...oder alle Zahlen als `1.` belassen.
-
-### Beginne mit Offset-Nummerierung
-
-57. foo
-1. bar
-
-
-## Code
-
-### Inline
-Inline `Code`
-
-### Eingerückter Code
-
-    // Einige Kommentare
-    Zeile 1 des Codes
-    Zeile 2 des Codes
-    Zeile 3 des Codes
-
-### Codeblock
-Codeblock mit "Fences"
-
-```
-Beispieltext hier...
-Beispieltext hier...
-Beispieltext hier...
-```
-
-### Syntaxhervorhebung
-
-```js
-var foo = function (bar) {
-  return bar++;
-};
-
-console.log(foo(5));
-```
-
-## Tabellen
-
-### Standardtabelle
-| Option | Beschreibung |
-| ------ | ----------- |
-| data   | Pfad zu den Daten, die in die Vorlagen eingespeist werden sollen. |
-| engine | Engine, die für die Verarbeitung der Vorlagen verwendet wird. Handlebars ist die Standardoption. |
-| ext    | Dateierweiterung für Ziel-Dateien. |
-
-### Rechtsbündige Spalten
-
-| Option | Beschreibung |
-| ------:| -----------:|
-| data   | Pfad zu den Daten, die in die Vorlagen eingespeist werden sollen. |
-| engine | Engine, die für die Verarbeitung der Vorlagen verwendet wird. Handlebars ist die Standardoption. |
-| ext    | Dateierweiterung für Ziel-Dateien. |
-
-
-## Links
-
-* [Linktext](http://dev.nodeca.com)
-* [Link mit Titel](http://nodeca.github.io/pica/demo/ "Titeltext!")
-
-
-## Bilder
-
-![Minion](https://octodex.github.com/images/minion.png)
-![Stormtroopocat](https://octodex.github.com/images/stormtroopocat.jpg "Der Stormtroopocat")
-
-Wie bei Links verwenden auch Bilder eine Fußnoten-artige Syntax
-
-![Alt-Text][id]
-
-Mit einer späteren Referenz im Dokument, die den URL-Standort definiert:
-
-[id]: https://octodex.github.com/images/dojocat.jpg  "Der Dojocat"
-
-
-## Fußnoten
-
-Fußnote 1 Link[^erste].
-
-Fußnote 2 Link[^zweite].
-
-Doppelte Fußnotenreferenz[^zweite].
-
-[^erste]: Fußnote **kann Markup haben**
-
-    und mehrere Absätze.
-
-[^zweite]: Fußnotentext.
-
-
-## Definitionlisten
-
-Begriff 1
-
-:   Definition 1
-mit fortgesetzter Darstellung.
-
-Begriff 2 mit *inline Markup*
-
-:   Definition 2
-
-        { etwas Code, Teil von Definition 2 }
-
-    Dritter Absatz der Definition 2.
+Diese erweiterte Markdown-Beispielseite zeigt zusätzliche Funktionen wie hervorgehobene Codeblöcke, Listen, horizontale Linien, verschiedene Schriftstile, geordnete/ungeordnete Listen und Tabellen mit unterschiedlichen Ausrichtungen.

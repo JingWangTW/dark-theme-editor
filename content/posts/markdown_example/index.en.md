@@ -1,170 +1,93 @@
 ---
 title: "Markdown Example"
-author: "Jing Wang"
-date: 2023-03-09T23:11:11+08:00
-tags: ["markdown", "syntax"]
-categories: ["example", "demo"]
+author: "ChatGPT"
+date: 2023-11-18T21:53:25+08:00
+tags: ["markdown", "example"]
+categories: ["example"]
 ---
 
-# `<h1>` Heading
-## `<h2>` Heading
-### `<h3>` Heading
-#### `<h4>` Heading
-##### `<h5>` Heading
-###### `<h6>` Heading
+# Introduction
 
+Markdown is a lightweight markup language designed with simplicity in mind. Created by John Gruber and Aaron Swartz, Markdown allows users to write structured content using plain text formatting. It's widely used for various purposes, from creating documentation and writing blog posts to formatting README files on platforms like GitHub. The key advantage of Markdown is its readability; the source document looks clean and unobtrusive, while the rendered output is well-formatted and visually appealing.
 
-## Horizontal Rules
+## Evolution and Popularity
 
-___
+Markdown has experienced significant growth in popularity due to its ease of use and compatibility with various platforms. GitHub, in particular, has played a crucial role in popularizing Markdown as the preferred format for documentation and code-related content. Its simplicity and versatility make it an excellent choice for writers, developers, and anyone who needs to create content without the hassle of dealing with complex markup languages.
+
+### Syntax and Formatting
+
+The syntax of Markdown is straightforward and intuitive. Headings are created using hash symbols, while lists can be either ordered or unordered. You can apply different font styles such as *italic* or **bold** using simple symbols. Code blocks, both inline and multiline, are supported, making it easy to include code snippets in your documents.
+
+```python
+# Example of a Python function
+def greet(name):
+    return f"Hello, {name}!"
+```
+
+## Advanced Features
+
+### Highlighted Code Blocks
+
+You can create highlighted code blocks using backticks followed by the language identifier:
+
+```javascript
+// Example of a JavaScript function
+function greet(name) {
+    return `Hello, ${name}!`;
+}
+```
+
+### Lists and Horizontal Rules
+
+Lists can be ordered or unordered, and you can create nested lists:
+
+- Unordered List Item
+  - Nested Item 1
+  - Nested Item 2
+- Another Unordered Item
+
+1. Ordered List Item
+   1. Nested Item A
+   2. Nested Item B
+2. Another Ordered Item
 
 ---
 
-***
+### Different Font Styles
 
+You can apply different font styles to text:
 
-## Emphasis
+- *Italic* or _Italic_
+- **Bold** or __Bold__
+- ***Bold and Italic*** or ___Bold and Italic___
 
-**This is bold text**
+### Tables and Alignment
 
-__This is bold text__
+Markdown allows you to create tables with different alignments. You can specify alignment for each column by using colons in the header row. This makes it easy to create organized and visually appealing tables.
 
-*This is italic text*
+| Left-aligned | Center-aligned | Right-aligned |
+|:-------------|:--------------:|--------------:|
+| Apple        | Banana         | Orange        |
+| Laptop       | Tablet         | Smartphone    |
+| Monday       | Wednesday      | Friday        |
 
-_This is italic text_
+### Hyperlinks and Images
 
-~~Strikethrough~~
+Creating hyperlinks in Markdown is as simple as enclosing the text in square brackets and providing the URL in parentheses. For images, you use similar syntax, but with an exclamation mark in front.
 
+[OpenAI](https://www.openai.com/)
 
-## Blockquotes
+![Markdown Logo](https://markdown-here.com/img/icon256.png)
 
-> Blockquotes can also be nested...
->> ...by using additional greater-than signs right next to each other...
-> > > ...or with spaces between arrows.
+### Blockquotes and Footnotes
 
+Blockquotes are created by using the greater-than symbol. You can nest blockquotes to add layers of indentation. Footnotes, denoted by `[^1]`, can be defined at the end of the document.
 
-## Lists
+> This is a blockquote.
+>> You can nest blockquotes for more depth.
 
-### Unordered
+[^1]: This is a footnote.
 
-+ Create a list by starting a line with `+`, `-`, or `*`
-+ Sub-lists are made by indenting 2 spaces:
-  - Marker character change forces new list start:
-    * Ac tristique libero volutpat at
-    + Facilisis in pretium nisl aliquet
-    - Nulla volutpat aliquam velit
-+ Very easy!
+---
 
-### Ordered
-
-1. Lorem ipsum dolor sit amet
-2. Consectetur adipiscing elit
-3. Integer molestie lorem at massa
-
-1. You can use sequential numbers...
-1. ...or keep all the numbers as `1.`
-
-### Start numbering with offset
-
-57. foo
-1. bar
-
-
-## Code
-
-### Inline
-Inline `code`
-
-### Indented Code
-
-    // Some comments
-    line 1 of code
-    line 2 of code
-    line 3 of code
-
-### Block code
-Block code "fences"
-
-```
-Sample text here...
-Sample text here...
-Sample text here...
-```
-
-### Syntax highlighting
-
-``` js
-var foo = function (bar) {
-  return bar++;
-};
-
-console.log(foo(5));
-```
-
-## Tables
-
-### Default Table
-| Option | Description |
-| ------ | ----------- |
-| data   | path to data files to supply the data that will be passed into templates. |
-| engine | engine to be used for processing templates. Handlebars is the default. |
-| ext    | extension to be used for dest files. |
-
-### Right aligned columns
-
-| Option | Description |
-| ------:| -----------:|
-| data   | path to data files to supply the data that will be passed into templates. |
-| engine | engine to be used for processing templates. Handlebars is the default. |
-| ext    | extension to be used for dest files. |
-
-
-## Links
-
-* [link text](http://dev.nodeca.com)
-* [link with title](http://nodeca.github.io/pica/demo/ "title text!")
-
-
-## Images
-
-![Minion](https://octodex.github.com/images/minion.png)
-![Stormtroopocat](https://octodex.github.com/images/stormtroopocat.jpg "The Stormtroopocat")
-
-Like links, Images also have a footnote style syntax
-
-![Alt text][id]
-
-With a reference later in the document defining the URL location:
-
-[id]: https://octodex.github.com/images/dojocat.jpg  "The Dojocat"
-
-
-## Footnotes
-
-Footnote 1 link[^first].
-
-Footnote 2 link[^second].
-
-Duplicated footnote reference[^second].
-
-[^first]: Footnote **can have markup**
-
-    and multiple paragraphs.
-
-[^second]: Footnote text.
-
-
-## Definition lists
-
-Term 1
-
-:   Definition 1
-with lazy continuation.
-
-Term 2 with *inline markup*
-
-:   Definition 2
-
-        { some code, part of Definition 2 }
-
-    Third paragraph of definition 2.
+This extended Markdown example page showcases additional features, including highlighted code blocks, lists, horizontal rules, different font styles, ordered/unordered lists, and tables with different alignments.
