@@ -1,4 +1,5 @@
 # Dark Theme Editor | Hugo
+
 [![Example Site](https://github.com/JingWangTW/dark-theme-editor/actions/workflows/hugo.yml/badge.svg)](https://github.com/JingWangTW/dark-theme-editor/actions/workflows/hugo.yml)
 [![GitHub Release](https://img.shields.io/github/release/JingWangTW/dark-theme-editor?&color=03fcfc)]()
 [![Built for - Hugo](https://img.shields.io/badge/Built_for-Hugo-a503fc)](https://gohugo.io/)
@@ -6,13 +7,14 @@
 
 > **Dark Theme Editor** is a blog theme for [Hugo](https://gohugo.io/).
 
-DEMO - https://jingwangtw.github.io/dark-theme-editor/
+DEMO - <https://jingwangtw.github.io/dark-theme-editor/>
 
 ⚠️ The theme needs at least Hugo v0.112.x.
 
 ---
 
 ## Main Features
+
 * An editor-like theme for Hugo
 * [Multilingual support](#multilingual-config)
 * Mermaid Support
@@ -51,6 +53,7 @@ This will install the theme repository as a submodule in the `themes/dark-theme-
 ## Usage
 
 ### General Config
+
 * When using `dark-theme-editor` as the theme for your Hugo site, please remember to set the [theme field in your `config.toml` file](https://gohugo.io/getting-started/configuration/#theme).
 * Additionally, the theme provides many custom fields for you to configure as needed. Please refer to the [`config.toml` file in the theme](https://github.com/JingWangTW/dark-theme-editor/blob/main/config.toml) to find all available options. You can override these values by adding them to your own `config.toml` file or by directly modifying the file in the theme directory.
     <details>
@@ -246,9 +249,11 @@ This will install the theme repository as a submodule in the `themes/dark-theme-
             # It's recommended to keep it turned off by default and only enable this configuration when required.
             useMath = false
     ```
+
     </details>
 
 ### Multilingual Config
+
 * If your site is in [multilingual mode](https://gohugo.io/content-management/multilingual/), there will be a language select icon at the footer of the site. Additionally, there will be a navigator on each translated page.
 * Please move the configuration fields that need to be translated under the corresponding language configuration blocks in your `hugo.toml`. There is an example `hugo.multilang.toml` file you could reference. Remember to rename it to `hugo.toml` when needed.
     <details>
@@ -535,34 +540,41 @@ This will install the theme repository as a submodule in the `themes/dark-theme-
             # It's recommended to keep it turned off by default and only enable this configuration when required.
             useMath = false
     ```
+
     </details>
 * Also, please [add the corresponding i18n translation table](https://gohugo.io/functions/lang/translate/) according to the language you use, so the theme can translate to the language you use properly. I have placed an example file for English containing all the words required by the theme under the `i18n` folder. You should copy it and translate it to the language you need.
 
-### Author Taxonomies 
+### Author Taxonomies
+
 * Since Hugo [will not merge the taxonomies config from theme config to site config by default](https://gohugo.io/getting-started/configuration/#merge-configuration-from-themes), the author taxonomies pages need to be set in your [site configuration].
   * You could simply merge the theme config into site config.  
+
     ```toml
     [taxonomies]
         _merge = "deep"
     ```
+
   * Otherwise, you could define your taxonomies directly.
+
     ```toml
     [taxonomies]
         autor = "author"
         tag = "tags"
         category = "categories"
     ```
+
 * Also, you need to set up the `[params.page.showAuthor]` according to your preference. `params` config will be merged from theme config into site config by default.
 
 ### LaTex Math Support
+
 * This theme supports LaTeX Math interpretation and utilizes [KaTeX](https://katex.org/) as the rendering engine.
 * To enable this feature, please add `useMath = true` in the frontmatter of the single page or in the [site configuration]. By default, this feature is turned off. The single page configuration will override the configuration in the [site configuration].
 * As turning on this feature will add the related dependency in each page, which will slow down the performance of page loading, it is recommended to turn on this feature in the pages that require it, rather than turning it on globally in the [site configuration].
-* By default, we support the following delimiters: 
-    * `$$ \LaTeX $$`: This will render the formula in a single line.
-    * `$ \LaTeX $`: This will render the formula inline.
-    * `\\( \LaTeX \\)`: This will render the formula inline.
-    * `\\[ \LaTeX \\]`: This will render the formula in a single line.
+* By default, we support the following delimiters:
+  * `$$ \LaTeX $$`: This will render the formula in a single line.
+  * `$ \LaTeX $`: This will render the formula inline.
+  * `\\( \LaTeX \\)`: This will render the formula inline.
+  * `\\[ \LaTeX \\]`: This will render the formula in a single line.
 * Also, as Hugo will interpret `\` as an escape character, remember to use `\\\\` for line breaks.
 * <details>
   <summary>FYI, this is the <a href="https://katex.org/docs/options"> configuraions </a> passed to KaTeX by the theme.</summary>
@@ -581,34 +593,42 @@ This will install the theme repository as a submodule in the `themes/dark-theme-
         throwOnError: false,
     });
     ```
+
   </details>
 
 ## Run & Build
+
 ### Develop
+
 ```
 hugo server
 ```
+
 Then, you should be able to see your site at `localhost:1313`. From now on, all changes made locally will be reflected on the site, without the need to refresh your browser each time. Additionally, all files will not be minified or merged in this development mode, making it easier to debug any issues.
 
 ### Release
+
 ```
 hugo
 ```
+
 This will build your site in release mode, where all `.html`, `.css`, and `.js` files will be minified and merged when possible.
 
 ## Feature Plan
+
 * Share to Social Media Button  
 * Better Code Block Highlight
-* Tab View Support 
+* Tab View Support
 * Store custom note in local storage.
 * Accessibility Support
 * LaTex Math Rendering in Server Side.
 
 ## Acknowledgement
+
 This theme was originally inspired by the [theme `edidor`](https://github.com/sfengyuan/edidor).
 
 ## License
-This theme was released under the Apache License 2.0.
 
+This theme was released under the Apache License 2.0.
 
 [site configuration]: https://gohugo.io/getting-started/configuration/
