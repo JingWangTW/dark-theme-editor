@@ -57,9 +57,9 @@ Lists can be ordered or unordered, and you can create nested lists:
 
 You can apply different font styles to text:
 
-- *Italic* or _Italic_
-- **Bold** or __Bold__
-- ***Bold and Italic*** or ___Bold and Italic___
+- *Italic* or *Italic*
+- **Bold** or **Bold**
+- ***Bold and Italic*** or ***Bold and Italic***
 
 ### Tables and Alignment
 
@@ -86,7 +86,6 @@ Blockquotes are created by using the greater-than symbol. You can nest blockquot
 > This is a blockquote.
 >> You can nest blockquotes for more depth.
 
-[^1]: This is a footnote.
 
 ---
 

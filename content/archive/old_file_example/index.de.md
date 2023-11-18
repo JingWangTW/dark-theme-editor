@@ -10,32 +10,41 @@ description: "Markdown-Beispiel von ChatGPT."
 # Markdown-Beispiel
 
 ## Überschriften
+
 Dies ist eine H1-Überschrift
 =====================
+
 Dies ist eine H2-Überschrift
 ---------------------
 
 ## Hervorhebungen
+
 Dies ist *kursiv* und dies ist **fett**.
 
 ## Listen
+
 ### Ungeordnete Liste
+
 - Punkt 1
 - Punkt 2
 - Punkt 3
 
 ### Geordnete Liste
+
 1. Punkt 1
 2. Punkt 2
 3. Punkt 3
 
 ## Links
+
 Hier ist ein Link zu [Google](https://www.google.com).
 
 ## Bilder
+
 ![Alternativtext](https://via.placeholder.com/150 "Platzhalterbild")
 
 ## Codeblöcke
+
 ```python
 # Dies ist ein Python-Codeblock mit 100 Zeilen Code
 for i in range(10):

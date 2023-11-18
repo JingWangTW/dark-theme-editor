@@ -1,5 +1,5 @@
 ---
-title: "Markdown Syntax"
+title: "Markdown Example"
 author: "Jing Wang"
 date: 2023-03-09T23:11:11+08:00
 tags: ["markdown", "syntax"]
@@ -7,12 +7,16 @@ categories: ["example", "demo"]
 ---
 
 # `<h1>` Heading
-## `<h2>` Heading
-### `<h3>` Heading
-#### `<h4>` Heading
-##### `<h5>` Heading
-###### `<h6>` Heading
 
+## `<h2>` Heading
+
+### `<h3>` Heading
+
+#### `<h4>` Heading
+
+##### `<h5>` Heading
+
+###### `<h6>` Heading
 
 ## Horizontal Rules
 
@@ -22,19 +26,17 @@ ___
 
 ***
 
-
 ## Emphasis
 
 **This is bold text**
 
-__This is bold text__
+**This is bold text**
 
 *This is italic text*
 
-_This is italic text_
+*This is italic text*
 
 ~~Strikethrough~~
-
 
 ## Blockquotes
 
@@ -42,17 +44,16 @@ _This is italic text_
 >> ...by using additional greater-than signs right next to each other...
 > > > ...or with spaces between arrows.
 
-
 ## Lists
 
 ### Unordered
 
 + Create a list by starting a line with `+`, `-`, or `*`
 + Sub-lists are made by indenting 2 spaces:
-  - Marker character change forces new list start:
-    * Ac tristique libero volutpat at
+  + Marker character change forces new list start:
+    + Ac tristique libero volutpat at
     + Facilisis in pretium nisl aliquet
-    - Nulla volutpat aliquam velit
+    + Nulla volutpat aliquam velit
 + Very easy!
 
 ### Ordered
@@ -69,10 +70,10 @@ _This is italic text_
 57. foo
 1. bar
 
-
 ## Code
 
 ### Inline
+
 Inline `code`
 
 ### Indented Code
@@ -83,6 +84,7 @@ Inline `code`
     line 3 of code
 
 ### Block code
+
 Block code "fences"
 
 ```
@@ -145,26 +147,25 @@ int main() {
 ## Tables
 
 ### Default Table
-| Option | Description |
-| ------ | ----------- |
+
+| Option | Description                                                               |
+| ------ | ------------------------------------------------------------------------- |
 | data   | path to data files to supply the data that will be passed into templates. |
-| engine | engine to be used for processing templates. Handlebars is the default. |
-| ext    | extension to be used for dest files. |
+| engine | engine to be used for processing templates. Handlebars is the default.    |
+| ext    | extension to be used for dest files.                                      |
 
 ### Right aligned columns
 
-| Option | Description |
-| ------:| -----------:|
-| data   | path to data files to supply the data that will be passed into templates. |
-| engine | engine to be used for processing templates. Handlebars is the default. |
-| ext    | extension to be used for dest files. |
-
+| Option |                                                               Description |
+| -----: | ------------------------------------------------------------------------: |
+|   data | path to data files to supply the data that will be passed into templates. |
+| engine |    engine to be used for processing templates. Handlebars is the default. |
+|    ext |                                      extension to be used for dest files. |
 
 ## Links
 
-* [link text](http://dev.nodeca.com)
-* [link with title](http://nodeca.github.io/pica/demo/ "title text!")
-
++ [link text](http://dev.nodeca.com)
++ [link with title](http://nodeca.github.io/pica/demo/ "title text!")
 
 ## Images
 
@@ -179,7 +180,6 @@ With a reference later in the document defining the URL location:
 
 [id]: https://octodex.github.com/images/dojocat.jpg  "The Dojocat"
 
-
 ## Footnotes
 
 Footnote 1 link[^first].
@@ -193,7 +193,6 @@ Duplicated footnote reference[^second].
     and multiple paragraphs.
 
 [^second]: Footnote text.
-
 
 ## Definition lists
 

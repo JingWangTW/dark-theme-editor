@@ -57,9 +57,9 @@ Listen können geordnet oder ungeordnet sein, und Sie können verschachtelte Lis
 
 Sie können verschiedenen Texten verschiedene Schriftstile zuweisen:
 
-- *Kursiv* oder _Kursiv_
-- **Fett** oder __Fett__
-- ***Fett und kursiv*** oder ___Fett und kursiv___
+- *Kursiv* oder *Kursiv*
+- **Fett** oder **Fett**
+- ***Fett und kursiv*** oder ***Fett und kursiv***
 
 ### Tabellen und Ausrichtung
 
@@ -86,7 +86,6 @@ Blockzitate werden durch Verwenden des Größer-als-Symbols erstellt. Sie könne
 > Dies ist ein Blockzitat.
 >> Sie können Blockzitate für mehr Tiefe verschachteln.
 
-[^1]: Dies ist eine Fußnote.
 
 ---
 

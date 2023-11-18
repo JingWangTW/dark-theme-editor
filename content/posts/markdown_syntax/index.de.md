@@ -7,12 +7,16 @@ categories: ["beispiel", "demo"]
 ---
 
 # `<h1>` Überschrift
-## `<h2>` Überschrift
-### `<h3>` Überschrift
-#### `<h4>` Überschrift
-##### `<h5>` Überschrift
-###### `<h6>` Überschrift
 
+## `<h2>` Überschrift
+
+### `<h3>` Überschrift
+
+#### `<h4>` Überschrift
+
+##### `<h5>` Überschrift
+
+###### `<h6>` Überschrift
 
 ## Horizontale Linien
 
@@ -22,19 +26,17 @@ ___
 
 ***
 
-
 ## Betonung
 
 **Dieser Text ist fett**
 
-__Dieser Text ist fett__
+**Dieser Text ist fett**
 
 *Dieser Text ist kursiv*
 
-_Dieser Text ist kursiv_
+*Dieser Text ist kursiv*
 
 ~~Durchgestrichen~~
-
 
 ## Blockzitate
 
@@ -42,17 +44,16 @@ _Dieser Text ist kursiv_
 >> ...durch Verwendung zusätzlicher Größer-als-Zeichen direkt hintereinander...
 > > > ...oder mit Leerzeichen zwischen den Pfeilen.
 
-
 ## Listen
 
 ### Ungeordnet
 
 + Erstelle eine Liste, indem du eine Zeile mit `+`, `-` oder `*` beginnst
 + Unterlisten werden durch Einrücken um 2 Leerzeichen erstellt:
-  - Änderung des Markerzeichens zwingt einen neuen Listenbeginn:
-    * Ac tristique libero volutpat at
+  + Änderung des Markerzeichens zwingt einen neuen Listenbeginn:
+    + Ac tristique libero volutpat at
     + Facilisis in pretium nisl aliquet
-    - Nulla volutpat aliquam velit
+    + Nulla volutpat aliquam velit
 + Sehr einfach!
 
 ### Geordnet
@@ -69,10 +70,10 @@ _Dieser Text ist kursiv_
 57. foo
 1. bar
 
-
 ## Code
 
 ### Inline
+
 Inline `Code`
 
 ### Eingerückter Code
@@ -83,6 +84,7 @@ Inline `Code`
     Zeile 3 des Codes
 
 ### Codeblock
+
 Codeblock mit "Fences"
 
 ```
@@ -102,6 +104,7 @@ console.log(foo(5));
 ```
 
 ### Syntaxhervorhebung mit Option
+
 ```c {linenos=table,hl_lines=["23-24","26-27",33],linenostart=20}
 /*
     C-Programm: Einfache Addition
@@ -144,6 +147,7 @@ int main() {
 ## Tabellen
 
 ### Standardtabelle
+
 | Option | Beschreibung |
 | ------ | ----------- |
 | data   | Pfad zu den Daten, die in die Vorlagen eingespeist werden sollen. |
@@ -158,12 +162,10 @@ int main() {
 | engine | Engine, die für die Verarbeitung der Vorlagen verwendet wird. Handlebars ist die Standardoption. |
 | ext    | Dateierweiterung für Ziel-Dateien. |
 
-
 ## Links
 
-* [Linktext](http://dev.nodeca.com)
-* [Link mit Titel](http://nodeca.github.io/pica/demo/ "Titeltext!")
-
++ [Linktext](http://dev.nodeca.com)
++ [Link mit Titel](http://nodeca.github.io/pica/demo/ "Titeltext!")
 
 ## Bilder
 
@@ -178,7 +180,6 @@ Mit einer späteren Referenz im Dokument, die den URL-Standort definiert:
 
 [id]: https://octodex.github.com/images/dojocat.jpg  "Der Dojocat"
 
-
 ## Fußnoten
 
 Fußnote 1 Link[^erste].
@@ -192,7 +193,6 @@ Doppelte Fußnotenreferenz[^zweite].
     und mehrere Absätze.
 
 [^zweite]: Fußnotentext.
-
 
 ## Definitionlisten
 

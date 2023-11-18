@@ -30,13 +30,12 @@ useMath: true
 | $\hat{\theta}$ | `\hat{\theta}` | $\underline{AB}$           | `\underline{AB}`           | $\underlinesegment{AB}$ | `\underlinesegment{AB}` |
 | $\widehat{ac}$ | `\widehat{ac}` | $\widecheck{ac}$           | `\widecheck{ac}`           | $\underbar{X}$          | `\underbar{X}`          |
 
-
 ### Accent functions inside `\\text{...}`
 
 |                 |             |                |         |                |         |                |         |
 | :-------------- | :---------- | :------------- | :------ | :------------- | :------ | :------------- | :------ |
 | $\text{\'{a}}$  | `\'{a}`     | $\text{\~{a}}$ | `\~{a}` | $\text{\.{a}}$ | `\.{a}` | $\text{\H{a}}$ | `\H{a}` |
-| $\text{\`{a}}$  | `` \`{a}``  | $\text{\={a}}$ | `\={a}` | $\text{\"{a}}$ | `\"{a}` | $\text{\v{a}}$ | `\v{a}` |
+| $\text{\`{a}}$  | ``\`{a}``  | $\text{\={a}}$ | `\={a}` | $\text{\"{a}}$ | `\"{a}` | $\text{\v{a}}$ | `\v{a}` |
 | $\text{\\^{a}}$ | `\\^{a}`    | $\text{\u{a}}$ | `\u{a}` | $\text{\r{a}}$ | `\r{a}` |
 
 * See also [letters and unicode](#letters-and-unicode).
@@ -72,52 +71,53 @@ useMath: true
 |           | `\Bigg` | `\Biggl` | `\Biggm` | `\Biggr` |
 
 ## Environments
+
 <table class="latex-demo">
     <tr>
         <td>$\begin{matrix} a & b \\ c & d \end{matrix}$</td>
-        <td><pre><code>\begin{matrix} 
+        <td><pre><code>\begin{matrix}
     a & b \\\\
     c & d
 \end{matrix}</code></pre></td>
         <td>$\begin{array}{cc}a & b \\ c & d \end{array}$</td>
-        <td><pre><code>\begin{array}{cc} 
+        <td><pre><code>\begin{array}{cc}
     a & b \\\\
     c & d
 \end{array}</code></pre></td>
     </tr>
     <tr>
         <td>$\begin{pmatrix} a & b \\ c & d \end{pmatrix}$</td>
-        <td><pre><code>\begin{pmatrix} 
+        <td><pre><code>\begin{pmatrix}
     a & b \\\\
     c & d
 \end{pmatrix}</code></pre></td>
         <td>$\begin{bmatrix} a & b \\ c & d \end{bmatrix}$</td>
-        <td><pre><code>\begin{bmatrix} 
+        <td><pre><code>\begin{bmatrix}
     a & b \\\\
     c & d
 \end{bmatrix}</code></pre></td>
     </tr>
     <tr>
         <td>$\begin{vmatrix} a & b \\ c & d \end{vmatrix}$</td>
-        <td><pre><code>\begin{vmatrix} 
+        <td><pre><code>\begin{vmatrix}
     a & b \\\\
     c & d
 \end{vmatrix}</code></pre></td>
         <td>$\begin{Vmatrix} a & b \\ c & d \end{Vmatrix}$</td>
-        <td><pre><code>\begin{Vmatrix} 
+        <td><pre><code>\begin{Vmatrix}
     a & b \\\\
     c & d
 \end{Vmatrix}</code></pre></td>
     </tr>
     <tr>
         <td>$\begin{Bmatrix} a & b \\ c & d \end{Bmatrix}$</td>
-        <td><pre><code>\begin{Bmatrix} 
+        <td><pre><code>\begin{Bmatrix}
     a & b \\\\
     c & d
 \end{Bmatrix}</code></pre></td>
         <td>$\def\arraystretch{1.5}\begin{array}{c:c:c} a & b & c \\ \hline d & e & f \\ \hdashline g & h & i \end{array}$</td>
-        <td><pre><code>\def\arraystretch{1.5} 
-\begin{array}{c:c:c} 
+        <td><pre><code>\def\arraystretch{1.5}
+\begin{array}{c:c:c}
                     a & b & c \\\
         \hline      d & e & f \\\
         \hdashline  g & h & i
@@ -137,7 +137,7 @@ useMath: true
     </tr>
     <tr>
         <td>$\begin{smallmatrix} a & b \\ c & d \end{smallmatrix}$</td>
-        <td><pre><code>\begin{smallmatrix} 
+        <td><pre><code>\begin{smallmatrix}
     a & b \\\\
     c & d
 \end{smallmatrix}</code></pre></td>
@@ -159,13 +159,13 @@ useMath: true
         <td><pre><code>\begin{equation}
     \begin{split}
         a & = b + c \\
-          & = e + f 
+          & = e + f
     \end{split}
 \end{equation}</code></pre></td>
         <td>\begin{align} a&=b+c \\ d+e&=f \end{align}</td>
-        <td><pre><code>\begin{align} 
-        a &= b + c \\ 
-    d + e &=f 
+        <td><pre><code>\begin{align}
+        a &= b + c \\
+    d + e &=f
 \end{align}</code></pre></td>
     </tr>
     <tr>
@@ -200,7 +200,6 @@ useMath: true
 | `matrix*`, `pmatrix*`, `bmatrix*`, `Bmatrix*`, `vmatrix*`, `Vmatrix*` | take an optional argument to set column alignment, as in `\begin{matrix*}[r]`                                                                                           |
 | `equation*`, `gather*`, `align*`, `alignat*`                          | have no automatic numbering. Alternatively, you can use `\nonumber` or `\notag` to omit the numbering for a specific row of the equation.                               |
 | `gathered`, `aligned`, `alignedat`                                    | 1. do not need to be in display mode. <br> 2. have no automatic numbering. <br> 3. must be inside math delimiters in order to be rendered by the auto-render extension. |
-
 
 * Acceptable line separators include: `\\\\`, `\cr`, `\\\\[distance]`, and `\cr[distance]`. *Distance* can be written with any of the [KaTeX units](#units).
 * The `{array}` environment supports `|` and `:` vertical separators.
@@ -291,7 +290,9 @@ $\allowbreak α β γ δ ϵ ζ η θ ι κ λ μ ν ξ o π \allowbreak ρ σ τ
 | $\phase{-78^\circ}$   | `\phase{-78^\circ}` |                                    |                                    |
 
 ### Tags
+
 * `\tag{hi} x+y^{2x}`
+
 <div class="latex-demo-annotation-table">
 
 |                       |
@@ -301,6 +302,7 @@ $\allowbreak α β γ δ ϵ ζ η θ ι κ λ μ ν ξ o π \allowbreak ρ σ τ
 </div>
 
 * `\tag*{hi} x+y^{2x}`
+
 <div class="latex-demo-annotation-table">
 
 |                       |
@@ -320,12 +322,14 @@ $\allowbreak α β γ δ ϵ ζ η θ ι κ λ μ ν ξ o π \allowbreak ρ σ τ
 | :------ | :------ | :---------------- | :---------------- | :------------------------------------------- | :---------------------------------------------------- |
 | $x_n$   | `x_n`   | $\stackrel{!}{=}$ | `\stackrel{!}{=}` | $a \atop b$                                  | `a \atop b`                                           |
 | $e^x$   | `e^x`   | $\overset{!}{=}$  | `\overset{!}{=}`  | $a\raisebox{0.25em}{$b$}c$                   | `a\raisebox{0.25em}{$b$}c`                            |
-| $\_u^o$ | `_u^o ` | $\underset{!}{=}$ | `\underset{!}{=}` | $a+\left(\vcenter{\frac{\frac a b}c}\right)$ | `a+\left(\vcenter{\hbox{$\frac{\frac a b}c$}}\right)` |
+| $\_u^o$ | `_u^o` | $\underset{!}{=}$ | `\underset{!}{=}` | $a+\left(\vcenter{\frac{\frac a b}c}\right)$ | `a+\left(\vcenter{\hbox{$\frac{\frac a b}c$}}\right)` |
 |         |         |                   |                   | $$\sum_{\substack{0<i<m\\\\0<j<n}}$$         | `\sum_{\substack{0<i<m\\\\0<j<n}}`                    |
-* `\raisebox` and `\hbox` put their argument into text mode. To raise math, nest `$...$` delimiters inside the argument as shown above. 
+
+* `\raisebox` and `\hbox` put their argument into text mode. To raise math, nest `$...$` delimiters inside the argument as shown above.
 * `\vcenter` can be written without an `\hbox` if the `strict` rendering option is *false*. In that case, omit the nested `$...$` delimiters.
 
 ### Overlap and Spacing
+
 <table class="latex-demo">
     <tr>
         <td>${=}\mathllap{/\,}$</td>
@@ -351,12 +355,12 @@ $\allowbreak α β γ δ ϵ ζ η θ ι κ λ μ ν ξ o π \allowbreak ρ σ τ
 
 | Function        | Produces           | Function             | Produces                              |
 | :-------------- | :----------------- | :------------------- | :------------------------------------ |
-| `\,`            | ³∕₁₈ em space      | `\kern{distance}`    | space, width = _distance_             |
-| `\thinspace`    | ³∕₁₈ em space      | `\mkern{distance}`   | space, width = _distance_             |
-| `\>`            | ⁴∕₁₈ em space      | `\mskip{distance}`   | space, width = _distance_             |
-| `\:`            | ⁴∕₁₈ em space      | `\hskip{distance}`   | space, width = _distance_             |
-| `\medspace`     | ⁴∕₁₈ em space      | `\hspace{distance}`  | space, width = _distance_             |
-| `\;`            | ⁵∕₁₈ em space      | `\hspace*{distance}` | space, width = _distance_             |
+| `\,`            | ³∕₁₈ em space      | `\kern{distance}`    | space, width = *distance*             |
+| `\thinspace`    | ³∕₁₈ em space      | `\mkern{distance}`   | space, width = *distance*             |
+| `\>`            | ⁴∕₁₈ em space      | `\mskip{distance}`   | space, width = *distance*             |
+| `\:`            | ⁴∕₁₈ em space      | `\hskip{distance}`   | space, width = *distance*             |
+| `\medspace`     | ⁴∕₁₈ em space      | `\hspace{distance}`  | space, width = *distance*             |
+| `\;`            | ⁵∕₁₈ em space      | `\hspace*{distance}` | space, width = *distance*             |
 | `\thickspace`   | ⁵∕₁₈ em space      | `\phantom{content}`  | space the width and height of content |
 | `\enspace`      | ½ em space         | `\hphantom{content}` | space the width of content            |
 | `\quad`         | 1 em space         | `\vphantom{content}` | a strut the height of content         |
@@ -366,13 +370,11 @@ $\allowbreak α β γ δ ϵ ζ η θ ι κ λ μ ν ξ o π \allowbreak ρ σ τ
 | `\nobreakspace` | non-breaking space | `\negthickspace`     | – ⁵∕₁₈ em space                       |
 | `\space`        | space              | `\mathstrut`         | `\vphantom{(}`                        |
 
-
 #### Notes
 
 * `distance` will accept any of the [KaTeX units](#units).
 * `\kern`, `\mkern`, `\mskip`, and `\hspace` accept unbraced distances, as in: `\kern1em`.
 * `\mkern` and `\mskip` will not work in text mode and both will write a console warning for any unit except `mu`.
-
 
 ## Logic and Set Theory
 
@@ -424,6 +426,7 @@ $\gdef\VERT{|}$
 | $\iint$ `\iint`   | $\intop$ `\intop`       | $\bigodot$ `\bigodot`     | $\bigcap$ `\bigcap`     |
 | $\iiint$ `\iiint` | $\smallint$ `\smallint` | $\biguplus$ `\biguplus`   | $\bigcup$ `\bigcup`     |
 | $\oint$ `\oint`   | $\oiint$ `\oiint`       | $\oiiint$ `\oiiint`       | $\bigsqcup$ `\bigsqcup` |
+
 * Direct Input: $∫ ∬ ∭ ∮ ∏ ∐ ∑ ⋀ ⋁ ⋂ ⋃ ⨀ ⨁ ⨂ ⨄ ⨆$ ∯ ∰
 
 ### Binary Operators
@@ -462,7 +465,6 @@ $\gdef\VERT{|}$
 | :------------------------------ | :------------------------------ | :-------------------------- |
 | $\binom{n}{k}$ `\binom{n}{k}`   | $\dbinom{n}{k}$ `\dbinom{n}{k}` | ${n\brace k}$ `{n\brace k}` |
 | ${n \choose k}$ `{n \choose k}` | $\tbinom{n}{k}$ `\tbinom{n}{k}` | ${n\brack k}$ `{n\brack k}` |
-
 
 ### Math Operators
 
