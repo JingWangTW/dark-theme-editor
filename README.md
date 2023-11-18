@@ -616,12 +616,11 @@ This will build your site in release mode, where all `.html`, `.css`, and `.js` 
 
 ## Feature Plan
 
-* Share to Social Media Button  
-* Better Code Block Highlight
 * Tab View Support
 * Store custom note in local storage.
 * Accessibility Support
 * LaTex Math Rendering in Server Side.
+* Search Bar Provided.
 
 ## Acknowledgement
 
