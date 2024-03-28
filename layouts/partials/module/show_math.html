@@ -3,6 +3,21 @@
         https://katex.org/docs/browser.html 
 -->
 
+{{ $trustedMath := false }}
+{{ if isset $.Params "trustedmath" }}
+
+    {{ if $.Params.trustedmath }}
+        {{ $trustedMath = . }}
+    {{ end }}
+
+{{ else if isset $.Site.Params.globalFrontmatter "trustedmath" }}
+
+    {{ if $.Site.Params.globalFrontmatter.trustedmath }}
+        {{ $trustedMath = . }}
+    {{ end }}
+
+{{ end }}
+
 <link
     rel="stylesheet"
     href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css"
@@ -22,7 +37,7 @@
     src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"
     integrity="sha384-+VBxd3r6XgURycqtZ117nYw44OOcIax56Z4dCRWbxyPt0Koah1uHoK0o4+/RRE05"
     crossorigin="anonymous"
-    onload="renderMathInElement(document.body);"></script>
+    onload="renderMathInElement(document.body{{ if $trustedMath }}, { trust: true }{{ end }});"></script>
 
 <script>
     document.addEventListener("DOMContentLoaded", function () {
@@ -37,6 +52,7 @@
             ],
             // • rendering keys, e.g.:
             throwOnError: false,
+            {{ if $trustedMath }}trust: true,{{ end }}
         });
     });
 </script>

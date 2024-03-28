@@ -25,7 +25,7 @@
             {{ else }}
                 <li class="file">
                     <a href="{{ .Permalink }}" title=".{{ .RelPermalink }}">
-                        {{ .Title }}
+                        {{ if .Params.Filename }} {{ .Params.Filename }} {{ else }} {{ .Title }} {{ end }}
                     </a>
                 </li>
             {{ end }}
