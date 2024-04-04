@@ -248,6 +248,16 @@ This will install the theme repository as a submodule in the `themes/dark-theme-
             #   it will slow down the page loading speed. 
             # It's recommended to keep it turned off by default and only enable this configuration when required.
             useMath = false
+
+            # Filed tp describe how should we pass the "trust" params to the `KaTex` module.
+            # Thos params would affect if we could trust the HTML related code in LaTex blocks.
+            # https://katex.org/docs/options.html
+            trustedmath = false
+
+        [params.preference]
+            # Use "true" to show the real fila name in both breadcrumb and the sidebar
+            # Use "false" to show the tile in the file in both breadcrumb and the sidebar
+            showFileName = false
     ```
 
     </details>
@@ -539,6 +549,16 @@ This will install the theme repository as a submodule in the `themes/dark-theme-
             #   it will slow down the page loading speed. 
             # It's recommended to keep it turned off by default and only enable this configuration when required.
             useMath = false
+            
+            # Filed tp describe how should we pass the "trust" params to the `KaTex` module.
+            # Thos params would affect if we could trust the HTML related code in LaTex blocks.
+            # https://katex.org/docs/options.html
+            trustedmath = false
+
+        [params.preference]
+            # Use "true" to show the real fila name in both breadcrumb and the sidebar
+            # Use "false" to show the tile in the file in both breadcrumb and the sidebar
+            showFileName = false
     ```
 
     </details>
