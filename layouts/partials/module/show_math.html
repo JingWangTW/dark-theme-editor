@@ -10,13 +10,14 @@
         {{ $trustedMath = . }}
     {{ end }}
 
-{{ else if isset $.Site.Params.globalFrontmatter "trustedmath" }}
+{{ else if isset $.Site.Params.page "trustedmath" }}
 
-    {{ if $.Site.Params.globalFrontmatter.trustedmath }}
+    {{ if $.Site.Params.page.trustedmath }}
         {{ $trustedMath = . }}
     {{ end }}
 
 {{ end }}
+
 
 <link
     rel="stylesheet"
@@ -37,7 +38,11 @@
     src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"
     integrity="sha384-+VBxd3r6XgURycqtZ117nYw44OOcIax56Z4dCRWbxyPt0Koah1uHoK0o4+/RRE05"
     crossorigin="anonymous"
-    onload="renderMathInElement(document.body{{ if $trustedMath }}, { trust: true }{{ end }});"></script>
+    {{ if $trustedMath }}
+        onload="renderMathInElement(document.body , { trust: true });"
+    {{ else }}
+        onload="renderMathInElement(document.body);"
+    {{ end }}></script>
 
 <script>
     document.addEventListener("DOMContentLoaded", function () {
@@ -52,7 +57,10 @@
             ],
             // • rendering keys, e.g.:
             throwOnError: false,
-            {{ if $trustedMath }}trust: true,{{ end }}
+
+            {{ if $trustedMath }}
+                trust: true
+            {{ end }}
         });
     });
 </script>
