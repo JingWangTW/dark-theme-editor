@@ -2,9 +2,7 @@
     <article class="main">
         {{ partial "module/sidebar_btn" . }}
 
-        {{ with $.Site.Params.page.logoImage }}
-            <img class="logo" src="{{ $.Site.BaseURL }}{{ . }}"/>
-        {{ end }}
+
         <div class="title">
             <h1 class="title-header">
                 {{ .Title }}
