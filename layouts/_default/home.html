@@ -5,8 +5,8 @@
 
         <div class="home">
             <div class="title">
-                {{ with $.Site.Params.header.logoImage }}
-                    <img class="logo" src="{{ $.Site.BaseURL }}{{ . }}"/>
+                {{ with $.Site.Params.header.logo.imgUrl }}
+                    <img class="logo" src="{{ $.Site.BaseURL }}{{ . }}" />
                 {{ end }}
 
                 {{ with $.Site.Params.header.title }}
@@ -60,12 +60,12 @@
                     </div>
                 </div>
                 {{ if not $.Site.Params.homePage.disableWalkthroughs }}
-                <div class="right">
-                    <h3 class="recommend-title">
-                        {{ i18n "walkthroughs"  | title }}
-                    </h3>
-                    {{ partial "module/section_tree" ( dict "context" . "currentPage" . ) }}
-                </div>
+                    <div class="right">
+                        <h3 class="recommend-title">
+                            {{ i18n "walkthroughs"  | title }}
+                        </h3>
+                        {{ partial "module/section_tree" ( dict "context" . "currentPage" . ) }}
+                    </div>
                 {{ end }}
             </div>
         </div>
