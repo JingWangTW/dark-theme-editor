@@ -54,8 +54,8 @@ This will install the theme repository as a submodule in the `themes/dark-theme-
 
 ### General Config
 
-* When using `dark-theme-editor` as the theme for your Hugo site, please remember to set the [theme field in your `config.toml` file](https://gohugo.io/getting-started/configuration/#theme).
-* Additionally, the theme provides many custom fields for you to configure as needed. Please refer to the [`config.toml` file in the theme](https://github.com/JingWangTW/dark-theme-editor/blob/main/config.toml) to find all available options. You can override these values by adding them to your own `config.toml` file or by directly modifying the file in the theme directory.
+* When using `dark-theme-editor` as the theme for your Hugo site, please remember to set the [theme field in your `config.toml`/`hugo.toml` file](https://gohugo.io/getting-started/configuration/#theme).
+* Additionally, the theme provides many custom fields for you to configure as needed. Please refer to the [`hugo.toml` file in the theme](https://github.com/JingWangTW/dark-theme-editor/blob/main/hugo.toml) to find all available options. You can override these values by adding them to your own configuration file or by directly modifying the file in the theme directory.
     <details>
     <summary>Click to toggle the full list of configurations.</summary>
 
@@ -547,14 +547,14 @@ This will install the theme repository as a submodule in the `themes/dark-theme-
 ### Author Taxonomies
 
 * Since Hugo [will not merge the taxonomies config from theme config to site config by default](https://gohugo.io/getting-started/configuration/#merge-configuration-from-themes), the author taxonomies pages need to be set in your [site configuration].
-  * You could simply merge the theme config into site config.  
+    * You could simply merge the theme config into site config.  
 
     ```toml
     [taxonomies]
         _merge = "deep"
     ```
 
-  * Otherwise, you could define your taxonomies directly.
+    * Otherwise, you could define your taxonomies directly.
 
     ```toml
     [taxonomies]
@@ -571,10 +571,10 @@ This will install the theme repository as a submodule in the `themes/dark-theme-
 * To enable this feature, please add `useMath = true` in the frontmatter of the single page or in the [site configuration]. By default, this feature is turned off. The single page configuration will override the configuration in the [site configuration].
 * As turning on this feature will add the related dependency in each page, which will slow down the performance of page loading, it is recommended to turn on this feature in the pages that require it, rather than turning it on globally in the [site configuration].
 * By default, we support the following delimiters:
-  * `$$ \LaTeX $$`: This will render the formula in a single line.
-  * `$ \LaTeX $`: This will render the formula inline.
-  * `\\( \LaTeX \\)`: This will render the formula inline.
-  * `\\[ \LaTeX \\]`: This will render the formula in a single line.
+    * `$$ \LaTeX $$`: This will render the formula in a single line.
+    * `$ \LaTeX $`: This will render the formula inline.
+    * `\\( \LaTeX \\)`: This will render the formula inline.
+    * `\\[ \LaTeX \\]`: This will render the formula in a single line.
 * Also, as Hugo will interpret `\` as an escape character, remember to use `\\\\` for line breaks.
 * <details>
   <summary>FYI, this is the <a href="https://katex.org/docs/options"> configuraions </a> passed to KaTeX by the theme.</summary>
