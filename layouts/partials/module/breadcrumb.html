@@ -18,12 +18,13 @@
 
     {{ if .IsHome }}
         {{ i18n "breadcrumb_home" | title }}
-    {{ if isset $.Site.Params.preference "showFileName" }}
+    {{ else if .IsPage }}
         {{ if $.Site.Params.preference.showFileName }}
-            {{ .Name }}
+            {{ .File.TranslationBaseName }}.{{ .File.Ext }}
         {{ else }}
             {{ .Title }}
         {{ end }}
+
     {{ else }}
         {{ .Title }}
     {{ end }}

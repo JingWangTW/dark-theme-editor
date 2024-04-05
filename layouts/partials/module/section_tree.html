@@ -25,12 +25,8 @@
             {{ else }}
                 <li class="file">
                     <a href="{{ .Permalink }}" title=".{{ .RelPermalink }}">
-                        {{ if isset $.Site.Params.preference "showFileName" }}
-                            {{ if $.Site.Params.preference.showFileName }}
-                                {{ .Name }}
-                            {{ else }}
-                                {{ .Title }}
-                            {{ end }}
+                        {{ if .Site.Params.preference.showFileName }}
+                            {{ .File.TranslationBaseName }}.{{ .File.Ext }}
                         {{ else }}
                             {{ .Title }}
                         {{ end }}
