@@ -113,29 +113,6 @@ erDiagram
 
 This ER diagram shows relationships between customers, orders, and line items.
 
-### 8. Entity Relationship Diagram (ERD)
-
-An extended version of ER diagrams in Mermaid is as follows:
-
-```mermaid
-erd
-entity "Customer" as customer {
-  +ID: string
-  Name: string
-  Email: string
-}
-
-entity "Order" as order {
-  +ID: string
-  Date: date
-  Total: currency
-}
-
-customer ||--o{ order : "Places"
-```
-
-In this extended ERD, you can see the attributes of entities and their relationships.
-
 ## Create Stunning Visuals with Mermaid
 
 Mermaid is a versatile tool that empowers you to create a wide range of charts and diagrams, making it an invaluable asset for developers, technical writers, and anyone needing to convey complex information visually. With its intuitive syntax and extensive charting capabilities, Mermaid simplifies the process of creating informative and engaging visuals.

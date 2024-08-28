@@ -106,37 +106,12 @@ stateDiagram-v2
 
 ```mermaid
 erDiagram
-  CUSTOMER ||--o{ ORDER : 下單
-  ORDER ||--|{ LINE-ITEM : 包含
-  CUSTOMER }| -- |{ ORDER : 擁有
+  "客戶" ||--o{ "訂單" : "下單"
+  "訂單" ||--|{ "產品" : "包含"
+  "客戶" }| -- |{ "訂單" : "擁有"
 ```
 
 這個ER圖顯示了客戶、訂單和訂單項之間的關係。
-
-### 8. 實體關係圖（ERD）
-
-Mermaid的擴展ER圖示例如下：
-
-```mermaid
-erd
-entity "Customer" as customer {
-  +ID: 字串
-  名稱: 字串
-  電子郵件:
-
- 字串
-}
-
-entity "Order" as order {
-  +ID: 字串
-  日期: 日期
-  總額: 貨幣
-}
-
-customer ||--o{ order : "下單"
-```
-
-在這個擴展的ERD中，您可以看到實體的屬性以及它們之間的關係。
 
 ## 用Mermaid創建引人注目的視覺效果
 
