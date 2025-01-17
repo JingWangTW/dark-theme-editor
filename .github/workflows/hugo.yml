@@ -2,74 +2,74 @@
 name: Deploy example site to GitHub Pages
 
 on:
-  # Triggers the workflow on push to any tags
-  push:
-    tags:
-      - '*'
+    # Triggers the workflow on push to any tags
+    push:
+        tags:
+            - "*"
 
 # Sets permissions of the GITHUB_TOKEN to allow deployment to GitHub Pages
 permissions:
-  contents: read
-  pages: write
-  id-token: write
+    contents: read
+    pages: write
+    id-token: write
 
 # Allow one concurrent deployment
 concurrency:
-  group: "pages"
-  cancel-in-progress: true
+    group: "pages"
+    cancel-in-progress: true
 
 # Default to bash
 defaults:
-  run:
-    shell: bash
+    run:
+        shell: bash
 
 jobs:
-  # Build job
-  build:
-    runs-on: ubuntu-latest
-    env:
-      HUGO_VERSION: 0.112.0
-    steps:
-      - name: Install Hugo CLI
-        run: |
-          wget -O ${{ runner.temp }}/hugo.deb https://github.com/gohugoio/hugo/releases/download/v${HUGO_VERSION}/hugo_extended_${HUGO_VERSION}_linux-amd64.deb \
-          && sudo dpkg -i ${{ runner.temp }}/hugo.deb
-      - name: Install Dart Sass Embedded
-        run: sudo snap install dart-sass-embedded
-      - name: Checkout
-        uses: actions/checkout@v3
-        with:
-          submodules: recursive
-          fetch-depth: 0
-          ref: 'example-site'
-      - name: Setup Pages
-        id: pages
-        uses: actions/configure-pages@v3
-      - name: Install Theme
-        run: mkdir themes && cd themes && git clone https://github.com/JingWangTW/dark-theme-editor.git
-      - name: Build with Hugo
+    # Build job
+    build:
+        runs-on: ubuntu-latest
         env:
-          # For maximum backward compatibility with Hugo modules
-          HUGO_ENVIRONMENT: production
-          HUGO_ENV: production
-        run: |
-          hugo \
-            --minify \
-            --enableGitInfo \
-            --baseURL "${{ steps.pages.outputs.base_url }}/"
-      - name: Upload artifact
-        uses: actions/upload-pages-artifact@v1
-        with:
-          path: ./public
+            HUGO_VERSION: 0.124.0
+        steps:
+            - name: Install Hugo CLI
+              run: |
+                  wget -O ${{ runner.temp }}/hugo.deb https://github.com/gohugoio/hugo/releases/download/v${HUGO_VERSION}/hugo_extended_${HUGO_VERSION}_linux-amd64.deb \
+                  && sudo dpkg -i ${{ runner.temp }}/hugo.deb
+            - name: Install Dart Sass Embedded
+              run: sudo snap install dart-sass-embedded
+            - name: Checkout
+              uses: actions/checkout@v3
+              with:
+                  submodules: recursive
+                  fetch-depth: 0
+                  ref: "example-site"
+            - name: Setup Pages
+              id: pages
+              uses: actions/configure-pages@v3
+            - name: Install Theme
+              run: mkdir themes && cd themes && git clone https://github.com/JingWangTW/dark-theme-editor.git
+            - name: Build with Hugo
+              env:
+                  # For maximum backward compatibility with Hugo modules
+                  HUGO_ENVIRONMENT: production
+                  HUGO_ENV: production
+              run: |
+                  hugo \
+                    --minify \
+                    --enableGitInfo \
+                    --baseURL "${{ steps.pages.outputs.base_url }}/"
+            - name: Upload artifact
+              uses: actions/upload-pages-artifact@v1
+              with:
+                  path: ./public
 
-  # Deployment job
-  deploy:
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
-    runs-on: ubuntu-latest
-    needs: build
-    steps:
-      - name: Deploy to GitHub Pages
-        id: deployment
-        uses: actions/deploy-pages@v1
+    # Deployment job
+    deploy:
+        environment:
+            name: github-pages
+            url: ${{ steps.deployment.outputs.page_url }}
+        runs-on: ubuntu-latest
+        needs: build
+        steps:
+            - name: Deploy to GitHub Pages
+              id: deployment
+              uses: actions/deploy-pages@v1
