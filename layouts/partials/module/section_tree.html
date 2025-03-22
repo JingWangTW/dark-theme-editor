@@ -5,6 +5,35 @@
     {{ $page_children := where ( union .Sections .Pages ) "Kind" "page" }}
     {{ $section_children := where ( union .Sections .Pages ) "Kind" "!=" "page" }}
 
+    {{ $sortBy := or .Site.Params.preference.sortBy "title" }}
+
+    {{ $sortInAsc := true }}
+    {{ if isset .Site.Params.preference "sortInAsc" }}
+        {{ $sortInAsc = .Site.Params.preference.sortInAsc }}
+    {{ end }}
+
+    {{ if eq $sortBy "lastmod" }}
+        {{ $page_children = $page_children.ByLastmod }}
+        {{ $section_children = $section_children.ByLastmod }}
+    {{ else if eq $sortBy "weight" }}
+        {{ $page_children = $page_children.ByWeight }}
+        {{ $section_children = $section_children.ByWeight }}
+    {{ else if eq $sortBy "pubdate" }}
+        {{ $page_children = $page_children.ByPublishDate }}
+        {{ $section_children = $section_children.ByPublishDate }}
+    {{ else if eq $sortBy "date" }}
+        {{ $page_children = $page_children.ByDate }}
+        {{ $section_children = $section_children.ByDate }}
+    {{ else }}
+        {{ $page_children = $page_children.ByTitle }}
+        {{ $section_children = $section_children.ByTitle }}
+    {{ end }}
+
+    {{ if not $sortInAsc }}
+        {{ $page_children = $page_children.Reverse }}
+        {{ $section_children = $section_children.Reverse }}
+    {{ end }}
+
     {{/* show page child first than section child */}}
     {{ $children := $section_children | append $page_children }}
 
