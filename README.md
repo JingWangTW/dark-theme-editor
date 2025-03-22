@@ -258,6 +258,18 @@ This will install the theme repository as a submodule in the `themes/dark-theme-
             # Use "true" to show the real fila name in both breadcrumb and the sidebar
             # Use "false" to show the tile in the file in both breadcrumb and the sidebar
             showFileName = false
+
+            # Sort the pages in the sidebar in the following way
+            # Available options are:
+            ## "lastmod": the value is determined by your site configuration, defaulting to the `lastmod` field in front matter.
+            ## "title": sorted by title
+            ## "weight": Assign a weight to a page using the `weight` field in front matter. The `weight` must be a non-zero integer.
+            ## "pubdate": the value is determined by your site configuration, defaulting to the `publishDate` field in front matter.
+            ## "date":  the value is determined by your site configuration, defaulting to the `date` field in front matter.
+            sortBy = "title"
+
+            # Used with `sortBy`, to determine to sort in ascending order (true) or in descending order (false)
+            sortInAsc = false
     ```
 
     </details>
