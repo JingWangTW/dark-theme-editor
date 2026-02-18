@@ -36,6 +36,9 @@ defaultContentLanguage = 'en'
 # Turn on Emoji support in Hugo
 enableEmoji = true
 
+# Turn on the support for git info
+enableGitInfo = true
+
 # Recommend syntax hilight config
 [markup]
     [markup.highlight]
@@ -118,7 +121,6 @@ enableEmoji = true
             email = "tony.jing.wang@gmail.com"
 
     [params.homePage]
-
         # When displaying the URL behind the title, it appears to be all messed up.
         recentPostShowUrl = false
 ```
