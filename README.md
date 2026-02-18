@@ -9,7 +9,7 @@
 
 DEMO - <https://jingwangtw.github.io/dark-theme-editor/>
 
-⚠️ The theme needs at least Hugo v0.124.x.
+⚠️ The theme needs at least Hugo v0.151.x.
 
 ---
 
@@ -54,7 +54,7 @@ This will install the theme repository as a submodule in the `themes/dark-theme-
 
 ### General Config
 
-* When using `dark-theme-editor` as the theme for your Hugo site, please remember to set the [theme field in your `config.toml`/`hugo.toml` file](https://gohugo.io/getting-started/configuration/#theme).
+* When using `dark-theme-editor` as the theme for your Hugo site, please remember to set the [theme field in your `hugo.toml` file](https://gohugo.io/configuration/all/#theme).
 * Additionally, the theme provides many custom fields for you to configure as needed. Please refer to the [`hugo.toml` file in the theme](https://github.com/JingWangTW/dark-theme-editor/blob/main/hugo.toml) to find all available options. You can override these values by adding them to your own configuration file or by directly modifying the file in the theme directory.
     <details>
     <summary>Click to toggle the full list of configurations.</summary>
@@ -120,7 +120,7 @@ This will install the theme repository as a submodule in the `themes/dark-theme-
 
             # Config about your's site logo, remove this item to hide the logo
             [params.header.logo]
-                # Where is your site's URL
+                # Put your logo img URL here
                 imgUrl = ""
 
                 # If the logo is clickable, where should it be linked?
@@ -152,13 +152,13 @@ This will install the theme repository as a submodule in the `themes/dark-theme-
             modifiedTime = true
 
             # The format of the `modifiedTime`.
-            # Refer to page https://gohugo.io/functions/format/ for more detail.
+            # Refer to page https://gohugo.io/methods/time/format/#layout-string for more detail.
             # Below is the default format, please do not remove it, unless you set `false` in `modifiedTime` field.
             dateFormat = "Jan 02 2006 15:04:05"
 
             # Should show the current git HEAD hash or not
             # To make this show up correctly, please follow the prerequisites in page
-            # https://gohugo.io/variables/git/
+            # https://gohugo.io/methods/page/gitinfo/#prerequisites/
             gitHash = true
 
             # Social link in the footer, listed items are supported, delete unwanted items to hide it.
@@ -229,7 +229,7 @@ This will install the theme repository as a submodule in the `themes/dark-theme-
             showDate = true
 
             # The format of the date.
-            # Refer to page https://gohugo.io/functions/format/ for more detail.
+            # Refer to page https://gohugo.io/methods/time/format/#layout-string for more detail.
             # Below is the default format, please do not remove it, unless you set `false` in `showDate` field.
             dateFormat = "2006.01.02"
 
@@ -459,7 +459,7 @@ This will install the theme repository as a submodule in the `themes/dark-theme-
         [params.header]
             # Config about your's site logo, remove this item to hide the logo
             [params.header.logo]
-                # Where is your site's URL
+                # Put your logo img URL here
                 imgUrl = ""
 
                 # If the logo is clickable, where should it be linked?
@@ -488,13 +488,13 @@ This will install the theme repository as a submodule in the `themes/dark-theme-
             modifiedTime = true
 
             # The format of the `modifiedTime`.
-            # Refer to page https://gohugo.io/functions/format/ for more detail.
+            # Refer to page https://gohugo.io/methods/time/format/#layout-string for more detail.
             # Below is the default format, please do not remove it, unless you set `false` in `modifiedTime` field.
             dateFormat = "Jan 02 2006 15:04:05"
 
             # Should show the current git HEAD hash or not
             # To make this show up correctly, please follow the prerequisites in page
-            # https://gohugo.io/variables/git/
+            # https://gohugo.io/methods/page/gitinfo/#prerequisites
             gitHash = true
 
             # Social link in the footer, listed items are supported, delete unwanted items to hide it.
@@ -542,7 +542,7 @@ This will install the theme repository as a submodule in the `themes/dark-theme-
             showDate = true
 
             # The format of the date.
-            # Refer to page https://gohugo.io/functions/format/ for more detail.
+            # Refer to page https://gohugo.io/methods/time/format/#layout-string for more detail.
             # Below is the default format, please do not remove it, unless you set `false` in `showDate` field.
             dateFormat = "2006.01.02"
 
@@ -578,7 +578,7 @@ This will install the theme repository as a submodule in the `themes/dark-theme-
 
 ### Author Taxonomies
 
-* Since Hugo [will not merge the taxonomies config from theme config to site config by default](https://gohugo.io/getting-started/configuration/#merge-configuration-from-themes), the author taxonomies pages need to be set in your [site configuration].
+* Since Hugo [will not merge the taxonomies config from theme config to site config by default](https://gohugo.io/configuration/introduction/#merge-configuration-settings), the author taxonomies pages need to be set in your [site configuration].
     * You could simply merge the theme config into site config.  
 
     ```toml
@@ -662,4 +662,4 @@ This theme was originally inspired by the [theme `edidor`](https://github.com/sf
 
 This theme was released under the Apache License 2.0.
 
-[site configuration]: https://gohugo.io/getting-started/configuration/
+[site configuration]: https://gohugo.io/configuration/all/

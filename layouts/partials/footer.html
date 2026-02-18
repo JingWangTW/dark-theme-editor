@@ -107,11 +107,14 @@
                 </li>
             {{ end }}
 
-            {{ with $.Site.Params.footer.gitHash }}
-                <li title="{{ $.GitInfo.Subject }}">
-                    {{ $.GitInfo.AbbreviatedHash }}
-                </li>
+            {{ if $.IsPage }}
+                {{ with $.Site.Params.footer.gitHash }}
+                    <li title="{{ $.GitInfo.Subject }}">
+                        {{ $.GitInfo.AbbreviatedHash }}
+                    </li>
+                {{ end }}
             {{ end }}
+
         </ul>
     </div>
 </footer>

@@ -1,7 +1,7 @@
 # Minimum support hugo
 [module]
     [module.hugoVersion]
-        min = "0.124.0"
+        min = "0.151.0"
 
 # Support Taxonomies
 [taxonomies]
@@ -69,7 +69,7 @@
 
         # Config about your's site logo, remove this item to hide the logo
         [params.header.logo]
-            # Where is your site's URL
+            # Put your logo img URL here
             imgUrl = ""
 
             # If the logo is clickable, where should it be linked?
@@ -101,13 +101,13 @@
         modifiedTime = true
 
         # The format of the `modifiedTime`.
-        # Refer to page https://gohugo.io/functions/format/ for more detail.
+        # Refer to page https://gohugo.io/methods/time/format/#layout-string for more detail.
         # Below is the default format, please do not remove it, unless you set `false` in `modifiedTime` field.
         dateFormat = "Jan 02 2006 15:04:05"
 
         # Should show the current git HEAD hash or not
         # To make this show up correctly, please follow the prerequisites in page
-        # https://gohugo.io/variables/git/
+        # https://gohugo.io/methods/page/gitinfo/#prerequisites
         gitHash = true
 
         # Social link in the footer, listed items are supported, delete unwanted items to hide it.
@@ -178,7 +178,7 @@
         showDate = true
 
         # The format of the date.
-        # Refer to page https://gohugo.io/functions/format/ for more detail.
+        # Refer to page https://gohugo.io/methods/time/format/#layout-string for more detail.
         # Below is the default format, please do not remove it, unless you set `false` in `showDate` field.
         dateFormat = "2006.01.02"
 
