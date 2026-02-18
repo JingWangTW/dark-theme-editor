@@ -15,6 +15,9 @@ defaultContentLanguage = 'en'
 # Turn on Emoji support in Hugo
 enableEmoji = true
 
+# Enable to access git info 
+enableGitInfo = true
+
 # Recommend syntax hilight config
 [markup]
     [markup.highlight]
