@@ -1,7 +1,7 @@
 # Minimum support hugo
 [module]
     [module.hugoVersion]
-        min = "0.124.0"
+        min = "0.151.0"
 
 # Support Taxonomies
 [taxonomies]

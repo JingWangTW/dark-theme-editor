@@ -9,7 +9,7 @@
 
 DEMO - <https://jingwangtw.github.io/dark-theme-editor/>
 
-⚠️ The theme needs at least Hugo v0.124.x.
+⚠️ The theme needs at least Hugo v0.151.x.
 
 ---
 
