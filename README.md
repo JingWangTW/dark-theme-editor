@@ -120,7 +120,7 @@ This will install the theme repository as a submodule in the `themes/dark-theme-
 
             # Config about your's site logo, remove this item to hide the logo
             [params.header.logo]
-                # Where is your site's URL
+                # Put your logo img URL here
                 imgUrl = ""
 
                 # If the logo is clickable, where should it be linked?
@@ -459,7 +459,7 @@ This will install the theme repository as a submodule in the `themes/dark-theme-
         [params.header]
             # Config about your's site logo, remove this item to hide the logo
             [params.header.logo]
-                # Where is your site's URL
+                # Put your logo img URL here
                 imgUrl = ""
 
                 # If the logo is clickable, where should it be linked?
